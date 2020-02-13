@@ -1,0 +1,1581 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EIIP.Contract.UPay</name>
+    </assembly>
+    <members>
+        <member name="T:EIIP.Contract.BalanceInOut">
+             <summary>
+             账户余额存支明细契约。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.BalanceInOut.TableID">
+            <summary>
+            对应表索引。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.BalanceInOut.IOID">
+            <summary>
+             存支ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.BalanceInOut.IOID_g">
+            <summary>
+             存支GUID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.BalanceInOut.IOTypeID">
+            <summary>
+             存支类型ID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.BalanceInOut.IOSum">
+            <summary>
+             存支金额(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.BalanceInOut.PerID">
+            <summary>
+             个人ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.BalanceInOut.PerID_g">
+            <summary>
+             个人GUID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.BalanceInOut.Remark">
+            <summary>
+             备注
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.BalanceInOut.CTime">
+            <summary>
+             创建时间(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.BalanceInOut.CDays">
+            <summary>
+             创建日期数
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.BalanceInOut.ObjID">
+            <summary>
+             目标对象ID(完整安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.BalanceInOut.ObjID_g">
+            <summary>
+             目标对象GUID(完整安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.BalanceInOut.ObjTypeID">
+            <summary>
+             目标对象类型ID(完整安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.BalanceInOut.RefIOID">
+            <summary>
+             关联存支ID(完整安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.BalanceInOut.IOFlag">
+            <summary>
+             存支标志(完整安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.BalanceInOut.IOTag">
+            <summary>
+             存支标识(完整安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.BalanceInOut.Status">
+            <summary>
+             状态
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.BalanceInOut.Version">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="T:EIIP.Contract.Balances">
+             <summary>
+             账户余额契约。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Balances.TableID">
+            <summary>
+            对应表索引。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Balances.PerID">
+            <summary>
+             个人ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Balances.PerID_g">
+            <summary>
+             个人GUID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Balances.BalanceTypeID">
+            <summary>
+             账户类型ID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Balances.CurSum">
+            <summary>
+             当前余额(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Balances.LockSum">
+            <summary>
+             锁定余额(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Balances.IOID">
+            <summary>
+             源存支ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Balances.IOID_g">
+            <summary>
+             源存支GUID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Balances._CurSum">
+            <summary>
+             最近一次余额(完整安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Balances._LockSum">
+            <summary>
+             最近一次锁定余额(完整安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Balances._IOID">
+            <summary>
+             最近一次源存支ID。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Balances._IOID_g">
+            <summary>
+             最近一次源存支GUID(完整安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Balances.Status">
+            <summary>
+             状态
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Balances.Version">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="T:EIIP.Contract.Finance.Line">
+             <summary>
+             (借款人)额度信息契约。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.TableID">
+            <summary>
+            对应表索引。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.LineID">
+            <summary>
+             额度ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.LineID_g">
+            <summary>
+             额度GUID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.LineAppID_g">
+            <summary>
+             额度申请GUID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.PerID">
+            <summary>
+             人员ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.PerID_g">
+            <summary>
+             人员GUID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.PerName">
+            <summary>
+             人员姓名
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.AccountTypeID">
+            <summary>
+             帐号类型ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.BankID">
+            <summary>
+             授信银行机构ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.LoanProductID">
+            <summary>
+             贷款产品ID(完整安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.BankCardNum">
+            <summary>
+             额度贷款卡号(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.LongestUseMonth">
+            <summary>
+             最长贷款期限（月）
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.LineIOID">
+            <summary>
+             额度源存支ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.LineIOID_g">
+            <summary>
+             额度源存支GUID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line._LineIOID">
+            <summary>
+             最近一次额度源存支ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line._LineIOID_g">
+            <summary>
+             最近一次额度源存支GUID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.LineContractNum">
+            <summary>
+             额度合同号
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.LineSignDate">
+            <summary>
+             额度合同签订日期
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.LineEnableDate">
+            <summary>
+             额度合同启用日期
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.LineDisableDate">
+            <summary>
+             额度合同结束日期
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.CollateralContractNum">
+            <summary>
+             担保合同号
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.CollateralSignDate">
+            <summary>
+             担保合同签订日期
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.CollateralEnableDate">
+            <summary>
+             担保合同启用日期
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.CollateralDisableDate">
+            <summary>
+             担保合同结束日期
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.BankCustomerNum">
+            <summary>
+             银行客户号
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.BankLineNum">
+            <summary>
+             银行额度号
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.BankPayAccountNum">
+            <summary>
+             银行还款帐号
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.BankLoanAccountNum">
+            <summary>
+             银行贷款帐号
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.BankFrozenLineAmt">
+            <summary>
+             银行冻结额度金额
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.BankLineAmt">
+            <summary>
+             银行授信额度
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.BankAvailableLineAmt">
+            <summary>
+             银行可用额度
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.BankUsedLineAmt">
+            <summary>
+             银行已用额度
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line._BankAvailableLineAmt">
+            <summary>
+             最近一次银行可用额度
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line._BankUsedLineAmt">
+            <summary>
+             最近一次银行已用额度
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.TdFrozenLineAmt">
+            <summary>
+             天地网冻结额度金额(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.TdLineAmt">
+            <summary>
+             天地网授信额度(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.TdAvailableLineAmt">
+            <summary>
+             天地网可用额度金额(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.TdUsedLineAmt">
+            <summary>
+             天地网已用额度金额(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.TdLockedLineAmt">
+            <summary>
+             天地网锁定额度金额(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.TdEnableDate">
+            <summary>
+             天地网额度启用日期
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.TdDisableDate">
+            <summary>
+             天地网额度结束日期(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line._TdAvailableLineAmt">
+            <summary>
+             最近一次天地网可用额度金额
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line._TdUsedLineAmt">
+            <summary>
+             最近一次天地网已用额度金额
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line._TdLockedLineAmt">
+            <summary>
+             最近一次天地网锁定额度金额
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.RiskLevelID">
+            <summary>
+             风险等级ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.ServicePayMethod">
+            <summary>
+             服务费收费方式(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.ServiceFeeBase">
+            <summary>
+             服务费收费基准(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.ServiceFeePer">
+            <summary>
+             服务费百分比调整(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.ServiceFeeAbs">
+            <summary>
+             服务费绝对比调整(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.ServiceFee">
+            <summary>
+             (一次性)服务费金额(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.ServiceFeeMaxPer">
+            <summary>
+             贷款金额占订单总额最大百分比(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.UseConditionID">
+            <summary>
+             使用条件ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.WFStateID">
+            <summary>
+             工作流处理状态ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.StateID">
+            <summary>
+             额度状态ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.TagID">
+            <summary>
+             标记ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.FlagID">
+            <summary>
+             标志ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Line.Version">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="T:EIIP.Contract.Finance.LineInOut">
+             <summary>
+             (借款人)额度存支信息契约。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.LineInOut.TableID">
+            <summary>
+            对应表索引。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.LineInOut.LineIOID">
+            <summary>
+             额度存支ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.LineInOut.LineIOID_g">
+            <summary>
+             额度存支GUID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.LineInOut.PerID">
+            <summary>
+             人员ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.LineInOut.PerID_g">
+            <summary>
+             人员GUID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.LineInOut.PerName">
+            <summary>
+             人员姓名
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.LineInOut.AccountTypeID">
+            <summary>
+             帐号类型ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.LineInOut.LineID_g">
+            <summary>
+             额度GUID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.LineInOut.BankID">
+            <summary>
+             授信银行机构ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.LineInOut.LoanProductID">
+            <summary>
+             贷款产品ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.LineInOut.BankCardNum">
+            <summary>
+             银行贷款卡号
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.LineInOut.IOTypeID">
+            <summary>
+             存支类型ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.LineInOut.IOAmt">
+            <summary>
+             存支金额(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.LineInOut.ObjTypeID">
+            <summary>
+             目标对象类型ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.LineInOut.ObjID">
+            <summary>
+             目标对象ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.LineInOut.ObjID_g">
+            <summary>
+             目标对象GUID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.LineInOut.StateID">
+            <summary>
+             状态ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.LineInOut.TagID">
+            <summary>
+             标记ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.LineInOut.FlagID">
+            <summary>
+             标志ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.LineInOut.Version">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="T:EIIP.Contract.Finance.Loan">
+             <summary>
+             贷款信息契约。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Loan.TableID">
+            <summary>
+            对应表索引。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Loan.LoanID">
+            <summary>
+             贷款ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Loan.LoanID_g">
+            <summary>
+             贷款GUID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Loan.LoanAppID_g">
+            <summary>
+             用贷申请GUID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Loan.PerID">
+            <summary>
+             人员ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Loan.PerID_g">
+            <summary>
+             人员GUID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Loan.PerName">
+            <summary>
+             人员姓名
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Loan.AccountTypeID">
+            <summary>
+             帐号类型ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Loan.OrdID_g">
+            <summary>
+             订单GUID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Loan.LineID_g">
+            <summary>
+             额度GUID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Loan.LoanProductID">
+            <summary>
+             贷款产品ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Loan.BankCardNum">
+            <summary>
+             贷款卡号
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Loan.BankLoanNum">
+            <summary>
+             银行贷款编号
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Loan.LoanAmt">
+            <summary>
+             贷款金额(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Loan.YearRate">
+            <summary>
+             年利率
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Loan.PayMethod">
+            <summary>
+             还款方式ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Loan.PayPeriodUnit">
+            <summary>
+             还款周期单位,如周、月、季和年等
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Loan.PayPeriodQuantity">
+            <summary>
+             还款周期数量,如2周
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Loan.LoanUseMonth">
+            <summary>
+             贷款期限（月）
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Loan.LoanDate">
+            <summary>
+             放款日期(完整安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Loan.CompleteDate">
+            <summary>
+             最后还款日期
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Loan.AllPayAmt">
+            <summary>
+             已还金额
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Loan.RiskLevelID">
+            <summary>
+             风险等级ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Loan.ServiceFeePer">
+            <summary>
+             服务费百分比调整
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Loan.ServicePayMethod">
+            <summary>
+             服务费收费方式
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Loan.ServiceFee">
+            <summary>
+             服务费金额
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Loan.StateID">
+            <summary>
+             贷款状态ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Finance.Loan.Version">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="T:EIIP.Contract.UPay.Order">
+             <summary>
+             订单资料契约。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.TableID">
+            <summary>
+            对应表索引。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.OrdID">
+            <summary>
+             订单ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.OrdID_g">
+            <summary>
+             订单GUID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.OrdCode">
+            <summary>
+             订单编号
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.Subject">
+            <summary>
+             订单标题
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.StageID">
+            <summary>
+             订单阶段ID(完整安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.GrandTotal">
+            <summary>
+             产品价格总计(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.BuyerID">
+            <summary>
+             买方ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.BuyerID_g">
+            <summary>
+             买方GUID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.Buyer">
+            <summary>
+             买方
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.SellerID">
+            <summary>
+             卖方ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.SellerID_g">
+            <summary>
+             卖方GUID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.Seller">
+            <summary>
+             卖方
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.OrderDate">
+            <summary>
+             订单日期(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.ExpDate">
+            <summary>
+             订单有效日期(完整安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.RequiredDate">
+            <summary>
+             出库请求日期
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.ShippedDate">
+            <summary>
+             货运日期
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.AreaFrom">
+            <summary>
+             发货地
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.AreaFromID">
+            <summary>
+             发货地ID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.TransporID">
+            <summary>
+             运输方式ID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.TransporInfo">
+            <summary>
+             运输方式附加说明
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.Freight">
+            <summary>
+             运输费用(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.Receiver">
+            <summary>
+             收件人
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.RecvAddress">
+            <summary>
+             收货地址
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.RecvAddressID">
+            <summary>
+             收货地址ID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.PaymentID">
+            <summary>
+             付款方式ID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.OrdFlag">
+            <summary>
+             订单标记
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.OrdTag">
+            <summary>
+             订单标识
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.Points">
+            <summary>
+             使用积分(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.StateID">
+            <summary>
+             订单状态ID。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.OrdTypeID">
+            <summary>
+             订单类型ID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.OrdObjID">
+            <summary>
+             订单关联对象ID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.PayWay">
+            <summary>
+             支付方式
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Order.Version">
+            <summary>
+            版本号
+            </summary>
+            <remarks>与 Order 一致</remarks>
+        </member>
+        <member name="T:EIIP.Contract.UPay.Payment">
+             <summary>
+             付款项契约。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Payment.TableID">
+            <summary>
+            对应表索引。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Payment.PayID">
+            <summary>
+             付款ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Payment.PayID_g">
+            <summary>
+             付款GUID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Payment.OrdID">
+            <summary>
+             订单ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Payment.OrdID_g">
+            <summary>
+             订单GUID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Payment.PaymentID">
+            <summary>
+             付款类型ID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Payment.PayDate">
+            <summary>
+             付款日期(完整安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Payment.Money">
+            <summary>
+             付款金额(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Payment.MoneyMain">
+            <summary>
+             商品金额(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Payment.MoneyHandling">
+            <summary>
+             服务手续费(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Payment.PerID">
+            <summary>
+             付款人ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Payment.PerID_g">
+            <summary>
+             付款人GUID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Payment.PerName">
+            <summary>
+             付款人
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Payment.BankID">
+            <summary>
+             银行ID(完整安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Payment.Usage">
+            <summary>
+             资金用途(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Payment.CMDCode">
+            <summary>
+             付款指令(完整安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Payment.Remarks">
+            <summary>
+             付款备注
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Payment.PayFlag">
+            <summary>
+             付款标志
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Payment.StateID">
+            <summary>
+             付款状态ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Payment.PayTag">
+            <summary>
+             付款标识
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Payment.Version">
+            <summary>
+            版本号
+            </summary>
+            <remarks>与 Order 一致</remarks>
+        </member>
+        <member name="T:EIIP.Contract.UPay.PersonAcc">
+             <summary>
+             个人账户资料契约。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.PersonAcc.TableID">
+            <summary>
+            对应表索引。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.PersonAcc.PerID">
+            <summary>
+             个人ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.PersonAcc.PerID_g">
+            <summary>
+             个人GUID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.PersonAcc.AccountName">
+            <summary>
+             银行账户名称(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.PersonAcc.AccountNum">
+            <summary>
+             银行账户号码(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.PersonAcc.BankID">
+            <summary>
+             银行ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.PersonAcc.BranchName">
+            <summary>
+             分支行名称
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.PersonAcc.Province">
+            <summary>
+             分支行省份
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.PersonAcc.City">
+            <summary>
+             分支行城市
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.PersonAcc.Version">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="T:EIIP.Contract.PointInOut">
+             <summary>
+             账户积分存支明细契约。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.PointInOut.TableID">
+            <summary>
+            对应表索引。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.PointInOut.IOID">
+            <summary>
+             存支ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.PointInOut.IOID_g">
+            <summary>
+             存支GUID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.PointInOut.IOTypeID">
+            <summary>
+             存支类型ID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.PointInOut.IOSum">
+            <summary>
+             存支金额(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.PointInOut.PerID">
+            <summary>
+             个人ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.PointInOut.PerID_g">
+            <summary>
+             个人GUID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.PointInOut.Remark">
+            <summary>
+             备注
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.PointInOut.CTime">
+            <summary>
+             创建时间(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.PointInOut.CDays">
+            <summary>
+             创建日期数
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.PointInOut.ObjID">
+            <summary>
+             目标对象ID(完整安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.PointInOut.ObjID_g">
+            <summary>
+             目标对象GUID(完整安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.PointInOut.ObjTypeID">
+            <summary>
+             目标对象类型ID(完整安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.PointInOut.RefIOID">
+            <summary>
+             关联存支ID(完整安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.PointInOut.IOFlag">
+            <summary>
+             存支标志(完整安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.PointInOut.IOTag">
+            <summary>
+             存支标识(完整安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.PointInOut.Status">
+            <summary>
+             状态
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.PointInOut.Version">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="T:EIIP.Contract.Points">
+             <summary>
+             账户积分契约。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Points.TableID">
+            <summary>
+            对应表索引。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Points.PerID">
+            <summary>
+             个人ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Points.PerID_g">
+            <summary>
+             个人GUID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Points.CurSum">
+            <summary>
+             当前积分(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Points.LockSum">
+            <summary>
+             锁定积分(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Points.IOID">
+            <summary>
+             源存支ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Points.IOID_g">
+            <summary>
+             源存支GUID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Points._CurSum">
+            <summary>
+             最近一次积分(完整安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Points._LockSum">
+            <summary>
+             最近一次锁定积分(完整安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Points._IOID">
+            <summary>
+             最近一次源存支ID。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Points._IOID_g">
+            <summary>
+             最近一次源存支GUID(完整安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Points.Status">
+            <summary>
+             状态
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.Points.Version">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="T:EIIP.Contract.UPay.Product">
+             <summary>
+             产品资料契约。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.TableID">
+            <summary>
+            对应表索引。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.ProID">
+            <summary>
+             产品ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.ProID_g">
+            <summary>
+             产品GUID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.ProTypeID">
+            <summary>
+             产品类型ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.QualityID">
+            <summary>
+             商品成色(质量)类型ID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.ProCode">
+            <summary>
+             产品编号
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.Title">
+            <summary>
+             产品标题
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.ProName">
+            <summary>
+             产品名称(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.Spec">
+            <summary>
+             产品规格(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.Weight">
+            <summary>
+             产品重量说明
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.Material">
+            <summary>
+             产品材质(完整安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.AreaFrom">
+            <summary>
+             产品产地
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.AreaFromID">
+            <summary>
+             产品产地ID(完整安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.Brand">
+            <summary>
+             产品品牌(完整安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.Series">
+            <summary>
+             产品系列
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.SupplierID">
+            <summary>
+             供应商ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.SupplierID_g">
+            <summary>
+             供应商GUID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.Supplier">
+            <summary>
+             供应商
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.UnitID">
+            <summary>
+             产品单位ID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.UnitPrice">
+            <summary>
+             产品单价(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.ApprovePrice">
+            <summary>
+             产品定价(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.BulkPrice">
+            <summary>
+             产品批发价(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.BulkNum">
+            <summary>
+             批发数量(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.BulkDiscount">
+            <summary>
+             批发折扣
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.ProTag">
+            <summary>
+             产品标识ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.ProFlag">
+            <summary>
+             产品标志
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.SaleTypeID">
+            <summary>
+             销售类型
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.UpperLimit">
+            <summary>
+             销售上限
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.LowerLimit">
+            <summary>
+             销售下限
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.FreightPayWay">
+            <summary>
+             运费支付方式(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.TxOrdinaryFee">
+            <summary>
+             平邮附加费(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.TxExpressFee">
+            <summary>
+             快递附加费(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.TxEMSFee">
+            <summary>
+             EMS附加费(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.Product.Version">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="T:EIIP.Contract.UPay.ProductSKU">
+             <summary>
+             产品SKU契约。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.TableID">
+            <summary>
+            对应表索引。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.SkuID">
+            <summary>
+             商品SkuID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.SkuID_g">
+            <summary>
+             商品SkuGUID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.ProID">
+            <summary>
+             商品ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.ProID_g">
+            <summary>
+             商品GUID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.SkuSetID">
+            <summary>
+             Sku集ID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.Title">
+            <summary>
+             Sku标题
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.ProName">
+            <summary>
+             商品名称(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.SkuCode">
+            <summary>
+             产品SKU编号(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.SupplierID">
+            <summary>
+             供应商ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.SupplierID_g">
+            <summary>
+             供应商GUID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.Supplier">
+            <summary>
+             供应商
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.UnitID">
+            <summary>
+             商品单位ID(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.UnitPrice">
+            <summary>
+             单价(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.ApprovePrice">
+            <summary>
+             建议价格
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.BulkPrice">
+            <summary>
+             商品批发价(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.BulkNum">
+            <summary>
+             批发数量(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.BulkDiscount">
+            <summary>
+             批发折扣
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.TradeSum">
+            <summary>
+             交易总额
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.SkuTag">
+            <summary>
+             Sku标识ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.SkuFlag">
+            <summary>
+             Sku标志ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.SaleTypeID">
+            <summary>
+             销售类型ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.SaleData">
+            <summary>
+             销售数据
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.UpperLimit">
+            <summary>
+             销售上限(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.LowerLimit">
+            <summary>
+             销售下限(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.RangePrice1">
+            <summary>
+             区间价格1(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.RangeLimit1">
+            <summary>
+             区间下限1(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.RangePrice2">
+            <summary>
+             区间价格2(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.RangeLimit2">
+            <summary>
+             区间下限2(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.RangePrice3">
+            <summary>
+             区间价格3(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.RangeLimit3">
+            <summary>
+             区间下限3(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.RangePrice4">
+            <summary>
+             区间价格4(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.RangeLimit4">
+            <summary>
+             区间下限4(基础安全要求)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.OptIDs">
+            <summary>
+             SKU选项ID集
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.UPay.ProductSKU.Version">
+            <summary>
+            版本号
+            </summary>
+            <remarks>与 Order 一致</remarks>
+        </member>
+    </members>
+</doc>

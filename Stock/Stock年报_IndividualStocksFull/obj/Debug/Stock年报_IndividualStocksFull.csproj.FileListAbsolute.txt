@@ -1,0 +1,49 @@
+c:\users\lenovo\documents\visual studio 2013\Projects\Stock\Stock年报_IndividualStocksFull\bin\Debug\Stock年报_IndividualStocksFull.exe.config
+c:\users\lenovo\documents\visual studio 2013\Projects\Stock\Stock年报_IndividualStocksFull\bin\Debug\Stock年报_IndividualStocksFull.exe
+c:\users\lenovo\documents\visual studio 2013\Projects\Stock\Stock年报_IndividualStocksFull\bin\Debug\Stock年报_IndividualStocksFull.pdb
+c:\users\lenovo\documents\visual studio 2013\Projects\Stock\Stock年报_IndividualStocksFull\obj\Debug\Stock年报_IndividualStocksFull.exe
+c:\users\lenovo\documents\visual studio 2013\Projects\Stock\Stock年报_IndividualStocksFull\obj\Debug\Stock年报_IndividualStocksFull.pdb
+c:\users\lenovo\documents\visual studio 2013\Projects\Stock\Stock年报_IndividualStocksFull\obj\Debug\Stock年报_IndividualStocksFull.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Stock\Stock\Stock年报_IndividualStocksFull\bin\Debug\Stock年报_IndividualStocksFull.exe.config
+C:\Users\Administrator\Desktop\Stock\Stock\Stock年报_IndividualStocksFull\obj\Debug\Stock年报_IndividualStocksFull.exe
+C:\Users\Administrator\Desktop\Stock\Stock\Stock年报_IndividualStocksFull\obj\Debug\Stock年报_IndividualStocksFull.pdb
+C:\Users\Administrator\Desktop\Stock\Stock\Stock年报_IndividualStocksFull\bin\Debug\Stock年报_IndividualStocksFull.exe
+C:\Users\Administrator\Desktop\Stock\Stock\Stock年报_IndividualStocksFull\bin\Debug\Stock年报_IndividualStocksFull.pdb
+C:\Users\Administrator\Desktop\Stock\Stock\Stock年报_IndividualStocksFull\obj\Debug\Stock年报_IndividualStocksFull.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Downloads\Stock\Stock年报_IndividualStocksFull\bin\Debug\Stock年报_IndividualStocksFull.exe.config
+C:\Users\Administrator\Downloads\Stock\Stock年报_IndividualStocksFull\bin\Debug\Stock年报_IndividualStocksFull.exe
+C:\Users\Administrator\Downloads\Stock\Stock年报_IndividualStocksFull\bin\Debug\Stock年报_IndividualStocksFull.pdb
+C:\Users\Administrator\Downloads\Stock\Stock年报_IndividualStocksFull\obj\Debug\Stock年报_IndividualStocksFull.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Downloads\Stock\Stock年报_IndividualStocksFull\obj\Debug\Stock年报_IndividualStocksFull.exe
+C:\Users\Administrator\Downloads\Stock\Stock年报_IndividualStocksFull\obj\Debug\Stock年报_IndividualStocksFull.pdb
+C:\Users\Administrator\Downloads\Stock\Stock\Stock年报_IndividualStocksFull\bin\Debug\Stock年报_IndividualStocksFull.exe.config
+C:\Users\Administrator\Downloads\Stock\Stock\Stock年报_IndividualStocksFull\bin\Debug\Stock年报_IndividualStocksFull.exe
+C:\Users\Administrator\Downloads\Stock\Stock\Stock年报_IndividualStocksFull\bin\Debug\Stock年报_IndividualStocksFull.pdb
+C:\Users\Administrator\Downloads\Stock\Stock\Stock年报_IndividualStocksFull\obj\Debug\Stock年报_IndividualStocksFull.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Downloads\Stock\Stock\Stock年报_IndividualStocksFull\obj\Debug\Stock年报_IndividualStocksFull.exe
+C:\Users\Administrator\Downloads\Stock\Stock\Stock年报_IndividualStocksFull\obj\Debug\Stock年报_IndividualStocksFull.pdb
+G:\BaiduYunDownload\Stock\Stock\Stock\Stock年报_IndividualStocksFull\bin\Debug\Stock年报_IndividualStocksFull.exe.config
+G:\BaiduYunDownload\Stock\Stock\Stock\Stock年报_IndividualStocksFull\bin\Debug\Stock年报_IndividualStocksFull.exe
+G:\BaiduYunDownload\Stock\Stock\Stock\Stock年报_IndividualStocksFull\bin\Debug\Stock年报_IndividualStocksFull.pdb
+G:\BaiduYunDownload\Stock\Stock\Stock\Stock年报_IndividualStocksFull\obj\Debug\Stock年报_IndividualStocksFull.exe
+G:\BaiduYunDownload\Stock\Stock\Stock\Stock年报_IndividualStocksFull\obj\Debug\Stock年报_IndividualStocksFull.pdb
+F:\BaiduNetdiskDownload\Stock\Stock\Stock年报_IndividualStocksFull\bin\Debug\Stock年报_IndividualStocksFull.exe.config
+F:\BaiduNetdiskDownload\Stock\Stock\Stock年报_IndividualStocksFull\bin\Debug\Stock年报_IndividualStocksFull.exe
+F:\BaiduNetdiskDownload\Stock\Stock\Stock年报_IndividualStocksFull\bin\Debug\Stock年报_IndividualStocksFull.pdb
+F:\BaiduNetdiskDownload\Stock\Stock\Stock年报_IndividualStocksFull\obj\Debug\Stock年报_IndividualStocksFull.exe
+F:\BaiduNetdiskDownload\Stock\Stock\Stock年报_IndividualStocksFull\obj\Debug\Stock年报_IndividualStocksFull.pdb
+F:\BaiduNetdiskDownload\Stock(4)\Stock\Stock年报_IndividualStocksFull\bin\Debug\Stock年报_IndividualStocksFull.exe.config
+F:\BaiduNetdiskDownload\Stock(4)\Stock\Stock年报_IndividualStocksFull\bin\Debug\Stock年报_IndividualStocksFull.exe
+F:\BaiduNetdiskDownload\Stock(4)\Stock\Stock年报_IndividualStocksFull\bin\Debug\Stock年报_IndividualStocksFull.pdb
+F:\BaiduNetdiskDownload\Stock(4)\Stock\Stock年报_IndividualStocksFull\obj\Debug\Stock年报_IndividualStocksFull.exe
+F:\BaiduNetdiskDownload\Stock(4)\Stock\Stock年报_IndividualStocksFull\obj\Debug\Stock年报_IndividualStocksFull.pdb
+G:\BaiduYunDownload\Stock\Stock\Stock年报_IndividualStocksFull\bin\Debug\Stock年报_IndividualStocksFull.exe.config
+G:\BaiduYunDownload\Stock\Stock\Stock年报_IndividualStocksFull\bin\Debug\Stock年报_IndividualStocksFull.exe
+G:\BaiduYunDownload\Stock\Stock\Stock年报_IndividualStocksFull\bin\Debug\Stock年报_IndividualStocksFull.pdb
+G:\BaiduYunDownload\Stock\Stock\Stock年报_IndividualStocksFull\obj\Debug\Stock年报_IndividualStocksFull.exe
+G:\BaiduYunDownload\Stock\Stock\Stock年报_IndividualStocksFull\obj\Debug\Stock年报_IndividualStocksFull.pdb
+F:\BaiduYunDownload\Stock\Stock年报_IndividualStocksFull\bin\Debug\Stock年报_IndividualStocksFull.exe.config
+F:\BaiduYunDownload\Stock\Stock年报_IndividualStocksFull\bin\Debug\Stock年报_IndividualStocksFull.exe
+F:\BaiduYunDownload\Stock\Stock年报_IndividualStocksFull\bin\Debug\Stock年报_IndividualStocksFull.pdb
+F:\BaiduYunDownload\Stock\Stock年报_IndividualStocksFull\obj\Debug\Stock年报_IndividualStocksFull.exe
+F:\BaiduYunDownload\Stock\Stock年报_IndividualStocksFull\obj\Debug\Stock年报_IndividualStocksFull.pdb

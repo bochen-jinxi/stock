@@ -1,0 +1,3017 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EIIP.Web.Library</name>
+    </assembly>
+    <members>
+        <member name="T:EIIP.Web.Library.AppHelper">
+            <summary>
+            应用辅助类。
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.AppHelper.SleepWhenWorkless">
+            <summary>
+            为避免挤占CPU, 无任务时休息。
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.AppHelper.SleepWhenWorkless(System.Int32)">
+            <summary>
+            为避免挤占CPU, 无任务时休息。
+            </summary>
+            <param name="seccond">要休息的秒数</param>
+        </member>
+        <member name="M:EIIP.Web.Library.AppHelper.SleepWhenWorklessMinutes(System.Int32)">
+            <summary>
+            为避免挤占CPU, 无任务时休息。
+            </summary>
+            <param name="minute">要休息的分钟数</param>
+        </member>
+        <member name="M:EIIP.Web.Library.AppHelper.WriteLog(System.String,System.String)">
+            <summary>
+            写入日志。
+            </summary>
+            <param name="functionName">函数名称</param>
+            <param name="message">日志信息</param>
+        </member>
+        <member name="M:EIIP.Web.Library.AppHelper.WriteLog(System.String)">
+            <summary>
+            写入日志。
+            </summary>
+            <param name="message">日志信息</param>
+        </member>
+        <member name="M:EIIP.Web.Library.AppHelper.WriteLogException(System.String,System.Exception)">
+            <summary>
+            写入异常日志。
+            </summary>
+            <param name="functionName">函数名称</param>
+            <param name="exp">异常</param>
+        </member>
+        <member name="P:EIIP.Web.Library.AppHelper.DataPath">
+            <summary>
+            获取数据目录。以“\”结尾。
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.ChartHelper">
+            <summary>
+            指数图表帮助类
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.ChartHelper.GetSalt(System.Char)">
+            <summary>
+            获取指定字符的Salt值。
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Library.ChartHelper.ValidateFileName(System.String)">
+            <summary>
+            校验图标编码合法性。
+            </summary>
+            <param name="fileNameWithoutExt">文件名。（不含扩展名）</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Library.ChartHelper.IsChartTypeByChartCode(System.String,System.Int32)">
+            <summary>
+            判断图表编码是否为指定的类型
+            </summary>
+            <param name="chartcode">图表编码</param>
+            <param name="chartflag">图表类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Library.ChartHelper.GetDatumDateWeeks(System.DateTime)">
+            <summary>
+            根据日期计算日期距基准日期的周数（基准日期为1900-01-01,以周一为一周的第一天）
+            </summary>
+            <param name="date">日期</param>
+            <returns>日期周数</returns>
+        </member>
+        <member name="T:EIIP.Web.Common.WebFunction">
+            <summary>
+            Function
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Common.WebFunction.ReplaceIllegalStr(System.String)">
+            <summary>
+            过滤非法字符串
+            </summary>
+            <param name="str"></param>
+        </member>
+        <member name="M:EIIP.Web.Common.WebFunction.AddJsStr(System.String)">
+            <summary>
+            引用JS
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Common.WebFunction.AddJsStr(System.Text.StringBuilder,System.String)">
+            <summary>
+            引用JS
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Common.WebFunction.AddCssStr(System.String)">
+            <summary>
+            引用CSS
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Common.WebFunction.AddCssStr(System.Text.StringBuilder,System.String)">
+            <summary>
+            引用CSS
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Common.WebFunction.GetQueryString(System.String)">
+            <summary>
+            获得指定Url参数的值
+            </summary>
+            <param name="strName">Url参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Common.WebFunction.GetFormString(System.String)">
+            <summary>
+            获得指定Url参数的值
+            </summary>
+            <param name="strName">Url参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Common.WebFunction.SetLastRequestUrl(System.String,System.String,System.String)">
+            <summary>
+            设置请求URL
+            </summary>
+            <param name="url">当前URL</param>
+            <param name="key">键</param>
+            <param name="value">值</param> 
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Common.WebFunction.GetLastRequestUrl(System.String,System.String)">
+            <summary>
+            手动记录上一次请求的URL
+            </summary>
+            <param name="key">唯一键</param>
+            <param name="defaulturl">缺省URL</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Common.WebFunction.IsQQ(System.String)">
+            <summary>
+            是否QQ号码格式
+            </summary>
+            <param name="input">输入值</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:EIIP.Web.Common.WebFunction.IsPostCode(System.String)">
+            <summary>
+            是否邮政编码格式
+            </summary>
+            <param name="input">输入值</param>
+            <returns>bool</returns>
+        </member>
+        <member name="T:EIIP.Web.Library.Config">
+            <summary>
+            配置类
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.Config.IsIncludeProtectedMCodexName(System.String)">
+            <summary>
+            检查是否包含指定的违禁药材名称
+            </summary>
+            <param name="mname">药品名称</param>
+            <returns></returns>
+        </member>
+        <member name="F:EIIP.Web.Library.Config.OrderExpireDays">
+            <summary>
+            订单过期时间
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.Config.NewRegisterStartDate">
+            <summary>
+            新注册系统的开始时间
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.Config.FakeBaseData">
+            <summary>
+            人气数据统计的作假倍数
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Library.Config.SecureVerifyEnabled">
+            <summary>
+            安全验证开关
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.ConfigurationService.ConfigurationHandler">
+            <summary>
+            配置处理器
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.ConfigurationService.ConfigurationHandler.Create(System.Object,System.Object,System.Xml.XmlNode)">
+            <summary>
+            创建配置处理器
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.ConfigurationService.UPayConfigurationManager">
+            <summary>
+            配置管理器
+            同时支持两种配置方式
+            1，Web.Config Section配置
+            2，Web.Config AppSettings配置
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.ConfigurationService.UPayConfigurationManager._ConfigData">
+            <summary>
+            配置数据
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.ConfigurationService.UPayConfigurationManager.FunctionPluginConfigurtion">
+            <summary>
+            工作流函数插件信息
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.ConfigurationService.UPayConfigurationManager.ValidatorPluginConfigurtion">
+            <summary>
+            工作流验证器插件信息
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.ConfigurationService.UPayConfigurationManager.#ctor">
+            <summary>
+            默认构造
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.ConfigurationService.UPayConfigurationManager.#ctor(System.Xml.XmlNode)">
+            <summary>
+            构造器
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Library.ConfigurationService.UPayConfigurationManager.SafeInstance">
+            <summary>
+            获取UPay统一配置处理器
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.ConfigurationService.UPayConfigurationManager.Nested">
+            <summary>
+            通过Web.Config/AppSettings获取统一配置支
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.ConfigurationService.ConfigurationManagerProxy">
+            <summary>
+            配置管理器代理
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.ConfigurationService.ConfigurationManagerProxy.#ctor(System.Xml.XmlNode)">
+            <summary>
+            构造器
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.ConfigurationService.ConfigurationManagerProxy.GetSection(System.String)">
+            <summary>
+            获取配置Section
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.ConfigurationService.WorkFlowFunctionPluginConfigurtion">
+            <summary>
+            工作流函数配置
+            <Worflow.FunctionPluginInfo>
+            	<Function key="" name="" type="" />
+            </Worflow.FunctionPluginInfo>
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.ConfigurationService.WorkFlowFunctionPluginConfigurtion.#ctor(System.Xml.XmlNode)">
+            <summary>
+            构造器
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.ConfigurationService.WorkFlowFunctionPluginConfigurtion.InitSetting">
+            <summary>
+            初始化配置
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.ConfigurationService.WorkFlowFunctionPluginConfigurtion.GetAttibuteValue(System.Xml.XmlNode,System.String)">
+            <summary>
+            获取属性值
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Library.ConfigurationService.WorkFlowFunctionPluginConfigurtion.WorkFlowFunctionPluginInfoList">
+            <summary>
+            工作流函数插件信息列表
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.ConfigurationService.WorkFlowValidatorPluginConfigurtion">
+            <summary>
+            工作流验证期配置
+            <Worflow.ValidatorPluginInfo>
+            	<Validator key="" name="" type="" />
+            </Worflow.ValidatorPluginInfo>
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.ConfigurationService.WorkFlowValidatorPluginConfigurtion.#ctor(System.Xml.XmlNode)">
+            <summary>
+            构造器
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.ConfigurationService.WorkFlowValidatorPluginConfigurtion.InitSetting">
+            <summary>
+            初始化配置
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.ConfigurationService.WorkFlowValidatorPluginConfigurtion.GetAttibuteValue(System.Xml.XmlNode,System.String)">
+            <summary>
+            获取属性值
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Library.ConfigurationService.WorkFlowValidatorPluginConfigurtion.WorkFlowValidatorPluginInfoList">
+            <summary>
+            工作流验证期插件信息列表
+            </summary>
+        </member>
+        <member name="T:EIIP.Constant">
+            <summary>
+            常量类。
+            </summary>
+        </member>
+        <member name="F:EIIP.Constant.Domain">
+            <summary>
+            网站域名。
+            </summary>
+        </member>
+        <member name="F:EIIP.Constant.SiteFullName">
+            <summary>
+            网站全称。
+            </summary>
+        </member>
+        <member name="F:EIIP.Constant.SiteName">
+            <summary>
+            网站名称。
+            </summary>
+        </member>
+        <member name="F:EIIP.Constant.SiteNameSuffix">
+            <summary>
+            网站名称后缀。
+            </summary>
+        </member>
+        <member name="F:EIIP.Constant.SitePhone_Srv">
+            <summary>
+            网站咨询热线 诚实通热线
+            </summary>
+        </member>
+        <member name="F:EIIP.Constant.SitePhone_Srv1">
+            <summary>
+            投诉建议
+            </summary>
+        </member>
+        <member name="F:EIIP.Constant.SitePhone_Srv2">
+            <summary>
+            客服中心
+            </summary>
+        </member>
+        <member name="F:EIIP.Constant.SitePhone_Srv3">
+            <summary>
+            新闻热线
+            </summary>
+        </member>
+        <member name="F:EIIP.Constant.SitePhone_Fax">
+            <summary>
+            网站客户服务传真
+            </summary>
+        </member>
+        <member name="F:EIIP.Constant.SitePhone_Fax1">
+            <summary>
+            网站客户服务传真
+            </summary>
+        </member>
+        <member name="F:EIIP.Constant.SiteQQ1">
+            <summary>
+            网站客户QQ1
+            </summary>
+        </member>
+        <member name="F:EIIP.Constant.SiteQQ2">
+            <summary>
+            网站客户QQ2
+            </summary>
+        </member>
+        <member name="F:EIIP.Constant.DefaultWebTempletID">
+            <summary>
+            缺省网站模板。
+            </summary>
+        </member>
+        <member name="F:EIIP.Constant.CopyrightYearFrom">
+            <summary>
+            版权起始年份。
+            </summary>
+        </member>
+        <member name="F:EIIP.Constant.GLOBAL_GUID_KEY">
+            <summary>
+            用户全局缓存键
+            </summary>
+        </member>
+        <member name="F:EIIP.Constant.Index_Title">
+            <summary>
+            首页标题
+            </summary>
+        </member>
+        <member name="F:EIIP.Constant.Info_Title">
+            <summary>
+            资讯标题
+            </summary>
+        </member>
+        <member name="F:EIIP.Constant.Mall_Title">
+            <summary>
+            商机标题
+            </summary>
+        </member>
+        <member name="F:EIIP.Constant.Price_Title">
+            <summary>
+            价格标题
+            </summary>
+        </member>
+        <member name="F:EIIP.Constant.Company_Title">
+            <summary>
+            企业标题
+            </summary>
+        </member>
+        <member name="F:EIIP.Constant.YaoCai_Title">
+            <summary>
+            药材大全标题
+            </summary>
+        </member>
+        <member name="F:EIIP.Constant.ZhiShu_Title">
+            <summary>
+            指数标题
+            </summary>
+        </member>
+        <member name="F:EIIP.Constant.BBS_Title">
+            <summary>
+            BBS标题
+            </summary>
+        </member>
+        <member name="F:EIIP.Constant.BBS_Suffix">
+            <summary>
+            BBS后缀
+            </summary>
+        </member>
+        <member name="F:EIIP.Constant.SiteEmail">
+            <summary>
+            网站Email
+            </summary>
+        </member>
+        <member name="F:EIIP.Constant.AntiExtLinkImgFile">
+            <summary>
+            反外链图片文件。
+            </summary>
+        </member>
+        <member name="F:EIIP.Constant.FilterStr">
+            <summary>
+            过滤用户 非法文字
+            </summary>
+        </member>
+        <member name="F:EIIP.Constant.WebSiteTitle">
+            <summary>
+            全站统一标题后缀
+            </summary>
+        </member>
+        <member name="F:EIIP.Constant.WebSiteMetaKeyWords">
+            <summary>
+            全站统一热门关键字
+            </summary>
+        </member>
+        <member name="F:EIIP.Constant.WebSiteMetaDescription">
+            <summary>
+            全站统一热门关键字描述
+            </summary>
+        </member>
+        <member name="F:EIIP.Constant.Disclaimer">
+            <summary>
+            免责申明
+            </summary>
+        </member>
+        <member name="F:EIIP.Constant.srtCopyright">
+            <summary>
+            原创
+            </summary>
+        </member>
+        <member name="F:EIIP.Constant.strCopyright1">
+            <summary>
+            网载
+            </summary>
+        </member>
+        <member name="M:EIIP.Constant.WebSiteCopyright">
+            <summary>
+            新版网站底部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Constant.WebSiteCopyright1">
+            <summary>
+            新版网站联系方式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:EIIP.Constant.UPayProtectedMCode_Regex">
+            <summary>
+            买卖通统一受保护的药材正则实例。赵睿： 2012-04-06
+            </summary>
+        </member>
+        <member name="P:EIIP.Constant.UPayProtectedMCode">
+            <summary>
+            买卖通统一受保护的药材关键字。 赵睿： 2012-04-06
+            </summary>
+            <remarks>
+            修改:liaoyun
+            Time:2012-10-17
+            </remarks>
+        </member>
+        <member name="T:EIIP.DN">
+            <summary>
+            域名(Domain Name)辅助类。
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.AT">
+            <summary>
+            域名: .domain.com
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.AT_">
+            <summary>
+            域名: .domain.com/
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.AT_Email">
+            <summary>
+            @domain.com
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.AT_Email_Main">
+            <summary>
+            main@domain.com
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.chartHTTP">
+            <summary>
+            http://chart.domain.com
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.chartHTTP_">
+            <summary>
+            http://chart.domain.com/
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.www">
+            <summary>
+            www.domain.com
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.wwwHTTP">
+            <summary>
+            http://www.domain.com
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.wwwHTTP_">
+            <summary>
+            http://www.domain.com/
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.shangjiHTTP">
+            <summary>
+            商机二级域名
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.shangjiHTTP_">
+            <summary>
+            商机二级域名
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.shangjiaHTTP">
+            <summary>
+            商家二级域名
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.shangjiaHTTP_">
+            <summary>
+            商家二级域名
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.tdcsHTTP">
+            <summary>
+            天地兴投二级域名
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.tdcsHTTP_">
+            <summary>
+            天地兴投二级域名
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.jiageHTTP">
+            <summary>
+            价格二级域名
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.jiageHTTP_">
+            <summary>
+            价格二级域名
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.yaocaiHTTP">
+            <summary>
+            药材
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.yaocaiHTTP_">
+            <summary>
+            药材
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.zhishuHTTP">
+            <summary>
+            指数二级域名
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.zhishuHTTP_">
+            <summary>
+            指数二级域名
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.searchHTTP">
+            <summary>
+            搜索
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.searchHTTP_">
+            <summary>
+            搜索
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.tupianHTTP_">
+            <summary>
+            图片二级域名
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.tupianHTTP">
+            <summary>
+            图片二级域名
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.infoHTTP">
+            <summary>
+            仅兼容
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.infoHTTP_">
+            <summary>
+            仅兼容
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.zycmmtHTTP">
+            <summary>
+            http://www.zycmmt.com
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.zycmmtHTTP_">
+            <summary>
+            http://www.zycmmt.com/
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.img">
+            <summary>
+            img.domain.com
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.imgHTTP">
+            <summary>
+            http://img.domain.com
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.imgHTTP_">
+            <summary>
+            http://img.domain.com/
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.upay">
+            <summary>
+            upay.domain.com
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.upayHTTPS">
+            <summary>
+            https://upay.domain.com
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.upayHTTPS_">
+            <summary>
+            https://upay.domain.com/
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.bbs">
+            <summary>
+            bbs.domain.com
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.bbsHTTP">
+            <summary>
+            http://bbs.domain.com
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.bbsHTTP_">
+            <summary>
+            http://bbs.domain.com/
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.hitHTTP_">
+            <summary>
+            http://hit.domain.com/
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.fs">
+            <summary>
+            fs.domain.com
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.fsHTTP">
+            <summary>
+            http://fs.domain.com
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.fsHTTP_">
+            <summary>
+            http://fs.domain.com/
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.se">
+            <summary>
+            se.domain.com
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.seHTTP">
+            <summary>
+            http://se.domain.com
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.seHTTP_">
+            <summary>
+            http://se.domain.com/
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.mall">
+            <summary>
+            mall.domain.com
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.mallHTTP">
+            <summary>
+            http://mall.domain.com
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.mallHTTP_">
+            <summary>
+            http://mall.domain.com/
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.mmt">
+            <summary>
+            mmt.domain.com
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.mmtHTTP">
+            <summary>
+            http://mmt.domain.com
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.mmtHTTP_">
+            <summary>
+            http://mmt.domain.com/
+            </summary>
+        </member>
+        <member name="M:EIIP.DN.Info_Url(System.Boolean,System.Int32,System.Text.StringBuilder)">
+            <summary>
+            获取信息主题页URL。
+            </summary>
+            <param name="isBBS">设置是否BBS主题</param>
+            <param name="topicID">主题ID</param>
+            <param name="writer">写入器</param>
+        </member>
+        <member name="M:EIIP.DN.Info_Url(System.Boolean,System.Int32,System.Int32,System.Text.StringBuilder)">
+            <summary>
+            获取信息主题页URL。
+            </summary>
+            <param name="isBBS">设置是否BBS主题</param>
+            <param name="topicID">主题ID</param>
+            <param name="pageIndex">评论页索引</param>
+            <param name="writer">写入器</param>
+        </member>
+        <member name="M:EIIP.DN.Info_Url(System.Boolean,System.Int32,System.Int32,System.Int32,System.Text.StringBuilder)">
+            <summary>
+            获取信息主题页URL。
+            </summary>
+            <param name="isBBS">设置是否BBS主题</param>
+            <param name="topicID">主题ID</param>
+            <param name="pageIndex">评论页索引</param>
+            <param name="id2">主题功能索引</param>
+            <param name="writer">写入器</param>
+        </member>
+        <member name="T:EIIP.DN.Expression">
+            <summary>
+            域名关联的正则表达式。
+            </summary>
+        </member>
+        <member name="F:EIIP.DN.Expression.SHOP123">
+            <summary>
+            通用商铺二级域名。
+            </summary>
+            <remarks>
+            <code> @"^shop(\d{3,})\.zyctd\.com$" </code>
+            </remarks>
+        </member>
+        <member name="F:EIIP.DN.Expression.SHOP_CUSTOM">
+            <summary>
+            自定义商铺二级域名。
+            </summary>
+            <remarks>
+            <code> @"^((?!shop[1-9])[\w\.-]{3,})\.zyctd\.com$" </code>
+            </remarks>
+        </member>
+        <member name="T:EIIP.Web.Dictionarys">
+            <summary>
+            字典类。
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Dictionarys.m_Lock">
+            <summary>
+            对象锁
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Dictionarys.AreaDictionary">
+            <summary>
+            获取市场分类字典。
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Dictionarys.PCADictionary">
+            <summary>
+            产地省份
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Dictionarys.CompanyDictionary">
+            <summary>
+            获取市场分类字典。
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Dictionarys.MemberStateDictionary">
+            <summary>
+            获取行业类别字典。
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Dictionarys.MemberDictionary">
+            <summary>
+            获取会员级别字典。
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Dictionarys.Forums">
+            <summary>
+            获取论坛分区数据。
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Type.BBSZone">
+            <summary>
+            定义BBS分区。
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Type.BBSZone.#ctor(System.Int32,System.String)">
+            <summary>
+            实例化BBS分区。
+            </summary>
+            <param name="cataID">分区栏目ID。</param>
+            <param name="cataName">分区栏目名称。</param>
+        </member>
+        <member name="P:EIIP.Web.Type.BBSZone.CataID">
+            <summary>
+            获取分区栏目ID。
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Type.BBSZone.CataName">
+            <summary>
+            获取分区栏目名称。
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Type.BBSZone.Subjects">
+            <summary>
+            获取分区下从属子栏目。
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Type.SupplysFlaglType">
+             <summary>
+             经营时段
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Type.SupplysFlaglType.常年">
+            <summary>
+            常年。
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Type.SupplysFlaglType.季节">
+            <summary>
+             季节性
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Type.SupplysFlaglType.阶段">
+            <summary>
+             阶段
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.DpzsConst">
+            <summary>
+            大盘指数常量类
+            [ 新增 by 祝东华 2013-7-20 am ]
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.DpzsConst.OLDMCODEX_MIN_MID">
+            <summary>
+            旧药材最小编码ID 中间 401999900 - 401999999 表示旧指数
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.DpzsConst.OLDMCODEX_MAX_MID">
+            <summary>
+            旧药材最大编码ID 中间 401999900 - 401999999 表示旧指数
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.DpzsConst.MARKETINDEX_MINID">
+            <summary>
+            大盘指数最小值(401999900)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.DpzsConst.MARKETINDEX_MAXID">
+            <summary>
+            大盘指数最大值(401999999)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.DpzsConst.MARKETINDEX_MINID2">
+            <summary>
+            新版大盘指数最小值(91000000)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.DpzsConst.MARKETINDEX_MAXID2">
+            <summary>
+            新版大盘指数最大值(99999999)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.DpzsConst.MARKETINDEX_MINDay">
+            <summary>
+            大盘指数最小日期值。2007-01-01
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.DpzsConst.MARKETINDEX_BASE">
+            <summary>
+            大盘指数基期指数。
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Library.DpzsConst.DatumDate">
+            <summary>
+            基准日期
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.Tools.EntityConvert">
+            <summary>
+            描述：转换DataReader、DataRow、DataTable为指定的类型对象
+            说明：每个转换与被转换类型存在独立的转换器
+            注意：与反射的不同点
+            1，性能高于反射(如果不判断数据库的Null，则性能可与直接赋值的方式媲美)
+            2，存在多个缓存转换器
+            3，指令流存在固化的冗余指令代码
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.Tools.EntityConvert.ToList``1(System.Data.DataTable)">
+            <summary>
+            转换DataTable为指定的对象列表。
+            </summary>
+            <typeparam name="T">转换类型</typeparam>
+            <param name="dt">被转化对象</param>
+            <returns>默认返回空的列表</returns>
+        </member>
+        <member name="M:EIIP.Web.Library.Tools.EntityConvert.ToItem``1(System.Data.DataRow)">
+            <summary>
+            转换DataRow为指定的对象列表
+            </summary>
+            <typeparam name="T">转换类型</typeparam>
+            <param name="dr">被转化对象</param>
+            <returns>默认返回默认实例对象</returns>
+        </member>
+        <member name="M:EIIP.Web.Library.Tools.EntityConvert.ToItem``1(System.Data.IDataRecord)">
+            <summary>
+            转换DataRecord为指定的对象列表。
+            </summary>
+            <typeparam name="T">转换类型</typeparam>
+            <param name="dr">被转化对象</param>
+            <returns>默认返回默认实例对象</returns>
+        </member>
+        <member name="T:EIIP.Web.Library.Tools.EntityConvert.HandlerCacher">
+            <summary>
+            缓存处理程序
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.Tools.EntityConvert.HandlerCacher.GetDataRowHandler``1">
+            <summary>
+            获取缓存处理器
+            </summary>
+            <typeparam name="T">转换类型</typeparam>
+            <returns>处理器</returns>
+        </member>
+        <member name="M:EIIP.Web.Library.Tools.EntityConvert.HandlerCacher.GetDataRecordHandler``1">
+            <summary>
+            获取缓存处理器
+            </summary>
+            <typeparam name="T">转换类型</typeparam>
+            <returns>处理器</returns>
+        </member>
+        <member name="M:EIIP.Web.Library.Tools.EntityConvert.HandlerCacher.GetCacheKey(System.String,System.Type,System.Type)">
+            <summary>
+            获取缓存键
+            </summary>
+            <param name="methodName">可选方法名称</param>
+            <param name="templateType">处理器类型</param>
+            <param name="entityType">转换的类型</param>
+            <returns>方法名称+处理器类型+转换类型=键</returns>
+        </member>
+        <member name="T:EIIP.Web.Library.Tools.EntityConvert.HandlerCreator">
+            <summary>
+            创建处理程序
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.Tools.EntityConvert.HandlerCreator.CreateMethod``1(EIIP.Web.Library.Tools.EntityConvert.AssemblyInfo)">
+            <summary>
+            发射方法
+            </summary>
+            <typeparam name="T">转换类型</typeparam>
+            <param name="assembly">发射配件</param>
+            <returns>返回转换器方法</returns>
+        </member>
+        <member name="T:EIIP.Web.Library.Tools.EntityConvert.AssemblyInfo">
+            <summary>
+            发射配件
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.Tools.EntityConvert.AssemblyInfo.MethodName">
+            <summary>
+            方法标识名
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.Tools.EntityConvert.AssemblyInfo.SourceType">
+            <summary>
+            转化源类型
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.Tools.EntityConvert.AssemblyInfo.CanSettedMethod">
+            <summary>
+            能否设置方法
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.Tools.EntityConvert.AssemblyInfo.GetValueMethod">
+            <summary>
+            获取值方法
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.Tools.EntityConvert.AssemblyInfo.#ctor(System.Type)">
+            <summary>
+            配件构造
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.Tools.EntityConvert.AssemblyInfo.#ctor(System.String,System.Type)">
+            <summary>
+            配件构造
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.Tools.EntityConvert.AssemblyInfo.CanSetted(System.Data.IDataRecord,System.String)">
+            <summary>
+            是否能赋值
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.Tools.EntityConvert.AssemblyInfo.CanSetted(System.Data.DataRow,System.String)">
+            <summary>
+            是否能赋值
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.Exceptions.DomainException">
+            <summary>
+            业务异常基类
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.Exceptions.DomainException.#ctor(System.String)">
+            <summary>
+            构造
+            </summary>
+            <param name="msg">错误消息</param>
+        </member>
+        <member name="T:EIIP.Web.Function">
+            <summary>
+            json处理方法
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Function.ResponseResult(System.String)">
+            <summary>
+            Author:徐建波
+            Date:2008-1-29
+            数据回发客户端
+            </summary>
+            <param name="content"></param>
+        </member>
+        <member name="M:EIIP.Web.Function.ResponseResult(System.Int32,System.String)">
+            <summary>
+            Author:徐建波
+            Date:2008-1-29
+            数据回发客户端
+            </summary>
+            <param name="state">状态 eiip.web.type.ajaxtype</param>
+            <param name="content"></param>
+        </member>
+        <member name="M:EIIP.Web.Function.ajaxMsg(System.Boolean,System.String)">
+            <summary>
+            服务器返回通用格式
+            </summary>
+            <param name="state">状态 true or false</param>
+            <param name="message">服务器消息</param>
+            <returns></returns>
+        </member>
+        <member name="T:EIIP.Web.Function.Message">
+            <summary>
+            消息类
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Function.Message.#ctor(System.Boolean,System.String)">
+            <summary>
+            消息发送
+            </summary>
+            <param name="state"></param>
+            <param name="msg"></param>
+        </member>
+        <member name="P:EIIP.Web.Function.Message.State">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Function.Message.Msg">
+            <summary>
+            消息
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.JSON">
+            <summary>
+            json转换
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.JSON.ReplaceJson(System.String)">
+            <summary>
+            过滤
+            </summary>
+            <param name="jsondata">jsondata</param>
+            <returns>json</returns>
+        </member>
+        <member name="M:EIIP.Web.JSON.ReplaceHTMLtoJson(System.String)">
+            <summary>
+            过滤 
+            </summary>
+            <param name="htmldata">htmldata</param>
+            <returns>htmlstr</returns>
+        </member>
+        <member name="M:EIIP.Web.JSON.DataTableToJSON(System.Data.DataTable,System.Int32)">
+            <summary>
+            [带字段名称]DataTable 转换成 JSON
+            </summary>
+            <param name="dt">datatable</param>
+            <param name="recordCount">总页数</param>
+            <returns>json字符串 键值对</returns>
+        </member>
+        <member name="M:EIIP.Web.JSON.DataTableToJSON(System.Data.DataTable,System.Int32,System.String[])">
+            <summary>
+            [带字段名称]DataTable 转换成 JSON
+            </summary>
+            <param name="dt">datatable</param>
+            <param name="recordCount">总页数</param>
+            <param name="Columns">列名</param>
+            <returns>json字符串 键值对</returns>
+        </member>
+        <member name="M:EIIP.Web.JSON.DataTableToJSON1(System.Data.DataTable,System.Int32)">
+            <summary>
+            [不带字段名称]DataTable 转换成 JSON
+            </summary>
+            <param name="dt">datatable</param>
+            <param name="recordCount">总页数</param>
+            <returns>json格式 数组</returns>
+        </member>
+        <member name="M:EIIP.Web.JSON.DataTableToJSON1(System.Data.DataTable,System.Int32,System.String[])">
+            <summary>
+            [不带字段名称]DataTable 转换成 JSON
+            </summary>
+            <param name="dt">datatable</param>
+            <param name="recordCount">总页数</param>
+            <param name="Columns">列名</param>
+            <returns>json格式 数组</returns>
+        </member>
+        <member name="T:EIIP.Web.JavaScriptConvert">
+            <summary>
+            转换类
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.JavaScriptConvert.SerializeObject(System.Object)">
+            <summary>
+            序列化json
+            </summary>
+            <param name="obj">obj</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:EIIP.Web.JavaScriptConvert.DeserializeObject(System.Object)">
+            <summary>
+            反序列化json
+            </summary>
+            <param name="obj">obj</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:EIIP.Web.JavaScriptConvert.DeserializeObject(System.Object,System.Type)">
+            <summary>
+            反序列化json
+            </summary>
+            <param name="obj">ojb</param>
+            <param name="stype">stype</param>
+            <returns></returns>
+        </member>
+        <member name="T:EIIP.Web.Library.Helper.DateTimeHelper">
+            <summary>
+            日期助手类
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.Helper.DateTimeHelper.GetDate(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            获取新的时间实例
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.Helper.DateTimeHelper.GetDate(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            获取新的时间实例
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.Helper.DateTimeHelper.ToDate(System.DateTime)">
+            <summary>
+            日期转换(去除时分秒)
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.Helper.EnumHelper">
+            <summary>
+            通用枚举助手类   潘相杨 2012-08-30 
+            </summary>
+            罗欢：由于类型 'EnumHelper' 仅包含“static”成员，因此将它标记为“static”可阻止编译器添加默认公共构造函数。
+        </member>
+        <member name="M:EIIP.Web.Library.Helper.EnumHelper.GetEnumMetaData(System.Enum)">
+            <summary>
+            枚举标记信息获取
+            </summary>
+            <param name="oEnum">指定枚举</param>
+        </member>
+        <member name="M:EIIP.Web.Library.Helper.EnumHelper.GetEnumMetaList(System.Type)">
+            <summary>
+            获取枚举元数据列表
+            </summary>
+            <param name="enumType">指定枚举类型</param>
+        </member>
+        <member name="M:EIIP.Web.Library.Helper.EnumHelper.GetEnumMetaData_Description(System.Enum)">
+            <summary>
+            枚举标记信息获取 - 描述
+            </summary>
+            <param name="oEnum">指定枚举</param>
+        </member>
+        <member name="M:EIIP.Web.Library.Helper.EnumHelper.GetEnumMetaData_Description2(System.Enum)">
+            <summary>
+            枚举标记信息获取 - 描述2
+            </summary>
+            <param name="oEnum">指定枚举</param>
+        </member>
+        <member name="M:EIIP.Web.Library.Helper.EnumHelper.GetEnumMetaData_IsInner(System.Enum)">
+            <summary>
+            枚举标记信息获取 - 是否是内部属性
+            </summary>
+            <param name="oEnum">指定枚举</param>
+        </member>
+        <member name="M:EIIP.Web.Library.Helper.EnumHelper.GetEnumMetaData_Name(System.Enum)">
+            <summary>
+            枚举标记信息获取 - 名称
+            </summary>
+            <param name="oEnum">指定枚举</param>
+        </member>
+        <member name="M:EIIP.Web.Library.Helper.EnumHelper.GetEnumMetaData_Type(System.Enum)">
+            <summary>
+            枚举标记信息获取 - 类型值
+            </summary>
+            <param name="oEnum">指定枚举</param>
+        </member>
+        <member name="M:EIIP.Web.Library.Helper.EnumHelper.GetEnumMetaData_Value(System.Enum)">
+            <summary>
+            枚举标记信息获取 - 枚举值
+            </summary>
+            <param name="oEnum">指定枚举</param>
+        </member>
+        <member name="T:EIIP.Web.Library.Helper.EnumMetadata">
+            <summary>
+            枚举 源数据值
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Library.Helper.EnumMetadata.Description">
+            <summary>
+            获取描述信息。
+            注意：取值失败时 返回 ""
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Library.Helper.EnumMetadata.Description2">
+            <summary>
+            获取描述信息2。
+            注意：取值失败时 返回 ""
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Library.Helper.EnumMetadata.IsInner">
+            <summary>
+             获取一个值，该值指示属性是否为内部属性（即不能显示在外部UI）。
+             注意：取值失败时 返回 false
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Library.Helper.EnumMetadata.Name">
+            <summary>
+            获取枚举名称。
+            注意：取值失败时 返回 ""
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Library.Helper.EnumMetadata.Type">
+            <summary>
+            获取类型值。
+            注意：取值失败时 返回 0
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Library.Helper.EnumMetadata.Value">
+            <summary>
+            获取枚举值。
+            注意：取值失败时 返回 0
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.Helper.NumericHelper">
+            <summary>
+            数字帮助类
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.Helper.NumericHelper.ConvertToInt32(System.String,System.Int32)">
+            <summary>
+            转换字符串为Int32（转换失败则返回默认值，不会抛异常）
+            </summary>
+            <param name="str">字符串</param>
+            <param name="defaultValue">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Library.Helper.NumericHelper.ConvertToDecimal(System.String,System.Decimal)">
+            <summary>
+            转换字符串为decimal（转换失败则返回默认值，不会抛异常）
+            </summary>
+            <param name="str">字符串</param>
+            <param name="defaultValue">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="T:EIIP.Web.Library.Helper.RegularHelper">
+            <summary>
+            正则验证帮助类。 赵睿 2012.08.01
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.Helper.RegularHelper.IsDecimal(System.String)">
+            <summary>
+            是否实数（默认精度9位，刻度2位）
+            </summary>
+            <param name="input">匹配字符串（默认精度9，刻度2）</param>		
+        </member>
+        <member name="M:EIIP.Web.Library.Helper.RegularHelper.IsDecimal(System.String,System.Int32)">
+            <summary>
+            是否是实数（默认精度9位，刻度2位）
+            </summary>
+            <param name="input">匹配字符串</param>
+            <param name="decimalDigit">小数位数（负数时，默认刻度是2位）</param>
+        </member>
+        <member name="M:EIIP.Web.Library.Helper.RegularHelper.IsDecimal(System.String,System.Int32,System.Int32)">
+            <summary>
+            是否是实数
+            </summary>
+            <param name="input">匹配字符串</param>
+            <param name="intDigit">整数部分（负数时，默认是8位）</param>
+            <param name="decimalDigit">小数位数（负数时，默认是2位小数位）</param>
+        </member>
+        <member name="M:EIIP.Web.Library.Helper.RegularHelper.IsMatch(System.String,System.String)">
+            <summary>
+            正则匹配判定（忽略大小写）
+            </summary>
+            <param name="input">匹配字符串</param>
+            <param name="pattern">模式</param>
+        </member>
+        <member name="M:EIIP.Web.Library.Helper.RegularHelper.IsMatch(System.String,System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            正则匹配判定
+            </summary>
+            <param name="input">匹配字符串</param>
+            <param name="pattern">模式</param>
+            <param name="options">匹配选项</param>
+        </member>
+        <member name="T:EIIP.Web.Library.Helper.SerializeHelper">
+            <summary>
+            序列化帮助类
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.Helper.SerializeHelper.JsonSerializer``1(``0)">
+            <summary>
+            JSON 序列化
+            </summary>
+            <param name="t">实例对象</param>
+        </member>
+        <member name="M:EIIP.Web.Library.Helper.SerializeHelper.JsonSerializer(System.Object)">
+            <summary>
+            JSON 序列化
+            </summary>
+            <param name="obj">实例对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Library.Helper.SerializeHelper.JsonDeserialize``1(System.String)">
+            <summary>
+            JSON 反序列化
+            </summary>
+            <param name="json">JSON字符串</param>
+        </member>
+        <member name="M:EIIP.Web.Library.Helper.SerializeHelper.XmlSerializer``1(``0)">
+            <summary>
+            XML序列化
+            </summary>
+            <param name="t">实例对象</param>
+        </member>
+        <member name="M:EIIP.Web.Library.Helper.SerializeHelper.XmlDeserialize``1(System.String)">
+            <summary>
+            XML 反序列化
+            </summary>
+            <param name="str">XML</param>
+        </member>
+        <member name="M:EIIP.Web.Library.Helper.SerializeHelper.DeepClone``1(``0)">
+            <summary>
+            Clone对象 
+            </summary>
+            <param name="t">实例对象</param>
+        </member>
+        <member name="T:EIIP.Web.Library.Helper.TrowExceptionHelper">
+            <summary>
+            抛出异常帮助类。 赵睿 2012.08.02 规范到统一的library下
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.Helper.TrowExceptionHelper.TrowException(System.String,System.Boolean)">
+            <summary>
+            是否抛出异常
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.Helper.TrowExceptionHelper.TrowException(System.Exception,System.Boolean)">
+            <summary>
+            是否抛出异常
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.LogHelper">
+            <summary>
+            LogHelper
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.LogHelper.m_SyncObj">
+            <summary>
+            日志处理类
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.LogHelper.GetExceptionMessage(System.Exception)">
+            <summary>
+            获取异常的消息
+            </summary>
+            <param name="ex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Library.LogHelper.WriteErrorMessage(System.String)">
+            <summary>
+            记录错误信息
+            </summary>
+            <param name="errorMsg"></param>
+        </member>
+        <member name="M:EIIP.Web.Library.LogHelper.WriteInfo(System.Object)">
+            <summary>
+            输出对象，仅供开发时使用
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:EIIP.Web.Library.LogHelper.WriteInfo(System.Object[])">
+            <summary>
+            输出对象，仅供开发时使用
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:EIIP.Web.Library.LogHelper.WriteException(System.Exception)">
+            <summary>
+            记录异常
+            </summary>
+            <param name="ex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Library.LogHelper.ClearHistoryLog(System.Double)">
+            <summary>
+            清除指定天数据日志历史
+            </summary>
+            <param name="days"></param>
+        </member>
+        <member name="P:EIIP.Web.Library.LogHelper.EnableServerExceptionLog">
+            <summary>
+            EnableServerExceptionLog
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Library.LogHelper.ServerExceptionLogFolderPath">
+            <summary>
+            ServerExceptionLogFolderPath
+            </summary>
+        </member>
+        <member name="T:LogTest.ObjectDumper">
+            <summary>
+            测试时使用
+            </summary>
+        </member>
+        <member name="F:LogTest.ObjectDumper.writer">
+            <summary>
+            TextWriter
+            </summary>
+        </member>
+        <member name="M:LogTest.ObjectDumper.Write(System.Object)">
+            <summary>
+            Write
+            </summary>
+            <param name="target"></param>
+        </member>
+        <member name="M:LogTest.ObjectDumper.Write(System.Data.DataTable)">
+            <summary>
+            Write
+            </summary>
+            <param name="target"></param>
+        </member>
+        <member name="M:LogTest.ObjectDumper.Write(System.Object,System.Int32)">
+            <summary>
+            Write
+            </summary>
+            <param name="o"></param>
+            <param name="depth"></param>
+        </member>
+        <member name="T:EIIP.Web.Library.RabbitMQ.MQExchangeType">
+            <summary>
+            消息交换类型
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.RabbitMQ.MQExchangeType.Direct">
+            <summary>
+            路由模式。需要将一个队列绑定到交换机上，要求该消息与一个特定的路由键完全匹配。
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.RabbitMQ.MQExchangeType.Topic">
+            <summary>
+            主题模式。将路由键和某模式进行匹配，此时队列需要绑定要一个模式上。
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.RabbitMQ.MQExchangeType.Fanout">
+            <summary>
+            广播模式。一个发送到交换机的消息都会被转发到与该交换机绑定的所有队列上。
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.RabbitMQ.IMessageQuene">
+            <summary>
+            消息队列接口
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.RabbitMQ.IMessageQuene.MessageQuenePulish(EIIP.Web.Library.RabbitMQ.MessageQueneContext,System.Byte[],System.Boolean,EIIP.Web.Library.RabbitMQ.MQExchangeType)">
+            <summary>
+            队列消息发布
+            </summary>
+            <param name="context">消息队列信息</param>
+            <param name="messageBody">消息内容</param>
+            <param name="durable">是否持久化</param>
+            <param name="exchangeType">交换器模式</param>
+            <returns>是否执行成功</returns>
+        </member>
+        <member name="M:EIIP.Web.Library.RabbitMQ.IMessageQuene.InitiativeConsumer(EIIP.Web.Library.RabbitMQ.MessageQueneContext,System.Boolean)">
+            <summary>
+            队列主动获取模式
+            </summary>
+            <param name="context">消息队列信息</param>
+            <param name="isAck">
+            是否发送回执后执行消息删除。
+            isAck为true时，表示需要回复，在接收到消息后，queue上的消息不会被清除，直到调用channel.basicAck方法，queue上的消息才会被清除；而且，在当前连接断开以前，其它客户端将不能收到此queue上的消息。
+            isAck为false时，表示不需要回复，在接收到消息后，queue上的消息就会清除
+            </param>
+        </member>
+        <member name="M:EIIP.Web.Library.RabbitMQ.IMessageQuene.SubscribeConsumer(EIIP.Web.Library.RabbitMQ.MessageQueneContext,System.Boolean)">
+            <summary>
+            队列订阅模式
+            </summary>
+            <param name="context">消息队列信息</param>
+            <param name="isAck">
+            是否发送回执后执行消息删除。
+            isAck为true时，表示需要回复，在接收到消息后，queue上的消息不会被清除，直到调用channel.basicAck方法，queue上的消息才会被清除；而且，在当前连接断开以前，其它客户端将不能收到此queue上的消息。
+            isAck为false时，表示不需要回复，在接收到消息后，queue上的消息就会清除
+            </param>
+        </member>
+        <member name="T:EIIP.Web.Library.RabbitMQ.MessageQueneContext">
+            <summary>
+            消息队列服务信息
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Library.RabbitMQ.MessageQueneContext.HostName">
+            <summary>
+            队列服务器地址
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Library.RabbitMQ.MessageQueneContext.Port">
+            <summary>
+            端口号
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Library.RabbitMQ.MessageQueneContext.VirtualHost">
+            <summary>
+            虚拟主机
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Library.RabbitMQ.MessageQueneContext.RequestedHeartbeat">
+            <summary>
+            心跳时间设置(秒)
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Library.RabbitMQ.MessageQueneContext.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Library.RabbitMQ.MessageQueneContext.PassWord">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Library.RabbitMQ.MessageQueneContext.ExchangeName">
+            <summary>
+            交换器名
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Library.RabbitMQ.MessageQueneContext.RoutingKey">
+            <summary>
+            路由名
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Library.RabbitMQ.MessageQueneContext.QueneName">
+            <summary>
+            队列名
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.RabbitMQ.MessageQueneContentReadSave">
+            <summary>
+            读取消息队列内容和存储辅助用 
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.RabbitMQ.MessageQueneContentReadSave.res">
+            <summary>
+            读取的消息内容
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.RabbitMQ.MessageQueneContentReadSave.isSave">
+            <summary>
+            是否存储成功
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.RabbitMQ.RabbitMQMessageQuene">
+            <summary>
+            RabbitMQ
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.RabbitMQ.RabbitMQMessageQuene.MQ_Connect_factory">
+            <summary>
+            创建消息队列连接工厂
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.RabbitMQ.RabbitMQMessageQuene.IsRead">
+            <summary>
+            读取消息队列标识  初始化值为false
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.RabbitMQ.RabbitMQMessageQuene.GetExchangeTypeString(EIIP.Web.Library.RabbitMQ.MQExchangeType)">
+            <summary>
+            获取消息交换类型字符串
+            </summary>
+            <param name="exchangeType">消息交换类型</param>
+            <returns>消息交换类型字符串</returns>
+        </member>
+        <member name="M:EIIP.Web.Library.RabbitMQ.RabbitMQMessageQuene.MessageQuenePulish(EIIP.Web.Library.RabbitMQ.MessageQueneContext,System.Byte[],System.Boolean,EIIP.Web.Library.RabbitMQ.MQExchangeType)">
+            <summary>
+            队列消息发布
+            </summary>
+            <param name="context">消息队列信息</param>
+            <param name="messageBody">消息内容</param>
+            <param name="durable">是否持久化</param>
+            <param name="exchangeType">交换器模式</param>
+            <returns>是否执行成功</returns>
+        </member>
+        <member name="M:EIIP.Web.Library.RabbitMQ.RabbitMQMessageQuene.InitiativeConsumer(EIIP.Web.Library.RabbitMQ.MessageQueneContext,System.Boolean,System.Int32)">
+            <summary>
+            队列主动获取模式
+            </summary>
+            <param name="context">消息队列信息</param>
+            <param name="isAck">
+            是否发送回执后执行消息删除。
+            isAck为true时，表示需要回复，在接收到消息后，queue上的消息不会被清除，直到调用channel.basicAck方法，queue上的消息才会被清除；而且，在当前连接断开以前，其它客户端将不能收到此queue上的消息。
+            isAck为false时，表示不需要回复，在接收到消息后，queue上的消息就会清除
+            </param>
+            <param name="DealNum">每次处理条数 队列如果小于指定条数 就处理拥有的条数  例如队列共有100条 每次取DealNum=10条传给委托方法处理 </param>
+        </member>
+        <member name="M:EIIP.Web.Library.RabbitMQ.RabbitMQMessageQuene.SubscribeConsumer(EIIP.Web.Library.RabbitMQ.MessageQueneContext,System.Boolean)">
+            <summary>
+            队列订阅模式
+            </summary>
+            <param name="context">消息队列信息</param>
+            <param name="isAck">
+            是否发送回执后执行消息删除。
+            isAck为true时，表示需要回复，在接收到消息后，queue上的消息不会被清除，直到调用channel.basicAck方法，queue上的消息才会被清除；而且，在当前连接断开以前，其它客户端将不能收到此queue上的消息。
+            isAck为false时，表示不需要回复，在接收到消息后，queue上的消息就会清除
+            </param>
+        </member>
+        <member name="E:EIIP.Web.Library.RabbitMQ.RabbitMQMessageQuene.MessageHandlerEvent">
+            <summary>
+            消息处理事件
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.RabbitMQ.RabbitMQMessageQuene.MessageHandler">
+            <summary>
+            消息处理委托
+            </summary>
+            <param name="DataList">消息内容</param>
+            <param name="ReturnDataList">消息处理情况</param>
+        </member>
+        <member name="T:EIIP.Web.Library.SQLHelperEx">
+            <summary>
+            SQL帮助类
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.SQLHelperEx.AppendSQLCondition``1(System.Text.StringBuilder,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.String,System.Boolean)">
+            <summary>
+            添加SQL条件
+            </summary>
+            <param name="sb"></param>
+            <param name="fieldName"> </param>
+            <param name="value"></param>
+            <param name="isExact"></param>
+        </member>
+        <member name="T:EIIP.Web.Library.StringHelperEx">
+            <summary>
+            字符串帮助类
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.StringHelperEx.ContainChinese(System.String)">
+            <summary>
+            字符串中是否包含中文字符
+            </summary>
+            <param name="oriString">原字符串</param>
+            <returns></returns>
+        </member>
+        <member name="T:EIIP.Web.Library.TestSetting">
+            <summary>
+            用于测试项目
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.TestSetting.IsDevTestMode">
+            <summary>
+            测试项目中将IsTest设为True
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.Tools.Interfaces.IObjectWrapper`1">
+            <summary>
+            定义泛型对象包装器
+            </summary>
+            <typeparam name="T">包装对象类型</typeparam>
+        </member>
+        <member name="M:EIIP.Web.Library.Tools.Interfaces.IObjectWrapper`1.UnWrap">
+            <summary>
+            解包对象
+            </summary>
+            <returns>返回原始对象</returns>
+        </member>
+        <member name="T:EIIP.Web.Library.Tools.Interfaces.IPulginLoader">
+            <summary>
+            定义插件加载器
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.Tools.Interfaces.IPulginLoader.Load(System.Object[])">
+            <summary>
+            加载插件
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.Tools.ObjectWrapper`1">
+            <summary>
+            定义对象包装器
+            </summary>
+            <typeparam name="T">指定包装类型</typeparam>
+        </member>
+        <member name="M:EIIP.Web.Library.Tools.ObjectWrapper`1.#ctor(`0)">
+            <summary>
+            构造
+            </summary>
+            <param name="value">指定类型</param>
+        </member>
+        <member name="M:EIIP.Web.Library.Tools.ObjectWrapper`1.UnWrap">
+            <summary>
+            获取原始对象，必须解包
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Library.Tools.ObjectWrapper`1.UnWrap(`0)">
+            <summary>
+            获取原始对象，必须解包。如果解包对象为Null则返回默认值
+            </summary>
+            <param name="defaultValue">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Library.Tools.ObjectWrapper`1.Equals(System.Object)">
+            <summary>
+            重写Equals
+            </summary>
+            <param name="other">比较对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Library.Tools.ObjectWrapper`1.GetHashCode">
+            <summary>
+            重写HashCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Library.Tools.ObjectWrapper`1.CompareTo(`0)">
+            <summary>
+            提供比较
+            </summary>
+            <param name="other">比较对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Library.Tools.ObjectWrapper`1.ToString">
+            <summary>
+            重写ToString
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EIIP.Web.Library.Tools.ObjectWrapper`1.Value">
+            <summary>
+            原始对象
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Library.Tools.ObjectWrapper`1.HasValue">
+            <summary>
+            是否有值
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.Tools.PulginLoaderManager">
+            <summary>
+            插件加载管理器
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.Tools.PulginLoaderManager.Add(EIIP.Web.Library.Tools.Interfaces.IPulginLoader[])">
+            <summary>
+            添加插件加载器
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.Tools.PulginLoaderManager.Load(System.Object[])">
+            <summary>
+            执行加载插件
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.Tools.ThreadLocalStringBuilder">
+            <summary>
+            线程本地 StringBuiilder
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.Tools.ThreadLocalStringBuilder.#ctor(System.Int32)">
+            <summary>
+            构造
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.Tools.ThreadLocalStringBuilder.GetLocalInitStringBuilder">
+            <summary>
+            获取本地初始化StringBuilder
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.Tools.ThreadLocalStringBuilder.GetLocalStringBuilder">
+            <summary>
+            获取本地StringBuilder
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.Tools.ThreadLocalStringBuilder.GetLocalStringBuilder(System.Boolean)">
+            <summary>
+            获取本地/初始化 StringBuilder
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.UPay.Arithmetic">
+            <summary>
+            通用算法类 赵睿 2012.08.02 规范到统一的library下
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Arithmetic.CalculatePushCodeValue(System.String)">
+            <summary>
+            计算：推送编码--》编码值
+            </summary>
+            <param name="pushCode">推送编码。例如：PHD01</param>
+            <returns>例如：10113112</returns>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Arithmetic.CalculatePushCode(System.Int32)">
+            <summary>
+            计算：编码值--》推送编码
+            </summary>
+            <param name="pushCodeValue">推送编码值。例如：10113112</param>
+            <returns>例如：PHD01</returns>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Arithmetic.CalculatePOrderLogTagCode(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            计算订单阶段表日志标识编码
+            </summary>
+            <param name="opration">操作类别</param>
+            <param name="type">任务类别</param>
+            <param name="behavior">行为类别</param>
+        </member>
+        <member name="T:EIIP.Web.Library.UPay.Formatter">
+            <summary>
+            格式化器。 赵睿 2012.08.02 规范到统一的library下
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Formatter.FormatOrderID(System.Int32,System.DateTime)">
+            <summary>
+            格式化订单编号
+            </summary>
+            <param name="ordID">订单ID</param>
+            <param name="ctime">创建时间</param>
+            <returns>订单编号</returns>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Formatter.FormatCodeByDate(System.Int32,System.DateTime)">
+            <summary>
+            根据日期格式化编号
+            </summary>
+            <param name="identityID">唯一标识ID</param>
+            <param name="date">日期</param>
+            <returns>格式化后的编号：日期+ID</returns>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Formatter.Get_SpecialMobileWithStartFormat(System.String)">
+            <summary>
+            获取带*的手机号
+            </summary>
+            <param name="mobile">手机号</param>
+            <returns>例如：137*****301</returns>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Formatter.Get_SpecialMobileWithStartFormat(System.String,System.String)">
+            <summary>
+            获取带*的手机号
+            </summary>
+            <param name="mobile">手机号</param>
+            <param name="defValue">屏蔽的默认显示</param>
+            <returns>例如：137*****301</returns>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Formatter.Get_SpecialEmailWithStartFormat(System.String)">
+            <summary>
+            获取带*的Email
+            </summary>
+            <param name="email">Email</param>
+            <returns>例如：faves***@163.com</returns>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Formatter.Get_SpecialEmailWithStartFormat(System.String,System.String)">
+            <summary>
+            获取带*的Email
+            </summary>
+            <param name="email">Email</param>
+            <param name="defValue">默认显示</param>
+            <returns>例如：faves***@163.com</returns>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Formatter.GetSpecialAccountNumWithStartFormat(System.String)">
+            <summary>
+            获取带*的银行卡号
+            </summary>
+            <param name="accountNum">银行卡号</param>
+            <returns>例如：622*****179</returns>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Formatter.Get_SpecialAccountNumWithStartFormat(System.String,System.String)">
+            <summary>
+            获取带*的银行卡号
+            </summary>
+            <param name="accountNum">银行卡号</param>
+            <param name="defValue">默认显示</param>
+            <returns>例如：622*****179</returns>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Formatter.Get_SpecialUserNameWithStartFormat(System.String)">
+            <summary>
+            获取带*的用户名称(兼容目前：手机，姓名2种账户名称)
+            </summary>
+            <param name="userName">用户名</param>
+            <returns>例如：赵*** 或 137*****301</returns>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Formatter.Get_SpecialUserNameWithStartFormat(System.String,System.String)">
+            <summary>
+            获取带*的用户名称
+            </summary>
+            <param name="userName">用户名</param>
+            <param name="defValue">默认显示</param>
+            <returns>例如：赵***</returns>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Formatter.Get_SpecialFormat(System.String,System.String,System.String,System.String)">
+            <summary>
+            获取特殊的格式化字符串
+            </summary>
+            <param name="value">需格式化字符串</param>
+            <param name="pattren">正则模板</param>
+            <param name="replace">替换</param>
+            <param name="defValue">默认值</param>
+            <returns>格式化字符串</returns>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Formatter.Get_SpecialFormat(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取特殊的格式化字符串
+                将该value字符串的一定区域内 转换成指定 replace
+            </summary>
+            <param name="value">待格式化的字符串</param>
+            <param name="replace">用于替换的字符串</param>
+            <param name="start">起始位置</param>
+            <param name="end">结束位置</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Formatter.Get_SpecialFormat(System.String,System.Int32)">
+            <summary>
+            格式化字符串的长度
+            </summary>
+            <param name="value"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EIIP.Web.Library.UPay.RegularHelper">
+            <summary>
+            正则验证帮助类。 赵睿 2012.08.01
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.RegularHelper.IsDecimal(System.String)">
+            <summary>
+            是否实数（默认精度9位，刻度2位）
+            </summary>
+            <param name="input">匹配字符串（默认精度9，刻度2）</param>		
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.RegularHelper.IsDecimal(System.String,System.Int32)">
+            <summary>
+            是否是实数（默认精度9位，刻度2位）
+            </summary>
+            <param name="input">匹配字符串</param>
+            <param name="decimalDigit">小数位数（负数时，默认刻度是2位）</param>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.RegularHelper.IsDecimal(System.String,System.Int32,System.Int32)">
+            <summary>
+            是否是实数
+            </summary>
+            <param name="input">匹配字符串</param>
+            <param name="intDigit">整数部分（负数时，默认是8位）</param>
+            <param name="decimalDigit">小数位数（负数时，默认是2位小数位）</param>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.RegularHelper.IsMatch(System.String,System.String)">
+            <summary>
+            正则匹配判定（忽略大小写）
+            </summary>
+            <param name="input">匹配字符串</param>
+            <param name="pattern">模式</param>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.RegularHelper.IsMatch(System.String,System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            正则匹配判定
+            </summary>
+            <param name="input">匹配字符串</param>
+            <param name="pattern">模式</param>
+            <param name="options">匹配选项</param>
+        </member>
+        <member name="T:EIIP.Web.Library.UPay.RSA">
+            <summary>
+            非对称加密类 赵睿 2012.08.02 规范到统一的library下
+            暂时使用，有能干的人可以创建Active控件来做。
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.RSA.ExportPublicKeyPair">
+            <summary>
+            导出公钥
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.RSA.Decrypt(System.String)">
+            <summary>
+            加密
+            </summary>
+            <param name="encryptString">需加密文本</param>
+            <returns>加密文本</returns>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.RSA.BytesToHexString(System.Byte[])">
+            <summary>
+            转为16进制
+            </summary>
+            <param name="input">字节组</param>
+        </member>
+        <member name="T:EIIP.Web.Library.UPay.RSA.RSAPublicKeyPair">
+            <summary>
+            公钥对
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Library.UPay.RSA.RSAPublicKeyPair.Exponent">
+            <summary>
+            算法Exponent参数
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Library.UPay.RSA.RSAPublicKeyPair.Module">
+            <summary>
+            算法Module参数
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.UPay.SessionManager">
+            <summary>
+            Session管理类 赵睿 2012.07.31
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.SessionManager.Verify_NonNullOrEmpty(System.String)">
+            <summary>
+            验证Key
+            </summary>
+            <param name="key">键</param>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.SessionManager.Set``1(System.String,``0)">
+            <summary>
+            设置Value
+            </summary>
+            <param name="key">键</param>
+            <param name="t">泛型对象</param>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.SessionManager.Set``1(System.String,``0,System.Int32)">
+            <summary>
+            设置Value
+            </summary>
+            <param name="key">键</param>
+            <param name="t">泛型对象</param>
+            <param name="time">过期时间(分钟)</param>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.SessionManager.Get``1(System.String)">
+            <summary>
+            获取Value
+            </summary>
+            <param name="key">键</param>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.SessionManager.Remove(System.String)">
+            <summary>
+            移除指定的键值
+            </summary>
+            <param name="key">键</param>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.SessionManager.RemoveByTag(System.String)">
+            <summary>
+            根据标志前缀移除键/值
+            </summary>
+            <param name="tag">标志前缀</param>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.SessionManager.Clear">
+            <summary>
+            清空
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.UPay.SessionManager.SessionKey">
+            <summary>
+            常量键
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.SessionManager.SessionKey.DEFAULT_DURING_TIME">
+            <summary>
+            默认Session过期时间
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.SessionManager.SessionKey.MOBILE_RETRIEVE_PASSWORD_TAG">
+            <summary>
+            手机找回密码键：TAG
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.SessionManager.SessionKey.MOBILE_RETRIEVE_PASSWORD_SMSMOBILE">
+            <summary>
+            手机找回密码键：SMSMOBILE
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.SessionManager.SessionKey.MOBILE_RETRIEVE_PASSWORD_VCODE">
+            <summary>
+            手机找回密码键：VCODE
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.SessionManager.SessionKey.EMAIL_RETRIEVE_PASSWORD_TAG">
+            <summary>
+            邮箱找回密码键：TAG
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.SessionManager.SessionKey.EMAIL_RETRIEVE_PASSWORD_EMAIL">
+            <summary>
+            邮箱找回密码键：EMAIL
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.SessionManager.SessionKey.EMAIL_RETRIEVE_PASSWORD_ACODE">
+            <summary>
+            邮箱找回密码键：ACODE
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.UPay.PageCategory">
+            <summary>
+            页类型 赵睿：2012.08.01
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.PageCategory.其他">
+            <summary>
+            其他 = 0
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.PageCategory.产品">
+            <summary>
+            产品 = 1
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.PageCategory.订单">
+            <summary>
+            订单 = 2
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.PageCategory.商铺">
+            <summary>
+            商铺 = 3
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.PageCategory.举报申诉">
+            <summary>
+            举报申诉 = 5
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.UPay.PageUrlMetadata">
+            <summary>
+            页Url元数据 赵睿：2012.08.01
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.PageUrlMetadata.Index_aspx">
+            <summary>
+            网站首页 0
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.PageUrlMetadata.Default_aspx">
+            <summary>
+            网站默认页 100
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.PageUrlMetadata.LoginForm_aspx">
+            <summary>
+            后台首页 2
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.PageUrlMetadata.MainForm_aspx">
+            <summary>
+            产品首页 3
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.PageUrlMetadata.Info_Article_aspx">
+            <summary>
+            咨询信息 4
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.PageUrlMetadata.Product_Index_aspx">
+            <summary>
+            产品首页 100
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.PageUrlMetadata.Product_List_aspx">
+            <summary>
+            产品列表页 100
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.PageUrlMetadata.Product_ItemDetails_aspx">
+            <summary>
+            产品详情页 100
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.PageUrlMetadata.Order_OrderDetails_aspx">
+            <summary>
+            订单详情页 200
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.PageUrlMetadata.Order_Pay_aspx">
+            <summary>
+            订单支付页 200
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.PageUrlMetadata.Order_PaySucceed_aspx">
+            <summary>
+            订单支付成功页 200
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.PageUrlMetadata.Order_ContractForm_aspx">
+            <summary>
+            申请合约页 220
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.PageUrlMetadata.Order_ContractDetails_aspx">
+            <summary>
+            合约详情页 221
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.PageUrlMetadata.Site_Index_aspx">
+            <summary>
+            商铺首页 300
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.PageUrlMetadata.Complain_Product_aspx">
+            <summary>
+            举报商品 500
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.PageUrlMetadata.Complain_Product_List">
+            <summary>
+            举报商品 505
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.UPay.SiteMap">
+            <summary>
+            站点地图 赵睿：2012.08.01
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.SiteMap.Redirect(EIIP.Web.Library.UPay.PageUrlMetadata,System.String[])">
+            <summary>
+            导航
+            	1：可先拼接好参数传入：
+            	2: 可直接传入传递参数：
+            </summary>
+            <param name="urlMetadate">Url元数据</param>
+            <param name="parameters">Query参数</param>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.SiteMap.Get_FullPageUrlWithParameter(EIIP.Web.Library.UPay.PageUrlMetadata,System.String[])">
+            <summary>
+            获取带参的页面完整Url
+            </summary>
+            <param name="urlMetadate">Url元数据</param>
+            <param name="parameters">Query参数</param>
+            <returns>带参的页面全路径</returns>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.SiteMap.Get_PageName(EIIP.Web.Library.UPay.PageUrlMetadata)">
+            <summary>
+            获取页名称描述
+            </summary>
+            <param name="urlMetadate">Url元数据</param>
+            <returns>页名称描述</returns>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.SiteMap.Get_RelativelyPageUrl(EIIP.Web.Library.UPay.PageUrlMetadata)">
+            <summary>
+            获取页的相对Url
+            </summary>
+            <param name="urlMetadate">Url元数据</param>
+            <returns>相对Url</returns>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.SiteMap.Get_FullPageUrl(EIIP.Web.Library.UPay.PageUrlMetadata)">
+            <summary>
+            获取页的完整Url
+            </summary>
+            <param name="urlMetadate">Url元数据</param>
+            <returns>完整Url</returns>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.SiteMap.Get_ClassIndex(EIIP.Web.Library.UPay.PageUrlMetadata)">
+            <summary>
+            获取页类型索引
+            </summary>
+            <param name="urlMetadate">Url元数据</param>
+            <returns>类型索引</returns>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.SiteMap.Get_PageCategory(EIIP.Web.Library.UPay.PageUrlMetadata)">
+            <summary>
+            获取页类型
+            </summary>
+            <param name="urlMetadate">Url元数据</param>
+            <returns>Url元数据值</returns>
+        </member>
+        <member name="T:EIIP.Web.Library.UPay.SiteMapHelper">
+            <summary>
+            站点地图帮助类（快捷通用的Url地址） 赵睿：2012.08.01
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.SiteMapHelper.Get_IndexUrl(System.Guid)">
+            <summary>
+            首页
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.SiteMapHelper.Get_InfoArticleUrl(System.Int32)">
+            <summary>
+            咨询页
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.SiteMapHelper.Get_ProductItemDetailsUrl(System.Guid)">
+            <summary>
+            产品详情
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.SiteMapHelper.Get_ProductItemDetailsUrl(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            产品详情拼接不包含skuid
+            修改：陈镭升 crl-1038 伪静态相关修改 20131013
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.SiteMapHelper.Get_ProductItemDetailsUrl(System.Int32,System.Int32,System.Int32,System.Guid)">
+             <summary>
+            产品详情拼接包含skuid
+            修改：陈镭升 crl-1038 伪静态相关修改 20131013
+             </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.SiteMapHelper.Get_ProductItemDetailsPseudoUrl(System.String,System.String,System.String)">
+            <summary>
+            获取商品详情页URL地址
+            </summary>
+            <param name="skuID">商品SKUID</param>
+            <param name="shopID">店铺ID</param>
+            <param name="mbID">药品ID</param>
+            <returns>商品详情页URL地址</returns>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.SiteMapHelper.Get_ProductListUrl(System.Int32)">
+            <summary>
+            产品列表
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.SiteMapHelper.Get_ProductListUrl(System.String)">
+            <summary>
+            产品列表
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.SiteMapHelper.Get_ContractFormUrl(System.Guid,System.Guid)">
+            <summary>
+            合约申请
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.SiteMapHelper.Get_ContractDetailsUrl(System.Guid)">
+            <summary>
+            合约详情
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.SiteMapHelper.Get_PayUrl(System.Guid)">
+            <summary>
+            支付页面
+            </summary>
+            <param name="Ord_g">订单ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.SiteMapHelper.Get_SiteIndexUrl(System.Guid)">
+            <summary>
+            商铺首页
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.SiteMapHelper.ComplainProductUrl(System.Guid)">
+            <summary>
+            产品举报
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.SiteMapHelper.ComplainProductListUrl(EIIP.Web.Library.UPay.SiteMapHelper.ReportCenterListPageType)">
+            <summary>
+            举报列表页
+            </summary>
+            <param name="pType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EIIP.Web.Library.UPay.SiteMapHelper.ReportCenterListPageType">
+            <summary>
+            举报列表页分类类别
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.SiteMapHelper.ReportCenterListPageType.待处理">
+            <summary>
+            待处理 = 5
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.SiteMapHelper.ReportCenterListPageType.受理中">
+            <summary>
+            受理中 = 10
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.SiteMapHelper.ReportCenterListPageType.已完结">
+            <summary>
+            已完结 = 15
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.UPay.TrowExceptionHelper">
+            <summary>
+            抛出异常帮助类。 赵睿 2012.08.02 规范到统一的library下
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.TrowExceptionHelper.TrowException(System.String,System.Boolean)">
+            <summary>
+            是否抛出异常
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.TrowExceptionHelper.TrowException(System.Exception,System.Boolean)">
+            <summary>
+            是否抛出异常
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.UPay.Utilities.EncryptionHelper">
+            <summary>
+            加密辅助类 赵睿 2012/08/22
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Utilities.EncryptionHelper.Encrypt(System.String)">
+            <summary>
+            加密
+            </summary>
+            <param name="encryptionText">明文</param>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Utilities.EncryptionHelper.Decrypt(System.String)">
+            <summary>
+            解密
+            </summary>
+            <param name="encryptionText">密文</param>
+        </member>
+        <member name="P:EIIP.Web.Library.UPay.Utilities.EncryptionHelper.Key">
+            <summary>
+            Key
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Library.UPay.Utilities.EncryptionHelper.IV">
+            <summary>
+            IV
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.UPay.Utilities.EncryptTransform">
+            <summary>
+            加密转换 赵睿 2012/08/22
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.Utilities.EncryptTransform.m_Key">
+            <summary>
+            密钥
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.Utilities.EncryptTransform.m_IV">
+            <summary>
+            密钥向量IV
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Utilities.EncryptTransform.#ctor(System.Byte[],System.Byte[])">
+            <summary>
+            构造
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Utilities.EncryptTransform.Encrypt(System.Byte[])">
+            <summary>
+            加密
+            </summary>
+            <param name="bytesData">加密字节</param>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Utilities.EncryptTransform.Decrypt(System.Byte[])">
+            <summary>
+            解密
+            </summary>
+            <param name="bytesData">解密字节</param>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Utilities.EncryptTransform.Verfiy(System.Byte[],System.Byte[])">
+            <summary>
+            验证密钥
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.UPay.Utilities.NumericHelper">
+            <summary>
+            工具类 赵睿
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Utilities.NumericHelper.ConvertToInt32(System.String,System.Int32)">
+            <summary>
+            转换字符串为Int32（转换失败则返回默认值，不会抛异常）
+            </summary>
+            <param name="str">字符串</param>
+            <param name="defaultValue">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Utilities.NumericHelper.ConvertToDecimal(System.String,System.Decimal)">
+            <summary>
+            转换字符串为decimal（转换失败则返回默认值，不会抛异常）
+            </summary>
+            <param name="str">字符串</param>
+            <param name="defaultValue">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="T:EIIP.Web.Library.Utilities.SerializeHelper">
+            <summary>
+            序列化帮助类（EIIP序列化Json格式测试不正确）赵睿 2012.08.02
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.Utilities.SerializeHelper.JsonSerializer``1(``0)">
+            <summary>
+            JSON 序列化
+            </summary>
+            <param name="t">实例对象</param>
+        </member>
+        <member name="M:EIIP.Web.Library.Utilities.SerializeHelper.JsonDeserialize``1(System.String)">
+            <summary>
+            JSON 反序列化
+            </summary>
+            <param name="json">JSON字符串</param>
+        </member>
+        <member name="M:EIIP.Web.Library.Utilities.SerializeHelper.XmlSerializer``1(``0)">
+            <summary>
+            XML序列化
+            </summary>
+            <param name="t">实例对象</param>
+        </member>
+        <member name="M:EIIP.Web.Library.Utilities.SerializeHelper.XmlDeserialize``1(System.String)">
+            <summary>
+            XML 反序列化
+            </summary>
+            <param name="str">XML</param>
+        </member>
+        <member name="M:EIIP.Web.Library.Utilities.SerializeHelper.DeepClone``1(``0)">
+            <summary>
+            Clone对象 
+            </summary>
+            <param name="t">实例对象</param>
+        </member>
+        <member name="T:EIIP.Web.Library.UPay.Web.FaultEntity">
+            <summary>
+            失败错误类 赵睿 2012/08/22
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Web.FaultEntity.#ctor">
+            <summary>
+            构造
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Web.FaultEntity.#ctor(System.Exception)">
+            <summary>
+            构造
+            </summary>
+            <param name="ex">异常类实例</param>
+        </member>
+        <member name="P:EIIP.Web.Library.UPay.Web.FaultEntity.Source">
+            <summary>
+            获取或设置导致错误的应用程序或对象的名称。
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Library.UPay.Web.FaultEntity.Message">
+            <summary>
+            获取描述当前异常的消息。
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Library.UPay.Web.FaultEntity.StackTrace">
+            <summary>
+            获取调用堆栈上直接帧的字符串表示形式。
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.UPay.Web.ServiceAuthHelper">
+            <summary>
+            认证 赵睿 2012/08/23
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.Web.ServiceAuthHelper.AUTH_TOKEN">
+            <summary>
+            令牌
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Web.ServiceAuthHelper.GetAuthUrlParameters(System.String,System.Collections.Generic.List{EIIP.Web.Library.UPay.Web.UrlParameter})">
+            <summary>
+            获取包含认证的参数集
+            </summary>
+            <param name="url">Url</param>
+            <param name="lstUrlParameter">查询参数集</param>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Web.ServiceAuthHelper.Signature(System.String)">
+            <summary>
+            签名Url
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Web.ServiceAuthHelper.Signature(System.Byte[])">
+            <summary>
+            签名
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Web.ServiceAuthHelper.VerifySignature(System.String,System.String)">
+            <summary>
+            验证签名
+            </summary>
+            <param name="sign">签名</param>
+            <param name="url">含签名URL</param>
+        </member>
+        <member name="T:EIIP.Web.Library.UPay.Web.UrlHelper">
+            <summary>
+            Url 帮助类 赵睿 2012/08/22
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Web.UrlHelper.UrlEncodeUnicode(System.String)">
+            <summary>
+            编码查询参数
+            </summary>
+            <param name="queryString">查询参数</param>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Web.UrlHelper.Combine(System.String[])">
+            <summary>
+            组合完整的Url地址
+            </summary>
+            <param name="urls">Url各段</param>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Web.UrlHelper.ConvertToQueryString(System.Collections.Generic.List{EIIP.Web.Library.UPay.Web.UrlParameter})">
+            <summary>
+            转换参数列表--》查询字符串
+            </summary>
+            <param name="lstParameter">参数集</param>
+            <returns>查询字符串</returns>
+        </member>
+        <member name="T:EIIP.Web.Library.UPay.Web.HttpMethod">
+            <summary>
+            HttpMethod 赵睿 2012/08/22
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.Web.HttpMethod.GET">
+            <summary>
+            GET
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.Web.HttpMethod.POST">
+            <summary>
+            POST
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.UPay.Web.UrlParameter">
+            <summary>
+            Url参数类 赵睿 2012/08/22
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Web.UrlParameter.#ctor(System.String,System.String)">
+            <summary>
+            构造
+            </summary>
+            <param name="key">键</param>
+            <param name="value">值</param>
+        </member>
+        <member name="P:EIIP.Web.Library.UPay.Web.UrlParameter.Key">
+            <summary>
+            键
+            </summary>
+        </member>
+        <member name="P:EIIP.Web.Library.UPay.Web.UrlParameter.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.UPay.Web.ServiceManager`1">
+            <summary>
+            服务 赵睿 2012/08/22
+            </summary>
+            <typeparam name="T">服务类型（通讯）</typeparam>
+        </member>
+        <member name="P:EIIP.Web.Library.UPay.Web.ServiceManager`1.Instance">
+            <summary>
+            服务类实例
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.UPay.Web.ServiceUrlHelper">
+            <summary>
+            服务地址帮助类 赵睿 2012/08/22
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Web.ServiceUrlHelper.GetServiceUrl(EIIP.Web.Library.UPay.Web.ServiceUrlType)">
+            <summary>
+            获取服务Url
+            </summary>
+            <param name="serviceUrlType">服务Url类型</param>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Web.ServiceUrlHelper.GetFullServiceUrl(System.String,EIIP.Web.Library.UPay.Web.ServiceUrlType)">
+            <summary>
+            获取服务地址类型，获取完成的服务Url
+            </summary>
+            <param name="baseUrl">基地址</param>
+            <param name="serviceUrlType">服务Url类型</param>
+            <returns>返回完整的服务Url</returns>
+        </member>
+        <member name="T:EIIP.Web.Library.UPay.Web.ServiceUrlType">
+            <summary>
+            服务 Url 类型 赵睿 2012/08/22
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.Web.ServiceUrlType.天地网药品最新采集价格">
+            <summary>
+            天地网药品最新采集价格
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.UPay.Web.SyncHttp">
+            <summary>
+            Http 同步请求 赵睿 2012/08/21
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Web.SyncHttp.HttpGet(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            同步方式发起http get请求
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.UPay.Web.SyncHttp.HttpPost(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            同步方式发起http post请求
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.UPay.ModuleCRM">
+            <summary>
+            买卖通权限枚举 供UIHelper使用
+            陈利 2013-10-16
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.UPay.ModuleCRM.工作流启用Ukey">
+            <summary>
+            工作流启用Ukey
+            </summary> 
+        </member>
+        <member name="T:EIIP.Web.Library.Utility">
+            <summary>
+            实用工具类。
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.Utility.DelayDays">
+            <summary>
+            非VIP会员的延时天数(-15)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.Utility.AreaIDs">
+            <summary>
+            可用的市场ID集合。
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.Utility.InfoCataShowInBBS">
+            <summary>
+            信息中心到论坛中显示的栏目ID集合。
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.Utility.Style">
+            <summary>
+            会员模板样式
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.Utility.MaxHeadID">
+            <summary>
+            最大头像数量。
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.Utility.GetUsersDefaultAreaID(EIIP.Framework.User.UserSkeleton)">
+            <summary>
+            获取指定用户缺省所属的公司(市场)ID。不属于任何公司(市场)时，返回0。
+            </summary>
+            <param name="user">用户</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Library.Utility.GetIPValue(System.String)">
+            <summary>
+            获取IP地址值。
+            </summary>
+            <param name="ip">IP地址字串</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Library.Utility.Days(System.DateTime)">
+            <summary>
+            获取指定日期总天数。
+            </summary>
+            <param name="dt">日期</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Library.Utility.GetPrice(System.String)">
+            <summary>
+            提取首个价格。
+            </summary>
+            <param name="scopePrice"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Library.Utility.GetPriceLength(System.String)">
+            <summary>
+            提取首个价格。
+            </summary>
+            <param name="scopePrice2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Library.Utility.GetNoPic">
+            <summary>
+            获取无图片时的默认显示图片。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Library.Utility.GetNoPicUrl">
+            <summary>
+            获取无图片时的默认显示图片。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Library.Utility.GetNoPic(System.Text.StringBuilder)">
+            <summary>
+            获取无图片时的默认显示图片。
+            </summary>
+            <param name="writer">输出缓存</param>
+        </member>
+        <member name="M:EIIP.Web.Library.Utility.GetNoPicUrl(System.Text.StringBuilder)">
+            <summary>
+            获取无图片时的默认显示图片。
+            </summary>
+            <param name="writer">输出缓存</param>
+        </member>
+        <member name="M:EIIP.Web.Library.Utility.ResolveImgUrl(System.String)">
+            <summary>
+            解析图片地址。
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Library.Utility.GetImgUrl(System.String)">
+            <summary>
+            解析图片地址。
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Library.Utility.ParseSubDomain(System.String,System.Int32@)">
+            <summary>
+            解析主机名，返回个人ID或合法二级域名。
+            </summary>
+            <param name="host">主机名</param>
+            <param name="perID">返回个人ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Library.Utility.ReplaceFileNameExtension(System.String,System.String)">
+            <summary>
+            替换文件扩展名。
+            </summary>
+            <param name="pathFileName">文件名，可带路径</param>
+            <param name="newExtension">新的扩展名，可以带'.'</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Library.Utility.IsPicWithoutWatermark(System.String)">
+            <summary>
+            测试是否不须加水印。
+            </summary>
+            <param name="fileName">文件名路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Library.Utility.IsExtensionWithZYCTDWatermark(System.String)">
+            <summary>
+            测试是否不须加水印的扩展名。
+            </summary>
+            <param name="extension"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Library.Utility.IsMobileNumber(System.String)">
+            <summary>
+            是否为手机号
+            </summary>
+            <param name="mobile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Library.Utility.Escape(System.String)">
+            <summary>
+            中文转码
+            </summary>
+            <param name="s">需编码的中文字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Web.Library.Utility.GenerateShortUrl(System.String,System.Int32)">
+            <summary>
+            生成短网址
+            </summary>
+            <param name="realUrl">真实地址</param>
+            <param name="site">2:天地网 8:买卖通</param>
+            <returns>短网址</returns>
+        </member>
+        <member name="M:EIIP.Web.Library.Utility.EscapeHtmlString(System.String)">
+            <summary>
+            转义html特殊字符串，供javascript使用
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EIIP.Web.Library.Info">
+            <summary>
+            基本信息类。
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.Info.Company">
+            <summary>
+            公司名称
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.Info.Author">
+            <summary>
+            作者
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.Info.Name">
+            <summary>
+            产品代号
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.Info.CurrentVerCode">
+            <summary>
+            当前版本代号
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.Info.IDCard">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="T:EIIP.Web.Library.VersionInfo">
+            <summary>
+            产品版本信息
+            </summary>
+        </member>
+        <member name="F:EIIP.Web.Library.VersionInfo.WEB">
+            <summary>
+            WEB 版本
+            </summary>
+        </member>
+        <member name="M:EIIP.Web.Library.VersionInfo.ToString">
+            <summary>
+            产品版本信息
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

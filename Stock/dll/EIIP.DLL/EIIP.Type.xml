@@ -1,0 +1,5266 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EIIP.Type</name>
+    </assembly>
+    <members>
+        <member name="T:EIIP.Type.BASE.ForbiddenFlag">
+            <summary>
+            指示某一禁用标志。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ForbiddenFlag.保护级">
+            <summary>
+            保护级
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ForbiddenFlag.系统级">
+            <summary>
+            系统级
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ForbiddenFlag.日期范围">
+            <summary>
+            日期范围
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ForbiddenFlag.时间范围">
+            <summary>
+            时间范围
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.BASE.ForbiddenType">
+            <summary>
+            指定禁用项某一类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ForbiddenType.IP">
+            <summary>
+            IP
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ForbiddenType.EMail">
+            <summary>
+            电子邮件
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ForbiddenType.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.BASE.ImageRepositoryType">
+            <summary>
+            图片库类型。
+            </summary>
+            <remarks>与 BASE 表中 BASTypeID 匹配</remarks>
+        </member>
+        <member name="F:EIIP.Type.BASE.ImageRepositoryType.通用库">
+            <summary>
+            通用库
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ImageRepositoryType.基础库">
+            <summary>
+            基础库
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ImageRepositoryType.资源库">
+            <summary>
+            资源库
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ImageRepositoryType.广告库">
+            <summary>
+            广告库
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ImageRepositoryType.商品库">
+            <summary>
+            商品库
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ImageRepositoryType.产品库">
+            <summary>
+            产品库
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ImageRepositoryType.个人库">
+            <summary>
+            个人库
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ImageRepositoryType.药典库">
+            <summary>
+            药典库
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.BASE.PCAddress">
+            <summary>
+            省市县地址类。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.PCAddress.Province">
+            <summary>
+            省
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.PCAddress.City">
+            <summary>
+            市
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.PCAddress.Area">
+            <summary>
+            县
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.PCAddress.Other">
+            <summary>
+            街道等其他内容
+            </summary>
+        </member>
+        <member name="M:EIIP.Type.BASE.PCAddress.#ctor">
+            <summary>
+            实例化缺省省市县地址。
+            </summary>
+        </member>
+        <member name="M:EIIP.Type.BASE.PCAddress.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            实例化指定省市县地址。
+            </summary>
+            <param name="province">省</param>
+            <param name="city">市</param>
+            <param name="area">县</param>
+            <param name="other">街道等其他内容</param>
+        </member>
+        <member name="M:EIIP.Type.BASE.PCAddress.ToString">
+            <summary>
+            获取完整地址描述。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EIIP.Type.BASE.PCAType">
+            <summary>
+            指示某一省市县的类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.PCAType.None">
+            <summary>
+            不可识别的类型
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.PCAType.Province">
+            <summary>
+            省
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.PCAType.City">
+            <summary>
+            市
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.PCAType.Area">
+            <summary>
+            县
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.BASE.Flag">
+            <summary>
+            指定基本表的某一标志。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Flag.受保护">
+            <summary>
+            受保护
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Flag.系统级">
+            <summary>
+            系统级,一般不允许用户更改
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.BASE.NodeFlag">
+            <summary>
+            指示某一节点标志。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.NodeFlag.保护级">
+            <summary>
+            保护级
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.NodeFlag.系统级">
+            <summary>
+            系统级
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.NodeFlag.停用">
+            <summary>
+            停用。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.NodeFlag.待定2">
+            <summary>
+            待定2。0x0F 均为保留位。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.NodeFlag.待定3">
+            <summary>
+            待定3。0x0F 均为保留位。
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.BASE.ReferFlag">
+            <summary>
+            指定对照表字段的某一标志。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ReferFlag.系统级">
+            <summary>
+            系统级
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.BASE.ReferState">
+            <summary>
+            指定对照表字段的某一状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ReferState.未用">
+            <summary>
+            未用
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ReferState.使用">
+            <summary>
+            使用
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ReferState.删除">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.BASE.ReferTag">
+            <summary>
+            指定对照表字段的某一标记。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ReferTag.物理字段">
+            <summary>
+            物理字段
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ReferTag.虚拟字段">
+            <summary>
+            虚拟字段
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.BASE.Table">
+            <summary>
+            指定对照表的某一名称。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Table.Resource">
+            <summary>
+            资源表
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Table.ResPlan">
+            <summary>
+            预约表
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Table.Person">
+            <summary>
+            人员表
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Table.MRArchive">
+            <summary>
+            员工档案表
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Table.ResAccount">
+            <summary>
+            资源单据表
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Table.MRVita">
+            <summary>
+            人事管理-履历表
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Table.MRContract">
+            <summary>
+            人事管理-合同表
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Table.Roles">
+            <summary>
+            综合成员表
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Table.Roles_x4">
+            <summary>
+            单位资料表
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Table.Roles_x8">
+            <summary>
+            部门资料表
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Table.FileManager">
+            <summary>
+            文档管理表
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Table.PMProjects">
+            <summary>
+            项目管理-项目表
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.BASE.TableFlag">
+            <summary>
+            指定基本表的某一标志。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.TableFlag.受保护">
+            <summary>
+            受保护
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.TableFlag.系统级">
+            <summary>
+            系统级,一般不允许用户更改
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.TableFlag.扩展表">
+            <summary>
+            扩展表
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.BASE.TreeType">
+            <summary>
+            指定分类树某一基本类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.TreeType.产品类别">
+            <summary>
+            CRM的产品类别。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.TreeType.资料中心类别">
+            <summary>
+            资料中心类别
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.TreeType.长整型属性类别">
+            <summary>
+            长整型属性类别
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.TreeType.自定义类别">
+            <summary>
+            自定义类别
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.TreeType.商城产品分类">
+            <summary>
+            商城产品分类
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.TreeType.商家类别">
+            <summary>
+            商家类别
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.TreeType.信息分类">
+            <summary>
+            信息分类
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.TreeType.CRM区域结构">
+            <summary>
+            CRM区域结构
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.TreeType.待定44">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.BASE.Type">
+            <summary>
+            指定某一基本类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.格式类别">
+            <summary>
+            格式分类
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.工作流步骤状态">
+            <summary>
+            机构管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.驾照类型">
+            <summary>
+            驾照类型
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.人事档案类别">
+            <summary>
+            人事档案类别
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.文化程度">
+            <summary>
+            文化程度
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.合同类别">
+            <summary>
+            合同类别
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.职员状态">
+            <summary>
+            职员状态
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.工作流类型">
+            <summary>
+            工作流类型
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.项目类别">
+            <summary>
+            项目类别
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.项目单位字典">
+            <summary>
+            项目单位
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.公司规模">
+            <summary>
+            公司规模
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.公司成立">
+            <summary>
+            公司成立时间
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.年营业额">
+            <summary>
+            年营业额
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.客户分类">
+            <summary>
+            客户分类
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.客户来源">
+            <summary>
+            客户来源
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.客户行业">
+            <summary>
+            客户行业
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.客户价值">
+            <summary>
+            客户价值
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.客户状态">
+            <summary>
+            客户状态
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.省份字典">
+            <summary>
+            省份字典
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.客户地区">
+            <summary>
+            客户地区
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.活动类别">
+            <summary>
+            活动类别
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.活动状态">
+            <summary>
+            活动状态
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.服务类型">
+            <summary>
+            服务类型
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.服务状态">
+            <summary>
+            服务状态
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.服务费用类型">
+            <summary>
+            服务费用类型
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.产品类型">
+            <summary>
+            产品类型
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.常用单位">
+            <summary>
+            常用单位
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.联系人分类">
+            <summary>
+            联系人分类
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.销售跟单类型">
+            <summary>
+            销售跟单类型
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.销售跟单状态">
+            <summary>
+            销售跟单状态
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.销售跟单阶段">
+            <summary>
+            销售跟单阶段
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.药典品名属性">
+            <summary>
+            药典品名属性
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.药典药材产新">
+            <summary>
+            药典药材产新
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.通用库">
+            <summary>
+            通用库
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.基础库">
+            <summary>
+            基础库
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.资源库">
+            <summary>
+            资源库
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.广告库">
+            <summary>
+            广告库
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.商品库">
+            <summary>
+            商品库
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.产品库">
+            <summary>
+            产品库
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.个人库">
+            <summary>
+            个人库
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.Type.药典库">
+            <summary>
+            药典库
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.BASE.UKeyItem">
+             <summary>
+             UKey锁明细。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.UKeyItem.KeyID">
+            <summary>
+             锁ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.UKeyItem.KeyID_g">
+            <summary>
+             锁GUID
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.UKeyItem.SerialNumber">
+            <summary>
+             PSAC序列号
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.UKeyItem.PerTypeID">
+            <summary>
+             个人类型ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.UKeyItem.PerID">
+            <summary>
+             个人ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.UKeyItem.PerID_g">
+            <summary>
+             个人GUID
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.UKeyItem.PerName">
+            <summary>
+             个人名称
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.UKeyItem.AdminPWD">
+            <summary>
+             帐户管理密码
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.UKeyItem.ExtrData">
+            <summary>
+             附加数据
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.UKeyItem.AppValue">
+            <summary>
+             应用程序值
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.UKeyItem.IssueTime">
+            <summary>
+             发放时间
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.UKeyItem.StateID">
+            <summary>
+             状态ID
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.BASE.UKeyState">
+            <summary>
+            指示UKey某一状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.UKeyState.未绑定">
+            <summary>
+            未绑定
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.UKeyState.正常">
+            <summary>
+            正常
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.UKeyState.停用">
+            <summary>
+            停用
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.UKeyState.删除">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.BASE.ValueType">
+            <summary>
+            指定对照表字段的某一数据类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ValueType.NONE">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ValueType.NVarChar">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ValueType.NChar">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ValueType.NText">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ValueType.NVarCharMax">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ValueType.GUID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ValueType.DateTime">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ValueType.Bit">
+            <summary>
+            位
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ValueType.Date">
+            <summary>
+            日期（不含时间）
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ValueType.Int">
+            <summary>
+            整型
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ValueType.Decimal">
+            <summary>
+            默认两位小数
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ValueType.VarChar">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ValueType.Char">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ValueType.Text">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.BASE.ValueType.VarCharMax">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.WeekDayOfMonth">
+            <summary>
+            指定月份的工作日。
+            </summary>
+        </member>
+        <member name="M:EIIP.Type.WeekDayOfMonth.#ctor(System.Int32,System.Int32)">
+            <summary>
+            实例化月份的工作日。
+            </summary>
+            <param name="months">月份数。</param>
+            <param name="v">工作日数据。</param>
+        </member>
+        <member name="P:EIIP.Type.WeekDayOfMonth.Months">
+            <summary>
+            获取月份数。
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.WeekDayOfMonth.Value">
+            <summary>
+            获取或设置工作日数据。
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.WeekDayOfMonth.Num">
+            <summary>
+            获取该月总工作日数量。
+            </summary>
+        </member>
+        <member name="T:EIIP.CRM.Type.ActivityType">
+            <summary>
+            指示CRM某一活动类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.CRM.Type.ActivityType.电话">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="F:EIIP.CRM.Type.ActivityType.拜访">
+            <summary>
+            拜访
+            </summary>
+        </member>
+        <member name="F:EIIP.CRM.Type.ActivityType.传真">
+            <summary>
+            传真
+            </summary>
+        </member>
+        <member name="F:EIIP.CRM.Type.ActivityType.信件">
+            <summary>
+            信件
+            </summary>
+        </member>
+        <member name="F:EIIP.CRM.Type.ActivityType.电子邮件">
+            <summary>
+            电子邮件
+            </summary>
+        </member>
+        <member name="F:EIIP.CRM.Type.ActivityType.普通活动">
+            <summary>
+            普通活动
+            </summary>
+        </member>
+        <member name="F:EIIP.CRM.Type.ActivityType.问题与回复">
+            <summary>
+            问题与回复
+            </summary>
+        </member>
+        <member name="F:EIIP.CRM.Type.ActivityType.备忘">
+            <summary>
+            备忘
+            </summary>
+        </member>
+        <member name="T:EIIP.CRM.Type.CustomerManageRight">
+            <summary>
+            定义客户资料某一管理权限。
+            </summary>
+        </member>
+        <member name="F:EIIP.CRM.Type.CustomerManageRight.无权限">
+            <summary>
+            无权限
+            </summary>
+        </member>
+        <member name="F:EIIP.CRM.Type.CustomerManageRight.普通权限">
+            <summary>
+            普通权限
+            </summary>
+        </member>
+        <member name="F:EIIP.CRM.Type.CustomerManageRight.较高权限">
+            <summary>
+            较高权限，依据情况可进一步验证取得“所有权”
+            </summary>
+        </member>
+        <member name="F:EIIP.CRM.Type.CustomerManageRight.所有权">
+            <summary>
+            所有权
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Priority">
+            <summary>
+            指定活动的某一优先级
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Priority.高">
+            <summary>
+            高优先级
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Priority.较高">
+            <summary>
+            较高优先级
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Priority.普通">
+            <summary>
+            普通优先级
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Priority.较低">
+            <summary>
+            较低优先级
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Priority.低">
+            <summary>
+            低优先级
+            </summary>
+        </member>
+        <member name="T:EIIP.CRM.Type.ProductFlag">
+            <summary>
+            指示某一产品标志。
+            </summary>
+        </member>
+        <member name="F:EIIP.CRM.Type.ProductFlag.一口价">
+            <summary>
+            一口价
+            </summary>
+        </member>
+        <member name="F:EIIP.CRM.Type.ProductFlag.特价">
+            <summary>
+            特价
+            </summary>
+        </member>
+        <member name="F:EIIP.CRM.Type.ProductFlag.推荐">
+            <summary>
+            推荐
+            </summary>
+        </member>
+        <member name="T:EIIP.CRM.Type.SalesOrderFlag">
+            <summary>
+            指示某一销售跟单标志。
+            </summary>
+        </member>
+        <member name="F:EIIP.CRM.Type.SalesOrderFlag.不公开">
+            <summary>
+            不公开
+            </summary>
+        </member>
+        <member name="T:EIIP.CRM.Type.SalesOrderProcessFlag">
+            <summary>
+            指示CRM销售跟单进展的某一标志。
+            </summary>
+        </member>
+        <member name="F:EIIP.CRM.Type.SalesOrderProcessFlag.系统完成">
+            <summary>
+            系统完成
+            </summary>
+        </member>
+        <member name="T:EIIP.CRM.Type.SalesOrderProcessState">
+            <summary>
+            指示CRM销售跟单进展的某一状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.CRM.Type.SalesOrderProcessState.正常">
+            <summary>
+            正常
+            </summary>
+        </member>
+        <member name="F:EIIP.CRM.Type.SalesOrderProcessState.无效">
+            <summary>
+            无效
+            </summary>
+        </member>
+        <member name="F:EIIP.CRM.Type.SalesOrderProcessState.成功">
+            <summary>
+            成功
+            </summary>
+        </member>
+        <member name="T:EIIP.CRM.Type.ServiceProcessFlag">
+            <summary>
+            指示CRM服务过程的某一标志。
+            </summary>
+        </member>
+        <member name="F:EIIP.CRM.Type.ServiceProcessFlag.系统完成">
+            <summary>
+            系统完成
+            </summary>
+        </member>
+        <member name="T:EIIP.CRM.Type.ServiceProcessState">
+            <summary>
+            指示CRM服务过程的某一状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.CRM.Type.ServiceProcessState.正常">
+            <summary>
+            正常
+            </summary>
+        </member>
+        <member name="F:EIIP.CRM.Type.ServiceProcessState.无效">
+            <summary>
+            无效
+            </summary>
+        </member>
+        <member name="F:EIIP.CRM.Type.ServiceProcessState.成功">
+            <summary>
+            成功
+            </summary>
+        </member>
+        <member name="T:EIIP.ERP.Type.Order.Flag">
+            <summary>
+            指示某一订单标志。
+            </summary>
+        </member>
+        <member name="F:EIIP.ERP.Type.Order.Flag.隐藏">
+            <summary>
+            隐藏
+            </summary>
+        </member>
+        <member name="T:EIIP.ERP.Type.Order.Payment">
+            <summary>
+            指示某一订单支付方式。
+            </summary>
+        </member>
+        <member name="F:EIIP.ERP.Type.Order.Payment.货到付款代理">
+            <summary>
+            货到付款代理
+            </summary>
+        </member>
+        <member name="F:EIIP.ERP.Type.Order.Payment.货到付款">
+            <summary>
+            货到付款
+            </summary>
+        </member>
+        <member name="F:EIIP.ERP.Type.Order.Payment.在线支付">
+            <summary>
+            在线支付
+            </summary>
+        </member>
+        <member name="F:EIIP.ERP.Type.Order.Payment.自提">
+            <summary>
+            自提
+            </summary>
+        </member>
+        <member name="F:EIIP.ERP.Type.Order.Payment.公司转账">
+            <summary>
+            公司转账
+            </summary>
+        </member>
+        <member name="F:EIIP.ERP.Type.Order.Payment.邮局汇款">
+            <summary>
+            邮局汇款
+            </summary>
+        </member>
+        <member name="T:EIIP.ERP.Type.Order.Stage">
+            <summary>
+            指示某一订单阶段。
+            </summary>
+        </member>
+        <member name="F:EIIP.ERP.Type.Order.Stage.提交订单">
+            <summary>
+            提交订单
+            </summary>
+        </member>
+        <member name="F:EIIP.ERP.Type.Order.Stage.锁定订单">
+            <summary>
+            锁定订单
+            </summary>
+        </member>
+        <member name="F:EIIP.ERP.Type.Order.Stage.审核订单">
+            <summary>
+            审核订单
+            </summary>
+        </member>
+        <member name="F:EIIP.ERP.Type.Order.Stage.商品出库">
+            <summary>
+            商品出库
+            </summary>
+        </member>
+        <member name="F:EIIP.ERP.Type.Order.Stage.等待收货">
+            <summary>
+            等待收货
+            </summary>
+        </member>
+        <member name="F:EIIP.ERP.Type.Order.Stage.完成订单">
+            <summary>
+            完成订单
+            </summary>
+        </member>
+        <member name="F:EIIP.ERP.Type.Order.Stage.订单核实">
+            <summary>
+            订单核实
+            </summary>
+        </member>
+        <member name="T:EIIP.ERP.Type.Order.State">
+            <summary>
+            指示某一订单状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.ERP.Type.Order.State.正常">
+            <summary>
+            正常
+            </summary>
+        </member>
+        <member name="F:EIIP.ERP.Type.Order.State.锁定">
+            <summary>
+            锁定
+            </summary>
+        </member>
+        <member name="F:EIIP.ERP.Type.Order.State.删除">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Favorite.Flag">
+            <summary>
+            指定收藏对象的某一状态标志。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Favorite.Flag.订阅通知">
+            <summary>
+            订阅通知,值0x1000不能更改,与存储过程关联
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Favorite.ObjType">
+            <summary>
+            指定收藏对象的某一类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Favorite.ObjType.信息栏目">
+            <summary>
+            信息栏目
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Favorite.ObjType.信息">
+            <summary>
+            信息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Favorite.ObjType.文件项">
+            <summary>
+            文件夹或文档
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Favorite.ObjType.广告">
+            <summary>
+            广告
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Favorite.ObjType.数据中心">
+            <summary>
+            数据中心
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Favorite.ObjType.字典">
+            <summary>
+            字典
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Favorite.ObjType.分类树">
+            <summary>
+            分类树
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Favorite.ObjType.Person">
+            <summary>
+            个人资料 商铺
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Favorite.ObjType.PCA">
+            <summary>
+            PCA
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Favorite.ObjType.品名">
+            <summary>
+            品名
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Favorite.ObjType.品种">
+            <summary>
+            品种
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Favorite.ObjType.商品">
+            <summary>
+            商品
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Favorite.ObjType.SKU">
+            <summary>
+            商品
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Favorite.ObjType.Other">
+            <summary>
+            杂项
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.FileManager.AttFlag">
+            <summary>
+            指定文档附件的某一标志。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.AttFlag.普通">
+            <summary>
+            普通
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.AttFlag.装箱">
+            <summary>
+            文件内容前加入前导内容
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.AttFlag.电子印章类型">
+            <summary>
+            电子印章类型
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.FileManager.Cata">
+            <summary>
+            指定文件项某一类别。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.Cata.通用">
+            <summary>
+            通用
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.Cata.项目管理">
+            <summary>
+            项目管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.Cata.人事档案资料">
+            <summary>
+            人事档案资料
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.Cata.人事合同资料">
+            <summary>
+            人事合同资料
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.Cata.日程文档">
+            <summary>
+            日程文档
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.FileManager.FileType">
+            <summary>
+            指定文件系统的某一类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.FileType.文件夹">
+            <summary>
+            文件夹
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.FileType.文档">
+            <summary>
+            文档
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.FileType.文件夹快捷方式">
+            <summary>
+            快捷方式_文件夹
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.FileType.文档快捷方式">
+            <summary>
+            快捷方式_文档
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.FileManager.Flag">
+            <summary>
+            指定文件系统的某一标志。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.Flag.记录阅读">
+            <summary>
+            记录阅读日志
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.Flag.混合显示">
+            <summary>
+            混合显示
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.Flag.手机短信">
+            <summary>
+            是否用短信通知用户
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.Flag.拒绝搜索">
+            <summary>
+            不能通过搜索查看
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.FileManager.LogFlag">
+            <summary>
+            指定文件系统日志的某一标志。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.LogFlag.阅读">
+            <summary>
+            阅读过文档正文
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.LogFlag.编辑">
+            <summary>
+            编辑过文件项
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.LogFlag.删除">
+            <summary>
+            移至回收站
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.LogFlag.恢复">
+            <summary>
+            恢复
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.LogFlag.设置属性">
+            <summary>
+            设置属性
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.LogFlag.修订或批注">
+            <summary>
+            修订或批注
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.LogFlag.拒绝修订">
+            <summary>
+            拒绝修订
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.LogFlag.接受修订">
+            <summary>
+            接受修订
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.LogFlag.上传附件">
+            <summary>
+            上传附件
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.LogFlag.下载附件">
+            <summary>
+            下载附件
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.LogFlag.删除附件">
+            <summary>
+            删除附件
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.LogFlag.移动">
+            <summary>
+            移动
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.LogFlag.创建">
+            <summary>
+            创建
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.LogFlag.设置权限">
+            <summary>
+            设置权限
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.LogFlag.移除">
+            <summary>
+            从回收站中删除
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.LogFlag.共享设置">
+            <summary>
+            共享设置
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.LogFlag.新建正文">
+            <summary>
+            新建正文
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.LogFlag.编辑正文">
+            <summary>
+            编辑正文
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.FileManager.Property">
+            <summary>
+            指定文件系统的某一属性。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.Property.普通">
+            <summary>
+            普通
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.Property.系统级">
+            <summary>
+            系统级文件
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.Property.受保护">
+            <summary>
+            属性设置不能由用户来更改受保护
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.Property.特殊性">
+            <summary>
+            特殊性,正被系统其它模块使用
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.Property.所有者控制权">
+            <summary>
+            所有者拥有完全控制权限
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.Property.共享阅读">
+            <summary>
+            所有人共享,所有人均有阅读权限
+            </summary>
+        </member>
+        <member name="T:EIIP.WebLibrary.Editor.ResourceType">
+            <summary>
+            指定上传资源的某一类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.WebLibrary.Editor.ResourceType.文件">
+            <summary>
+            文件
+            </summary>
+        </member>
+        <member name="F:EIIP.WebLibrary.Editor.ResourceType.图片">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="F:EIIP.WebLibrary.Editor.ResourceType.动画">
+            <summary>
+            动画
+            </summary>
+        </member>
+        <member name="F:EIIP.WebLibrary.Editor.ResourceType.媒体">
+            <summary>
+            媒体
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.FileManager.SpecialFolder">
+            <summary>
+            指定文件系统的某一特殊文件夹(ObjID)。100以上的为虚拟文件号
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.SpecialFolder.普通文件夹">
+            <summary>
+            普通文件夹
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.SpecialFolder.文件系统根">
+            <summary>
+            文件系统根
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.SpecialFolder.公共文件夹">
+            <summary>
+            公共文件夹
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.SpecialFolder.人事管理文件夹">
+            <summary>
+            人事管理文件夹
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.SpecialFolder.项管文件夹">
+            <summary>
+            项管文件夹
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.SpecialFolder.电子印章">
+            <summary>
+            电子印章
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.SpecialFolder.人事档案资料">
+            <summary>
+            人事档案资料
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.SpecialFolder.人事合同资料">
+            <summary>
+            人事合同资料
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.SpecialFolder.共享文件夹">
+            <summary>
+            共享文件夹
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.SpecialFolder.我的文档">
+            <summary>
+            个人文件夹（我的文档）
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.SpecialFolder.我的邮件">
+            <summary>
+            邮件附件,从属于个人文件夹（我的文档）
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.SpecialFolder.个人收藏">
+            <summary>
+            个人收藏,从属于个人文件夹（我的文档）
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.SpecialFolder.日程文档">
+            <summary>
+            日程文档，存放日程项所属文档
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.SpecialFolder.流程文档">
+            <summary>
+            流程文档，存放工作流文档
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.FileManager.State">
+            <summary>
+            指定某一状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.State.普通">
+            <summary>
+            正常
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.State.修改过">
+            <summary>
+            修改过
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.State.回收站">
+            <summary>
+            回收站
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.State.删除">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.FileManager.TextFlag">
+            <summary>
+            指定文档正文的某一标志。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.TextFlag.审阅中">
+            <summary>
+            在审阅状态中
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.FileManager.TextState">
+            <summary>
+            指定文档正文某一状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.TextState.普通">
+            <summary>
+            正常
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.TextState.快照">
+            <summary>
+            快照
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.FileManager.TextState.删除">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.IEquatable`1">
+            <summary>
+            定义一个通用的方法，由值类型或类实现以创建类型特定的方法，用于确定实例间的相等性。
+            </summary>
+            <typeparam name="T">要比较的对象的类型。</typeparam>
+        </member>
+        <member name="M:EIIP.Type.IEquatable`1.Equals(`0,System.Boolean@)">
+            <summary>
+            指示当前对象是否等于同一类型的另一个对象。如果当前对象等于 other 参数，则为 true；否则为 false。
+            </summary>
+            <param name="other">与此对象进行比较的对象。</param>
+            <param name="lowestLevel">返回是否达到最低的相等级别</param>
+            <returns></returns>
+        </member>
+        <member name="T:EIIP.Type.Info.CataFlag">
+            <summary>
+            指定信息栏目的某一标志。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.CataFlag.显示摘要">
+            <summary>
+            显示摘要
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.CataFlag.仅使用标题">
+            <summary>
+            因特殊需要，使用在仅需标题的栏目里。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.CataFlag.BBS风格">
+            <summary>
+            在Web网站中，以BBS风格的方式展示。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.CataFlag.混合显示">
+            <summary>
+            混合显示
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.CataFlag.手机短信">
+            <summary>
+            是否用短信通知用户
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.CataFlag.转载标志">
+            <summary>
+            是否转载。在Web网站中，指示栏目内的信息是否是转载的。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.CataFlag.来宾可阅">
+            <summary>
+            来宾可阅。在Web网站中，指示栏目内的信息阅读是否受限。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.CataFlag.允许匿名">
+            <summary>
+            允许匿名。在Web网站中，允许匿名创建或回复栏目信息。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.CataFlag.受保护">
+            <summary>
+            受保护属性
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.CataFlag.系统级">
+            <summary>
+            系统级属性
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.CataFlag.允许总固顶">
+            <summary>
+            允许总固顶
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.CataFlag.图片主题">
+            <summary>
+            图片主题。允许使用图片主题。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.CataFlag.Web浏览">
+            <summary>
+            Web浏览
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Info.CataState">
+            <summary>
+            指定信息栏目的某一状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.CataState.正常">
+            <summary>
+            正常使用
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.CataState.审核">
+            <summary>
+            审核，信息栏目中的主题信息要经过审核后才能发布
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.CataState.停用">
+            <summary>
+            停用
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.CataState.删除">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Info.ItemFlag">
+            <summary>
+            指定信息主题评论的某一状态标志。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.ItemFlag.匿名">
+            <summary>
+            匿名
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Info.SearchMode">
+            <summary>
+            指定信息的某一查询模式。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.SearchMode.用户发布的信息">
+            <summary>
+            用户发布的信息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.SearchMode.用户参与的信息">
+            <summary>
+            用户参与的信息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.SearchMode.用户待审的信息">
+            <summary>
+            用户待审的信息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.SearchMode.有权审核的信息">
+            <summary>
+            有权审核的信息
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Info.ShowMode">
+            <summary>
+            指定信息在显示的某一显示模式。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.ShowMode.所有信息">
+            <summary>
+            所有信息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.ShowMode.公告信息">
+            <summary>
+            公告信息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.ShowMode.最新发布">
+            <summary>
+            最新发布信息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.ShowMode.最新回复">
+            <summary>
+            最新回复信息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.ShowMode.总置顶信息">
+            <summary>
+            总置顶信息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.ShowMode.子栏目发布信息">
+            <summary>
+            子栏目发布信息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.ShowMode.子栏目回复信息">
+            <summary>
+            子栏目回复信息
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Info.TopicFlag">
+            <summary>
+            指定信息主题的某一状态标志。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.TopicFlag.拒绝回复">
+            <summary>
+            不能回复该信息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.TopicFlag.冻结主题">
+            <summary>
+            冻结主题
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.TopicFlag.匿名">
+            <summary>
+            匿名
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.TopicFlag.加红">
+            <summary>
+            加红
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.TopicFlag.加蓝">
+            <summary>
+            加蓝
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.TopicFlag.加绿">
+            <summary>
+            加绿
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.TopicFlag.加粗">
+            <summary>
+            加粗
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.TopicFlag.图片标志">
+            <summary>
+            图片标志
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.TopicFlag.精华">
+            <summary>
+            精华标志
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Info.TopicState">
+            <summary>
+            指定信息主题的某一状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.TopicState.待审核">
+            <summary>
+            刚发布且栏目需要审核的信息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.TopicState.通过审核">
+            <summary>
+            通过审核正常使用的信息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.TopicState.删除">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Info.TopicTag">
+            <summary>
+            指定信息主题的某一性质标签。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.TopicTag.不置顶">
+            <summary>
+            置顶
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.TopicTag.置顶">
+            <summary>
+            置顶
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.TopicTag.级置顶">
+            <summary>
+            级置顶
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.TopicTag.总置顶">
+            <summary>
+            总置顶
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.TopicTag.总固顶">
+            <summary>
+            总固顶
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Info.TopicType">
+            <summary>
+            指定信息主题的某一类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.TopicType.普通">
+            <summary>
+            普通信息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.TopicType.投票">
+            <summary>
+            投票信息
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Info.VoteType">
+            <summary>
+            指定信息主题投票的某一类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.VoteType.单选票">
+            <summary>
+            单选票
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Info.VoteType.复选票">
+            <summary>
+            复选票
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.IServerTransferable">
+            <summary>
+            定义可传值的接口。
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.IServerTransferable.TransferTag">
+            <summary>
+            获取附加对象
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.LogFlag">
+            <summary>
+            指定系统操作日志的某一标志。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.LogFlag.其它">
+            <summary>
+            其它
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.LogFlag.阅读">
+            <summary>
+            阅读
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.LogFlag.编辑">
+            <summary>
+            编辑
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.LogFlag.删除">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.LogFlag.恢复">
+            <summary>
+            恢复
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.LogFlag.设置">
+            <summary>
+            设置
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.LogFlag.移动">
+            <summary>
+            移动
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.LogFlag.移除">
+            <summary>
+            删除（不可恢复）
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.LogFlag.创建">
+            <summary>
+            创建
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.LogFlag.发送">
+            <summary>
+            发送
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.LogFlag.错误">
+            <summary>
+            错误
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.LogFlag.审核">
+            <summary>
+            审核
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.LogType">
+            <summary>
+            指定系统操作日志的某一类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.LogType.其它">
+            <summary>
+            其它
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.LogType.信息">
+            <summary>
+            信息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.LogType.消息">
+            <summary>
+            消息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.LogType.邮件">
+            <summary>
+            邮件
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.LogType.异常">
+            <summary>
+            异常
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.LogType.短信">
+            <summary>
+            手机短信
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.LogType.系统清理及升级">
+            <summary>
+            系统清理及升级
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.LogType.文档管理">
+            <summary>
+            文档管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.LogType.会员">
+            <summary>
+            会员
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.LogType.供求">
+            <summary>
+            供求
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.LogType.未处理异常">
+            <summary>
+            未处理异常
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.LogType.系统报告">
+            <summary>
+            系统报告
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Mail.EmailFlag">
+            <summary>
+            指定邮件帐户的某一状态标志。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Mail.EmailFlag.记住密码">
+            <summary>
+            记住密码
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Mail.EmailFlag.要求提供阅读回执">
+            <summary>
+            要求提供阅读回执
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Mail.Flag">
+            <summary>
+            指定邮件的某一状态标志。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Mail.Flag.附件">
+            <summary>
+            附件
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Mail.Flag.回复">
+            <summary>
+            回复邮件
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Mail.Flag.转发">
+            <summary>
+            抄送邮件
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Mail.ServerFlag">
+            <summary>
+            指定邮件服务器的某一标志。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Mail.ServerFlag.帐户为邮件地址">
+            <summary>
+            帐户为邮件地址
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Mail.SMTPAuthMethod">
+            <summary>
+            指示SMTP登录验证的某一方式
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Mail.SMTPAuthMethod.不需要验证">
+            <summary>
+            服务器不需要身份验证
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Mail.SMTPAuthMethod.邮件帐户验证">
+            <summary>
+            使用与接收邮件服务器(SMTP)相同的设置
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Mail.SMTPAuthMethod.统一帐户验证">
+            <summary>
+            服务器允许统一身份验证
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Mail.State">
+            <summary>
+            指定邮件某一状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Mail.State.草稿">
+            <summary>
+            草稿
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Mail.State.未读">
+            <summary>
+            未读
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Mail.State.已读">
+            <summary>
+            回收站
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Mail.State.删除">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Mail.Type">
+            <summary>
+            指定邮件的某一类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Mail.Type.内部邮件">
+            <summary>
+            内部邮件
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Mail.Type.外部邮件">
+            <summary>
+            外部邮件
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Menu.EffectType">
+            <summary>
+            指示菜单显示效果的某一类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Menu.EffectType.LeftRight">
+            <summary>
+            从左到右展开
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Menu.EffectType.Thawy">
+            <summary>
+            粒子效果
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Menu.EffectType.UpDown">
+            <summary>
+            从上到下
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Menu.EffectType.Fade">
+            <summary>
+            淡入
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Menu.Flag">
+            <summary>
+            指定菜单的某一状态标志。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Menu.Flag.受保护">
+            <summary>
+            受保护菜单,可以修改但不能删除。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Menu.Flag.系统级">
+            <summary>
+            系统级菜单,不允许用户更改
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Menu.Flag.脚本操作">
+            <summary>
+            菜单将会执行脚本操作
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Menu.Flag.结束一组">
+            <summary>
+            将在该菜单项后面加一分隔行。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Menu.Flag.开始一组">
+            <summary>
+            将在该菜单项前面加一分隔行。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Menu.Flag.新窗口">
+            <summary>
+            总是开启新窗口，而不是默认的显现视口。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Menu.Flag.标签">
+            <summary>
+            标签类型
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Menu.Type">
+            <summary>
+            指定菜单的某一类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Menu.Type.主菜单">
+            <summary>
+            主菜单
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Menu.Type.任务窗格菜单">
+            <summary>
+            任务窗格菜单
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Menu.Type.任务窗格菜单2">
+            <summary>
+            任务窗格菜单二
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Message.Flag">
+            <summary>
+            指定消息的某一标志。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.Flag.订阅">
+            <summary>
+            订阅标志
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.Flag.企业端口">
+            <summary>
+            企业端口
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.Flag.广告通道">
+            <summary>
+            广告通道
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.Flag.营销通道">
+            <summary>
+            营销通道
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.Flag.快速通道">
+            <summary>
+            快速通道
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.Flag.App推送">
+            <summary>
+            App推送
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.Flag.短信">
+            <summary>
+            短信
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Message.SIMFlag">
+            <summary>
+            指定SIM卡的某一标志。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.SIMFlag.拒绝代发">
+            <summary>
+            拒绝代发
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.SIMFlag.单向接收">
+            <summary>
+            单向接收
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Message.SIMState">
+            <summary>
+            指定SIM卡的某一状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.SIMState.低">
+            <summary>
+            低
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.SIMState.中">
+            <summary>
+            中
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.SIMState.较高">
+            <summary>
+            较高
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.SIMState.最高">
+            <summary>
+            最高
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.SIMState.删除">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Message.SIMChannel">
+            <summary>
+            特定SIM通道（卡）。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.SIMChannel.广告通道">
+            <summary>
+            广告通道
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.SIMChannel.营销通道">
+            <summary>
+            营销通道
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.SIMChannel.快速通道">
+            <summary>
+            快速通道，发送验证码用
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Message.State">
+            <summary>
+            指定消息某一状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.State.等待">
+            <summary>
+            等待
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.State.未读">
+            <summary>
+            未读
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.State.已读">
+            <summary>
+            回收站
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.State.删除">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Message.Type">
+            <summary>
+            指定消息的某一类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.Type.用户级">
+            <summary>
+            用户间互发消息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.Type.系统级">
+            <summary>
+            系统发送的消息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.Type.普通消息">
+            <summary>
+            普通消息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.Type.及时消息">
+            <summary>
+            及时消息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.Type.邀请消息">
+            <summary>
+            邀请消息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.Type.邮件消息">
+            <summary>
+            邮件消息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.Type.订阅消息">
+            <summary>
+            订阅消息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.Type.通知消息">
+            <summary>
+            通知消息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.Type.回复消息">
+            <summary>
+            用户级的消息回复
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.Type.提醒消息">
+            <summary>
+            提醒消息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.Type.日程消息">
+            <summary>
+            日程消息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.Type.群发消息">
+            <summary>
+            群发消息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.Type.事件消息">
+            <summary>
+            事件消息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Message.Type.流程消息">
+            <summary>
+            流程消息
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.ObjectRefFlag">
+            <summary>
+            指示引用关系的某一标识。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.ObjectRefFlag.受保护">
+            <summary>
+            受保护
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.ObjectRefFlag.系统级">
+            <summary>
+            系统级
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.ObjectRefFlag.一对一">
+            <summary>
+            一对一关系。
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.ObjectType">
+            <summary>
+            指示某一EIIP对象类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.ObjectType.日程">
+            <summary>
+            日程
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.ObjectType.菜单">
+            <summary>
+            菜单
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.ObjectType.项管">
+            <summary>
+            项管
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.ObjectType.CRM活动">
+            <summary>
+            CRM活动
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.ObjectType.CRM服务">
+            <summary>
+            CRM服务
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.ObjectType.CRM跟单">
+            <summary>
+            CRM跟单
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.ObjectType.CRM机会">
+            <summary>
+            CRM机会
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.ObjectType.文档">
+            <summary>
+            文档 200 - 
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.ObjectType.工作流">
+            <summary>
+            工作流 300 - 
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Person.CAFlag">
+            <summary>
+            指定个人证书的某一标记。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.CAFlag.集成">
+            <summary>
+            集成
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.CAFlag.硬件">
+            <summary>
+            硬件
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Person.ChooseMode">
+            <summary>
+            指定个人选择的的某一模式。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.ChooseMode.职员">
+            <summary>
+            职员
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.ChooseMode.客户">
+            <summary>
+            客户
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.ChooseMode.客户与会员">
+            <summary>
+            客户与会员
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.ChooseMode.联系人">
+            <summary>
+            联系人
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.ChooseMode.单选">
+            <summary>
+            单选
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Person.FavorFlag">
+            <summary>
+            指定个人喜好的某一标记。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.FavorFlag.生日提醒">
+            <summary>
+            生日提醒
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Person.Flag">
+            <summary>
+            指定人员的某一标记。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.Flag.受保护">
+            <summary>
+            允许用户更改
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.Flag.系统级">
+            <summary>
+            不允许用户更改
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.Flag.归属继承">
+            <summary>
+            归属继承
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.Flag.企业级">
+            <summary>
+            企业级
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.Flag.待激活">
+            <summary>
+            待激活
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.Flag.UKey认证">
+            <summary>
+            UKey认证
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.Flag.金融认证">
+            <summary>
+            金融认证
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.Flag.私有">
+            <summary>
+            私有
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Person.IDCardInfo">
+             <summary>
+             身份证资料。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.IDCardInfo.IDCard">
+            <summary>
+             身份证号码
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.IDCardInfo.PerName">
+            <summary>
+             姓名
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.IDCardInfo.PerID_g">
+            <summary>
+             个人GUID
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.IDCardInfo.Birthday">
+            <summary>
+             生日
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.IDCardInfo.Photo">
+            <summary>
+             照片
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.IDCardInfo.OriCity">
+            <summary>
+             原始发证地
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.IDCardInfo.SexID">
+            <summary>
+             性别ID
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.Person.IDCardInfo.Sex">
+            <summary>
+            获取性别类型。
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Person.LogFlag">
+            <summary>
+            指定人事日志的某一标志。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.LogFlag.创建">
+            <summary>
+            创建
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.LogFlag.编辑">
+            <summary>
+            编辑
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.LogFlag.删除">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.LogFlag.审核">
+            <summary>
+            审核
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.LogFlag.添加档案">
+            <summary>
+            添加档案
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.LogFlag.编辑档案">
+            <summary>
+            编辑档案
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.LogFlag.创建登录帐号">
+            <summary>
+            创建登录帐号
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.LogFlag.修改登录帐号">
+            <summary>
+            修改登录帐号
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.LogFlag.变更帐号身份">
+            <summary>
+            变更账号身份
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.LogFlag.清空密码">
+            <summary>
+            清空密码
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.LogFlag.设置密码">
+            <summary>
+            设置密码
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.LogFlag.添加履历">
+            <summary>
+            添加履历
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.LogFlag.编辑履历">
+            <summary>
+            编辑履历
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.LogFlag.删除履历">
+            <summary>
+            删除履历
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.LogFlag.添加合同">
+            <summary>
+            添加合同
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.LogFlag.编辑合同">
+            <summary>
+            编辑合同
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.LogFlag.删除合同">
+            <summary>
+            删除合同
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.LogFlag.积分">
+            <summary>
+            积分设置
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.LogFlag.虚拟币">
+            <summary>
+            虚拟币设置
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.LogFlag.移交">
+            <summary>
+            移交
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Person.LoginIdentity">
+            <summary>
+            登录身份类。
+            </summary>
+        </member>
+        <member name="M:EIIP.Type.Person.LoginIdentity.#ctor">
+            <summary>
+            实例化登录身份类
+            </summary>
+        </member>
+        <member name="M:EIIP.Type.Person.LoginIdentity.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            实例化登录身份类
+            </summary>
+            <param name="roleID">登录帐号ID</param>
+            <param name="perID">登录帐号所属人员ID</param>
+            <param name="perTypeID">人员类型ID</param>
+            <param name="stateID">登录帐号状态ID</param>
+        </member>
+        <member name="P:EIIP.Type.Person.LoginIdentity.RoleID">
+            <summary>
+            获取登录帐号ID。
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.Person.LoginIdentity.RoleName">
+            <summary>
+            获取或设置登录帐号名称。
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.Person.LoginIdentity.RoleBrief">
+            <summary>
+            获取或设置登录帐号简介。
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.Person.LoginIdentity.PerID">
+            <summary>
+            获取个人ID
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.Person.LoginIdentity.PerName">
+            <summary>
+            获取或设置个人名称。
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.Person.LoginIdentity.PerTypeID">
+            <summary>
+            获取个人类型ID
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.Person.LoginIdentity.StateID">
+            <summary>
+            获取登录帐号状态ID
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.Person.LoginIdentity.VisitTime">
+            <summary>
+            获取或设置最近一次登录时间。
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.Person.LoginIdentity.IsAdmin">
+            <summary>
+            获取一个值，该值指示是否为内置管理员帐号
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.Person.LoginIdentity.IsValid">
+            <summary>
+            获取一个值，该值指示登录用户是否是有效的
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Person.SexType">
+            <summary>
+            指定人员的某一性别。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.SexType.未知">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.SexType.男">
+            <summary>
+            男
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.SexType.女">
+            <summary>
+            女
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Person.Type">
+            <summary>
+            指定人员的某一类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.Type.职员">
+            <summary>
+            职员
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.Type.客户">
+            <summary>
+            客户
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.Type.联系人">
+            <summary>
+            联系人
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.Type.免费会员">
+            <summary>
+            免费会员
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.Type.企业会员">
+            <summary>
+            企业会员
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.Type.分公司">
+            <summary>
+            分公司
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.Type.商户操作员">
+            <summary>
+            商户操作员。商户一般操作人员。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.Type.商户管理员">
+            <summary>
+            商户管理员。具备商户管理级别（如自行创建或维护商户操作员、维护商户资料等）。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.Type.金融关联人">
+            <summary>
+            金融关联人。客户资料金融身份。
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Person.VitaType">
+            <summary>
+            指定人员履历的某一类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.VitaType.教育">
+            <summary>
+            教育
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.VitaType.工作">
+            <summary>
+            工作
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Person.VitaType.培训">
+            <summary>
+            培训
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.PM.MemberType">
+            <summary>
+            指定项目管理的某一成员类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.PM.MemberType.用户">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.PM.MemberType.角色">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.PM.MemberType.单位">
+            <summary>
+            单位
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.PM.MemberType.部门">
+            <summary>
+            部门
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.PM.MemberType.职位">
+            <summary>
+            职位
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.PM.MemberType.单位字典">
+            <summary>
+            单位字典
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.PM.State">
+            <summary>
+            指定项目某一状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.PM.State.正常">
+            <summary>
+            正常
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.PM.State.删除">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.PM.State.结束">
+            <summary>
+            结束
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.PM.Tag">
+            <summary>
+            指定项目成员的某一标志。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.PM.Tag.普通成员">
+            <summary>
+            用户-参与成员
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.PM.Tag.高级成员">
+            <summary>
+            用户-高级成员
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.PM.Tag.负责人">
+            <summary>
+            用户-项目负责人
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.PM.Tag.参与单位">
+            <summary>
+            参与单位
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.PM.Tag.主办单位">
+            <summary>
+            主办单位
+            </summary>
+        </member>
+        <member name="T:EIIP.CRM.Type.ObjectType">
+            <summary>
+            指定对象映射的某一关系。
+            </summary>
+        </member>
+        <member name="F:EIIP.CRM.Type.ObjectType.Staffer">
+            <summary>
+            职员
+            </summary>
+        </member>
+        <member name="F:EIIP.CRM.Type.ObjectType.Customer">
+            <summary>
+            客户
+            </summary>
+        </member>
+        <member name="F:EIIP.CRM.Type.ObjectType.Contact">
+            <summary>
+            联系人
+            </summary>
+        </member>
+        <member name="F:EIIP.CRM.Type.ObjectType.Activitiy">
+            <summary>
+            活动
+            </summary>
+        </member>
+        <member name="F:EIIP.CRM.Type.ObjectType.Opportunity">
+            <summary>
+            机会
+            </summary>
+        </member>
+        <member name="F:EIIP.CRM.Type.ObjectType.Service">
+            <summary>
+            服务
+            </summary>
+        </member>
+        <member name="F:EIIP.CRM.Type.ObjectType.Schedule">
+            <summary>
+            日程
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.RightKey.File">
+            <summary>
+            指定文件项访问控制的某一权限。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.File.阅读">
+            <summary>
+            阅读权限
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.File.编辑">
+            <summary>
+            编辑权限
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.File.删除">
+            <summary>
+            删除权限
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.File.移动">
+            <summary>
+            移动
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.File.评论意见">
+            <summary>
+            文档专用: 评论与意见
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.File.审阅正文">
+            <summary>
+            文档专用: 审阅文档权限
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.File.修订正文">
+            <summary>
+            文档专用: 修订文档权限(接受或取消审阅内容)
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.File.删除附件">
+            <summary>
+            文档专用: 删除附件
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.File.上传附件">
+            <summary>
+            文档专用: 上传附件
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.File.管理附件">
+            <summary>
+            文档专用: 管理附件
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.File.目录列表">
+            <summary>
+            文件夹专用: 列清单
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.File.新建文档">
+            <summary>
+            文件夹专用: 创建文档权限
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.File.新建文件夹">
+            <summary>
+            文件夹专用: 新建文件夹权限
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.File.日志浏览">
+            <summary>
+            日志浏览
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.File.权限管理">
+            <summary>
+            权限管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.File.高级权限">
+            <summary>
+            高级权限
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.File.日程设置">
+            <summary>
+            文档专用: 日程设置
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.File.完全控制">
+            <summary>
+            完全控制
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.File.拒绝使用">
+            <summary>
+            拒绝使用
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.File.拒绝权限管理">
+            <summary>
+            拒绝登录管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.File.拒绝高级权限">
+            <summary>
+            拒绝高级权限
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.RightKey.InfoCatalog">
+            <summary>
+            指定信息栏目的某一权限。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.InfoCatalog.阅读信息">
+            <summary>
+            阅读权限(值0x8001),可以查看本栏目及栏目下的信息(不包括子栏目)
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.InfoCatalog.主题发布">
+            <summary>
+            发布权限(阅读)
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.InfoCatalog.主题编辑">
+            <summary>
+            编辑权限(发布/阅读)
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.InfoCatalog.主题删除">
+            <summary>
+            删除权限(阅读)
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.InfoCatalog.主题置顶">
+            <summary>
+            置顶权限(阅读)
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.InfoCatalog.回复主题">
+            <summary>
+            回复主题
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.InfoCatalog.回复编辑">
+            <summary>
+            编辑回复信息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.InfoCatalog.回复删除">
+            <summary>
+            删除回复信息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.InfoCatalog.移动主题">
+            <summary>
+            移动主题到另一栏目(删除)
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.InfoCatalog.所有权">
+            <summary>
+            对信息拥有和发布人相同的权限
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.InfoCatalog.审核权">
+            <summary>
+            拥有对该栏目主题信息的审核权力
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.InfoCatalog.完全控制">
+            <summary>
+            完全控制
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.InfoCatalog.拒绝阅读信息">
+            <summary>
+            拒绝阅读信息
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.RightKey.Menu">
+            <summary>
+            指定菜单的某一权限。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.Menu.使用">
+            <summary>
+            使用
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.Menu.OA">
+            <summary>
+            OA专用菜单
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.Menu.CRM">
+            <summary>
+            CRM专用菜单
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.RightKey.ModuleCRM">
+            <summary>
+            指定CRM系统功能的某一权限。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleCRM.查看客户日志">
+            <summary>
+            查看客户日志
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleCRM.管理客户基本资料">
+            <summary>
+            管理客户基本资料
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleCRM.查看私有客户">
+            <summary>
+            查看私有客户
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleCRM.服务管理">
+            <summary>
+            客户服务管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleCRM.活动管理">
+            <summary>
+            客户活动管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleCRM.机会管理">
+            <summary>
+            客户机会管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleCRM.客户所有权">
+            <summary>
+            客户所有权。获得他人创建的客户资料的管理权限。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleCRM.导出客户资料">
+            <summary>
+            允许导出客户资料
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleCRM.查看联系人日志">
+            <summary>
+            查看联系人日志
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleCRM.管理联系人基本资料">
+            <summary>
+            管理联系人基本资料
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleCRM.查看私有联系人">
+            <summary>
+            查看私有联系人
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleCRM.联系人所有权">
+            <summary>
+            联系人所有权。获得他人创建的联系人资料的管理权限。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleCRM.导出联系人资料">
+            <summary>
+            允许导出联系人资料
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleCRM.移交">
+            <summary>
+            移交客户或联系人资料权限。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleCRM.客户审核">
+            <summary>
+            客户审核
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleCRM.客户图片管理">
+            <summary>
+            客户图片管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleCRM.销售管理">
+            <summary>
+            销售管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleCRM.产品管理">
+            <summary>
+            产品管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleCRM.区域管理">
+            <summary>
+            区域管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleCRM.完全控制">
+            <summary>
+            完全控制
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.RightKey.ModuleDoc">
+            <summary>
+            指定公文模块的某一权限。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleDoc.公文格式管理">
+            <summary>
+            公文格式管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleDoc.管理文档回收站">
+            <summary>
+            文档回收站管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleDoc.电子印章文件夹">
+            <summary>
+            电子印章
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleDoc.短信级别1">
+            <summary>
+            短信级别-中
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleDoc.短信级别2">
+            <summary>
+            短信级别-较高
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleDoc.短信级别3">
+            <summary>
+            短信级别-最高
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleDoc.设置短信级别">
+            <summary>
+            短信级别-最高
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.RightKey.ModuleFun">
+            <summary>
+            指定系统功能的某一权限。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleFun.授权_系统功能">
+            <summary>
+            系统功能授权
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleFun.授权_信息管理">
+            <summary>
+            信息模块授权
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleFun.授权_菜单模块">
+            <summary>
+            菜单模块授权
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleFun.授权_公文模块">
+            <summary>
+            公文模块授权
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleFun.授权_工作流模块">
+            <summary>
+            工作流模块授权
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleFun.授权_资源管理">
+            <summary>
+            资源管理授权
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleFun.授权_人事管理">
+            <summary>
+            人事管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleFun.授权_CRM管理">
+            <summary>
+            CRM管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleFun.授权_完全控制">
+            <summary>
+            授权_全部
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleFun.拒绝系统授权">
+            <summary>
+            拒绝系统授权
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleFun.配置邮件服务器">
+            <summary>
+            配置邮件服务器
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleFun.配置系统信息">
+            <summary>
+            配置系统信息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleFun.单位管理">
+            <summary>
+            单位管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleFun.部门职位管理">
+            <summary>
+            部门职位管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleFun.角色管理">
+            <summary>
+            角色管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleFun.在线管理">
+            <summary>
+            在线管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleFun.管理系统分类树">
+            <summary>
+            管理系统分类树
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleFun.短信消息">
+            <summary>
+            短信消息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleFun.上传文件">
+            <summary>
+            允许用户上传文件
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleFun.管理上传文件">
+            <summary>
+            可删除上传文件
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleFun.查看系统操作日志">
+            <summary>
+            查看系统操作日志
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleFun.网站链接菜单管理">
+            <summary>
+            网站链接菜单管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleFun.管理短信用户">
+            <summary>
+            管理短信用户
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleFun.系统清理及升级">
+            <summary>
+            系统清理及升级
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleFun.管理系统基础信息">
+            <summary>
+            管理系统基础信息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleFun.安全锁">
+            <summary>
+            安全锁
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.RightKey.ModuleInfo">
+            <summary>
+            指定信息模块的某一权限。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleInfo.创建栏目">
+            <summary>
+            创建栏目
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleInfo.编辑栏目">
+            <summary>
+            编辑栏目权限
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleInfo.删除栏目">
+            <summary>
+            删除栏目权限
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleInfo.移动栏目">
+            <summary>
+            移动栏目(创建栏目/删除栏目)
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleInfo.栏目授权">
+            <summary>
+            可设置栏目权限
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleInfo.栏目管理">
+            <summary>
+            管理栏目
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleInfo.拒绝栏目管理">
+            <summary>
+            拒绝阅读信息
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.RightKey.ModuleMR">
+            <summary>
+            指定人事管理模块的某一权限。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleMR.查看日志">
+            <summary>
+            查看日志
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleMR.清空密码">
+            <summary>
+            清除密码
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleMR.管理职员基本资料">
+            <summary>
+            职员管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleMR.查看职员扩展资料">
+            <summary>
+            查看职员扩展资料
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleMR.管理职员扩展资料">
+            <summary>
+            管理职员扩展资料
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleMR.登录帐号管理">
+            <summary>
+            登录帐号管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleMR.管理会员资料">
+            <summary>
+            管理会员资料
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleMR.会员审核">
+            <summary>
+            会员审核
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleMR.会员图片管理">
+            <summary>
+            会员图片管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleMR.查阅档案">
+            <summary>
+            查阅档案
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleMR.档案管理">
+            <summary>
+            档案管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleMR.隶属管理">
+            <summary>
+            为组织结构添加用户
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleMR.查阅履历">
+            <summary>
+            查阅履历
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleMR.履历管理">
+            <summary>
+            履历管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleMR.查阅合同">
+            <summary>
+            查阅合同
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleMR.合同管理">
+            <summary>
+            合同管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleMR.完全控制">
+            <summary>
+            完全控制
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleMR.拒绝职员管理">
+            <summary>
+            拒绝职员管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleMR.拒绝隶属管理">
+            <summary>
+            拒绝隶属管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleMR.拒绝登录管理">
+            <summary>
+            拒绝登录管理
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.RightKey.ModuleRes">
+            <summary>
+            指定资源管理模块的某一权限。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleRes.药材资料管理">
+            <summary>
+            药材资料管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleRes.地区药价管理">
+            <summary>
+            地区药价管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleRes.全国药价管理">
+            <summary>
+            全国药价管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleRes.工作日设置">
+            <summary>
+            工作日设置
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleRes.供求管理">
+            <summary>
+            供应管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleRes.供求审核">
+            <summary>
+            求购管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleRes.药典管理">
+            <summary>
+            药典管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleRes.品种管理">
+            <summary>
+            品种管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleRes.图表浏览">
+            <summary>
+            药典管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleRes.图表管理">
+            <summary>
+            药典管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleRes.大盘指数管理">
+            <summary>
+            大盘指数管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleRes.品种周期维护">
+            <summary>
+            品种周期维护
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleRes.品种预警维护">
+            <summary>
+            品种预警维护
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleRes.广告管理">
+            <summary>
+            广告管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleRes.资料中心管理">
+            <summary>
+            资料中心管理
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.RightKey.ModuleWF">
+            <summary>
+            指定工作流模块的某一权限。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleWF.设计流程表单">
+            <summary>
+            设计工作流表单
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleWF.管理流程定义">
+            <summary>
+            新增,编辑,设计,删除工作流
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleWF.设计流程定义">
+            <summary>
+            设计工作流
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleWF.删除流程定义">
+            <summary>
+            删除工作流
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleWF.审核流程定义">
+            <summary>
+            审核工作流
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleWF.流程事务管理">
+            <summary>
+            流程事务管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleWF.归档检索">
+            <summary>
+            归档检索
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleWF.归档记录管理">
+            <summary>
+            归档记录管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleWF.统计分析">
+            <summary>
+            统计分析
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.ModuleWF.拒绝设计流程">
+            <summary>
+            拒绝设计流程
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.ResType">
+            <summary>
+            指定系统资源的某一类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.ResType.信息栏目">
+            <summary>
+            信息栏目下的信息权限
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.ResType.菜单">
+            <summary>
+            菜单
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.ResType.工作流">
+            <summary>
+            工作流
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.ResType.系统">
+            <summary>
+            系统操作(系统资源表)
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.ResType.文件夹及文档">
+            <summary>
+            由独立的权限设置来管理文件权限。
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.RightKey.Workflow">
+            <summary>
+            指定工作流的某一权限。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.RightKey.Workflow.使用">
+            <summary>
+            使用
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Role.ChooseMode">
+            <summary>
+            指定角色选择的的某一模式。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Role.ChooseMode.用户">
+            <summary>
+            可选择用户
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Role.ChooseMode.列组织结构">
+            <summary>
+            仅显示组织结构
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Role.ChooseMode.列自定义群">
+            <summary>
+            仅显示自定义群
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Role.ChooseMode.组织结构">
+            <summary>
+            可选择组织结构
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Role.ChooseMode.自定义群">
+            <summary>
+            可选择自定义群
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Role.ChooseMode.屏蔽选组织结构">
+            <summary>
+            仅供屏蔽选择用(0x0100)
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Role.ChooseMode.屏蔽选自定义群">
+            <summary>
+            仅供屏蔽选择用(0x0200)
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Role.Flag">
+            <summary>
+            指定角色的某一状态标志。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Role.Flag.普通">
+            <summary>
+            普通,用户可定制
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Role.Flag.受保护">
+            <summary>
+            受保护,不可删除但可修改
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Role.Flag.系统">
+            <summary>
+            系统专用
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Role.Flag.不分配权限">
+            <summary>
+            不分配权限
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Role.SpecialRole">
+            <summary>
+            指定角色的某一特殊角色(RoleID)。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Role.SpecialRole.根_个人用户">
+            <summary>
+            包含所有个人登录帐户。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Role.SpecialRole.根_角色组">
+            <summary>
+            包含所有角色组。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Role.SpecialRole.根_组织结构">
+            <summary>
+            包含所有单位、部门、职位。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Role.SpecialRole.根_自定义群">
+            <summary>
+            包含所有用户自定义群（组）。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Role.SpecialRole.admin">
+            <summary>
+            默认系统管理员
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Role.SpecialRole.系统管理组">
+            <summary>
+            系统管理组,管理员对系统有不受限制的完全访问权
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Role.SpecialRole.用户组">
+            <summary>
+            用户组
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Role.SpecialRole.来宾组">
+            <summary>
+            来宾组
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Role.SpecialRole.EIIP事件组">
+            <summary>
+            该组成员会接收如短信余额不足或服务快到期等系统事件消息。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Role.SpecialRole.项管管理组">
+            <summary>
+            项目管理中的管理员组
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Role.SpecialRole.默认单位">
+            <summary>
+            默认单位
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Role.SpecialRole.短信用户群">
+            <summary>
+            短信用户群（自定义群）
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Role.State">
+            <summary>
+            指定用户帐号的某一状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Role.State.正常">
+            <summary>
+            正常
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Role.State.停用">
+            <summary>
+            停用
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Role.State.删除">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Role.Type">
+            <summary>
+            指定 Role 的某一类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Role.Type.用户">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Role.Type.角色">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Role.Type.单位">
+            <summary>
+            单位
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Role.Type.部门">
+            <summary>
+            部门
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Role.Type.职位">
+            <summary>
+            职位
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Role.Type.自定义群">
+            <summary>
+            自定义群(0x200)
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Schedule.AlertInfo">
+            <summary>
+            日程提醒信息。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Schedule.AlertInfo.DefaultAlertInfo">
+            <summary>
+            获取缺省文件权限实体实例。
+            </summary>
+        </member>
+        <member name="M:EIIP.Type.Schedule.AlertInfo.#ctor(System.Int32,System.Int32,System.DateTime,EIIP.Type.Schedule.AlertState)">
+            <summary>
+            实例化文件权限实体类。
+            </summary>
+            <param name="schID">日程ID</param>
+            <param name="userID">用户ID</param>
+            <param name="baseTime">上次提醒时间</param>
+            <param name="state">提醒状态</param>
+        </member>
+        <member name="P:EIIP.Type.Schedule.AlertInfo.SchID">
+            <summary>
+            获取日程ID
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.Schedule.AlertInfo.UserID">
+            <summary>
+            获取用户ID
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.Schedule.AlertInfo.BaseTime">
+            <summary>
+            获取上次提醒时间
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.Schedule.AlertInfo.AState">
+            <summary>
+            获取提醒状态
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Schedule.AlertState">
+            <summary>
+            指定日程提醒的某一状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Schedule.AlertState.条件提醒">
+            <summary>
+            正常提醒
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Schedule.AlertState.无条件提醒">
+            <summary>
+            无条件提醒
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Schedule.AlertState.拒绝提醒">
+            <summary>
+            拒绝提醒
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Schedule.AlertTerm">
+            <summary>
+            指定日程的定期提醒类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Schedule.AlertTerm.每年">
+            <summary>
+            每年
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Schedule.AlertTerm.每月">
+            <summary>
+            每月
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Schedule.AlertTerm.每日">
+            <summary>
+            每日
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Schedule.AlertType">
+            <summary>
+            指定日程的提醒类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Schedule.AlertType.不提醒">
+            <summary>
+            不提醒
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Schedule.AlertType.次数提醒">
+            <summary>
+            次数提醒
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Schedule.AlertType.循环提醒">
+            <summary>
+            循环提醒
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Schedule.Cata">
+            <summary>
+            指定日程的某一类别。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Schedule.Cata.普通">
+            <summary>
+            普通
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Schedule.Cata.日计划">
+            <summary>
+            每日计划
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Schedule.Cata.周计划">
+            <summary>
+            每周计划
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Schedule.Cata.月计划">
+            <summary>
+            每月计划
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Schedule.Cata.CRM活动">
+            <summary>
+            CRM活动
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Schedule.Flag">
+            <summary>
+            指定日程表的某一标志。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Schedule.Flag.普通">
+            <summary>
+            普通
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Schedule.Type">
+            <summary>
+            指定日程表的某一类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Schedule.Type.记事">
+            <summary>
+            记事类型
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Schedule.Type.计划">
+            <summary>
+            计划类型
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Schedule.Type.安排">
+            <summary>
+            安排类型
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.SiteInfo">
+            <summary>
+            站点信息。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SiteInfo.SiteID">
+            <summary>
+             站点ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SiteInfo.CountVisit">
+            <summary>
+             访问次数
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SiteInfo.TimeBase">
+            <summary>
+             基准时间
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SiteInfo.TimeUpdate">
+            <summary>
+             下次探测更新时间
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SiteInfo.Version">
+            <summary>
+             当前版本号
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SiteInfo.Version2">
+            <summary>
+             目标版本号
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SiteInfo.Version2Step">
+            <summary>
+             版本升级序号
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SiteInfo.SiteFlag">
+            <summary>
+             站点标识
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SiteInfo.SiteTag">
+            <summary>
+             站点标志
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SiteInfo.InstanceID">
+            <summary>
+             实例标识
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.SiteInfoTag">
+            <summary>
+            指定站点的某一标识。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SiteInfoTag.待定单位">
+            <summary>
+            待定单位
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.SMS.State">
+            <summary>
+            指定SMS的某一状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SMS.State.未发送">
+            <summary>
+            未发送
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SMS.State.已发送">
+            <summary>
+            已发送
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SMS.State.失败">
+            <summary>
+            失败
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.State">
+            <summary>
+            指定某一状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.State.正常">
+            <summary>
+            正常
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.State.回收站">
+            <summary>
+            回收站
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.State.删除">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.SystemDate">
+            <summary>
+            系统内置日期时间类。
+            </summary>
+        </member>
+        <member name="M:EIIP.Type.SystemDate.#ctor(System.DateTime)">
+            <summary>
+            实例化系统内置日期时间。
+            </summary>
+            <param name="dt"></param>
+        </member>
+        <member name="M:EIIP.Type.SystemDate.#ctor(System.Int16)">
+            <summary>
+            实例化系统内置日期时间。
+            </summary>
+            <param name="years">基于基准时间的年数</param>
+        </member>
+        <member name="M:EIIP.Type.SystemDate.#ctor(System.Int32)">
+            <summary>
+            实例化系统内置日期时间。
+            </summary>
+            <param name="days">基于基准时间的天数</param>
+        </member>
+        <member name="P:EIIP.Type.SystemDate.Base">
+            <summary>
+            获取基准日期时间。
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.SystemDate.Value">
+            <summary>
+            获取日期时间值。
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.SystemDate.Years">
+            <summary>
+            获取基于基准时间的整年数。
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.SystemDate.Days">
+            <summary>
+            获取基于基准时间的整天数。
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.SystemResource">
+            <summary>
+            指定系统资源的某一编号。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SystemResource.信息管理">
+            <summary>
+            信息模块的操作权限
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SystemResource.系统功能">
+            <summary>
+            系统功能模块的操作权限
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SystemResource.菜单">
+            <summary>
+            菜单模块的操作权限
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SystemResource.公文">
+            <summary>
+            公文
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SystemResource.工作流">
+            <summary>
+            工作流
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SystemResource.资源管理">
+            <summary>
+            资源管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SystemResource.人事管理">
+            <summary>
+            人事管理
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SystemResource.CRM">
+            <summary>
+            CRM
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SystemResource.CRM0">
+            <summary>
+            CRM
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SystemResource.CRM1">
+            <summary>
+            CRM
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SystemResource.CRM2">
+            <summary>
+            CRM
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SystemResource.CRM3">
+            <summary>
+            CRM
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SystemResource.CRM4">
+            <summary>
+            CRM
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SystemResource.CRM5">
+            <summary>
+            CRM
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SystemResource.CRM6">
+            <summary>
+            CRM
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SystemResource.CRM7">
+            <summary>
+            CRM
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SystemResource.CRM8">
+            <summary>
+            CRM
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SystemResource.CRM9">
+            <summary>
+            CRM
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SystemResource.CRM10">
+            <summary>
+            CRM
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SystemResource.CRM11">
+            <summary>
+            CRM
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SystemResource.ICM">
+            <summary>
+            ICM
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SystemResource.ICM0">
+            <summary>
+            ICM
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SystemResource.ICM1">
+            <summary>
+            ICM
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SystemResource.ICM2">
+            <summary>
+            ICM
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SystemResource.IMM">
+            <summary>
+            IMM
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SystemResource.IMM0">
+            <summary>
+            IMM
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SystemResource.IMM1">
+            <summary>
+            IMM
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.SystemResource.IMM2">
+            <summary>
+            IMM
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Tidings.Type">
+            <summary>
+            指定讯息的某一类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Tidings.Type.登录">
+            <summary>
+            登录讯息
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Tidings.Type.只有自已看">
+            <summary>
+            100以内的要排除自己
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Tidings.Type.全部">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.User.HandleAction">
+            <summary>
+            指定用户的某一处理行为。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.User.HandleAction.弹出系统">
+            <summary>
+            弹出系统
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.User.HandleAction.更新权限环境">
+            <summary>
+            更新权限环境
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.User.HandleAction.新消息">
+            <summary>
+            新消息
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.User.OnlineState">
+            <summary>
+            指定用户在线的某一状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.User.OnlineState.联机">
+            <summary>
+            联机
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.User.OnlineState.忙碌">
+            <summary>
+            忙碌
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.User.OnlineState.隐身">
+            <summary>
+            隐身
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.User.OnlineState.离开">
+            <summary>
+            离开
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.WhiteBoardTools">
+            <summary>
+            指定白板的某一绘图工具。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.WhiteBoardTools.工具_钢笔">
+            <summary>
+            可随意书写内容,保留书写痕迹
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.WhiteBoardTools.工具_直线">
+            <summary>
+            选择后，按住鼠标左键在画板内移动光标即可
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.WhiteBoardTools.工具_记忆线">
+            <summary>
+            选择后，以点击鼠标左键的方式决定每条线的路径
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.WhiteBoardTools.工具_圆型">
+            <summary>
+            圆型
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.WhiteBoardTools.工具_长方型">
+            <summary>
+            长方型
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.WhiteBoardTools.工具_圆矩型">
+            <summary>
+            圆矩型
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.WhiteBoardTools.工具_弧型">
+            <summary>
+            使用旋转即可更改弧缺
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.WhiteBoardTools.工具_文字">
+            <summary>
+            选择后，在画板内单击鼠标左键即在目标位置插入文字
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.WhiteBoardTools.工具_预置图型">
+            <summary>
+            几种固有图型
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.WhiteBoardTools.所有工具">
+            <summary>
+            所有绘图工具
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.WhiteBoardTools.操作_选移">
+            <summary>
+            选择后，左键按住画板内需要移动的图形，而后移动鼠标即可
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.WhiteBoardTools.操作_调大小">
+            <summary>
+            调大小
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.WhiteBoardTools.操作_放大">
+            <summary>
+            不支持放大[线条]一类的图型
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.WhiteBoardTools.操作_缩小">
+            <summary>
+            不支持缩小[线条]一类的图型
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.WhiteBoardTools.操作_阴影">
+            <summary>
+            阴影
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.WhiteBoardTools.操作_边框">
+            <summary>
+            同样可以在次定义画笔的粗度，甚至去掉边框
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.WhiteBoardTools.操作_填充">
+            <summary>
+            [线条、图片、文字]不支持填充
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.WhiteBoardTools.操作_立体">
+            <summary>
+            [图片、文字]不支持立体
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.WhiteBoardTools.操作_透明度">
+            <summary>
+            可以设置目标透明度、透明效果、是否空心
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.WhiteBoardTools.操作_文字化">
+            <summary>
+            以文字充当目标图型的边框
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.WhiteBoardTools.操作_旋转">
+            <summary>
+            旋转幅度可单独依据鼠标左右、上下移动控制,注意:Rotation旋转效果在运行时必须由脚本控制
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.WhiteBoardTools.所有操作">
+            <summary>
+            所有绘图工具的可用操作
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.WhiteBoardTools.所有功能">
+            <summary>
+            所有功能
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Workflow.ColumnFlag">
+            <summary>
+            指定工作流表单列字段的某一标识。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.ColumnFlag.系统级">
+            <summary>
+            系统级
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.ColumnFlag.表达式">
+            <summary>
+            表达式
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.ColumnFlag.必填字段">
+            <summary>
+            必填字段
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.ColumnFlag.多行文本">
+            <summary>
+            多行文本
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.ColumnFlag.启动时不显示">
+            <summary>
+            启动时不显示
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.ColumnFlag.开始一组">
+            <summary>
+            开始一组
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.ColumnFlag.结束一组">
+            <summary>
+            结束一组
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Workflow.ColumnItem">
+             <summary>
+             工作流表单列明细。
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Workflow.ValueEntry">
+            <summary>
+            属性值实体类
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.ValueEntry.Empty">
+            <summary>
+            空的值实体
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.ValueEntry.m_Value">
+            <summary>
+            表单列值数据。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.ValueEntry.m_StringValue">
+            <summary>
+            表单列字符串类型值。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.ValueEntry.m_FieldType">
+            <summary>
+            字段类型
+            </summary>
+        </member>
+        <member name="M:EIIP.Type.Workflow.ValueEntry.#ctor">
+            <summary>
+            实例化缺省值实体。
+            </summary>
+        </member>
+        <member name="M:EIIP.Type.Workflow.ValueEntry.#ctor(EIIP.PropertySet.FieldType,System.Object)">
+            <summary>
+            实例化值实体。
+            </summary>
+            <param name="type">类型</param>
+            <param name="value">值</param>
+        </member>
+        <member name="P:EIIP.Type.Workflow.ValueEntry.FieldType">
+            <summary>
+            获取类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.Workflow.ValueEntry.Value">
+            <summary>
+            获取或设置值。
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.Workflow.ValueEntry.StringValue">
+            <summary>
+            获取或设置字符串值。
+            </summary>
+        </member>
+        <member name="M:EIIP.Type.Workflow.ColumnItem.ResetProperties">
+             <summary>
+             重置属性
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.ColumnItem.m_ColID">
+            <summary>
+             列ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.ColumnItem.m_WID">
+            <summary>
+             工作流定义ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.ColumnItem.m_CName">
+            <summary>
+             列名称
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.ColumnItem.m_CTypeID">
+            <summary>
+             列类型ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.ColumnItem.m_VTypeID">
+            <summary>
+             数据类型ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.ColumnItem.m_Width">
+            <summary>
+             字段显示宽度
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.ColumnItem.m_Length">
+            <summary>
+             数据长度
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.ColumnItem.m_Scale">
+            <summary>
+             小数位数
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.ColumnItem.m_CText">
+            <summary>
+             列文本
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.ColumnItem.m_CPropertys">
+            <summary>
+             列属性集
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.ColumnItem.m_CFlag">
+            <summary>
+             列标志
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.ColumnItem.m_Appro">
+            <summary>
+             许可级别
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.ColumnItem.m_OrderID">
+            <summary>
+             优先级
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.ColumnItem.m_StateID">
+            <summary>
+             状态ID
+            </summary>
+        </member>
+        <member name="M:EIIP.Type.Workflow.ColumnItem.GetCPropertys``1">
+            <summary>
+            获取列属性集对象。
+            </summary>
+            <typeparam name="T">要反序列化的列属性集对象类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Type.Workflow.ColumnItem.#ctor">
+            <summary>
+            构造缺省实例。
+            </summary>
+        </member>
+        <member name="M:EIIP.Type.Workflow.ColumnItem.#ctor(System.Data.DataRow)">
+            <summary>
+            构造指定表单列实例。
+            </summary>
+            <param name="row">列数据</param>
+        </member>
+        <member name="M:EIIP.Type.Workflow.ColumnItem.#ctor(System.Data.IDataReader)">
+            <summary>
+            构造指定表单列实例。
+            </summary>
+            <param name="dr">数据源</param>
+        </member>
+        <member name="M:EIIP.Type.Workflow.ColumnItem.GetListText(System.Int32)">
+            <summary>
+            获取列表指定索引的显示文本。
+            </summary>
+            <param name="index">索引</param>
+            <returns></returns>
+        </member>
+        <member name="P:EIIP.Type.Workflow.ColumnItem.ColID">
+            <summary>
+             获取列ID
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.Workflow.ColumnItem.ID">
+            <summary>
+            获取表单字段名。
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.Workflow.ColumnItem.WID">
+            <summary>
+             获取工作流定义ID
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.Workflow.ColumnItem.CName">
+            <summary>
+             获取列名称
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.Workflow.ColumnItem.CTypeID">
+            <summary>
+             获取列类型ID
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.Workflow.ColumnItem.VTypeID">
+            <summary>
+             获取数据类型ID
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.Workflow.ColumnItem.FieldType">
+            <summary>
+            获取表单列数据类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.Workflow.ColumnItem.Width">
+            <summary>
+             获取字段显示宽度
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.Workflow.ColumnItem.Length">
+            <summary>
+             获取数据长度
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.Workflow.ColumnItem.Scale">
+            <summary>
+             获取小数位数
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.Workflow.ColumnItem.CText">
+            <summary>
+             获取列文本
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.Workflow.ColumnItem.CPropertys">
+            <summary>
+             获取列文本
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.Workflow.ColumnItem.BasePropertys">
+            <summary>
+            获取扩展的基础列属性集。
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.Workflow.ColumnItem.CFlag">
+            <summary>
+             获取列标志
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.Workflow.ColumnItem.Appro">
+            <summary>
+             获取许可级别
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.Workflow.ColumnItem.OrderID">
+            <summary>
+             获取优先级
+            </summary>
+        </member>
+        <member name="P:EIIP.Type.Workflow.ColumnItem.StateID">
+            <summary>
+             获取状态ID
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Workflow.ColumnState">
+            <summary>
+            指定工作流表单列字段的某一状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.ColumnState.设计">
+            <summary>
+            设计时的字段
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.ColumnState.启用">
+            <summary>
+            已启用的字段
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.ColumnState.停用">
+            <summary>
+            停用的字段
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.ColumnState.删除">
+            <summary>
+            删除的字段
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Workflow.ColumnType">
+            <summary>
+            指定工作流表单列字段的某一类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.ColumnType.流程字段">
+            <summary>
+            仅在工作流流转时使用的字段，不能被归档。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.ColumnType.归档字段">
+            <summary>
+            可归档的物理表单字段。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.ColumnType.流程辅助">
+            <summary>
+            仅在工作流流转时使用的流程辅助字段，不能被归档。
+            </summary>
+        </member>
+        <member name="T:EIIP.PropertySet.Data">
+            <summary>
+            字节数据。（密封类）
+            </summary>
+        </member>
+        <member name="F:EIIP.PropertySet.Data.bytes">
+            <summary>
+            数据
+            </summary>
+        </member>
+        <member name="M:EIIP.PropertySet.Data.#ctor">
+            <summary>
+            实例化字节数据。
+            </summary>
+        </member>
+        <member name="M:EIIP.PropertySet.Data.#ctor(System.Byte[])">
+            <summary>
+            以指定数据实例化字节数据。
+            </summary>
+            <param name="bytes"></param>
+        </member>
+        <member name="P:EIIP.PropertySet.Data.Bytes">
+            <summary>
+            获取或设置字节数组。
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Workflow.Entry">
+             <summary>
+             工作流实体明细。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.Entry.WFID">
+            <summary>
+             工作流ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.Entry.WorkflowID">
+            <summary>
+            工作流定义ID。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.Entry.WFName">
+            <summary>
+             工作流名称
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.Entry.State">
+            <summary>
+             工作流状态
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.Entry.UserID">
+            <summary>
+             发起人ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.Entry.User">
+            <summary>
+             发起人
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.Entry.CTime">
+            <summary>
+             创建时间
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Workflow.EntryState">
+            <summary>
+            指定工作流实体的某一状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.EntryState.CREATED">
+            <summary>
+            已创建状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.EntryState.ACTIVATED">
+            <summary>
+            激活状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.EntryState.SUSPENDED">
+            <summary>
+            挂起状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.EntryState.KILLED">
+            <summary>
+            异常终止。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.EntryState.COMPLETED">
+            <summary>
+            正常结束。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.EntryState.UNKNOWN">
+            <summary>
+            未知。
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Workflow.Flag">
+            <summary>
+            指定工作流定义的某一标志。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.Flag.系统级">
+            <summary>
+            系统级
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.Flag.受保护">
+            <summary>
+            受保护
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.Flag.归档">
+            <summary>
+            归档标志
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Workflow.Object">
+            <summary>
+            指定工作流流程定义某一描述对象。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.Object.Action">
+            <summary>
+            动作
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.Object.Step">
+            <summary>
+            步骤
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.Object.Split">
+            <summary>
+            分支点
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.Object.Join">
+            <summary>
+            连接点
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.Object.Condition">
+            <summary>
+            条件
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.Object.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Workflow.State">
+            <summary>
+            指定工作流流程定义某一状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.State.草稿">
+            <summary>
+            未启用
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.State.已启用">
+            <summary>
+            已启用
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.State.回收站">
+            <summary>
+            回收站
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.State.删除">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Workflow.StepEntryState">
+            <summary>
+            指定步骤实体的某一状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.StepEntryState.正常">
+            <summary>
+            正常
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.StepEntryState.历史">
+            <summary>
+            历史
+            </summary>
+        </member>
+        <member name="T:EIIP.Type.Workflow.StepStatus">
+            <summary>
+            指示工作流程中具体步骤某一运行时状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.StepStatus.完成">
+            <summary>
+            非法类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.StepStatus.等待">
+            <summary>
+            等候处理中
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.StepStatus.进行中">
+            <summary>
+            进行中
+            </summary>
+        </member>
+        <member name="F:EIIP.Type.Workflow.StepStatus.已拒绝">
+            <summary>
+            拒绝
+            </summary>
+        </member>
+        <member name="T:EIIP.Workflow.WorkflowInfo">
+            <summary>
+            工作流定义信息类。
+            </summary>
+        </member>
+        <member name="F:EIIP.Workflow.WorkflowInfo.m_WorkflowID">
+            <summary>
+             工作流ID
+            </summary>
+        </member>
+        <member name="F:EIIP.Workflow.WorkflowInfo.m_WTypeID">
+            <summary>
+             工作流类型
+            </summary>
+        </member>
+        <member name="F:EIIP.Workflow.WorkflowInfo.m_WName">
+            <summary>
+             工作流名称
+            </summary>
+        </member>
+        <member name="F:EIIP.Workflow.WorkflowInfo.m_Content">
+            <summary>
+             工作流定义内容
+            </summary>
+        </member>
+        <member name="F:EIIP.Workflow.WorkflowInfo.m_WFlag">
+            <summary>
+             工作流标志
+            </summary>
+        </member>
+        <member name="F:EIIP.Workflow.WorkflowInfo.m_StateID">
+            <summary>
+             工作流状态ID
+            </summary>
+        </member>
+        <member name="M:EIIP.Workflow.WorkflowInfo.#ctor(System.Int32)">
+            <summary>
+            实例化工作流定义信息。
+            </summary>
+            <param name="workflowID">工作流定义ID</param>
+        </member>
+        <member name="P:EIIP.Workflow.WorkflowInfo.WorkflowID">
+            <summary>
+             获取工作流ID
+            </summary>
+        </member>
+        <member name="P:EIIP.Workflow.WorkflowInfo.WTypeID">
+            <summary>
+             获取或设置工作流类型
+            </summary>
+        </member>
+        <member name="P:EIIP.Workflow.WorkflowInfo.WName">
+            <summary>
+             获取或设置工作流名称
+            </summary>
+        </member>
+        <member name="P:EIIP.Workflow.WorkflowInfo.Content">
+            <summary>
+             获取或设置工作流定义内容
+            </summary>
+        </member>
+        <member name="P:EIIP.Workflow.WorkflowInfo.WFlag">
+            <summary>
+             获取或设置工作流标志
+            </summary>
+        </member>
+        <member name="P:EIIP.Workflow.WorkflowInfo.StateID">
+            <summary>
+             获取或设置工作流状态ID
+            </summary>
+        </member>
+    </members>
+</doc>

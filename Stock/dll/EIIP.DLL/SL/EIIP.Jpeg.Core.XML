@@ -1,0 +1,649 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EIIP.Jpeg.Core</name>
+    </assembly>
+    <members>
+        <member name="T:EIIP.Jpeg.Core.JpegHeader">
+            <summary>
+            JPEG头部。
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.JpegHeader.Marker">
+            <summary>
+            标记。
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.JpegHeader.Data">
+            <summary>
+            数据。
+            </summary>
+        </member>
+        <member name="P:EIIP.Jpeg.Core.JpegHeader.ToString">
+            <summary>
+            输出Encoding.UTF8字符串数据。
+            </summary>
+        </member>
+        <member name="T:EIIP.Jpeg.Core.DecodedJpeg">
+            <summary>
+            已解码的JPEG。
+            </summary>
+        </member>
+        <member name="M:EIIP.Jpeg.Core.DecodedJpeg.#ctor(EIIP.Jpeg.Core.Image,System.Collections.Generic.IEnumerable{EIIP.Jpeg.Core.JpegHeader})">
+            <summary>
+            实例化解码后的JPEG。
+            </summary>
+            <param name="image"></param>
+            <param name="metaHeaders"></param>
+        </member>
+        <member name="M:EIIP.Jpeg.Core.DecodedJpeg.#ctor(EIIP.Jpeg.Core.Image)">
+            <summary>
+            实例化解码后的JPEG。
+            </summary>
+            <param name="image"></param>
+        </member>
+        <member name="P:EIIP.Jpeg.Core.DecodedJpeg.Image">
+            <summary>
+            获取图像。
+            </summary>
+        </member>
+        <member name="P:EIIP.Jpeg.Core.DecodedJpeg.HasJFIF">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EIIP.Jpeg.Core.DecodedJpeg.MetaHeaders">
+            <summary>
+            获取头部元数据。
+            </summary>
+        </member>
+        <member name="T:EIIP.Jpeg.Core.DCT">
+            <summary>
+            实现离散的余弦变换。
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.DCT.N">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EIIP.Jpeg.Core.DCT.SetValueClipped(System.Byte[0:,0:],System.Int32,System.Int32,System.Single)">
+            <summary>
+            设置缩略值。
+            </summary>
+            <param name="arr"></param>
+            <param name="i"></param>
+            <param name="j"></param>
+            <param name="val"></param>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.DCT.quantum">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.DCT.divisors">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.DCT.DivisorsLuminance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.DCT.DivisorsChrominance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EIIP.Jpeg.Core.DCT.#ctor(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="quality"></param>
+        </member>
+        <member name="T:EIIP.Jpeg.Core.Encoder.JpegEncodeProgressChangedArgs">
+            <summary>
+            JPEG编码器处理进度变更事件参数。
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.Encoder.JpegEncodeProgressChangedArgs.EncodeProgress">
+            <summary>
+            从 0 至 1.0 的进度值。
+            </summary>
+        </member>
+        <member name="T:EIIP.Jpeg.Core.Encoder.JpegEncoder">
+            <summary>
+            JPEG编码器。
+            </summary>
+        </member>
+        <member name="M:EIIP.Jpeg.Core.Encoder.JpegEncoder.#ctor(EIIP.Jpeg.Core.Image,System.Int32,System.IO.Stream)">
+            <summary>
+            实例化JPEG编码器。
+            </summary>
+            <param name="image">图像实例</param>
+            <param name="quality">质量</param>
+            <param name="outStream">输出流</param>
+        </member>
+        <member name="M:EIIP.Jpeg.Core.Encoder.JpegEncoder.#ctor(EIIP.Jpeg.Core.DecodedJpeg,System.Int32,System.IO.Stream)">
+            <summary>
+            实例化JPEG编码器。
+            </summary>
+            <param name="decodedJpeg">解码的Jpeg</param>
+            <param name="quality">从0至100的图像质量(压缩从大到小)</param>
+            <param name="outStream">输出流</param>
+        </member>
+        <member name="M:EIIP.Jpeg.Core.Encoder.JpegEncoder.Encode">
+            <summary>
+            编码。
+            </summary>
+        </member>
+        <member name="E:EIIP.Jpeg.Core.Encoder.JpegEncoder.EncodeProgressChanged">
+            <summary>
+            编码进度变更事件成员。
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.JPEGMarker.DHT">
+            <summary>
+            哈夫曼编码表。
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.JPEGMarker.DQT">
+            <summary>
+            量子化表。
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.JPEGMarker.SOS">
+            <summary>
+            扫描起始位。
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.JPEGMarker.DRI">
+            <summary>
+            定义重启间隔
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.JPEGMarker.COM">
+            <summary>
+            注释
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.JPEGMarker.SOI">
+            <summary>
+            图像起始位置。
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.JPEGMarker.EOI">
+            <summary>
+            图像结尾。
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.JPEGMarker.DNL">
+            <summary>
+            定义线数量
+            </summary>
+        </member>
+        <member name="T:EIIP.Jpeg.Core.IO.BinaryReader">
+            <summary>
+            大端法二进制读取器。大端表示中，一个多字节整数的最高数位的字节写在左边。
+            </summary>
+        </member>
+        <member name="M:EIIP.Jpeg.Core.IO.JPEGBinaryReader.GetNextMarker">
+            <summary>
+            获取下一标志。
+            </summary>
+        </member>
+        <member name="M:EIIP.Jpeg.Core.IO.JPEGBinaryReader.ReadBits(System.Int32)">
+            <summary>
+            读取位
+            </summary>
+            <param name="n">要返回的位长度</param>
+            <returns></returns>
+        </member>
+        <member name="T:EIIP.Jpeg.Core.Filtering.GrayImage">
+            <summary>
+            灰度图像。
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.Filtering.GrayImage.Scan0">
+            <summary>
+            在0.0至1.0的像素亮度数据。
+            </summary>
+        </member>
+        <member name="M:EIIP.Jpeg.Core.Filtering.GrayImage.#ctor(System.Int32,System.Int32)">
+            <summary>
+            实例化从0.0至1.0的灰度图像。
+            </summary>
+            <param name="width">宽度</param>
+            <param name="height">高度</param>
+        </member>
+        <member name="M:EIIP.Jpeg.Core.Filtering.GrayImage.#ctor(System.Byte[0:,0:])">
+            <summary>
+            从位图实例化从0.0至1.0的灰度图像。
+            </summary>
+        </member>
+        <member name="M:EIIP.Jpeg.Core.Filtering.GrayImage.ToByteArray2D">
+            <summary>
+            转换为2D位数组。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EIIP.Jpeg.Core.Filtering.GrayImage.Width">
+            <summary>
+            获取或设置宽度。
+            </summary>
+        </member>
+        <member name="P:EIIP.Jpeg.Core.Filtering.GrayImage.Height">
+            <summary>
+            获取或设置高度。
+            </summary>
+        </member>
+        <member name="P:EIIP.Jpeg.Core.Filtering.GrayImage.Item(System.Int32,System.Int32)">
+            <summary>
+            获取或设置指定像素。返回在0.0至1.0的像素亮度。
+            </summary>
+            <param name="x">X-坐标</param>
+            <param name="y">Y-坐标</param>
+            <returns>Pixel brightness between 0.0 and 1.0</returns>
+        </member>
+        <member name="T:EIIP.Jpeg.Core.Filtering.Convolution">
+            <summary>
+            卷积类。
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.Filtering.Convolution.Instance">
+            <summary>
+            卷积实例。
+            </summary>
+        </member>
+        <member name="M:EIIP.Jpeg.Core.Filtering.Convolution.GaussianConv(EIIP.Jpeg.Core.Filtering.GrayImage,System.Double)">
+            <summary>
+            实例化卷积。
+            </summary>
+            <param name="data">灰度图像数据</param>
+            <param name="std"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Jpeg.Core.Filtering.Convolution.GaussianFilter(System.Double)">
+            <summary>
+            卷积过滤。
+            </summary>
+            <param name="std"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Jpeg.Core.Filtering.Convolution.Conv2DSeparable(EIIP.Jpeg.Core.Filtering.GrayImage,System.Single[])">
+            <summary>
+            转换
+            </summary>
+            <param name="data"></param>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Jpeg.Core.Filtering.Convolution.Filter1DSymmetric(EIIP.Jpeg.Core.Filtering.GrayImage,System.Single[],System.Boolean)">
+            <summary>
+            过滤灰度图像。
+            </summary>
+            <param name="data">要操作的灰度图像</param>
+            <param name="filter">过滤器</param>
+            <param name="transpose">设置是否进行变换</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Jpeg.Core.Filtering.Convolution.Conv2DSymmetric(EIIP.Jpeg.Core.Filtering.GrayImage,EIIP.Jpeg.Core.Filtering.GrayImage)">
+            <summary>
+            转换
+            </summary>
+            <param name="data"></param>
+            <param name="opLR"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Jpeg.Core.Filtering.Convolution.Conv2D(EIIP.Jpeg.Core.Filtering.GrayImage,EIIP.Jpeg.Core.Filtering.GrayImage)">
+            <summary>
+            Vanilla 2D convolution.  Not optimized.
+            </summary>
+            <param name="data"></param>
+            <param name="op"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EIIP.Jpeg.Core.ColorModel">
+            <summary>
+            颜色模式结构。
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.ColorModel.colorspace">
+            <summary>
+            颜色空间。
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.ColorModel.Opaque">
+            <summary>
+            指示是否透明。true=不透明
+            </summary>
+        </member>
+        <member name="T:EIIP.Jpeg.Core.ColorSpace">
+            <summary>
+            指示某一颜色空间
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.ColorSpace.Gray">
+            <summary>
+            灰度
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.ColorSpace.YCbCr">
+            <summary>
+            YCbCr
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.ColorSpace.RGB">
+            <summary>
+            RGB
+            </summary>
+        </member>
+        <member name="T:EIIP.Jpeg.Core.Image">
+            <summary>
+            图像类。
+            </summary>
+        </member>
+        <member name="M:EIIP.Jpeg.Core.Image.ChangeColorSpace(EIIP.Jpeg.Core.ColorSpace)">
+            <summary>
+            转换颜色空间至图像。
+            </summary>
+            <param name="cs">颜色空间</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Jpeg.Core.Image.#ctor(EIIP.Jpeg.Core.ColorModel,System.Byte[][0:,0:])">
+            <summary>
+            实例化图像。
+            </summary>
+            <param name="cm">颜色模式</param>
+            <param name="raster">扫描线数据</param>
+        </member>
+        <member name="M:EIIP.Jpeg.Core.Image.CreateRaster(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            创建扫描线。
+            </summary>
+            <param name="width">宽</param>
+            <param name="height">高</param>
+            <param name="bands"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EIIP.Jpeg.Core.Image.Raster">
+            <summary>
+            获取扫描线
+            </summary>
+        </member>
+        <member name="P:EIIP.Jpeg.Core.Image.ColorModel">
+            <summary>
+            获取颜色模式。
+            </summary>
+        </member>
+        <member name="P:EIIP.Jpeg.Core.Image.DensityX">
+            <summary>
+            获取或设置X方向的密度（点/英寸）。
+            </summary>
+        </member>
+        <member name="P:EIIP.Jpeg.Core.Image.DensityY">
+            <summary>
+            获取或设置Y方向的密度（点/英寸）。
+            </summary>
+        </member>
+        <member name="P:EIIP.Jpeg.Core.Image.ComponentCount">
+            <summary>
+            获取扫描线数量。
+            </summary>
+        </member>
+        <member name="P:EIIP.Jpeg.Core.Image.Width">
+            <summary>
+            获取宽度。
+            </summary>
+        </member>
+        <member name="P:EIIP.Jpeg.Core.Image.Height">
+            <summary>
+            获取高度。
+            </summary>
+        </member>
+        <member name="T:EIIP.Jpeg.Core.Filtering.ResamplingFilters">
+            <summary>
+            指示重新采样的某一过滤器。
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.Filtering.ResamplingFilters.NearestNeighbor">
+            <summary>
+            近邻取样
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.Filtering.ResamplingFilters.LowpassAntiAlias">
+            <summary>
+            抗锯齿
+            </summary>
+        </member>
+        <member name="T:EIIP.Jpeg.Core.Filtering.FilterProgressEventArgs">
+            <summary>
+            过滤进度事件参数。
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.Filtering.FilterProgressEventArgs.Progress">
+            <summary>
+            进度值0.0－1.0
+            </summary>
+        </member>
+        <member name="T:EIIP.Jpeg.Core.Decoder.BlockUpsamplingMode">
+            <summary>
+            指定块的某一取样模式。
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.Decoder.BlockUpsamplingMode.BoxFilter">
+            <summary>
+            最简单的取样模式。
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.Decoder.BlockUpsamplingMode.Interpolate">
+            <summary>
+            更平滑的取样模式。
+            </summary>
+        </member>
+        <member name="T:EIIP.Jpeg.Core.Decoder.JpegDecodeProgressChangedArgs">
+            <summary>
+            JPEG解码器处理进度变更事件参数。
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.Decoder.JpegDecodeProgressChangedArgs.SizeReady">
+            <summary>
+            尺寸。
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.Decoder.JpegDecodeProgressChangedArgs.Width">
+            <summary>
+            宽度
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.Decoder.JpegDecodeProgressChangedArgs.Height">
+            <summary>
+            高度
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.Decoder.JpegDecodeProgressChangedArgs.Abort">
+            <summary>
+            指示是否异常。
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.Decoder.JpegDecodeProgressChangedArgs.ReadPosition">
+            <summary>
+            从 0 至输入流的长度。
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.Decoder.JpegDecodeProgressChangedArgs.DecodeProgress">
+            <summary>
+            从 0 至 1.0 的进度值。
+            </summary>
+        </member>
+        <member name="T:EIIP.Jpeg.Core.Decoder.JpegDecoder">
+            <summary>
+            JPEG解码器。
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.Decoder.JpegDecoder.MAJOR_VERSION">
+            <summary>
+            解码版本 JFIF 1.02.
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.Decoder.JpegDecoder.ProgressUpdateByteInterval">
+            <summary>
+            进度更新间隔。
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.Decoder.JpegDecoder.JFIF_FIXED_LENGTH">
+            <summary>
+            不包括缩略数据的JFIF字段长度。
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.Decoder.JpegDecoder.JFXX_FIXED_LENGTH">
+            <summary>
+            不包括扩展数据的JFIF扩展字段长度。
+            </summary>
+        </member>
+        <member name="M:EIIP.Jpeg.Core.Decoder.JpegDecoder.#ctor(System.IO.Stream)">
+            <summary>
+            实例化JPEG解码器。
+            </summary>
+            <param name="input">输入流</param>
+        </member>
+        <member name="M:EIIP.Jpeg.Core.Decoder.JpegDecoder.TryParseJFIF(System.Byte[])">
+            <summary>
+            尝试解析 JFIF APP0 头。
+            </summary>
+        </member>
+        <member name="M:EIIP.Jpeg.Core.Decoder.JpegDecoder.Decode">
+            <summary>
+            解码。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="E:EIIP.Jpeg.Core.Decoder.JpegDecoder.DecodeProgressChanged">
+            <summary>
+            解码进度变更事件成员。
+            </summary>
+        </member>
+        <member name="P:EIIP.Jpeg.Core.Decoder.JpegDecoder.BlockUpsamplingMode">
+            <summary>
+            获取或设置块的取样模式。
+            </summary>
+        </member>
+        <member name="T:EIIP.Jpeg.Core.Decoder.JpegDecoder.UnitType">
+            <summary>
+            指示某一单位类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.Decoder.JpegDecoder.UnitType.None">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.Decoder.JpegDecoder.UnitType.Inches">
+            <summary>
+            英寸
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.Decoder.JpegDecoder.UnitType.Centimeters">
+            <summary>
+            厘米
+            </summary>
+        </member>
+        <member name="T:EIIP.Jpeg.Core.HuffmanTable">
+            <summary>
+            哈夫曼编码表。
+            </summary>
+        </member>
+        <member name="M:EIIP.Jpeg.Core.HuffmanTable.bufferIt(System.IO.Stream,System.Int32,System.Int32)">
+            <summary>
+            使用整型长度(32位)的缓存存储 Huffman 编码数据并传至outStream
+            </summary>
+        </member>
+        <member name="M:EIIP.Jpeg.Core.HuffmanTable.initHuf">
+            <summary>
+            初始化亮度与色度的 Huffman 编码。
+            </summary>
+        </member>
+        <member name="M:EIIP.Jpeg.Core.YCbCr.fromRGB(System.Single[])">
+            <summary>
+            RGB 转换为 YCbCr 范围 0-255
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EIIP.Jpeg.Core.IO.BinaryWriter">
+            <summary>
+            大端法二进制写入器。大端表示中，一个多字节整数的最高数位的字节写在左边。
+            </summary>
+        </member>
+        <member name="T:EIIP.Jpeg.Core.Decoder.JpegComponent">
+            <summary>
+            JPEG组件。
+            </summary>
+        </member>
+        <member name="T:EIIP.Jpeg.Core.ResizeNotNeededException">
+            <summary>
+            不需调整大小的异常。
+            </summary>
+        </member>
+        <member name="T:EIIP.Jpeg.Core.ResizeProgressChangedEventArgs">
+            <summary>
+            调整大小进度事件参数。
+            </summary>
+        </member>
+        <member name="F:EIIP.Jpeg.Core.ResizeProgressChangedEventArgs.Progress">
+            <summary>
+            进度0.0－1.0
+            </summary>
+        </member>
+        <member name="T:EIIP.Jpeg.Core.ImageResizer">
+            <summary>
+            图像尺寸调整器。
+            </summary>
+        </member>
+        <member name="M:EIIP.Jpeg.Core.ImageResizer.#ctor(EIIP.Jpeg.Core.Image)">
+            <summary>
+            实例化图像尺寸调整器。
+            </summary>
+            <param name="input">图像</param>
+        </member>
+        <member name="M:EIIP.Jpeg.Core.ImageResizer.ResizeNeeded(EIIP.Jpeg.Core.Image,System.Int32)">
+            <summary>
+            测试是否需要调整尺寸。
+            </summary>
+            <param name="image">图像</param>
+            <param name="maxEdgeLength">最大边缘长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Jpeg.Core.ImageResizer.Resize(System.Int32,EIIP.Jpeg.Core.Filtering.ResamplingFilters)">
+            <summary>
+            调整尺寸。
+            </summary>
+            <param name="maxEdgeLength">最大边缘长度</param>
+            <param name="technique">采样过滤器</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Jpeg.Core.ImageResizer.Resize(System.Int32,System.Int32,EIIP.Jpeg.Core.Filtering.ResamplingFilters)">
+            <summary>
+            调整尺寸。
+            </summary>
+            <param name="maxWidth">最大宽度</param>
+            <param name="maxHeight">最大高度</param>
+            <param name="technique">采样过滤器</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Jpeg.Core.ImageResizer.Resize(System.Double,EIIP.Jpeg.Core.Filtering.ResamplingFilters)">
+            <summary>
+            调整尺寸。
+            </summary>
+            <param name="scale">缩放比例</param>
+            <param name="technique">采样过滤器</param>
+            <returns></returns>
+        </member>
+        <member name="E:EIIP.Jpeg.Core.ImageResizer.ProgressChanged">
+            <summary>
+            尺寸调整事件成员。
+            </summary>
+        </member>
+    </members>
+</doc>

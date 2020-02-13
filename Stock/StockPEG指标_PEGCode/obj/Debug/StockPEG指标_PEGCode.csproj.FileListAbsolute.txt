@@ -1,0 +1,50 @@
+c:\users\lenovo\documents\visual studio 2013\Projects\Stock\StockPEG指标_PEGCode\bin\Debug\StockPEG指标_PEGCode.exe.config
+c:\users\lenovo\documents\visual studio 2013\Projects\Stock\StockPEG指标_PEGCode\obj\Debug\StockPEG指标_PEGCode.csprojResolveAssemblyReference.cache
+c:\users\lenovo\documents\visual studio 2013\Projects\Stock\StockPEG指标_PEGCode\bin\Debug\StockPEG指标_PEGCode.exe
+c:\users\lenovo\documents\visual studio 2013\Projects\Stock\StockPEG指标_PEGCode\bin\Debug\StockPEG指标_PEGCode.pdb
+c:\users\lenovo\documents\visual studio 2013\Projects\Stock\StockPEG指标_PEGCode\obj\Debug\StockPEG指标_PEGCode.exe
+c:\users\lenovo\documents\visual studio 2013\Projects\Stock\StockPEG指标_PEGCode\obj\Debug\StockPEG指标_PEGCode.pdb
+C:\Users\Administrator\Desktop\Stock\Stock\StockPEG指标_PEGCode\bin\Debug\StockPEG指标_PEGCode.exe.config
+C:\Users\Administrator\Desktop\Stock\Stock\StockPEG指标_PEGCode\bin\Debug\StockPEG指标_PEGCode.exe
+C:\Users\Administrator\Desktop\Stock\Stock\StockPEG指标_PEGCode\bin\Debug\StockPEG指标_PEGCode.pdb
+C:\Users\Administrator\Desktop\Stock\Stock\StockPEG指标_PEGCode\obj\Debug\StockPEG指标_PEGCode.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Stock\Stock\StockPEG指标_PEGCode\obj\Debug\StockPEG指标_PEGCode.exe
+C:\Users\Administrator\Desktop\Stock\Stock\StockPEG指标_PEGCode\obj\Debug\StockPEG指标_PEGCode.pdb
+C:\Users\Administrator\Downloads\Stock\StockPEG指标_PEGCode\bin\Debug\StockPEG指标_PEGCode.exe.config
+C:\Users\Administrator\Downloads\Stock\StockPEG指标_PEGCode\bin\Debug\StockPEG指标_PEGCode.exe
+C:\Users\Administrator\Downloads\Stock\StockPEG指标_PEGCode\bin\Debug\StockPEG指标_PEGCode.pdb
+C:\Users\Administrator\Downloads\Stock\StockPEG指标_PEGCode\obj\Debug\StockPEG指标_PEGCode.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Downloads\Stock\StockPEG指标_PEGCode\obj\Debug\StockPEG指标_PEGCode.exe
+C:\Users\Administrator\Downloads\Stock\StockPEG指标_PEGCode\obj\Debug\StockPEG指标_PEGCode.pdb
+C:\Users\Administrator\Downloads\Stock\Stock\StockPEG指标_PEGCode\bin\Debug\StockPEG指标_PEGCode.exe.config
+C:\Users\Administrator\Downloads\Stock\Stock\StockPEG指标_PEGCode\bin\Debug\StockPEG指标_PEGCode.exe
+C:\Users\Administrator\Downloads\Stock\Stock\StockPEG指标_PEGCode\bin\Debug\StockPEG指标_PEGCode.pdb
+C:\Users\Administrator\Downloads\Stock\Stock\StockPEG指标_PEGCode\obj\Debug\StockPEG指标_PEGCode.exe
+C:\Users\Administrator\Downloads\Stock\Stock\StockPEG指标_PEGCode\obj\Debug\StockPEG指标_PEGCode.pdb
+G:\BaiduYunDownload\Stock\Stock\Stock\StockPEG指标_PEGCode\bin\Debug\StockPEG指标_PEGCode.exe.config
+G:\BaiduYunDownload\Stock\Stock\Stock\StockPEG指标_PEGCode\bin\Debug\StockPEG指标_PEGCode.exe
+G:\BaiduYunDownload\Stock\Stock\Stock\StockPEG指标_PEGCode\bin\Debug\StockPEG指标_PEGCode.pdb
+G:\BaiduYunDownload\Stock\Stock\Stock\StockPEG指标_PEGCode\obj\Debug\StockPEG指标_PEGCode.exe
+G:\BaiduYunDownload\Stock\Stock\Stock\StockPEG指标_PEGCode\obj\Debug\StockPEG指标_PEGCode.pdb
+F:\BaiduNetdiskDownload\Stock\Stock\StockPEG指标_PEGCode\bin\Debug\StockPEG指标_PEGCode.exe.config
+F:\BaiduNetdiskDownload\Stock\Stock\StockPEG指标_PEGCode\bin\Debug\StockPEG指标_PEGCode.exe
+F:\BaiduNetdiskDownload\Stock\Stock\StockPEG指标_PEGCode\bin\Debug\StockPEG指标_PEGCode.pdb
+F:\BaiduNetdiskDownload\Stock\Stock\StockPEG指标_PEGCode\obj\Debug\StockPEG指标_PEGCode.exe
+F:\BaiduNetdiskDownload\Stock\Stock\StockPEG指标_PEGCode\obj\Debug\StockPEG指标_PEGCode.pdb
+F:\BaiduNetdiskDownload\Stock(4)\Stock\StockPEG指标_PEGCode\bin\Debug\StockPEG指标_PEGCode.exe.config
+F:\BaiduNetdiskDownload\Stock(4)\Stock\StockPEG指标_PEGCode\bin\Debug\StockPEG指标_PEGCode.exe
+F:\BaiduNetdiskDownload\Stock(4)\Stock\StockPEG指标_PEGCode\bin\Debug\StockPEG指标_PEGCode.pdb
+F:\BaiduNetdiskDownload\Stock(4)\Stock\StockPEG指标_PEGCode\obj\Debug\StockPEG指标_PEGCode.exe
+F:\BaiduNetdiskDownload\Stock(4)\Stock\StockPEG指标_PEGCode\obj\Debug\StockPEG指标_PEGCode.pdb
+F:\BaiduNetdiskDownload\Stock(4)\Stock\StockPEG指标_PEGCode\obj\Debug\StockPEG指标_PEGCode.csprojResolveAssemblyReference.cache
+G:\BaiduYunDownload\Stock\Stock\StockPEG指标_PEGCode\bin\Debug\StockPEG指标_PEGCode.exe.config
+G:\BaiduYunDownload\Stock\Stock\StockPEG指标_PEGCode\bin\Debug\StockPEG指标_PEGCode.exe
+G:\BaiduYunDownload\Stock\Stock\StockPEG指标_PEGCode\bin\Debug\StockPEG指标_PEGCode.pdb
+G:\BaiduYunDownload\Stock\Stock\StockPEG指标_PEGCode\obj\Debug\StockPEG指标_PEGCode.csprojResolveAssemblyReference.cache
+G:\BaiduYunDownload\Stock\Stock\StockPEG指标_PEGCode\obj\Debug\StockPEG指标_PEGCode.exe
+G:\BaiduYunDownload\Stock\Stock\StockPEG指标_PEGCode\obj\Debug\StockPEG指标_PEGCode.pdb
+F:\BaiduYunDownload\Stock\StockPEG指标_PEGCode\bin\Debug\StockPEG指标_PEGCode.exe.config
+F:\BaiduYunDownload\Stock\StockPEG指标_PEGCode\bin\Debug\StockPEG指标_PEGCode.exe
+F:\BaiduYunDownload\Stock\StockPEG指标_PEGCode\bin\Debug\StockPEG指标_PEGCode.pdb
+F:\BaiduYunDownload\Stock\StockPEG指标_PEGCode\obj\Debug\StockPEG指标_PEGCode.exe
+F:\BaiduYunDownload\Stock\StockPEG指标_PEGCode\obj\Debug\StockPEG指标_PEGCode.pdb

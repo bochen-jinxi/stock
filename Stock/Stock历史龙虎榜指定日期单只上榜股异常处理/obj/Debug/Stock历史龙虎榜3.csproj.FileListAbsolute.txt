@@ -1,0 +1,17 @@
+G:\BaiduYunDownload\Stock\Stock\Stock历史龙虎榜3\bin\Debug\Stock历史龙虎榜3.exe.config
+G:\BaiduYunDownload\Stock\Stock\Stock历史龙虎榜3\bin\Debug\Stock历史龙虎榜3.exe
+G:\BaiduYunDownload\Stock\Stock\Stock历史龙虎榜3\bin\Debug\Stock历史龙虎榜3.pdb
+G:\BaiduYunDownload\Stock\Stock\Stock历史龙虎榜3\bin\Debug\EIIP.Framework.dll
+G:\BaiduYunDownload\Stock\Stock\Stock历史龙虎榜3\bin\Debug\Newtonsoft.Json.dll
+G:\BaiduYunDownload\Stock\Stock\Stock历史龙虎榜3\bin\Debug\EIIP.Core.dll
+G:\BaiduYunDownload\Stock\Stock\Stock历史龙虎榜3\bin\Debug\EIIP.Core.Contract.dll
+G:\BaiduYunDownload\Stock\Stock\Stock历史龙虎榜3\bin\Debug\EIIP.ServiceModel.dll
+G:\BaiduYunDownload\Stock\Stock\Stock历史龙虎榜3\bin\Debug\EIIP.Log.dll
+G:\BaiduYunDownload\Stock\Stock\Stock历史龙虎榜3\bin\Debug\EIIP.Framework.xml
+G:\BaiduYunDownload\Stock\Stock\Stock历史龙虎榜3\bin\Debug\Newtonsoft.Json.xml
+G:\BaiduYunDownload\Stock\Stock\Stock历史龙虎榜3\bin\Debug\EIIP.Core.Contract.xml
+G:\BaiduYunDownload\Stock\Stock\Stock历史龙虎榜3\bin\Debug\EIIP.ServiceModel.xml
+G:\BaiduYunDownload\Stock\Stock\Stock历史龙虎榜3\bin\Debug\EIIP.Log.xml
+G:\BaiduYunDownload\Stock\Stock\Stock历史龙虎榜3\obj\Debug\Stock历史龙虎榜3.csprojResolveAssemblyReference.cache
+G:\BaiduYunDownload\Stock\Stock\Stock历史龙虎榜3\obj\Debug\Stock历史龙虎榜3.exe
+G:\BaiduYunDownload\Stock\Stock\Stock历史龙虎榜3\obj\Debug\Stock历史龙虎榜3.pdb

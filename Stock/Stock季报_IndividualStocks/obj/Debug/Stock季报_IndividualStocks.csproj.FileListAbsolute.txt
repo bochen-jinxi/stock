@@ -1,0 +1,63 @@
+c:\users\lenovo\documents\visual studio 2013\Projects\Stock\Stock季报_IndividualStocks\bin\Debug\Stock季报_IndividualStocks.exe.config
+c:\users\lenovo\documents\visual studio 2013\Projects\Stock\Stock季报_IndividualStocks\bin\Debug\Stock季报_IndividualStocks.exe
+c:\users\lenovo\documents\visual studio 2013\Projects\Stock\Stock季报_IndividualStocks\bin\Debug\Stock季报_IndividualStocks.pdb
+c:\users\lenovo\documents\visual studio 2013\Projects\Stock\Stock季报_IndividualStocks\obj\Debug\Stock季报_IndividualStocks.exe
+c:\users\lenovo\documents\visual studio 2013\Projects\Stock\Stock季报_IndividualStocks\obj\Debug\Stock季报_IndividualStocks.pdb
+c:\users\lenovo\documents\visual studio 2013\Projects\Stock\Stock季报_IndividualStocks\obj\Debug\Stock季报_IndividualStocks.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Stock\Stock\Stock季报_IndividualStocks\bin\Debug\Stock季报_IndividualStocks.exe.config
+C:\Users\Administrator\Desktop\Stock\Stock\Stock季报_IndividualStocks\obj\Debug\Stock季报_IndividualStocks.exe
+C:\Users\Administrator\Desktop\Stock\Stock\Stock季报_IndividualStocks\obj\Debug\Stock季报_IndividualStocks.pdb
+C:\Users\Administrator\Desktop\Stock\Stock\Stock季报_IndividualStocks\bin\Debug\Stock季报_IndividualStocks.exe
+C:\Users\Administrator\Desktop\Stock\Stock\Stock季报_IndividualStocks\bin\Debug\Stock季报_IndividualStocks.pdb
+C:\Users\Administrator\Desktop\Stock\Stock\Stock季报_IndividualStocks\obj\Debug\Stock季报_IndividualStocks.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Downloads\Stock\Stock季报_IndividualStocks\bin\Debug\Stock季报_IndividualStocks.exe.config
+C:\Users\Administrator\Downloads\Stock\Stock季报_IndividualStocks\obj\Debug\Stock季报_IndividualStocks.exe
+C:\Users\Administrator\Downloads\Stock\Stock季报_IndividualStocks\obj\Debug\Stock季报_IndividualStocks.pdb
+C:\Users\Administrator\Downloads\Stock\Stock季报_IndividualStocks\obj\Debug\Stock季报_IndividualStocks.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Downloads\Stock\Stock季报_IndividualStocks\bin\Debug\Stock季报_IndividualStocks.exe
+C:\Users\Administrator\Downloads\Stock\Stock季报_IndividualStocks\bin\Debug\Stock季报_IndividualStocks.pdb
+C:\Users\Administrator\Downloads\Stock\Stock\Stock季报_IndividualStocks\bin\Debug\Stock季报_IndividualStocks.exe.config
+C:\Users\Administrator\Downloads\Stock\Stock\Stock季报_IndividualStocks\bin\Debug\Stock季报_IndividualStocks.exe
+C:\Users\Administrator\Downloads\Stock\Stock\Stock季报_IndividualStocks\bin\Debug\Stock季报_IndividualStocks.pdb
+C:\Users\Administrator\Downloads\Stock\Stock\Stock季报_IndividualStocks\obj\Debug\Stock季报_IndividualStocks.exe
+C:\Users\Administrator\Downloads\Stock\Stock\Stock季报_IndividualStocks\obj\Debug\Stock季报_IndividualStocks.pdb
+C:\Users\Administrator\Downloads\Stock\Stock\Stock季报_IndividualStocks\obj\Debug\Stock季报_IndividualStocks.csprojResolveAssemblyReference.cache
+G:\BaiduYunDownload\Stock\Stock\Stock\Stock季报_IndividualStocks\bin\Debug\Stock季报_IndividualStocks.exe.config
+G:\BaiduYunDownload\Stock\Stock\Stock\Stock季报_IndividualStocks\bin\Debug\Stock季报_IndividualStocks.exe
+G:\BaiduYunDownload\Stock\Stock\Stock\Stock季报_IndividualStocks\bin\Debug\Stock季报_IndividualStocks.pdb
+G:\BaiduYunDownload\Stock\Stock\Stock\Stock季报_IndividualStocks\obj\Debug\Stock季报_IndividualStocks.exe
+G:\BaiduYunDownload\Stock\Stock\Stock\Stock季报_IndividualStocks\obj\Debug\Stock季报_IndividualStocks.pdb
+F:\BaiduNetdiskDownload\Stock\Stock\Stock季报_IndividualStocks\bin\Debug\Stock季报_IndividualStocks.exe.config
+F:\BaiduNetdiskDownload\Stock\Stock\Stock季报_IndividualStocks\bin\Debug\Stock季报_IndividualStocks.exe
+F:\BaiduNetdiskDownload\Stock\Stock\Stock季报_IndividualStocks\bin\Debug\Stock季报_IndividualStocks.pdb
+F:\BaiduNetdiskDownload\Stock\Stock\Stock季报_IndividualStocks\obj\Debug\Stock季报_IndividualStocks.exe
+F:\BaiduNetdiskDownload\Stock\Stock\Stock季报_IndividualStocks\obj\Debug\Stock季报_IndividualStocks.pdb
+F:\BaiduNetdiskDownload\Stock(4)\Stock\Stock季报_IndividualStocks\bin\Debug\Stock季报_IndividualStocks.exe.config
+F:\BaiduNetdiskDownload\Stock(4)\Stock\Stock季报_IndividualStocks\bin\Debug\Stock季报_IndividualStocks.exe
+F:\BaiduNetdiskDownload\Stock(4)\Stock\Stock季报_IndividualStocks\bin\Debug\Stock季报_IndividualStocks.pdb
+F:\BaiduNetdiskDownload\Stock(4)\Stock\Stock季报_IndividualStocks\obj\Debug\Stock季报_IndividualStocks.exe
+F:\BaiduNetdiskDownload\Stock(4)\Stock\Stock季报_IndividualStocks\obj\Debug\Stock季报_IndividualStocks.pdb
+F:\BaiduNetdiskDownload\Stock\Stock\Stock季报_IndividualStocks\obj\Debug\Stock季报_IndividualStocks.csprojResolveAssemblyReference.cache
+G:\BaiduYunDownload\Stock\Stock\Stock季报_IndividualStocks\bin\Debug\Stock季报_IndividualStocks.exe.config
+G:\BaiduYunDownload\Stock\Stock\Stock季报_IndividualStocks\bin\Debug\Stock季报_IndividualStocks.exe
+G:\BaiduYunDownload\Stock\Stock\Stock季报_IndividualStocks\bin\Debug\Stock季报_IndividualStocks.pdb
+G:\BaiduYunDownload\Stock\Stock\Stock季报_IndividualStocks\obj\Debug\Stock季报_IndividualStocks.csprojResolveAssemblyReference.cache
+G:\BaiduYunDownload\Stock\Stock\Stock季报_IndividualStocks\obj\Debug\Stock季报_IndividualStocks.exe
+G:\BaiduYunDownload\Stock\Stock\Stock季报_IndividualStocks\obj\Debug\Stock季报_IndividualStocks.pdb
+F:\BaiduYunDownload\Stock\Stock季报_IndividualStocks\obj\Debug\Stock季报_IndividualStocks.exe
+F:\BaiduYunDownload\Stock\Stock季报_IndividualStocks\obj\Debug\Stock季报_IndividualStocks.pdb
+F:\BaiduYunDownload\Stock\Stock季报_IndividualStocks\bin\Debug\Stock季报_IndividualStocks.exe.config
+F:\BaiduYunDownload\Stock\Stock季报_IndividualStocks\bin\Debug\Stock季报_IndividualStocks.exe
+F:\BaiduYunDownload\Stock\Stock季报_IndividualStocks\bin\Debug\Stock季报_IndividualStocks.pdb
+C:\Users\Administrator\Desktop\Stock\Stock季报_IndividualStocks\bin\Debug\Stock季报_IndividualStocks.exe.config
+C:\Users\Administrator\Desktop\Stock\Stock季报_IndividualStocks\bin\Debug\Stock季报_IndividualStocks.exe
+C:\Users\Administrator\Desktop\Stock\Stock季报_IndividualStocks\bin\Debug\Stock季报_IndividualStocks.pdb
+C:\Users\Administrator\Desktop\Stock\Stock季报_IndividualStocks\bin\Debug\mscorlib.dll
+C:\Users\Administrator\Desktop\Stock\Stock季报_IndividualStocks\bin\Debug\zh-Hans\mscorlib.resources.dll
+C:\Users\Administrator\Desktop\Stock\Stock季报_IndividualStocks\bin\Debug\normidna.nlp
+C:\Users\Administrator\Desktop\Stock\Stock季报_IndividualStocks\bin\Debug\normnfc.nlp
+C:\Users\Administrator\Desktop\Stock\Stock季报_IndividualStocks\bin\Debug\normnfd.nlp
+C:\Users\Administrator\Desktop\Stock\Stock季报_IndividualStocks\bin\Debug\normnfkc.nlp
+C:\Users\Administrator\Desktop\Stock\Stock季报_IndividualStocks\bin\Debug\normnfkd.nlp
+C:\Users\Administrator\Desktop\Stock\Stock季报_IndividualStocks\obj\Debug\Stock季报_IndividualStocks.exe
+C:\Users\Administrator\Desktop\Stock\Stock季报_IndividualStocks\obj\Debug\Stock季报_IndividualStocks.pdb

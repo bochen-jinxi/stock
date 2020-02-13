@@ -1,0 +1,51 @@
+c:\users\lenovo\documents\visual studio 2013\Projects\Stock\Stock高送转_XDCode\bin\Debug\Stock高送转_XDCode.exe.config
+c:\users\lenovo\documents\visual studio 2013\Projects\Stock\Stock高送转_XDCode\bin\Debug\Stock高送转_XDCode.exe
+c:\users\lenovo\documents\visual studio 2013\Projects\Stock\Stock高送转_XDCode\bin\Debug\Stock高送转_XDCode.pdb
+c:\users\lenovo\documents\visual studio 2013\Projects\Stock\Stock高送转_XDCode\obj\Debug\Stock高送转_XDCode.exe
+c:\users\lenovo\documents\visual studio 2013\Projects\Stock\Stock高送转_XDCode\obj\Debug\Stock高送转_XDCode.pdb
+c:\users\lenovo\documents\visual studio 2013\Projects\Stock\Stock高送转_XDCode\obj\Debug\Stock高送转_XDCode.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Stock\Stock\Stock高送转_XDCode\bin\Debug\Stock高送转_XDCode.exe.config
+C:\Users\Administrator\Desktop\Stock\Stock\Stock高送转_XDCode\bin\Debug\Stock高送转_XDCode.exe
+C:\Users\Administrator\Desktop\Stock\Stock\Stock高送转_XDCode\bin\Debug\Stock高送转_XDCode.pdb
+C:\Users\Administrator\Desktop\Stock\Stock\Stock高送转_XDCode\obj\Debug\Stock高送转_XDCode.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Stock\Stock\Stock高送转_XDCode\obj\Debug\Stock高送转_XDCode.exe
+C:\Users\Administrator\Desktop\Stock\Stock\Stock高送转_XDCode\obj\Debug\Stock高送转_XDCode.pdb
+C:\Users\Administrator\Downloads\Stock\Stock高送转_XDCode\bin\Debug\Stock高送转_XDCode.exe.config
+C:\Users\Administrator\Downloads\Stock\Stock高送转_XDCode\bin\Debug\Stock高送转_XDCode.exe
+C:\Users\Administrator\Downloads\Stock\Stock高送转_XDCode\bin\Debug\Stock高送转_XDCode.pdb
+C:\Users\Administrator\Downloads\Stock\Stock高送转_XDCode\obj\Debug\Stock高送转_XDCode.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Downloads\Stock\Stock高送转_XDCode\obj\Debug\Stock高送转_XDCode.exe
+C:\Users\Administrator\Downloads\Stock\Stock高送转_XDCode\obj\Debug\Stock高送转_XDCode.pdb
+C:\Users\Administrator\Downloads\Stock\Stock\Stock高送转_XDCode\bin\Debug\Stock高送转_XDCode.exe.config
+C:\Users\Administrator\Downloads\Stock\Stock\Stock高送转_XDCode\bin\Debug\Stock高送转_XDCode.exe
+C:\Users\Administrator\Downloads\Stock\Stock\Stock高送转_XDCode\bin\Debug\Stock高送转_XDCode.pdb
+C:\Users\Administrator\Downloads\Stock\Stock\Stock高送转_XDCode\obj\Debug\Stock高送转_XDCode.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Downloads\Stock\Stock\Stock高送转_XDCode\obj\Debug\Stock高送转_XDCode.exe
+C:\Users\Administrator\Downloads\Stock\Stock\Stock高送转_XDCode\obj\Debug\Stock高送转_XDCode.pdb
+G:\BaiduYunDownload\Stock\Stock\Stock\Stock高送转_XDCode\bin\Debug\Stock高送转_XDCode.exe.config
+G:\BaiduYunDownload\Stock\Stock\Stock\Stock高送转_XDCode\bin\Debug\Stock高送转_XDCode.exe
+G:\BaiduYunDownload\Stock\Stock\Stock\Stock高送转_XDCode\bin\Debug\Stock高送转_XDCode.pdb
+G:\BaiduYunDownload\Stock\Stock\Stock\Stock高送转_XDCode\obj\Debug\Stock高送转_XDCode.exe
+G:\BaiduYunDownload\Stock\Stock\Stock\Stock高送转_XDCode\obj\Debug\Stock高送转_XDCode.pdb
+F:\BaiduNetdiskDownload\Stock\Stock\Stock高送转_XDCode\bin\Debug\Stock高送转_XDCode.exe.config
+F:\BaiduNetdiskDownload\Stock\Stock\Stock高送转_XDCode\bin\Debug\Stock高送转_XDCode.exe
+F:\BaiduNetdiskDownload\Stock\Stock\Stock高送转_XDCode\bin\Debug\Stock高送转_XDCode.pdb
+F:\BaiduNetdiskDownload\Stock\Stock\Stock高送转_XDCode\obj\Debug\Stock高送转_XDCode.exe
+F:\BaiduNetdiskDownload\Stock\Stock\Stock高送转_XDCode\obj\Debug\Stock高送转_XDCode.pdb
+F:\BaiduNetdiskDownload\Stock(4)\Stock\Stock高送转_XDCode\bin\Debug\Stock高送转_XDCode.exe.config
+F:\BaiduNetdiskDownload\Stock(4)\Stock\Stock高送转_XDCode\bin\Debug\Stock高送转_XDCode.exe
+F:\BaiduNetdiskDownload\Stock(4)\Stock\Stock高送转_XDCode\bin\Debug\Stock高送转_XDCode.pdb
+F:\BaiduNetdiskDownload\Stock(4)\Stock\Stock高送转_XDCode\obj\Debug\Stock高送转_XDCode.exe
+F:\BaiduNetdiskDownload\Stock(4)\Stock\Stock高送转_XDCode\obj\Debug\Stock高送转_XDCode.pdb
+F:\BaiduNetdiskDownload\Stock(4)\Stock\Stock高送转_XDCode\obj\Debug\Stock高送转_XDCode.csprojResolveAssemblyReference.cache
+G:\BaiduYunDownload\Stock\Stock\Stock高送转_XDCode\bin\Debug\Stock高送转_XDCode.exe.config
+G:\BaiduYunDownload\Stock\Stock\Stock高送转_XDCode\bin\Debug\Stock高送转_XDCode.exe
+G:\BaiduYunDownload\Stock\Stock\Stock高送转_XDCode\bin\Debug\Stock高送转_XDCode.pdb
+G:\BaiduYunDownload\Stock\Stock\Stock高送转_XDCode\obj\Debug\Stock高送转_XDCode.csprojResolveAssemblyReference.cache
+G:\BaiduYunDownload\Stock\Stock\Stock高送转_XDCode\obj\Debug\Stock高送转_XDCode.exe
+G:\BaiduYunDownload\Stock\Stock\Stock高送转_XDCode\obj\Debug\Stock高送转_XDCode.pdb
+F:\BaiduYunDownload\Stock\Stock高送转_XDCode\bin\Debug\Stock高送转_XDCode.exe.config
+F:\BaiduYunDownload\Stock\Stock高送转_XDCode\bin\Debug\Stock高送转_XDCode.exe
+F:\BaiduYunDownload\Stock\Stock高送转_XDCode\bin\Debug\Stock高送转_XDCode.pdb
+F:\BaiduYunDownload\Stock\Stock高送转_XDCode\obj\Debug\Stock高送转_XDCode.exe
+F:\BaiduYunDownload\Stock\Stock高送转_XDCode\obj\Debug\Stock高送转_XDCode.pdb

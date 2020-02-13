@@ -1,0 +1,4624 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EIIP.Payment</name>
+    </assembly>
+    <members>
+        <member name="T:EIIP.Payment.CFCA.Config">
+            <summary>
+            配置文件。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.Config.m_InstitutionID">
+            <summary>
+            机构编号。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.Config.m_PaymentURL">
+            <summary>
+            支付平台支付接口地址。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.Config.m_TxURL">
+            <summary>
+            支付平台交易接口地址。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Config.#ctor(System.String,System.Xml.XmlElement)">
+            <summary>
+            实例化配置。
+            </summary>
+            <param name="fileName"></param>
+            <param name="root"></param>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Config.Test">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Config.InstitutionID">
+            <summary>
+            机构编号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Config.PaymentURL">
+            <summary>
+            获取支付平台支付接口地址。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Config.TxURL">
+            <summary>
+            获取支付平台交易接口地址。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Config.DataLogPath">
+            <summary>
+            获取数据日志记录物理路径, 以"\"结尾。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.Commission.StrategyBase">
+            <summary>
+            佣金策略基类。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.Commission.StrategyBase.Name">
+            <summary>
+            策略名称。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.Commission.StrategyBase.StrategyType">
+            <summary>
+            策略类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.Commission.StrategyBase.Remark">
+            <summary>
+            策略备注。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Config">
+            <summary>
+            配置文件。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.Config.m_PaymentURL">
+            <summary>
+            支付平台支付接口地址。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Config.#ctor(System.String,System.Xml.XmlElement)">
+            <summary>
+            实例化配置。
+            </summary>
+            <param name="fileName"></param>
+            <param name="root"></param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Config.Test">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Config.PaymentURL">
+            <summary>
+            获取支付平台支付接口地址。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Config.TxURL">
+            <summary>
+            获取支付平台交易接口地址。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Config.DataLogPath">
+            <summary>
+            获取数据日志记录物理路径, 以"\"结尾。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Notice2001Request">
+            <summary>
+            交易 2001 请求通知。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.NoticeRequestBase">
+            <summary>
+            通知请求基类。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.NoticeRequestBase.m_NoticeTransItem">
+            <summary>
+            通知请求传输项。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.NoticeRequestBase.m_XmlDoc">
+            <summary>
+            XML文档。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.NoticeRequestBase.m_XmlBody">
+            <summary>
+            XML文档 BODY 节点。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.NoticeRequestBase.#ctor(EIIP.Payment.MoBao.Type.NoticeTransItem)">
+            <summary>
+            实例化通知请求基类。
+            </summary>
+            <param name="item">通知请求传输项</param>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.NoticeRequestBase.MessageType">
+            <summary>
+            获取通知消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.NoticeRequestBase.NoticeTransItem">
+            <summary>
+            获取通知请求传输项。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.Notice2001Request.m_SuccessTime">
+            <summary>
+            成功时间。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.Notice2001Request.m_Money">
+            <summary>
+            金额。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Notice2001Request.#ctor(EIIP.Payment.MoBao.Type.NoticeTransItem)">
+            <summary>
+            实例化交易 2001 请求通知。
+            </summary>
+            <param name="item">通知请求传输项</param>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2001Request.MessageType">
+            <summary>
+            获取请求通知消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2001Request.SuccessTime">
+            <summary>
+            获取成功时间。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2001Request.CustParam">
+            <summary>
+            获取自定义参数。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2001Request.Money">
+            <summary>
+            获取金额。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2001Request.TradeType">
+            <summary>
+            获取交易类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2001Request.OrderNo">
+            <summary>
+            获取订单号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2001Request.TradeNo">
+            <summary>
+            获取交易流水号。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Notice2002Request">
+            <summary>
+            交易 2002 请求通知。银行卡认证打款通知。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Notice2002Request.#ctor(EIIP.Payment.MoBao.Type.NoticeTransItem)">
+            <summary>
+            实例化交易 2002 请求通知。银行卡认证打款通知。
+            </summary>
+            <param name="item">通知请求传输项</param>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2002Request.MessageType">
+            <summary>
+            获取请求通知消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2002Request.TradeNo">
+            <summary>
+            获取交易流水号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2002Request.AuthenticationStatus">
+            <summary>
+            获取认证状态。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Notice2003Request">
+            <summary>
+            交易 2003 请求通知。结算结果通知。摩宝处理完订单结算到银行卡的操作后，通过该接口告知天地网系统结算结果。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.Notice2003Request.m_SettleTime">
+            <summary>
+            结算时间。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.Notice2003Request.m_Money">
+            <summary>
+            结算金额。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Notice2003Request.#ctor(EIIP.Payment.MoBao.Type.NoticeTransItem)">
+            <summary>
+            实例化交易 2003 请求通知。结算结果通知。摩宝处理完订单结算到银行卡的操作后，通过该接口告知天地网系统结算结果。
+            </summary>
+            <param name="item">通知请求传输项</param>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2003Request.MessageType">
+            <summary>
+            获取请求通知消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2003Request.SettleTime">
+            <summary>
+            获取结算时间。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2003Request.PerId">
+            <summary>
+            获取个人GUID。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2003Request.PerName">
+            <summary>
+            获取个人姓名。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2003Request.Money">
+            <summary>
+            获取结算金额。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2003Request.OrderNo">
+            <summary>
+            获取订单号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2003Request.BankCode">
+            <summary>
+            获取银行简称，如：CCB,ICBC。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2003Request.CardNo">
+            <summary>
+            获取银行卡号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2003Request.BankName">
+            <summary>
+            获取开户行名称。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2003Request.SettleStatus">
+            <summary>
+            获取结算状态。成功通知是不可靠的（仅表示钱已经划出，在结算的次日通知），失败通知是一定是失败的（银行退回了转账的交易）。
+            1、钱已经划出，并且两天没有被退回，摩宝发出“结算成功”通知。2、两天后该订单款被退回了，摩宝发出“结算失败”通知。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Notice2051Request">
+            <summary>
+            融资交易 2051 请求通知。放款结果通知。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.Notice2051Request.m_SuccessTime">
+            <summary>
+            成功时间。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.Notice2051Request.m_Money">
+            <summary>
+            金额。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Notice2051Request.#ctor(EIIP.Payment.MoBao.Type.NoticeTransItem)">
+            <summary>
+            实例化融资交易 2051 请求通知。
+            </summary>
+            <param name="item">通知请求传输项</param>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2051Request.MessageType">
+            <summary>
+            获取请求通知消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2051Request.SuccessTime">
+            <summary>
+            获取成功时间。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2051Request.CustParam">
+            <summary>
+            获取自定义参数。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2051Request.Money">
+            <summary>
+            获取金额。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2051Request.PayerID">
+            <summary>
+            获取融资方（买方）个人ID。。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2051Request.PayerId">
+            <summary>
+            获取融资方（买方）个人GUID。。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2051Request.OrderID">
+            <summary>
+            获取天地网订单ID。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2051Request.OrderNo">
+            <summary>
+            获取订单号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2051Request.TradeNo">
+            <summary>
+            获取交易流水号。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Notice2053Request">
+            <summary>
+            融资交易 2053 请求通知。还款结果通知。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.Notice2053Request.m_SuccessTime">
+            <summary>
+            成功时间。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.Notice2053Request.m_Money">
+            <summary>
+            还款金额。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.Notice2053Request.m_Balance">
+            <summary>
+            贷款余额
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Notice2053Request.#ctor(EIIP.Payment.MoBao.Type.NoticeTransItem)">
+            <summary>
+            实例化融资交易 2053 请求通知。
+            </summary>
+            <param name="item">通知请求传输项</param>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2053Request.MessageType">
+            <summary>
+            获取请求通知消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2053Request.SuccessTime">
+            <summary>
+            获取成功时间。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2053Request.Money">
+            <summary>
+            获取还款金额。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2053Request.Balance">
+            <summary>
+            获取贷款余额。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2053Request.PayerID">
+            <summary>
+            获取融资方（买方）个人ID。。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2053Request.PayerId">
+            <summary>
+            获取融资方（买方）个人GUID。。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2053Request.OrderID">
+            <summary>
+            获取天地网订单ID。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Notice2053Request.TradeNo">
+            <summary>
+            获取交易流水号。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Request.Tx2310Request">
+            <summary>
+            WEB_PAY 交易-付款。天地网系统将用户订单相关信息通过用户浏览器提交到摩宝系统。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.TxBaseRequest">
+            <summary>
+            交易请求基类。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.TxBaseRequest.TxChannel">
+            <summary>
+            当前交易通道。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.TxBaseRequest.#ctor">
+            <summary>
+            实例化交易请求基类。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.TxBaseRequest.PostProcess">
+            <summary>
+            处理请求后处理。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.TxBaseRequest.m_XmlDoc">
+            <summary>
+            XML文档。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.TxBaseRequest.m_XmlBody">
+            <summary>
+            XML文档 BODY 节点。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.TxBaseRequest.Process">
+            <summary>
+            处理请求。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.TxBaseRequest.Send(EIIP.Payment.Type.RequestMessageItem)">
+            <summary>
+            发送消息。
+            </summary>
+            <param name="item">请求消息项</param>
+            <returns></returns>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.TxBaseRequest.TxCode">
+            <summary>
+            获取交易代码。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.TxBaseRequest.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.TxBaseRequest.RequestTransItem">
+            <summary>
+            获取请求传输项。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Request.Tx2310Request.#ctor">
+            <summary>
+            实例化 WEB_PAY 交易-付款。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Request.Tx2310Request.Initialize(EIIP.Payment.MoBao.TradeType,System.String,System.String,EIIP.Payment.Bank,System.Decimal,System.Guid,System.Guid,System.String,System.String,System.String,System.String)">
+            <summary>
+            初始化参数。
+            </summary>
+            <param name="tradeType">交易类型。</param>
+            <param name="orderNo">订单号。</param>
+            <param name="tradeNo">支付交易流水号。</param>
+            <param name="bank">付款银行。</param>
+            <param name="money">支付金额。</param>
+            <param name="payerId">支付方（买方）个人GUID。</param>
+            <param name="sellerId">收款方（卖方）个人GUID。</param>
+            <param name="custParam">自定义参数，在支付通知中带回。</param>
+            <param name="notificationURL">接收支付通知的URL。</param>
+            <param name="customerIP">支付用户的IP地址。安全防钓鱼</param>
+            <param name="reservedInfo">支付用户的预留信息。安全防钓鱼。默认填支付用户的名称</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Request.Tx2310Request.Initialize(EIIP.Payment.MoBao.TradeType,System.String,System.String,EIIP.Payment.Bank,System.Decimal,System.Decimal,System.Decimal,System.Guid,System.Guid,System.String,System.String,System.String,System.String)">
+            <summary>
+            初始化参数。（金融模式支付专用）
+            </summary>
+            <param name="tradeType">交易类型。</param>
+            <param name="orderNo">订单号。</param>
+            <param name="tradeNo">支付交易流水号。</param>
+            <param name="bank">付款银行。</param>
+            <param name="money">支付金额。</param>
+            <param name="commission">要向卖家收取的佣金。</param>
+            <param name="loanServiceFee">支付金额中包含的融资服务费。</param>
+            <param name="payerId">支付方（买方）个人GUID。</param>
+            <param name="sellerId">收款方（卖方）个人GUID。</param>
+            <param name="custParam">自定义参数，在支付通知中带回。</param>
+            <param name="notificationURL">接收支付通知的URL。</param>
+            <param name="customerIP">支付用户的IP地址。安全防钓鱼</param>
+            <param name="reservedInfo">支付用户的预留信息。安全防钓鱼。默认填支付用户的名称</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Request.Tx2310Request.Process">
+            <summary>
+            处理请求。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2310Request.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2310Request.TradeType">
+            <summary>
+            获取或设置交易类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2310Request.Bank">
+            <summary>
+            获取付款银行。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2310Request.OrderNo">
+            <summary>
+            获取或设置订单号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2310Request.TradeNo">
+            <summary>
+            获取或设置支付交易流水号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2310Request.Money">
+            <summary>
+            获取或设置支付金额。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2310Request.Commission">
+            <summary>
+            获取或设置佣金。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2310Request.LoanServiceFee">
+            <summary>
+            获取或设置融资服务费。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2310Request.PayerId">
+            <summary>
+            获取或设置支付方（买方）个人GUID。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2310Request.SellerId">
+            <summary>
+            获取或设置收款方（卖方）个人GUID。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2310Request.CustParam">
+            <summary>
+            获取或设置自定义参数，在支付通知中带回。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2310Request.ReturnUrl">
+            <summary>
+            获取或设置浏览器跳转的URL。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2310Request.NotificationURL">
+            <summary>
+            获取或设置接收支付通知的URL。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2310Request.Usage">
+            <summary>
+            获取或设置资金用途。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2310Request.ReservedInfo">
+            <summary>
+            获取或设置预留信息。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2310Request.CustomerIP">
+            <summary>
+            获取或设置支付用户的IP地址。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Tx232xRequest">
+            <summary>
+            交易基类。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.Tx232xRequest.m_OrderNo">
+            <summary>
+            订单号。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx232xRequest.#ctor">
+            <summary>
+            实例化交易基类。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx232xRequest._Initialize(System.String)">
+            <summary>
+            初始化参数。
+            </summary>
+            <param name="orderNo">订单号。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx232xRequest.Process">
+            <summary>
+            处理请求。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx232xRequest.OrderNo">
+            <summary>
+            获取或设置订单号。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Tx2321Request">
+            <summary>
+            TradeConfirm 交易-确认收货。天地网系统通过该接口将交易流水更新为确认收货状态。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2321Request.#ctor">
+            <summary>
+            实例化 TradeConfirm 交易-确认收货。天地网系统通过该接口将交易流水更新为确认收货状态。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2321Request.Initialize(System.String,System.Guid)">
+            <summary>
+            初始化参数。
+            </summary>
+            <param name="orderNo">订单号。</param>
+            <param name="payerId">支付方（买方）个人GUID。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2321Request.Process">
+            <summary>
+            处理请求。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2321Request.SendRequestAndGetRespose">
+            <summary>
+            发送请求至支付平台，并获取响应。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2321Request.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2321Request.PayerId">
+            <summary>
+            获取或设置支付方（买方）个人GUID。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Tx2322Request">
+            <summary>
+            TradeVerify 交易-订单审核。天地网系统通过该接口将交易流水更新为已审核状态。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2322Request.#ctor">
+            <summary>
+            实例化 TradeVerify 交易-订单审核。天地网系统通过该接口将交易流水更新为已审核状态。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2322Request.Initialize(System.String,System.Guid)">
+            <summary>
+            初始化参数。
+            </summary>
+            <param name="orderNo">订单号。</param>
+            <param name="guarantorId">审核方（担保方）个人GUID。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2322Request.Process">
+            <summary>
+            处理请求。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2322Request.SendRequestAndGetRespose">
+            <summary>
+            发送请求至支付平台，并获取响应。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2322Request.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2322Request.GuarantorId">
+            <summary>
+            获取或设置审核方（担保方）个人GUID。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Tx2323Request">
+            <summary>
+            TradeSettle 交易-交易结算。天地网通过该接口实现交易结算，和佣金收取。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2323Request.#ctor">
+            <summary>
+            实例化 TradeSettle 交易-交易结算。天地网通过该接口实现交易结算，和佣金收取。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2323Request.Initialize(System.String,System.Guid,System.Guid)">
+            <summary>
+            初始化参数。
+            </summary>
+            <param name="orderNo">订单号。</param>
+            <param name="payerId">支付方（买方）个人GUID。</param>
+            <param name="sellerId">收款方（卖方）个人GUID。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2323Request.Initialize(System.String,System.Guid,System.Guid,System.String,System.String,System.String)">
+            <summary>
+            初始化参数。
+            </summary>
+            <param name="orderNo">订单号。</param>
+            <param name="payerId">支付方（买方）个人GUID。</param>
+            <param name="sellerId">收款方（卖方）个人GUID。</param>
+            <param name="bankProvince">银行卡所在省。对结算失败的订单再次作结算时才需要设置</param>
+            <param name="bankCity">银行卡所在市。对结算失败的订单再次作结算时才需要设置</param>
+            <param name="branchName">分支行信息。对结算失败的订单再次作结算时才需要设置</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2323Request.Process">
+            <summary>
+            处理请求。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2323Request.SendRequestAndGetRespose">
+            <summary>
+            发送请求至支付平台，并获取响应。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2323Request.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2323Request.PayerId">
+            <summary>
+            获取或设置支付方（买方）个人GUID。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2323Request.SellerId">
+            <summary>
+            获取或设置收款方（卖方）个人GUID。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2323Request.BranchName">
+            <summary>
+            获取或设置银行分支行名称。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2323Request.BankProvince">
+            <summary>
+            获取或设置开户账户省份。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2323Request.BankCity">
+            <summary>
+            获取或设置开户账户城市。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Tx2340Request">
+            <summary>
+            TradeRepeal 交易撤销。天地网系统通过该接口撤销交易，将交易资金退回给购买方。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2340Request.#ctor">
+            <summary>
+            实例化 TradeRepeal 交易撤销。天地网系统通过该接口撤销交易，将交易资金退回给购买方。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2340Request.#ctor(System.Boolean)">
+            <summary>
+            实例化 TradeRepeal 交易撤销。天地网系统通过该接口撤销交易，将交易资金退回给购买方。
+            </summary>
+            <param name="needCommissionSettle">退款需要结算佣金</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2340Request.Initialize(System.String,System.Guid,System.Guid,System.Decimal)">
+            <summary>
+            初始化参数。
+            </summary>
+            <param name="orderNo">订单号。</param>
+            <param name="payerId">支付方（买方）个人GUID。</param>
+            <param name="sellerId">收款方（卖方）个人GUID。</param>
+            <param name="commission">退款交易佣金。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2340Request.Process">
+            <summary>
+            处理请求。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2340Request.SendRequestAndGetRespose">
+            <summary>
+            发送请求至支付平台，并获取响应。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2340Request.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2340Request.PayerId">
+            <summary>
+            获取或设置支付方（买方）个人GUID。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2340Request.SellerId">
+            <summary>
+            获取或设置收款方（卖方）个人GUID。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2340Request.Commission">
+            <summary>
+            获取或设置退款交易佣金。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Tx2390Request">
+            <summary>
+            TradeQuery 交易查询-交易流水。天地网通过该接口获取订单下某一笔交易流水的状态信息。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2390Request.#ctor">
+            <summary>
+            实例化 TradeQuery 交易查询-交易流水。天地网通过该接口获取订单下某一笔交易流水的状态信息。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2390Request.Initialize(System.String,System.String)">
+            <summary>
+            初始化参数。
+            </summary>
+            <param name="orderNo">订单号。</param>
+            <param name="tradeNo">支付交易流水号。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2390Request.Process">
+            <summary>
+            处理请求。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2390Request.SendRequestAndGetRespose">
+            <summary>
+            发送请求至支付平台，并获取响应。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2390Request.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2390Request.TradeNo">
+            <summary>
+            获取或设置支付交易流水号。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Tx2391Request">
+            <summary>
+            OrderQuery 交易查询-订单。天地网通过该接口获取订单状态。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2391Request.#ctor">
+            <summary>
+            实例化 OrderQuery 交易查询-订单。天地网通过该接口获取订单状态。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2391Request.Initialize(System.String)">
+            <summary>
+            初始化参数。
+            </summary>
+            <param name="orderNo">订单号。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2391Request.SendRequestAndGetRespose">
+            <summary>
+            发送请求至支付平台，并获取响应。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2391Request.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Request.Tx2221Request">
+            <summary>
+            GiroApplication 打款申请。天地网提交打款信息到摩宝账务系统。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Request.Tx2221Request.#ctor">
+            <summary>
+            实例化 GiroApplication 打款申请。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Request.Tx2221Request.Initialize(EIIP.Payment.BankAccount)">
+            <summary>
+            初始化参数。
+            </summary>
+            <param name="bankAccount">待认证的银行账户。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Request.Tx2221Request.Process">
+            <summary>
+            处理请求。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Request.Tx2221Request.SendRequestAndGetRespose">
+            <summary>
+            发送请求至支付平台，并获取响应。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2221Request.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2221Request.BankAccount">
+            <summary>
+            获取认证银行账户。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Tx2229Request">
+            <summary>
+            GiroQuery 打款查询。用于主动获取打款申请处理状态。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2229Request.#ctor">
+            <summary>
+            实例化 GiroQuery 打款查询。用于主动获取打款申请处理状态。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2229Request.Initialize(System.String)">
+            <summary>
+            初始化参数。
+            </summary>
+            <param name="tradeNo">认证交易流水号。即待认证的银行账户HashString。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2229Request.Initialize(EIIP.Payment.BankAccount)">
+            <summary>
+            初始化参数。
+            </summary>
+            <param name="bankAccount">待认证的银行账户。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2229Request.Process">
+            <summary>
+            处理请求。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2229Request.SendRequestAndGetRespose">
+            <summary>
+            发送请求至支付平台，并获取响应。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2229Request.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2229Request.TradeNo">
+            <summary>
+            获取或设置认证交易流水号。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Request.Tx2211Request">
+            <summary>
+            UserInfoChange 用户身份信息变更。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Request.Tx2211Request.#ctor">
+            <summary>
+            实例化 UserInfoChange 用户身份信息变更。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Request.Tx2211Request.Initialize(System.Guid,System.String,System.String,System.Boolean)">
+            <summary>
+            初始化参数。
+            </summary>
+            <param name="perId">个人GUID。</param>
+            <param name="perName">个人姓名。</param>
+            <param name="idCard">身份证。</param>
+            <param name="needRealNameAuth">设置一个值，该值指示是否需要认证身份证。若已认证过，应设置为 false。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Request.Tx2211Request.Process">
+            <summary>
+            处理请求。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Request.Tx2211Request.SendRequestAndGetRespose">
+            <summary>
+            发送请求至支付平台，并获取响应。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2211Request.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2211Request.PerId">
+            <summary>
+            获取或设置个人GUID。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2211Request.PerName">
+            <summary>
+            获取或设置个人姓名。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2211Request.IDCard">
+            <summary>
+            获取或设置身份证。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2211Request.NeedRealNameAuth">
+            <summary>
+            获取或设置一个值，该值指示是否需要实名认证。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Request.Tx2510Request">
+            <summary>
+            CREDIT_PAY 融资交易-信用支付。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Request.Tx2510Request.#ctor">
+            <summary>
+            实例化 CREDIT_PAY 融资交易-信用支付。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Request.Tx2510Request.Initialize(System.Int32,System.String,System.String,System.Decimal,System.Decimal,System.Guid,System.Guid,System.String,System.String,System.String,System.Collections.Generic.List{EIIP.Payment.MoBao.Type.Product})">
+            <summary>
+            初始化参数。
+            </summary>
+            <param name="orderID">天地网订单ID。</param>
+            <param name="orderNo">订单号。</param>
+            <param name="tradeNo">支付交易流水号。</param>
+            <param name="money">支付金额。</param>
+            <param name="commission">要向卖家收取的佣金。</param>
+            <param name="payerId">支付方（买方）个人GUID。</param>
+            <param name="sellerId">收款方（卖方）个人GUID。</param>
+            <param name="custParam">自定义参数，在支付通知中带回。</param>
+            <param name="customerIP">支付用户的IP地址。安全防钓鱼</param>
+            <param name="reservedInfo">支付用户的预留信息。安全防钓鱼。默认填支付用户的名称</param>
+            <param name="products">订单产品清单</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Request.Tx2510Request.Process">
+            <summary>
+            处理请求。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2510Request.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2510Request.OrderID">
+            <summary>
+            获取或设置订单ID。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2510Request.OrderNo">
+            <summary>
+            获取或设置订单号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2510Request.TradeNo">
+            <summary>
+            获取或设置支付交易流水号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2510Request.Money">
+            <summary>
+            获取或设置支付金额。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2510Request.Commission">
+            <summary>
+            获取或设置佣金。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2510Request.PayerId">
+            <summary>
+            获取或设置支付方（买方）个人GUID。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2510Request.SellerId">
+            <summary>
+            获取或设置收款方（卖方）个人GUID。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2510Request.CustParam">
+            <summary>
+            获取或设置自定义参数，在支付通知中带回。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2510Request.Usage">
+            <summary>
+            获取或设置资金用途。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2510Request.CustomerIP">
+            <summary>
+            获取或设置支付用户的IP地址。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2510Request.ReservedInfo">
+            <summary>
+            获取或设置预留信息。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2510Request.Products">
+            <summary>
+            获取产品清单。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Tx2590Request">
+            <summary>
+            AgentAvailableLimit 融资交易-可用额度查询。获取指定用户信用账户信息：信用额度、可用额度等。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2590Request.#ctor">
+            <summary>
+            实例化 AgentAvailableLimit 融资交易-可用额度查询。获取指定用户信用账户信息：信用额度、可用额度等。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2590Request.Initialize(System.Guid)">
+            <summary>
+            初始化参数。
+            </summary>
+            <param name="perId">融资客户个人GUID。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2590Request.Process">
+            <summary>
+            处理请求。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2590Request.SendRequestAndGetRespose">
+            <summary>
+            发送请求至支付平台，并获取响应。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2590Request.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2590Request.PerId">
+            <summary>
+            获取或设置融资客户个人GUID。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Tx2591Request">
+            <summary>
+            LoanInfoQuery 融资交易-融资结果查询。获取订单融资结果信息。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2591Request.#ctor">
+            <summary>
+            实例化 LoanInfoQuery 融资交易-融资结果查询。获取订单融资结果信息。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2591Request.Initialize(System.Int32)">
+            <summary>
+            初始化参数。
+            </summary>
+            <param name="orderID">融资订单ID。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2591Request.Process">
+            <summary>
+            处理请求。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2591Request.SendRequestAndGetRespose">
+            <summary>
+            发送请求至支付平台，并获取响应。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2591Request.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2591Request.OrderID">
+            <summary>
+            获取或设置融资订单ID。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Tx2592Request">
+            <summary>
+            AgentLoanInfoQuery 融资交易-客户融资信息查询。获取客户融资账户信息。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2592Request.#ctor">
+            <summary>
+            实例化 AgentLoanInfoQuery 融资交易-客户融资信息查询。获取客户融资账户信息。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2592Request.Initialize(System.Guid)">
+            <summary>
+            初始化参数。
+            </summary>
+            <param name="perId">融资客户个人GUID。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2592Request.Process">
+            <summary>
+            处理请求。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2592Request.SendRequestAndGetRespose">
+            <summary>
+            发送请求至支付平台，并获取响应。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2592Request.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2592Request.PerId">
+            <summary>
+            获取或设置融资客户个人GUID。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Request.Tx2540Request">
+            <summary>
+            RevokeOrder 融资交易-信用支付撤销。信用支付订单撤销。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Request.Tx2540Request.#ctor">
+            <summary>
+            实例化 RevokeOrder 融资交易-信用支付撤销。信用支付订单撤销。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Request.Tx2540Request.Initialize(System.Int32,System.String)">
+            <summary>
+            初始化参数。
+            </summary>
+            <param name="orderID">天地网订单ID。</param>
+            <param name="reason">订单撤销原因。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Request.Tx2540Request.Process">
+            <summary>
+            处理请求。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Request.Tx2540Request.SendRequestAndGetRespose">
+            <summary>
+            发送请求至支付平台，并获取响应。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2540Request.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2540Request.OrderID">
+            <summary>
+            获取或设置订单ID。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2540Request.Reason">
+            <summary>
+            获取或设置订单撤销原因。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Request.Tx2501Request">
+            <summary>
+            UserStatusSync 融资服务开通/关闭。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Request.Tx2501Request.#ctor">
+            <summary>
+            实例化 UserStatusSync 融资服务开通/关闭。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Request.Tx2501Request.Initialize(System.Int32,System.Guid,System.Boolean)">
+            <summary>
+            初始化参数。
+            </summary>
+            <param name="perID">融资客户个人ID。</param>
+            <param name="perId">融资客户个人GUID。</param>
+            <param name="serviceOpenOrClose">设置一个值，该值指示服务是否要开通。false表示要关闭服务。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Request.Tx2501Request.Process">
+            <summary>
+            处理请求。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Request.Tx2501Request.SendRequestAndGetRespose">
+            <summary>
+            发送请求至支付平台，并获取响应。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2501Request.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2501Request.PerId">
+            <summary>
+            获取或设置融资个人GUID。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2501Request.PerID">
+            <summary>
+            获取或设置融资客户个人ID。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2501Request.ServiceOpenOrClose">
+            <summary>
+            获取或设置一个值，该值指示服务是否要开通。false表示要关闭服务。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2501Request.Bank">
+            <summary>
+            获取或设置银行。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Tx2111Response">
+            <summary>
+            支付平台响应。注册开户。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.TxBaseResponse">
+            <summary>
+            交易响应基类。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.TxBaseResponse.TxChannel">
+            <summary>
+            当前交易通道。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.TxBaseResponse.m_Code">
+            <summary>
+            响应码。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.TxBaseResponse.m_Message">
+            <summary>
+            响应消息。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.TxBaseResponse.m_ResponseMessage">
+            <summary>
+            交易响应消息项。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.TxBaseResponse.#ctor(EIIP.Payment.Type.ResponseMessageItem,EIIP.Payment.MoBao.TxBaseRequest)">
+            <summary>
+            实例化交易响应基类。
+            </summary>
+            <param name="item">交易响应消息项</param>
+            <param name="txRequest">交易请求。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.TxBaseResponse.Process(System.Xml.XmlNode)">
+            <summary>
+            处理响应。
+            </summary>
+            <param name="xmlBody">XML文档 BODY 节点。</param>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.TxBaseResponse.TxRequest">
+            <summary>
+            获取交易请求基类。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.TxBaseResponse.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.TxBaseResponse.TxCode">
+            <summary>
+            获取交易代码。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.TxBaseResponse.ResponseMessage">
+            <summary>
+            获取交易响应消息项。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.TxBaseResponse.Code">
+            <summary>
+            获取响应编码。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.TxBaseResponse.IsSuccess">
+            <summary>
+            获取一个值，该值指示响应是否是成功的。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.TxBaseResponse.Message">
+            <summary>
+            获取响应消息。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2111Response.#ctor(EIIP.Payment.Type.ResponseMessageItem,EIIP.Payment.MoBao.TxBaseRequest)">
+            <summary>
+            实例化支付平台响应。注册开户。
+            </summary>
+            <param name="item">交易响应消息项</param>
+            <param name="txRequest">交易请求。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2111Response.Process(System.Xml.XmlNode)">
+            <summary>
+            处理响应。
+            </summary>
+            <param name="xmlBody">XML文档 BODY 节点。</param>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2111Response.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Tx2210Response">
+            <summary>
+            支付平台响应。实名认证。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2210Response.#ctor(EIIP.Payment.Type.ResponseMessageItem,EIIP.Payment.MoBao.TxBaseRequest)">
+            <summary>
+            实例化支付平台响应。实名认证。
+            </summary>
+            <param name="item">交易响应消息项</param>
+            <param name="txRequest">交易请求。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2210Response.Process(System.Xml.XmlNode)">
+            <summary>
+            处理响应。
+            </summary>
+            <param name="xmlBody">XML文档 BODY 节点。</param>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2210Response.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2210Response.AuthStatus">
+            <summary>
+            获取认证状态结果。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Tx2220Response">
+            <summary>
+            支付平台响应。银行卡认证申请。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2220Response.#ctor(EIIP.Payment.Type.ResponseMessageItem,EIIP.Payment.MoBao.TxBaseRequest)">
+            <summary>
+            实例化支付平台响应。银行卡认证申请。
+            </summary>
+            <param name="item">交易响应消息项</param>
+            <param name="txRequest">交易请求。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2220Response.Process(System.Xml.XmlNode)">
+            <summary>
+            处理响应。
+            </summary>
+            <param name="xmlBody">XML文档 BODY 节点。</param>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2220Response.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Tx2321Response">
+            <summary>
+            支付平台响应。交易-确认收货。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2321Response.#ctor(EIIP.Payment.Type.ResponseMessageItem,EIIP.Payment.MoBao.TxBaseRequest)">
+            <summary>
+            实例化支付平台响应。交易-确认收货。
+            </summary>
+            <param name="item">交易响应消息项</param>
+            <param name="txRequest">交易请求。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2321Response.Process(System.Xml.XmlNode)">
+            <summary>
+            处理响应。
+            </summary>
+            <param name="xmlBody">XML文档 BODY 节点。</param>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2321Response.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Tx2322Response">
+            <summary>
+            支付平台响应。交易-订单审核。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2322Response.#ctor(EIIP.Payment.Type.ResponseMessageItem,EIIP.Payment.MoBao.TxBaseRequest)">
+            <summary>
+            实例化支付平台响应。交易-订单审核。
+            </summary>
+            <param name="item">交易响应消息项</param>
+            <param name="txRequest">交易请求。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2322Response.Process(System.Xml.XmlNode)">
+            <summary>
+            处理响应。
+            </summary>
+            <param name="xmlBody">XML文档 BODY 节点。</param>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2322Response.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Tx2323Response">
+            <summary>
+            支付平台响应。交易-交易结算。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2323Response.#ctor(EIIP.Payment.Type.ResponseMessageItem,EIIP.Payment.MoBao.TxBaseRequest)">
+            <summary>
+            实例化支付平台响应。交易-交易结算。
+            </summary>
+            <param name="item">交易响应消息项</param>
+            <param name="txRequest">交易请求。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2323Response.Process(System.Xml.XmlNode)">
+            <summary>
+            处理响应。
+            </summary>
+            <param name="xmlBody">XML文档 BODY 节点。</param>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2323Response.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Tx2340Response">
+            <summary>
+            支付平台响应。交易-交易结算。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2340Response.#ctor(EIIP.Payment.Type.ResponseMessageItem,EIIP.Payment.MoBao.TxBaseRequest)">
+            <summary>
+            实例化支付平台响应。交易-交易结算。
+            </summary>
+            <param name="item">交易响应消息项</param>
+            <param name="txRequest">交易请求。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2340Response.Process(System.Xml.XmlNode)">
+            <summary>
+            处理响应。
+            </summary>
+            <param name="xmlBody">XML文档 BODY 节点。</param>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2340Response.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Tx2390Response">
+            <summary>
+            支付平台响应。交易-交易结算。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2390Response.#ctor(EIIP.Payment.Type.ResponseMessageItem,EIIP.Payment.MoBao.TxBaseRequest)">
+            <summary>
+            实例化支付平台响应。交易-交易结算。
+            </summary>
+            <param name="item">交易响应消息项</param>
+            <param name="txRequest">交易请求。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2390Response.Process(System.Xml.XmlNode)">
+            <summary>
+            处理响应。
+            </summary>
+            <param name="xmlBody">XML文档 BODY 节点。</param>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2390Response.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2390Response.Tx">
+            <summary>
+            获取交易信息。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Tx2391Response">
+            <summary>
+            支付平台响应。交易-交易结算。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2391Response.#ctor(EIIP.Payment.Type.ResponseMessageItem,EIIP.Payment.MoBao.TxBaseRequest)">
+            <summary>
+            实例化支付平台响应。交易-交易结算。
+            </summary>
+            <param name="item">交易响应消息项</param>
+            <param name="txRequest">交易请求。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2391Response.Process(System.Xml.XmlNode)">
+            <summary>
+            处理响应。
+            </summary>
+            <param name="xmlBody">XML文档 BODY 节点。</param>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2391Response.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2391Response.Order">
+            <summary>
+            获取订单信息。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Tx2221Response">
+            <summary>
+            支付平台响应。银行卡认证打款申请。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2221Response.#ctor(EIIP.Payment.Type.ResponseMessageItem,EIIP.Payment.MoBao.TxBaseRequest)">
+            <summary>
+            实例化支付平台响应。银行卡认证申请。
+            </summary>
+            <param name="item">交易响应消息项</param>
+            <param name="txRequest">交易请求。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2221Response.Process(System.Xml.XmlNode)">
+            <summary>
+            处理响应。
+            </summary>
+            <param name="xmlBody">XML文档 BODY 节点。</param>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2221Response.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Tx2229Response">
+            <summary>
+            支付平台响应。打款查询。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2229Response.#ctor(EIIP.Payment.Type.ResponseMessageItem,EIIP.Payment.MoBao.TxBaseRequest)">
+            <summary>
+            实例化支付平台响应。交易-交易结算。
+            </summary>
+            <param name="item">交易响应消息项</param>
+            <param name="txRequest">交易请求。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2229Response.Process(System.Xml.XmlNode)">
+            <summary>
+            处理响应。
+            </summary>
+            <param name="xmlBody">XML文档 BODY 节点。</param>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2229Response.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2229Response.AuthenticationStatus">
+            <summary>
+            获取认证状态。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Tx2211Response">
+            <summary>
+            支付平台响应。用户身份信息变更。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2211Response.#ctor(EIIP.Payment.Type.ResponseMessageItem,EIIP.Payment.MoBao.TxBaseRequest)">
+            <summary>
+            实例化支付平台响应。用户身份信息变更。
+            </summary>
+            <param name="item">交易响应消息项</param>
+            <param name="txRequest">交易请求。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2211Response.Process(System.Xml.XmlNode)">
+            <summary>
+            处理响应。
+            </summary>
+            <param name="xmlBody">XML文档 BODY 节点。</param>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2211Response.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2211Response.AuthStatus">
+            <summary>
+            获取认证状态结果。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Tx2590Response">
+            <summary>
+            支付平台响应。融资交易-可用额度查询。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2590Response.#ctor(EIIP.Payment.Type.ResponseMessageItem,EIIP.Payment.MoBao.TxBaseRequest)">
+            <summary>
+            实例化支付平台响应。融资交易-可用额度查询。
+            </summary>
+            <param name="item">交易响应消息项</param>
+            <param name="txRequest">交易请求。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2590Response.Process(System.Xml.XmlNode)">
+            <summary>
+            处理响应。
+            </summary>
+            <param name="xmlBody">XML文档 BODY 节点。</param>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2590Response.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2590Response.PersonCreditInfo">
+            <summary>
+            获取个人信用信息。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Tx2591Response">
+            <summary>
+            支付平台响应。融资交易-融资结果查询。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2591Response.#ctor(EIIP.Payment.Type.ResponseMessageItem,EIIP.Payment.MoBao.TxBaseRequest)">
+            <summary>
+            实例化支付平台响应。融资交易-融资结果查询。
+            </summary>
+            <param name="item">交易响应消息项</param>
+            <param name="txRequest">交易请求。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2591Response.Process(System.Xml.XmlNode)">
+            <summary>
+            处理响应。
+            </summary>
+            <param name="xmlBody">XML文档 BODY 节点。</param>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2591Response.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2591Response.FinanceOrderResult">
+            <summary>
+            获取金融订单融资结果。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Tx2592Response">
+            <summary>
+            支付平台响应。融资交易-客户融资信息查询。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2592Response.#ctor(EIIP.Payment.Type.ResponseMessageItem,EIIP.Payment.MoBao.TxBaseRequest)">
+            <summary>
+            实例化支付平台响应。融资交易-客户融资信息查询。
+            </summary>
+            <param name="item">交易响应消息项</param>
+            <param name="txRequest">交易请求。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2592Response.Process(System.Xml.XmlNode)">
+            <summary>
+            处理响应。
+            </summary>
+            <param name="xmlBody">XML文档 BODY 节点。</param>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2592Response.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2592Response.PersonLoanInfo">
+            <summary>
+            获取客户融资信息。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Tx2540Response">
+            <summary>
+            支付平台响应。交易-交易结算。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2540Response.#ctor(EIIP.Payment.Type.ResponseMessageItem,EIIP.Payment.MoBao.TxBaseRequest)">
+            <summary>
+            实例化支付平台响应。交易-交易结算。
+            </summary>
+            <param name="item">交易响应消息项</param>
+            <param name="txRequest">交易请求。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2540Response.Process(System.Xml.XmlNode)">
+            <summary>
+            处理响应。
+            </summary>
+            <param name="xmlBody">XML文档 BODY 节点。</param>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2540Response.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Tx2501Response">
+            <summary>
+            支付平台响应。融资服务开通/关闭。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2501Response.#ctor(EIIP.Payment.Type.ResponseMessageItem,EIIP.Payment.MoBao.TxBaseRequest)">
+            <summary>
+            实例化支付平台响应。交易-交易结算。
+            </summary>
+            <param name="item">交易响应消息项</param>
+            <param name="txRequest">交易请求。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2501Response.Process(System.Xml.XmlNode)">
+            <summary>
+            处理响应。
+            </summary>
+            <param name="xmlBody">XML文档 BODY 节点。</param>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2501Response.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Type.AuthenticationStatus">
+            <summary>
+            指示某一认证交易流水状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.Type.AuthenticationStatus.已受理">
+            <summary>
+            已受理（不处理）
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.Type.AuthenticationStatus.打款处理中">
+            <summary>
+            打款处理中（不处理）
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.Type.AuthenticationStatus.已打款">
+            <summary>
+            已打款（不处理）
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.Type.AuthenticationStatus.打款失败">
+            <summary>
+            打款失败
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.FinanceOrderResult">
+            <summary>
+            金融订单融资结果类。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.FinanceOrderResult.OrderID">
+            <summary>
+            获取金融订单ID。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.FinanceOrderResult.Money">
+            <summary>
+            获取订单贷款金额。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.FinanceOrderResult.AlreadyPaid">
+            <summary>
+            获取一个值，该值指示订单是否已被支付。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.FinanceOrderResult.MoneyPay">
+            <summary>
+            获取贷款支付金额。当 AlreadyPaid = true 时，该值有意义。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.FinanceOrderResult.PayTime">
+            <summary>
+            获取贷款支付时间。当 AlreadyPaid = true 时，该值有意义。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Type.NoticeTransItem">
+            <summary>
+            通知请求传输项。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Type.NoticeTransItem.#ctor(System.String)">
+            <summary>
+            实例化通知请求传输项。
+            </summary>
+            <param name="plainText">明文。</param>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Type.NoticeTransItem.Document">
+            <summary>
+            获取XML文档。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Type.NoticeTransItem.PlainText">
+            <summary>
+            获取通知文本。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Type.NoticeTransItem.TxCode">
+            <summary>
+            获取交易代码。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Type.NoticeTransItem.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Type.NoticeTransItem.TxName">
+            <summary>
+            获取交易名称。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Type.Product">
+            <summary>
+            产品信息。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.Type.Product.Num">
+            <summary>
+            数量。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.Type.Product.Price">
+            <summary>
+            单价
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Type.Product.Name">
+            <summary>
+            产品名称。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Type.Product.Brand">
+            <summary>
+            产品品牌。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Type.Product.Serial">
+            <summary>
+            产品型号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Type.Product.Place">
+            <summary>
+            产品产地。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Type.TradeStatus">
+            <summary>
+            指示某一交易流水状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.Type.TradeStatus.未支付">
+            <summary>
+            未支付
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.Type.TradeStatus.已支付">
+            <summary>
+            已支付
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.TradeType">
+            <summary>
+            指示某一交易类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.TradeType.现金模式">
+            <summary>
+            现金模式
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.TradeType.金融模式">
+            <summary>
+            金融模式
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Tx">
+            <summary>
+            交易信息类。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx.TradeNo">
+            <summary>
+            获取支付交易流水号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx.Money">
+            <summary>
+            获取交易金额。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx.Commission">
+            <summary>
+            获取交易佣金。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx.LoanServiceFee">
+            <summary>
+            获取融资服务费。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx.Time">
+            <summary>
+            获取支付交易时间。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx.TradeStatus">
+            <summary>
+            获取交易流水状态。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Type.OrderStatus">
+            <summary>
+            指示某一交易订单状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.Type.OrderStatus.初始状态">
+            <summary>
+            初始状态
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.Type.OrderStatus.已支付">
+            <summary>
+            已支付
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.Type.OrderStatus.已确认">
+            <summary>
+            已确认
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.Type.OrderStatus.已审核">
+            <summary>
+            已审核
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.Type.OrderStatus.结算处理中">
+            <summary>
+            结算处理中
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.Type.OrderStatus.已结算">
+            <summary>
+            已结算
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.Type.OrderStatus.结算失败">
+            <summary>
+            结算失败
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.Type.OrderStatus.已取消">
+            <summary>
+            已取消
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Order">
+            <summary>
+            订单信息类。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Order.OrderNo">
+            <summary>
+            获取订单号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Order.Money">
+            <summary>
+            获取金额。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Order.Commission">
+            <summary>
+            获取佣金。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Order.LoanServiceFee">
+            <summary>
+            获取融资服务费。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Order.Time">
+            <summary>
+            获取订单时间。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Order.OrderStatus">
+            <summary>
+            获取交易流水状态。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Type.AuthStatus">
+            <summary>
+            指示某一认证状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.Type.AuthStatus.认证失败">
+            <summary>
+            认证失败
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.Type.AuthStatus.认证成功">
+            <summary>
+            认证成功
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Type.SettleStatus">
+            <summary>
+            指示某一结算状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.Type.SettleStatus.打款成功">
+            <summary>
+            打款成功
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.Type.SettleStatus.结算失败">
+            <summary>
+            结算失败
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.LoanInfo">
+            <summary>
+            融资信息。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.LoanInfo.LoanAccount">
+            <summary>
+            获取贷款帐号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.LoanInfo.GrantDate">
+            <summary>
+            获取贷款发放日期。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.LoanInfo.LoanEndDate">
+            <summary>
+            获取贷款到期日期。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.LoanInfo.LoanAmt">
+            <summary>
+            获取贷款金额。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.LoanInfo.LoanBalance">
+            <summary>
+            获取贷款余额。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.PersonLoanInfo">
+            <summary>
+            客户融资信息。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.PersonLoanInfo.PerID">
+            <summary>
+            获取融资客户个人ID。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.PersonLoanInfo.LoanInfos">
+            <summary>
+            获取融资信息。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.NoticeManager">
+            <summary>
+            通知管理器。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.NoticeManager.ResponseMessage_CFCA">
+            <summary>
+            通知响应消息。使用时需转换为Base64编码。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.NoticeManager.ResponseMessage_MoBao">
+            <summary>
+            通知响应消息。无需转成Base64。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.NoticeManager.GetNoticeTransItem_CFCA(System.String,System.String)">
+            <summary>
+            获取通知传输项。
+            </summary>
+            <param name="message">通知消息</param>
+            <param name="signature">通知消息签名</param>
+        </member>
+        <member name="M:EIIP.Payment.NoticeManager.GetNoticeTransItem_MoBao(System.String,System.String)">
+            <summary>
+            获取通知传输项。
+            </summary>
+            <param name="message">通知消息</param>
+            <param name="signature">通知消息签名</param>
+        </member>
+        <member name="P:EIIP.Payment.NoticeManager.ResponseMessage_CFCA_Base64">
+            <summary>
+            获取 Base64 编码通知响应消息。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.Signature">
+            <summary>
+            签名工具类。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.Signature.InitSign(System.String,System.String)">
+            <summary>
+            初始化签名环境。
+            </summary>
+            <param name="certFile">一个证书文件的名称。</param>
+            <param name="certPass">访问 X.509 证书数据所需的密码。</param>
+        </member>
+        <member name="M:EIIP.Payment.Signature.InitVerify(System.String)">
+            <summary>
+            初始化验证环境。
+            </summary>
+            <param name="certFile">一个证书文件的名称。</param>
+        </member>
+        <member name="M:EIIP.Payment.Signature.Sign(System.String)">
+            <summary>
+            数据签名。
+            </summary>
+            <param name="text">要签名的内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Payment.Signature.Verify(System.String,System.Byte[])">
+            <summary>
+            校验签名。
+            </summary>
+            <param name="text">要签名的内容</param>
+            <param name="signature">签名数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Payment.Signature.Verify(System.String,System.String)">
+            <summary>
+            校验签名。
+            </summary>
+            <param name="text">要签名的内容</param>
+            <param name="signature">签名数据</param>
+            <returns></returns>
+        </member>
+        <member name="T:EIIP.Payment.BankAccount">
+            <summary>
+            银行账户基类。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.BankAccount.MAXAuthenticationAmount">
+            <summary>
+            最大认证金额。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.BankAccount.#ctor(EIIP.Payment.AccountType)">
+            <summary>
+            实例化银行账户。
+            </summary>
+            <param name="accountType">指定银行账户类型。</param>
+        </member>
+        <member name="M:EIIP.Payment.BankAccount.ToString">
+            <summary>
+            获取银行账户信息字串。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Payment.BankAccount.GetHashString">
+            <summary>
+            获取哈希签名。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Payment.BankAccount.GetAuthenticationAmount(System.String,System.Int32)">
+            <summary>
+            获取认证金额（单位: 分）。
+            </summary>
+            <param name="accountNumber">银行账户</param>
+            <param name="maxAmount">最大认证金额</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Payment.BankAccount.GetAuthenticationAmount(System.Int32)">
+            <summary>
+            获取认证金额（单位: 分）。
+            </summary>
+            <param name="maxAmount">最大认证金额</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Payment.BankAccount.GetAuthenticationMoney">
+            <summary>
+            获取认证金额。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Payment.BankAccount.GetAuthenticationMoney(System.String)">
+            <summary>
+            获取对应账号的认证金额。
+            </summary>
+            <param name="accountNumber">银行账号</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Payment.BankAccount.GetPayeeInfo">
+            <summary>
+            获取收款人信息，格式“账户名=账号”。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EIIP.Payment.BankAccount.AccountType">
+            <summary>
+            获取或设置付款方账户类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.BankAccount.AccountName">
+            <summary>
+            获取或设置账户名称。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.BankAccount.AccountNumber">
+            <summary>
+            获取或设置账户号码。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.BankAccount.Bank">
+            <summary>
+            获取或设置银行。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.BankAccount.BranchName">
+            <summary>
+            获取或设置银行分支行名称。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.BankAccount.Province">
+            <summary>
+            获取或设置开户账户省份。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.BankAccount.City">
+            <summary>
+            获取或设置开户账户城市。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.CFCA.BankAccountItem">
+            <summary>
+            银行账户项目。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.BankAccountItem.#ctor">
+            <summary>
+            以 1 分钱初始化。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.BankAccountItem.ItemNo">
+            <summary>
+            获取或设置记录流水号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.BankAccountItem.Amount">
+            <summary>
+            获取或设置金额(单位：分)。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.BankAccountItem.Money">
+            <summary>
+            获取或设置金额。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.BankAccountItem.BankAccount">
+            <summary>
+            银行账户。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.BankAccountItem.ResponseInfo">
+            <summary>
+            获取响应消息。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.CFCA.Notice1318Request">
+            <summary>
+            交易 1318 请求通知。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.CFCA.NoticeRequestBase">
+            <summary>
+            通知请求基类。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.NoticeRequestBase.m_Amount">
+            <summary>
+            金额。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.NoticeRequestBase.m_InstitutionID">
+            <summary>
+            机构编号。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.NoticeRequestBase.m_Status">
+            <summary>
+            状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.NoticeRequestBase.m_SuccessTime">
+            <summary>
+            成功时间。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.NoticeRequestBase.m_NoticeTransItem">
+            <summary>
+            通知请求传输项。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.NoticeRequestBase.m_XmlDoc">
+            <summary>
+            XML文档。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.NoticeRequestBase.m_XmlBody">
+            <summary>
+            XML文档 BODY 节点。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.NoticeRequestBase.#ctor(EIIP.Payment.CFCA.Type.NoticeTransItem)">
+            <summary>
+            实例化通知请求基类。
+            </summary>
+            <param name="item">通知请求传输项</param>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.NoticeRequestBase.Amount">
+            <summary>
+            获取金额(单位：分)。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.NoticeRequestBase.InstitutionID">
+            <summary>
+            获取机构编号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.NoticeRequestBase.Status">
+            <summary>
+            获取状态。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.NoticeRequestBase.SuccessTime">
+            <summary>
+            获取成功时间。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.NoticeRequestBase.Money">
+            <summary>
+            获取金额。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.NoticeRequestBase.NoticeTransItem">
+            <summary>
+            获取通知请求传输项。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Notice1318Request.#ctor(EIIP.Payment.CFCA.Type.NoticeTransItem)">
+            <summary>
+            实例化交易 1318 请求通知。
+            </summary>
+            <param name="item">通知请求传输项</param>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Notice1318Request.PaymentNo">
+            <summary>
+            获取支付流水号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Notice1318Request.PaymentStatus">
+            <summary>
+            获取支付状态。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.CFCA.Notice1348Request">
+            <summary>
+            交易 1348 请求通知。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Notice1348Request.#ctor(EIIP.Payment.CFCA.Type.NoticeTransItem)">
+            <summary>
+            实例化交易 1348 请求通知。
+            </summary>
+            <param name="item">通知请求传输项</param>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Notice1348Request.OrderNo">
+            <summary>
+            获取订单号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Notice1348Request.SerialNumber">
+            <summary>
+            获取结算交易流水号。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.Environment">
+            <summary>
+            CFCA支付环境类。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.Environment.Initialize">
+            <summary>
+            环境初始化。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.Environment.IsInitialized">
+            <summary>
+            获取一个值，该值指示是否已完成初始化。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.Environment.Config_CFCA">
+            <summary>
+            获取CFCA配置。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.Environment.Config_MoBao">
+            <summary>
+            获取MoBao配置。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.CFCA.Tx1311Request">
+            <summary>
+            1311 交易请求类。市场订单支付（直通车）
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.CFCA.TxBaseRequest">
+            <summary>
+            交易请求基类。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.TxBaseRequest.TxChannel">
+            <summary>
+            当前交易通道。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.TxBaseRequest.#ctor">
+            <summary>
+            实例化交易请求基类。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.TxBaseRequest.PostProcess">
+            <summary>
+            处理请求后处理。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.TxBaseRequest.m_XmlDoc">
+            <summary>
+            XML文档。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.TxBaseRequest.m_XmlBody">
+            <summary>
+            XML文档 BODY 节点。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.TxBaseRequest.Process">
+            <summary>
+            处理请求。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.TxBaseRequest.Send(EIIP.Payment.Type.RequestMessageItem)">
+            <summary>
+            发送消息。
+            </summary>
+            <param name="item">请求消息项</param>
+            <returns></returns>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.TxBaseRequest.TxCode">
+            <summary>
+            获取交易代码。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.TxBaseRequest.InstitutionID">
+            <summary>
+            获取机构编号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.TxBaseRequest.RequestTransItem">
+            <summary>
+            获取请求传输项。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1311Request.SetBankOnlyAtTest">
+            <summary>
+            设置CFCA测试银行，仅在测试环境下使用。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1311Request.#ctor">
+            <summary>
+            实例化 1311 交易请求。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1311Request.Initialize2Company(System.String,System.String,EIIP.Payment.Bank,System.Decimal,System.Decimal,EIIP.Payment.AccountType,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            初始化参数。(对公)
+            </summary>
+            <param name="orderNo">订单号。</param>
+            <param name="paymentNo">支付交易流水号。</param>
+            <param name="bank">付款银行。</param>
+            <param name="money">金额。</param>
+            <param name="moneyFee">支付服务手续费（付款方）。</param>
+            <param name="accountType">付款方账户类型。只能是 EIIP.Payment.AccountType.企业账户</param>
+            <param name="payerID">付款方编号。</param>
+            <param name="payerName">付款方名称。</param>
+            <param name="usage">资金用途。</param>
+            <param name="remark">备注。</param>
+            <param name="notificationURL">机构接收支付通知的URL。</param>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1311Request.Initialize2Person(System.String,System.String,System.Decimal,System.Decimal,EIIP.Payment.AccountType,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            初始化参数。(对私)
+            </summary>
+            <param name="orderNo">订单号。</param>
+            <param name="paymentNo">支付交易流水号。</param>
+            <param name="money">金额。</param>
+            <param name="moneyFee">支付服务手续费（付款方）。</param>
+            <param name="accountType">付款方账户类型。只能是 EIIP.Payment.AccountType.个人账户</param>
+            <param name="payerID">付款方编号。</param>
+            <param name="payerName">付款方名称。</param>
+            <param name="usage">资金用途。</param>
+            <param name="remark">备注。</param>
+            <param name="notificationURL">机构接收支付通知的URL。</param>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1311Request.Initialize4Authentication(System.String,System.String,System.Decimal,System.String)">
+            <summary>
+            用于认证的初始化参数。
+            </summary>
+            <param name="orderNo">订单号。</param>
+            <param name="paymentNo">支付交易流水号。</param>
+            <param name="money">金额。</param>
+            <param name="notificationURL">机构接收支付通知的URL。</param>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1311Request.Process">
+            <summary>
+            处理请求。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1311Request.TxCode">
+            <summary>
+            获取交易代码。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1311Request.AccountType">
+            <summary>
+            获取或设置付款方账户类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1311Request.Bank">
+            <summary>
+            获取付款银行。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1311Request.Amount">
+            <summary>
+            获取或设置金额。单位分
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1311Request.Money">
+            <summary>
+            获取或设置金额。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1311Request.Remark">
+            <summary>
+            获取或设置备注。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1311Request.Fee">
+            <summary>
+            获取或设置支付服务手续费（付款方）。单位分
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1311Request.MoneyFee">
+            <summary>
+            获取或设置支付服务手续费（付款方）金额。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1311Request.NotificationURL">
+            <summary>
+            获取或设置机构接收支付通知的URL。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1311Request.OrderNo">
+            <summary>
+            获取或设置订单号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1311Request.PayerID">
+            <summary>
+            获取或设置付款方编号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1311Request.PayerName">
+            <summary>
+            获取或设置付款方名称。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1311Request.PaymentNo">
+            <summary>
+            获取或设置支付交易流水号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1311Request.Usage">
+            <summary>
+            获取或设置资金用途。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1311Request.Payees">
+            <summary>
+            获取收款人。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.CFCA.Tx1320Request">
+            <summary>
+            1320 交易请求类。市场订单支付查询。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1320Request.#ctor">
+            <summary>
+            实例化 1320 交易请求。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1320Request.Initialize(System.String)">
+            <summary>
+            初始化参数。
+            </summary>
+            <param name="paymentNo">支付交易流水号。</param>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1320Request.Process">
+            <summary>
+            处理请求。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1320Request.SendRequestAndGetRespose">
+            <summary>
+            发送请求至支付平台，并获取响应。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1320Request.TxCode">
+            <summary>
+            获取交易代码。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1320Request.PaymentNo">
+            <summary>
+            获取或设置支付交易流水号。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.CFCA.Tx1330Request">
+            <summary>
+            1330 交易请求类。市场订单查询。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1330Request.#ctor">
+            <summary>
+            实例化 1330 交易请求。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1330Request.Initialize(System.String,System.DateTime,System.DateTime)">
+            <summary>
+            初始化参数。
+            </summary>
+            <param name="orderNo">订单号。</param>
+            <param name="startDate">开始日期。</param>
+            <param name="endDate">结束日期。</param>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1330Request.Process">
+            <summary>
+            处理请求。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1330Request.SendRequestAndGetRespose">
+            <summary>
+            发送请求至支付平台，并获取响应。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1330Request.TxCode">
+            <summary>
+            获取交易代码。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1330Request.OrderNo">
+            <summary>
+            获取或设置订单号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1330Request.EndDate">
+            <summary>
+            获取或设置结束日期。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1330Request.StartDate">
+            <summary>
+            获取或设置开始日期。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.CFCA.Tx1341Request">
+            <summary>
+            1341 交易请求类。市场订单结算（结算）。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.CFCA.Tx134xRequest">
+            <summary>
+            134x 交易请求类。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx134xRequest.#ctor">
+            <summary>
+            实例化 134x 交易请求。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx134xRequest.Initialize(System.String,System.String,System.Decimal,System.String,EIIP.Payment.BankAccount)">
+            <summary>
+            初始化参数。
+            </summary>
+            <param name="orderNo">订单号。</param>
+            <param name="serialNumber">交易流水号。</param>
+            <param name="money">金额。</param>
+            <param name="remark">备注。</param>
+            <param name="bankAccount">收款方的银行账户。</param>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx134xRequest.Process">
+            <summary>
+            处理请求。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx134xRequest.SendRequestAndGetRespose">
+            <summary>
+            发送请求至支付平台，并获取响应。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx134xRequest.Amount">
+            <summary>
+            获取或设置金额(单位：分)。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx134xRequest.Money">
+            <summary>
+            获取或设置金额。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx134xRequest.Remark">
+            <summary>
+            获取或设置备注。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx134xRequest.OrderNo">
+            <summary>
+            获取或设置订单号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx134xRequest.SerialNumber">
+            <summary>
+            获取或设置交易流水号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx134xRequest.BankAccount">
+            <summary>
+            获取或设置收款方在银行开立的账户。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx134xRequest.SumRequired">
+            <summary>
+            获取或设置一个值，该值指示是否需要汇集结算。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1341Request.#ctor">
+            <summary>
+            实例化 1341 交易请求。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1341Request.Initialize4Authentication(System.String,EIIP.Payment.BankAccount)">
+            <summary>
+            认证结算-初始化参数。
+            </summary>
+            <param name="orderNo">订单号。</param>
+            <param name="bankAccount">收款方的银行账户。</param>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1341Request.Initialize4Brokerage(System.String,System.String,System.Decimal,System.String)">
+            <summary>
+            佣金结算-初始化参数。
+            </summary>
+            <param name="orderNo">订单号。</param>
+            <param name="serialNumber">交易流水号。</param>
+            <param name="money">金额。</param>
+            <param name="remark">备注。</param>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1341Request.TxCode">
+            <summary>
+            获取交易代码。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.CFCA.Tx1350Request">
+            <summary>
+            1350 交易请求类。市场订单结算交易查询。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1350Request.#ctor">
+            <summary>
+            实例化 1350 交易请求。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1350Request.Initialize(System.String)">
+            <summary>
+            初始化参数。
+            </summary>
+            <param name="serialNumber">交易流水号。</param>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1350Request.Process">
+            <summary>
+            处理请求。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1350Request.SendRequestAndGetRespose">
+            <summary>
+            发送请求至支付平台，并获取响应。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1350Request.TxCode">
+            <summary>
+            获取交易代码。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1350Request.SerialNumber">
+            <summary>
+            获取或设置结算序列号。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.CFCA.Tx1810Request">
+            <summary>
+            1810 交易请求类。交易对账单。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1810Request.#ctor">
+            <summary>
+            实例化 1810 交易请求。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1810Request.Initialize(System.DateTime)">
+            <summary>
+            初始化参数。
+            </summary>
+            <param name="date">结算日期。</param>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1810Request.Process">
+            <summary>
+            处理请求。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1810Request.SendRequestAndGetRespose">
+            <summary>
+            发送请求至支付平台，并获取响应。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1810Request.TxCode">
+            <summary>
+            获取交易代码。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1810Request.Date">
+            <summary>
+            获取或设置日期。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.CFCA.Tx1333Request">
+            <summary>
+            1333 交易请求类。市场订单结算（退款）。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1333Request.#ctor">
+            <summary>
+            实例化 1333 交易请求。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1333Request.Initialize(System.String,System.String,System.String,System.Decimal,System.String)">
+            <summary>
+            初始化参数。
+            </summary>
+            <param name="paymentNo">原支付交易流水号。</param>
+            <param name="orderNo">订单号。</param>
+            <param name="serialNumber">交易流水号。</param>
+            <param name="money">金额。</param>
+            <param name="remark">备注。</param>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1333Request.Process">
+            <summary>
+            处理请求。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1333Request.SendRequestAndGetRespose">
+            <summary>
+            发送请求至支付平台，并获取响应。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1333Request.TxCode">
+            <summary>
+            获取交易代码。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1333Request.PaymentNo">
+            <summary>
+            获取或设置原支付交易流水号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1333Request.Amount">
+            <summary>
+            获取或设置金额(单位：分)。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1333Request.Money">
+            <summary>
+            获取或设置金额。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1333Request.Remark">
+            <summary>
+            获取或设置备注。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1333Request.OrderNo">
+            <summary>
+            获取或设置订单号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1333Request.SerialNumber">
+            <summary>
+            获取或设置交易流水号。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.CFCA.MarketConfirmResponse">
+            <summary>
+            市场确认交易响应。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.CFCA.TxBaseResponse">
+            <summary>
+            交易响应基类。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.TxBaseResponse.TxChannel">
+            <summary>
+            当前交易通道。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.TxBaseResponse.m_Code">
+            <summary>
+            响应码。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.TxBaseResponse.m_Message">
+            <summary>
+            响应消息。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.TxBaseResponse.m_ResponseMessage">
+            <summary>
+            交易响应消息项。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.TxBaseResponse.m_InstitutionID">
+            <summary>
+            机构编号。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.TxBaseResponse.#ctor(EIIP.Payment.Type.ResponseMessageItem)">
+            <summary>
+            实例化交易响应基类。
+            </summary>
+            <param name="item">交易响应消息项</param>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.TxBaseResponse.Process(System.Xml.XmlNode)">
+            <summary>
+            处理响应。
+            </summary>
+            <param name="xmlBody">XML文档 BODY 节点。</param>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.TxBaseResponse.TxCode">
+            <summary>
+            获取交易代码。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.TxBaseResponse.ResponseMessage">
+            <summary>
+            获取交易响应消息项。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.TxBaseResponse.Code">
+            <summary>
+            获取响应编码。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.TxBaseResponse.IsSuccess">
+            <summary>
+            获取一个值，该值指示响应是否是成功的。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.TxBaseResponse.Message">
+            <summary>
+            获取响应消息。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.TxBaseResponse.InstitutionID">
+            <summary>
+            获取或设置机构编号。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.MarketConfirmResponse.#ctor(EIIP.Payment.Type.ResponseMessageItem)">
+            <summary>
+            实例化市场确认交易响应。
+            </summary>
+            <param name="item">交易响应消息项</param>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.MarketConfirmResponse.Process(System.Xml.XmlNode)">
+            <summary>
+            处理响应。
+            </summary>
+            <param name="xmlBody">XML文档 BODY 节点。</param>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.MarketConfirmResponse.TxCode">
+            <summary>
+            获取交易代码。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.MarketConfirmResponse.Amount">
+            <summary>
+            获取金额。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.MarketConfirmResponse.OrderNo">
+            <summary>
+            获取订单号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.MarketConfirmResponse.SerialNumber">
+            <summary>
+            获取结算序列号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.MarketConfirmResponse.Status">
+            <summary>
+            获取结算状态。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.CFCA.MerchantConfirmResponse">
+            <summary>
+            商户确认交易响应。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.MerchantConfirmResponse.#ctor(EIIP.Payment.Type.ResponseMessageItem)">
+            <summary>
+            实例化商户确认交易响应。
+            </summary>
+            <param name="item">交易响应消息项</param>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.MerchantConfirmResponse.Process(System.Xml.XmlNode)">
+            <summary>
+            处理响应。
+            </summary>
+            <param name="xmlBody">XML文档 BODY 节点。</param>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.MerchantConfirmResponse.TxCode">
+            <summary>
+            获取交易代码。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.MerchantConfirmResponse.Amount">
+            <summary>
+            获取金额。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.MerchantConfirmResponse.PaymentNo">
+            <summary>
+            获取支付流水号.
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.MerchantConfirmResponse.Remark">
+            <summary>
+            获取备注。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.MerchantConfirmResponse.Status">
+            <summary>
+            获取结算状态。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.CFCA.Tx131xResponse">
+            <summary>
+            支付平台响应。市场订单支付状态变更通知。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx131xResponse.#ctor(EIIP.Payment.Type.ResponseMessageItem)">
+            <summary>
+            实例化支付平台通知响应。
+            </summary>
+            <param name="item">交易响应消息项</param>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx131xResponse.Process(System.Xml.XmlNode)">
+            <summary>
+            处理响应。
+            </summary>
+            <param name="xmlBody">XML文档 BODY 节点。</param>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx131xResponse.TxCode">
+            <summary>
+            获取交易代码。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx131xResponse.Amount">
+            <summary>
+            获取或设置金额。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx131xResponse.Money">
+            <summary>
+            获取或设置金额。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx131xResponse.PaymentNo">
+            <summary>
+            获取或设置支付交易流水号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx131xResponse.Status">
+            <summary>
+            获取或设置状态。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.CFCA.Tx1320Response">
+            <summary>
+            1320 交易响应类。市场订单支付查询。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.Tx1320Response.m_SuccessTime">
+            <summary>
+            成功时间。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1320Response.#ctor(EIIP.Payment.Type.ResponseMessageItem)">
+            <summary>
+            实例化 1320 交易响应。
+            </summary>
+            <param name="item">交易响应消息项</param>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1320Response.Process(System.Xml.XmlNode)">
+            <summary>
+            处理响应。
+            </summary>
+            <param name="xmlBody">XML文档 BODY 节点。</param>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1320Response.TxCode">
+            <summary>
+            获取交易代码。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1320Response.Amount">
+            <summary>
+            获取金额(单位:分)。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1320Response.Money">
+            <summary>
+            获取金额(单位:元)。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1320Response.PaymentNo">
+            <summary>
+            获取支付流水号.
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1320Response.Remark">
+            <summary>
+            获取备注。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1320Response.Status">
+            <summary>
+            获取交易状态。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1320Response.SuccessTime">
+            <summary>
+            获取成功时间。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.CFCA.Tx1330Response">
+            <summary>
+            1330 交易响应类。市场订单查询。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1330Response.#ctor(EIIP.Payment.Type.ResponseMessageItem)">
+            <summary>
+            实例化 1330 交易响应。
+            </summary>
+            <param name="item">交易响应消息项</param>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1330Response.Process(System.Xml.XmlNode)">
+            <summary>
+            处理响应。
+            </summary>
+            <param name="xmlBody">XML文档 BODY 节点。</param>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1330Response.TxCode">
+            <summary>
+            获取交易代码。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1330Response.OrderNo">
+            <summary>
+            获取订单号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1330Response.OrderPayments">
+            <summary>
+            获取支付订单。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1330Response.OrderSettlements">
+            <summary>
+            获取结算订单。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.CFCA.Tx1333Response">
+            <summary>
+            1333 交易响应。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1333Response.#ctor(EIIP.Payment.Type.ResponseMessageItem)">
+            <summary>
+            实例化 1333 交易响应。
+            </summary>
+            <param name="item">交易响应消息项</param>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1333Response.Process(System.Xml.XmlNode)">
+            <summary>
+            处理响应。
+            </summary>
+            <param name="xmlBody">XML文档 BODY 节点。</param>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1333Response.TxCode">
+            <summary>
+            获取交易代码。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.CFCA.Tx134xResponse">
+            <summary>
+            134x 交易响应。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx134xResponse.#ctor(EIIP.Payment.Type.ResponseMessageItem)">
+            <summary>
+            实例化 134x 交易响应。
+            </summary>
+            <param name="item">交易响应消息项</param>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx134xResponse.Process(System.Xml.XmlNode)">
+            <summary>
+            处理响应。
+            </summary>
+            <param name="xmlBody">XML文档 BODY 节点。</param>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx134xResponse.TxCode">
+            <summary>
+            获取交易代码。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.CFCA.Tx1350Response">
+            <summary>
+            1350 交易响应类。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1350Response.#ctor(EIIP.Payment.Type.ResponseMessageItem)">
+            <summary>
+            实例化 1350 交易响应。
+            </summary>
+            <param name="item">交易响应消息项</param>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1350Response.Process(System.Xml.XmlNode)">
+            <summary>
+            处理响应。
+            </summary>
+            <param name="xmlBody">XML文档 BODY 节点。</param>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1350Response.TxCode">
+            <summary>
+            获取交易代码。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1350Response.AccountType">
+            <summary>
+            获取付款方账户类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1350Response.Amount">
+            <summary>
+            获取金额。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1350Response.TotalMoney">
+            <summary>
+            获取金额。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1350Response.Remark">
+            <summary>
+            获取备注。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1350Response.OrderNo">
+            <summary>
+            获取订单号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1350Response.PaymentAccountName">
+            <summary>
+            获取账户名称（支付平台账户）。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1350Response.PaymentAccountNumber">
+            <summary>
+            获取或账户号码（支付平台账户）。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1350Response.SerialNumber">
+            <summary>
+            获取交易流水号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1350Response.BankAccount">
+            <summary>
+            获取收款方在银行开立的账户。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1350Response.Status">
+            <summary>
+            获取交易状态。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.CFCA.Tx1810Response">
+            <summary>
+            1810 交易响应类。交易对账单。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1810Response.#ctor(EIIP.Payment.Type.ResponseMessageItem)">
+            <summary>
+            实例化 1810 交易响应。
+            </summary>
+            <param name="item">交易响应消息项</param>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Tx1810Response.Process(System.Xml.XmlNode)">
+            <summary>
+            处理响应。
+            </summary>
+            <param name="xmlBody">XML文档 BODY 节点。</param>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1810Response.TxCode">
+            <summary>
+            获取交易代码。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx1810Response.TxList">
+            <summary>
+            获取交易记录。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.AccountType">
+            <summary>
+            指示某一账户类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.AccountType.个人帐户">
+            <summary>
+            个人帐户 1。(摩宝专用)
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.AccountType.企业帐户">
+            <summary>
+            企业帐户 2。(摩宝专用)
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.AccountType.个人账户">
+            <summary>
+            个人账户 11。(银联专用)
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.AccountType.企业账户">
+            <summary>
+            企业账户 12。(银联专用)
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.AccountType.支付平台内部账户">
+            <summary>
+            CFCA 支付平台内部账户 20。(银联专用)
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.CFCA.IdentificationType">
+            <summary>
+            指示某一账户类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.IdentificationType.身份证">
+            <summary>
+            身份证
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.IdentificationType.户口簿">
+            <summary>
+            户口簿
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.IdentificationType.护照">
+            <summary>
+            护照
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.IdentificationType.军官证">
+            <summary>
+            军官证
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.IdentificationType.士兵证">
+            <summary>
+            士兵证
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.IdentificationType.港澳居民来往内地通行证">
+            <summary>
+            港澳居民来往内地通行证
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.IdentificationType.台湾同胞来往内地通行证">
+            <summary>
+            台湾同胞来往内地通行证
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.IdentificationType.临时身份证">
+            <summary>
+            临时身份证
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.IdentificationType.外国人居留证">
+            <summary>
+            外国人居留证
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.IdentificationType.警官证">
+            <summary>
+            警官证
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.IdentificationType.其他证件">
+            <summary>
+            其他证件
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Tx2111Request">
+            <summary>
+            OpenAcct 注册开户。用户在天地网系统注册过程中，天地网系统通过该接口将用户信息同步到摩宝系统。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2111Request.#ctor">
+            <summary>
+            实例化 OpenAcct 注册开户请求。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2111Request.Initialize(System.Guid,System.String)">
+            <summary>
+            初始化参数。
+            </summary>
+            <param name="perId">个人GUID。</param>
+            <param name="perName">个人姓名。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2111Request.Process">
+            <summary>
+            处理请求。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2111Request.SendRequestAndGetRespose">
+            <summary>
+            发送请求至支付平台，并获取响应。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2111Request.SendRequestAndGetResposeMessageItem">
+            <summary>
+            发送请求至支付平台，并获取响应。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2111Request.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2111Request.PerId">
+            <summary>
+            获取或设置个人GUID。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2111Request.PerName">
+            <summary>
+            获取或设置个人姓名。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2111Request.Mobile">
+            <summary>
+            获取或设置手机号码。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2111Request.Email">
+            <summary>
+            获取或设置电子邮件。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2111Request.AccountType">
+            <summary>
+            获取或设置帐户类型。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Request.Tx2210Request">
+            <summary>
+            RealNameAuth 实名认证。摩宝系统接受天地网提交的用户名和身份证号码，通过第三方提供的接口验证用户姓名与身份证号码的一致性后，返回天地网验证结果。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Request.Tx2210Request.#ctor">
+            <summary>
+            实例化 RealNameAuth 实名认证。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Request.Tx2210Request.Initialize(System.Guid,System.String,System.String,System.Boolean)">
+            <summary>
+            初始化参数。
+            </summary>
+            <param name="perId">个人GUID。</param>
+            <param name="perName">个人姓名。</param>
+            <param name="idCard">身份证。</param>
+            <param name="needRealNameAuth">设置一个值，该值指示是否需要认证身份证。若已认证过，应设置为 false。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Request.Tx2210Request.Process">
+            <summary>
+            处理请求。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Request.Tx2210Request.SendRequestAndGetRespose">
+            <summary>
+            发送请求至支付平台，并获取响应。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2210Request.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2210Request.PerId">
+            <summary>
+            获取或设置个人GUID。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2210Request.PerName">
+            <summary>
+            获取或设置个人姓名。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2210Request.IDCard">
+            <summary>
+            获取或设置身份证。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Request.Tx2210Request.NeedRealNameAuth">
+            <summary>
+            获取或设置一个值，该值指示是否需要实名认证。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.Tx2220Request">
+            <summary>
+            BankCardRegister 银行卡登记。通过银行卡登记接口为用户指定默认结算用银行卡。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2220Request.#ctor">
+            <summary>
+            实例化 BankcardAuthReg 银行卡认证申请。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2220Request.Initialize(System.Guid,EIIP.Payment.BankAccount)">
+            <summary>
+            初始化参数。
+            </summary>
+            <param name="perId">个人GUID。</param>
+            <param name="bankAccount">银行账户。</param>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2220Request.Process">
+            <summary>
+            处理请求。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.MoBao.Tx2220Request.SendRequestAndGetRespose">
+            <summary>
+            发送请求至支付平台，并获取响应。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2220Request.MessageType">
+            <summary>
+            获取交易消息类型。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2220Request.PerId">
+            <summary>
+            获取或设置个人GUID。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.MoBao.Tx2220Request.BankAccount">
+            <summary>
+            获取或设置交易银行账户。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.MoBao.MessageType">
+            <summary>
+            指示摩宝某一交易消息类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.MessageType.UnKnown">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.MessageType.PAY_RESULT">
+            <summary>
+            支付通知。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.MessageType.GiroResult">
+            <summary>
+            银行卡认证打款通知。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.MessageType.SETT_RESULT">
+            <summary>
+            结算结果通知。摩宝处理完订单结算到银行卡的操作后，通过该接口告知天地网系统结算结果。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.MessageType.LOAN_NOTIFY">
+            <summary>
+            放款结果通知
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.MessageType.REPAY_LOAN_NOTIFY">
+            <summary>
+            还款结果通知
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.MessageType.OpenAcct">
+            <summary>
+            注册开户。用户在天地网系统注册过程中，天地网系统通过该接口将用户信息同步到摩宝系统。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.MessageType.RealNameAuth">
+            <summary>
+            实名认证。摩宝系统接受天地网提交的用户名和身份证号码，通过第三方提供的接口验证用户姓名与身份证号码的一致性后，返回天地网验证结果。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.MessageType.UserInfoChange">
+            <summary>
+            用户身份信息变更。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.MessageType.BankCardRegister">
+            <summary>
+            银行卡登记。通过银行卡登记接口为用户指定默认结算用银行卡。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.MessageType.GiroApplication">
+            <summary>
+            打款申请。天地网提交打款信息到摩宝账务系统。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.MessageType.GiroQuery">
+            <summary>
+            打款查询。用于主动获取打款申请处理状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.MessageType.WEB_PAY">
+            <summary>
+            交易-付款。天地网系统将用户订单相关信息通过用户浏览器提交到摩宝系统。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.MessageType.TradeConfirm">
+            <summary>
+            交易-确认收货。天地网系统通过该接口将交易流水更新为确认收货状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.MessageType.TradeVerify">
+            <summary>
+            交易-订单审核。天地网系统通过该接口将交易流水更新为已审核状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.MessageType.TradeSettle">
+            <summary>
+            交易-交易结算。天地网通过该接口实现交易结算，和佣金收取。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.MessageType.TradeRepeal">
+            <summary>
+            交易撤销。天地网系统通过该接口撤销交易，将交易资金退回给购买方。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.MessageType.TradeQuery">
+            <summary>
+            交易查询-交易流水。天地网通过该接口获取订单下某一笔交易流水的状态信息。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.MessageType.OrderQuery">
+            <summary>
+            交易查询-订单。天地网通过该接口获取订单状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.MessageType.UserStatusSync">
+            <summary>
+            融资服务开通/关闭。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.MessageType.CREDIT_PAY">
+            <summary>
+            信用支付
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.MessageType.RevokeOrder">
+            <summary>
+            信用支付撤销。信用支付订单撤销。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.MessageType.AgentAvailableLimit">
+            <summary>
+            可用额度查询。获取指定用户信用账户信息：信用额度、可用额度等。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.MessageType.LoanInfoQuery">
+            <summary>
+            融资结果查询。获取订单融资结果信息。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.MoBao.MessageType.AgentLoanInfoQuery">
+            <summary>
+            客户融资信息查询。获取客户融资账户信息。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.InterfaceChannel">
+            <summary>
+            指示某一交易接口通道。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.InterfaceChannel.CFCA">
+            <summary>
+            银联
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.InterfaceChannel.MoBao">
+            <summary>
+            摩宝
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.InterfaceChannel.ABC">
+            <summary>
+            农行
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.Type.MessageItem">
+            <summary>
+            传输消息项。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.Type.MessageItem.#ctor(EIIP.Payment.InterfaceChannel,System.String)">
+            <summary>
+            实例化传输消息项。
+            </summary>
+            <param name="interfaceChannel">交易接口通道</param>
+            <param name="message">密文消息</param>
+        </member>
+        <member name="M:EIIP.Payment.Type.MessageItem.#ctor(EIIP.Payment.InterfaceChannel,System.String,System.String)">
+            <summary>
+            实例化传输消息项。
+            </summary>
+            <param name="interfaceChannel">交易接口通道</param>
+            <param name="message">密文消息</param>
+            <param name="signature">密文消息签名。</param>
+        </member>
+        <member name="P:EIIP.Payment.Type.MessageItem.Message">
+            <summary>
+            获取密文消息。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.Type.MessageItem.Signature">
+            <summary>
+            获取密文消息签名。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.Type.MessageItem.InterfaceChannel">
+            <summary>
+            获取交易接口通道。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.CFCA.Type.NoticeTransItem">
+            <summary>
+            通知请求传输项。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.Type.NoticeTransItem.#ctor(System.String)">
+            <summary>
+            实例化通知请求传输项。
+            </summary>
+            <param name="plainText">明文。</param>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Type.NoticeTransItem.Document">
+            <summary>
+            获取XML文档。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Type.NoticeTransItem.PlainText">
+            <summary>
+            获取通知文本。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Type.NoticeTransItem.TxCode">
+            <summary>
+            获取交易代码。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Type.NoticeTransItem.TxName">
+            <summary>
+            获取或设置交易名称。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.PersonCreditInfo">
+            <summary>
+            个人信用信息。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.PersonCreditInfo.BankLineAmt">
+            <summary>
+            银行授信额度。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.PersonCreditInfo.TdLineAmt">
+            <summary>
+            天地网授信额度。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.PersonCreditInfo.AvailableLineAmt">
+            <summary>
+            可用额度。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.PersonCreditInfo.UsedLineAmt">
+            <summary>
+            已用额度。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.Type.RequestMessageItem">
+            <summary>
+            请求传输消息项。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.Type.RequestMessageItem.#ctor(EIIP.Payment.InterfaceChannel,System.String)">
+            <summary>
+            实例化请求传输消息项。
+            </summary>
+            <param name="interfaceChannel">交易接口通道</param>
+            <param name="message">密文消息</param>
+        </member>
+        <member name="M:EIIP.Payment.Type.RequestMessageItem.#ctor(EIIP.Payment.InterfaceChannel,System.String,System.String)">
+            <summary>
+            实例化请求传输消息项。
+            </summary>
+            <param name="interfaceChannel">交易接口通道</param>
+            <param name="message">密文消息</param>
+            <param name="signature">密文消息签名。</param>
+        </member>
+        <member name="T:EIIP.Payment.Type.RequestTransItem">
+            <summary>
+            交易请求传输项。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.Type.RequestTransItem.#ctor(EIIP.Payment.InterfaceChannel,System.String,System.String)">
+            <summary>
+            实例化交易请求传输项。
+            </summary>
+            <param name="interfaceChannel">交易接口通道</param>
+            <param name="plainText">明文。</param>
+            <param name="txCode">交易代码。</param>
+        </member>
+        <member name="P:EIIP.Payment.Type.RequestTransItem.PlainText">
+            <summary>
+            获取明文。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.Type.RequestTransItem.Message">
+            <summary>
+            获取加密消息。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.Type.RequestTransItem.Signature">
+            <summary>
+            获取加密消息的签名。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.Type.RequestTransItem.RequestMessageItem">
+            <summary>
+            获取请求消息项。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.Type.RequestTransItem.TxCode">
+            <summary>
+            获取交易代码。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.CFCA.OrderPayment">
+            <summary>
+            订单支付信息类。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.OrderPayment.Amount">
+            <summary>
+            获取或设置金额(单位：分)。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.OrderPayment.Money">
+            <summary>
+            获取或设置金额。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.OrderPayment.PaymentNo">
+            <summary>
+            获取或设置支付流水号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.OrderPayment.Remark">
+            <summary>
+            获取或设置备注。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.OrderPayment.Status">
+            <summary>
+            获取或设置订单状态。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.OrderPayment.TxType">
+            <summary>
+            获取或设置订单交易类型。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.CFCA.OrderSettlement">
+            <summary>
+            订单结算信息类。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.OrderSettlement.Amount">
+            <summary>
+            获取或设置金额(单位：分)。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.OrderSettlement.Money">
+            <summary>
+            获取或设置金额。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.OrderSettlement.Remark">
+            <summary>
+            获取或设置备注。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.OrderSettlement.SerialNumber">
+            <summary>
+            获取或设置结算序列号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.OrderSettlement.Status">
+            <summary>
+            获取或设置订单状态。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.OrderSettlement.TxType">
+            <summary>
+            获取或设置订单交易类型。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.CFCA.PaymentStatus">
+            <summary>
+            指定某一支付状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.PaymentStatus.未支付">
+            <summary>
+            未支付
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.PaymentStatus.已支付">
+            <summary>
+            已支付
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.CFCA.ResponseInfo">
+            <summary>
+            响应信息类。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.ResponseInfo.m_BatchNo">
+            <summary>
+            批量代付批次号
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.CFCA.ResponseInfo.#ctor">
+            <summary>
+            实例化默认响应信息。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.ResponseInfo.Status">
+            <summary>
+            获取交易状态。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.ResponseInfo.BatchNo">
+            <summary>
+            获取批量代付批次号。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.ResponseInfo.Code">
+            <summary>
+            获取交易状态。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.ResponseInfo.Message">
+            <summary>
+            获取交易状态。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.Type.ResponseMessageItem">
+            <summary>
+            响应传输消息项。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.Type.ResponseMessageItem.#ctor(EIIP.Payment.InterfaceChannel,System.String)">
+            <summary>
+            实例化请求传输消息项。
+            </summary>
+            <param name="interfaceChannel">交易接口通道</param>
+            <param name="message">密文消息</param>
+        </member>
+        <member name="M:EIIP.Payment.Type.ResponseMessageItem.#ctor(EIIP.Payment.InterfaceChannel,System.String,System.String)">
+            <summary>
+            实例化请求传输消息项。
+            </summary>
+            <param name="interfaceChannel">交易接口通道</param>
+            <param name="message">密文消息</param>
+            <param name="signature">密文消息签名。</param>
+        </member>
+        <member name="P:EIIP.Payment.Type.ResponseMessageItem.PlainText">
+            <summary>
+            获取明文。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.CFCA.SettlementStatus">
+            <summary>
+            指定某一结算状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.SettlementStatus.New">
+            <summary>
+            新的
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.SettlementStatus.已撤销">
+            <summary>
+            已撤销
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.SettlementStatus.交易失效">
+            <summary>
+            交易失效（付款方拒绝，可以通过 1410 撤销）
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.SettlementStatus.正在结算">
+            <summary>
+            正在结算（付款方同意结算，自然超期）
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.SettlementStatus.已经执行">
+            <summary>
+            已经执行
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.CFCA.TransactionStatus">
+            <summary>
+            指定某一交易状态。
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.TransactionStatus.等待提交">
+            <summary>
+            等待提交
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.TransactionStatus.重试提交">
+            <summary>
+            重试提交
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.TransactionStatus.已提交">
+            <summary>
+            已提交
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.TransactionStatus.查询异常">
+            <summary>
+            查询异常
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.TransactionStatus.New">
+            <summary>
+            New
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.TransactionStatus.交易失效">
+            <summary>
+            交易失效
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.TransactionStatus.等待结算">
+            <summary>
+            等待结算
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.CFCA.TransactionStatus.已经执行">
+            <summary>
+            已经执行
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.CFCA.Tx">
+            <summary>
+            交易信息类。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx.InstitutionAmount">
+            <summary>
+            获取或设置机构金额(单位：分)。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx.InstitutionMoney">
+            <summary>
+            获取或设置机构金额。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx.InstitutionFee">
+            <summary>
+            获取或设置机构费用(单位：分)。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx.InstitutionFeeMoney">
+            <summary>
+            获取或设置机构费用金额。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx.PayerFee">
+            <summary>
+            获取或设置支付者费用(单位：分)。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx.PayerFeeMoney">
+            <summary>
+            获取或设置支付者费用金额。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx.PaymentAmount">
+            <summary>
+            获取或设置支付者金额(单位：分)。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx.PaymentMoney">
+            <summary>
+            获取或设置金额。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx.Remark">
+            <summary>
+            获取或设置备注。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx.TxAmount">
+            <summary>
+            获取或设置交易金额(单位：分)。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx.TxMoney">
+            <summary>
+            获取或设置金额。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx.TxSn">
+            <summary>
+            获取或设置交易签名。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.CFCA.Tx.TxType">
+            <summary>
+            获取或设置交易类型。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.HttpData">
+            <summary>
+            HTTP数据
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.HttpData.#ctor(EIIP.Payment.InterfaceChannel)">
+            <summary>
+            实例化HTTP数据。
+            </summary>
+            <param name="interfaceChannel">通道</param>
+        </member>
+        <member name="M:EIIP.Payment.HttpData.GetData">
+            <summary>
+            获取GET查询数据。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Payment.HttpData.Set(System.String,System.String)">
+            <summary>
+            设置查询字串。
+            </summary>
+            <param name="name">名称</param>
+            <param name="value">值</param>
+        </member>
+        <member name="T:EIIP.Payment.Bank">
+            <summary>
+            指示某一银行。
+            </summary>
+            <remarks>
+            1、可支持的银行，IsInner = true
+            2、type 是做为 FLAG 标志使用的
+            3、对于银联通道，type的标志位：
+            	对私 = 0x01
+            	对公 = 0x02
+            	支持原路返回-对私 = 0x8000
+            	支持原路返回-对公 = 0x4000 
+            	设置支付原路退款的对公银行的type=3,还必须变更 Tx1311Request.Initialize(...) 方法内的选项
+            4、对于摩宝通道，type的标志位：
+            	对私 = 0x10
+            </remarks>
+            <example>
+            企业支付: 19家
+            工行、农行、中行、建行、交行、光大、华夏、民生、平安、招行、
+            浦发、河北银行、徽商、东亚银行、中信、兴业、广发、天津银行、宁波银行
+            
+            个人支付: 14家银行+银联在线
+            邮储(个人借记卡)、工行、农行、中行、建行、交行、光大、华夏、
+            民生、招行、浦发、徽商银行、上海银行、中信、银联在线（支持全国各大银行信用卡、借记卡）
+            </example>
+        </member>
+        <member name="F:EIIP.Payment.Bank.中国邮政储蓄银行">
+            <summary>
+            邮政储汇局
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.Bank.中国工商银行">
+            <summary>
+            中国工商银行
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.Bank.中国农业银行">
+            <summary>
+            中国农业银行
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.Bank.中国银行">
+            <summary>
+            中国银行
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.Bank.中国建设银行">
+            <summary>
+            中国建设银行
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.Bank.交通银行">
+            <summary>
+            交通银行
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.Bank.中信银行">
+            <summary>
+            中信银行
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.Bank.中国光大银行">
+            <summary>
+            中国光大银行
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.Bank.华夏银行">
+            <summary>
+            华夏银行
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.Bank.中国民生银行">
+            <summary>
+            中国民生银行
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.Bank.广东发展银行">
+            <summary>
+            广东发展银行
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.Bank.平安银行">
+            <summary>
+            平安银行
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.Bank.招商银行">
+            <summary>
+            招商银行
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.Bank.兴业银行">
+            <summary>
+            兴业银行
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.Bank.上海浦东发展银行">
+            <summary>
+            上海浦东发展银行
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.Bank.恒丰银行">
+            <summary>
+            恒丰银行
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.Bank.渤海银行">
+            <summary>
+            渤海银行
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.Bank.宁波银行">
+            <summary>
+            宁波银行
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.Bank.河北银行">
+            <summary>
+            河北银行
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.Bank.天津银行">
+            <summary>
+            宁波银行
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.Bank.徽商银行">
+            <summary>
+            徽商银行
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.Bank.贵阳银行">
+            <summary>
+            贵阳银行
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.Bank.CFCA测试银行">
+            <summary>
+            CFCA测试银行
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.Bank.MoBao测试银行">
+            <summary>
+            MoBao测试银行
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.Bank.银联在线">
+            <summary>
+            银联在线
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.Bank.东亚银行">
+            <summary>
+            东亚银行
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.URLConnection">
+            <summary>
+            URL连接类。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.URLConnection.#ctor(System.String)">
+            <summary>
+            实例化URL连接。
+            </summary>
+            <param name="url">URL连接地址</param>
+        </member>
+        <member name="M:EIIP.Payment.URLConnection.Send(EIIP.Payment.HttpData)">
+            <summary>
+            发送请求连接，并获取响应内容。
+            </summary>
+            <param name="httpData">HTTP数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Payment.URLConnection.RemoteCertificateCallback(System.Object,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors)">
+            <summary>
+            验证用于身份验证的远程安全套接字层 (SSL) 证书。返回值始终确定接受指定证书进行身份验证。
+            </summary>
+            <param name="sender">一个对象，它包含此验证的状态信息。</param>
+            <param name="certificate">用于对远程方进行身份验证的证书。</param>
+            <param name="chain">与远程证书关联的证书颁发机构链。</param>
+            <param name="sslPolicyErrors">与远程证书关联的一个或多个错误。</param>
+            <returns></returns>
+        </member>
+        <member name="P:EIIP.Payment.URLConnection.Method">
+            <summary>
+            获取或设置URL连接方式: POST 或 GET。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.Utils">
+            <summary>
+            工具类。
+            </summary>
+        </member>
+        <member name="M:EIIP.Payment.Utils.CodeMessage(System.Int32)">
+            <summary>
+            获取响应消息。
+            </summary>
+            <param name="code">响应编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Payment.Utils.Base64UrlEncoding(System.String)">
+            <summary>
+            将Base64字串进行一次URL编码。
+            </summary>
+            <param name="str">Base64字串</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Payment.Utils.HashSHA1(System.String)">
+            <summary>
+            获取SHA1哈希码。
+            </summary>
+            <param name="text">源字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Payment.Utils.ParseDateTime(System.String)">
+            <summary>
+            解析日期字串。
+            </summary>
+            <param name="dtString">日期字串。格式如 20121212151622 </param>
+            <returns></returns>
+        </member>
+        <member name="P:EIIP.Payment.Utils.Signature_CFCA">
+            <summary>
+            获取CFCA签名工具。
+            </summary>
+        </member>
+        <member name="P:EIIP.Payment.Utils.Signature_MoBao">
+            <summary>
+            获取MoBao签名工具。
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.Config">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:EIIP.Payment.VersionInfo">
+            <summary>
+            版本信息
+            </summary>
+        </member>
+        <member name="F:EIIP.Payment.VersionInfo.Version">
+            <summary>
+            版本号。
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,388 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EIIP.Adapter</name>
+    </assembly>
+    <members>
+        <member name="T:EIIP.Adapter.Application">
+            <summary>
+            指示某一应用程序。
+            </summary>
+        </member>
+        <member name="F:EIIP.Adapter.Application.zytd">
+            <summary>
+            天地网
+            </summary>
+        </member>
+        <member name="F:EIIP.Adapter.Application.upay">
+            <summary>
+            买卖通
+            </summary>
+        </member>
+        <member name="T:EIIP.Adapter.TeleADProxy.Header">
+            <remarks/>
+        </member>
+        <member name="P:EIIP.Adapter.TeleADProxy.Header.LoginName">
+            <remarks/>
+        </member>
+        <member name="P:EIIP.Adapter.TeleADProxy.Header.Pwd">
+            <remarks/>
+        </member>
+        <member name="P:EIIP.Adapter.TeleADProxy.Header.RoleID">
+            <remarks/>
+        </member>
+        <member name="P:EIIP.Adapter.TeleADProxy.Header.IsMD5">
+            <remarks/>
+        </member>
+        <member name="P:EIIP.Adapter.TeleADProxy.Header.AdAgentLoginID">
+            <remarks/>
+        </member>
+        <member name="P:EIIP.Adapter.TeleADProxy.Header.CustLoginID">
+            <remarks/>
+        </member>
+        <member name="P:EIIP.Adapter.TeleADProxy.Header.AnyAttr">
+            <remarks/>
+        </member>
+        <member name="T:EIIP.Adapter.TeleAD.ACDType">
+            <summary>
+            指示某一轮询模式。
+            </summary>
+        </member>
+        <member name="F:EIIP.Adapter.TeleAD.ACDType.智能ACD">
+            <summary>
+            智能ACD
+            </summary>
+        </member>
+        <member name="F:EIIP.Adapter.TeleAD.ACDType.空闲最长">
+            <summary>
+            空闲最长
+            </summary>
+        </member>
+        <member name="F:EIIP.Adapter.TeleAD.ACDType.轮询">
+            <summary>
+            轮询
+            </summary>
+        </member>
+        <member name="F:EIIP.Adapter.TeleAD.ACDType.一号通">
+            <summary>
+            一号通
+            </summary>
+        </member>
+        <member name="T:EIIP.Adapter.TeleAD.APIClient">
+            <summary>
+            调用客户端。
+            </summary>
+        </member>
+        <member name="F:EIIP.Adapter.TeleAD.APIClient.CODE_400">
+            <summary>
+            400号码
+            </summary>
+        </member>
+        <member name="F:EIIP.Adapter.TeleAD.APIClient.SOUND_CONTENT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EIIP.Adapter.TeleAD.APIClient.#ctor">
+            <summary>
+            实例化调用。
+            </summary>
+        </member>
+        <member name="M:EIIP.Adapter.TeleAD.APIClient.#ctor(EIIP.Adapter.Application)">
+            <summary>
+            实例化调用代理。
+            </summary>
+            <param name="application">当前的应用环境</param>
+        </member>
+        <member name="M:EIIP.Adapter.TeleAD.APIClient.CustomerAdd(System.Int32,System.Guid,System.String,System.String,System.String,System.String,System.String,System.String@)">
+            <summary>
+            添加商家客户资料。成功返回商家ID。
+            </summary>
+            <param name="perID">个人ID</param>
+            <param name="perID_g">个人GUID</param>
+            <param name="name">客户名称(限20字内)</param>
+            <param name="address">企业地址</param>
+            <param name="contactMan">联系人</param>
+            <param name="mobilePhone">联系手机</param>
+            <param name="desc">描述</param>
+            <param name="error">返回错误信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Adapter.TeleAD.APIClient.CustomerAdd(System.String,System.Decimal,System.Decimal,System.String,System.String,System.String,System.String,System.String,System.String,System.Decimal,System.String@)">
+            <summary>
+            添加商家客户资料。成功返回商家ID。
+            </summary>
+            <param name="name">客户名称(限20字内)</param>
+            <param name="callFee">通话费用</param>
+            <param name="msgFee">短信资费</param>
+            <param name="userName">登录名（字母与数字，4-20）</param>
+            <param name="pwd">登录密码(长度6位以上)</param>
+            <param name="address">企业地址</param>
+            <param name="contactMan">联系人</param>
+            <param name="mobilePhone">联系手机</param>
+            <param name="desc">描述</param>
+            <param name="adFee">推广费</param>
+            <param name="error">返回错误信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Adapter.TeleAD.APIClient.CustomerDelete(System.Int32,System.String@)">
+            <summary>
+            删除商家。成功返回true。
+            </summary>
+            <param name="customerID">商家ID</param>
+            <param name="error">返回错误信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Adapter.TeleAD.APIClient.CustomerSetStatus(System.Int32,System.Int32,System.String@)">
+            <summary>
+            设置商家状态。成功返回true。
+            </summary>
+            <param name="customerID">商家ID</param>
+            <param name="statusID">状态ID。1：激活企业 2：冻结企业</param>
+            <param name="error">返回错误信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Adapter.TeleAD.APIClient.CustomerActive(System.Int32,System.String@)">
+            <summary>
+            激活商家。成功返回true。
+            </summary>
+            <param name="customerID">商家ID</param>
+            <param name="error">返回错误信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Adapter.TeleAD.APIClient.CustomerUnActive(System.Int32,System.String@)">
+            <summary>
+            冻结商家。成功返回true。
+            </summary>
+            <param name="customerID">商家ID</param>
+            <param name="error">返回错误信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Adapter.TeleAD.APIClient.WorkGroupAdd(System.Int32,System.String,System.Int32,System.String@)">
+            <summary>
+            添加商家座席组（带小号模式）。返回用逗号分隔的(座席GUID,400号码,小号)字符串。失败返回空串。
+            </summary>
+            <param name="customerID">商家ID</param>
+            <param name="telList">坐席电话，多个用","分隔</param>
+            <param name="perID">个人ID</param>
+            <param name="error">返回错误信息</param>
+            <returns></returns>
+            <remarks>D95D1436C2D17A32E040A8C0CA013E92,4008156142-114,377012-377013</remarks>
+        </member>
+        <member name="M:EIIP.Adapter.TeleAD.APIClient.WorkGroupAdd(System.Int32,System.String,System.Int32,System.String,System.String,System.String@)">
+            <summary>
+            添加商家座席组（带小号模式）。返回用逗号分隔的(座席GUID,400号码,小号)字符串。失败返回空串。
+            </summary>
+            <param name="customerID">商家ID</param>
+            <param name="telList">坐席电话，多个用","分隔</param>
+            <param name="perID">个人ID</param>
+            <param name="content">提示音内容</param>
+            <param name="msgTel">短信提醒号码</param>
+            <param name="error">返回错误信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Adapter.TeleAD.APIClient.WorkGroupUpdate(System.Guid,System.String,System.String@)">
+            <summary>
+            更新指定座席组下坐席。成功返回true。
+            </summary>
+            <param name="groupId">座席组GUID</param>
+            <param name="telList">坐席电话，多个用","分隔</param>
+            <param name="error">返回错误信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Adapter.TeleAD.APIClient.WorkGroupUpdate(System.Int32,System.Guid,System.String,System.String@)">
+            <summary>
+            修改座席组的400小号。成功返回true。
+            </summary>
+            <param name="customerID">商家ID</param>
+            <param name="groupId">座席组GUID</param>
+            <param name="extCode">400小号号码</param>
+            <param name="error">返回错误信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Adapter.TeleAD.APIClient.WorkGroupDelete(System.Guid,System.String@)">
+            <summary>
+            删除座席组。成功返回true。
+            </summary>
+            <param name="groupId">座席组GUID</param>
+            <param name="error">返回错误信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Adapter.TeleAD.APIClient.Recharge(System.Int32,System.Decimal,EIIP.Adapter.TeleAD.RechargeType,System.String,System.String@)">
+            <summary>
+            代理商为企业充值/返款。成功返回true。
+            </summary>
+            <param name="customerID">商家ID</param>
+            <param name="money">金额</param>
+            <param name="rechargeType">充值返款类型</param>
+            <param name="desc">描述</param>
+            <param name="error">返回错误信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Adapter.TeleAD.APIClient.GetCallDetail(System.Int32,System.DateTime,System.String@)">
+            <summary>
+            获取一天的400电话呼叫明细。
+            </summary>
+            <param name="customerID">商家ID。当设置为0时，表示代理商自己</param>
+            <param name="date">要查询的日期</param>
+            <param name="error">返回错误信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Adapter.TeleAD.APIClient.GetCallDetail(System.Int32,EIIP.Adapter.TeleAD.CallType,System.DateTime,System.DateTime,System.String@)">
+            <summary>
+            获取不超过5天的日话信息查询。
+            </summary>
+            <param name="customerID">商家ID。当设置为0时，表示查询所有</param>
+            <param name="callType">通话类型</param>
+            <param name="fromDate">开始日期</param>
+            <param name="toDate">结束日期</param>
+            <param name="error">返回错误信息</param>
+            <returns></returns>
+            <remarks>
+            返回的表结构
+            =================================
+            字段		类型		说明
+            ID			int			主键
+            USERID		int			坐席ID
+            CUSTID		int			企业ID
+            FROMURL		string		来源URL
+            FROMIP		string		来源IP
+            ANI			string		主叫
+            DNI			string		被叫
+            STARTDATE	DateTime	开始时间
+            ENDDATE		DateTime	结束时间
+            LENG		int			时长
+            CALLFEE		decimal		通话总费用
+            CALLERTIME	int			主叫时长
+            CALLEDTIME	int			被叫时长
+            CALLRESULT	int			呼叫结果
+            RECORDERWAV	string		录音
+            PRONAME		string		省名称
+            CITYNAME	string		城市名称
+            WORKGROUPID	int			组ID
+            EXTCODE		int			小号号码
+            DNIPRONAME	string		被叫省份
+            DNICITYNAME	string		被叫城市
+            ===================================
+            </remarks>
+        </member>
+        <member name="M:EIIP.Adapter.TeleAD.APIClient.GetCallDetail(System.Int32,System.String,System.DateTime,System.String@)">
+            <summary>
+            获取某个商家的录音。返回byte[]数组.可保存为wav格式。
+            </summary>
+            <param name="customerID">商家ID。</param>
+            <param name="extID">录音ID，12位数字</param>
+            <param name="date"></param>
+            <param name="error"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EIIP.Adapter.TeleAD.CallType">
+            <summary>
+            指示某一通话类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Adapter.TeleAD.CallType.免费电话">
+            <summary>
+            免费电话
+            </summary>
+        </member>
+        <member name="F:EIIP.Adapter.TeleAD.CallType.电话400">
+            <summary>
+            电话400
+            </summary>
+        </member>
+        <member name="T:EIIP.Adapter.TeleAD.RechargeType">
+            <summary>
+            指示某一充值返款类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Adapter.TeleAD.RechargeType.通讯费充值">
+            <summary>
+            通讯费充值
+            </summary>
+        </member>
+        <member name="F:EIIP.Adapter.TeleAD.RechargeType.通讯费返款">
+            <summary>
+            通讯费返款
+            </summary>
+        </member>
+        <member name="F:EIIP.Adapter.TeleAD.RechargeType.短信费充值">
+            <summary>
+            短信费充值
+            </summary>
+        </member>
+        <member name="F:EIIP.Adapter.TeleAD.RechargeType.短信费返款">
+            <summary>
+            短信费返款
+            </summary>
+        </member>
+        <member name="T:EIIP.Adapter.TeleAD.WorkGroupResultInfo">
+            <summary>
+            工作组结果信息类。
+            </summary>
+        </member>
+        <member name="F:EIIP.Adapter.TeleAD.WorkGroupResultInfo.TelList">
+            <summary>
+            坐席电话，多个用","分隔
+            </summary>
+        </member>
+        <member name="P:EIIP.Adapter.TeleAD.WorkGroupResultInfo.GroupId">
+            <summary>
+            获取座席GUID
+            </summary>
+        </member>
+        <member name="P:EIIP.Adapter.TeleAD.WorkGroupResultInfo.Phone400">
+            <summary>
+            获取400电话分机
+            </summary>
+        </member>
+        <member name="P:EIIP.Adapter.TeleAD.WorkGroupResultInfo.OperatorCode">
+            <summary>
+            获取接线员编号范围。
+            </summary>
+        </member>
+        <member name="T:EIIP.Adapter.TeleAD.WorkSoundType">
+            <summary>
+            指示提示音某一类型。
+            </summary>
+        </member>
+        <member name="F:EIIP.Adapter.TeleAD.WorkSoundType.无">
+            <summary>
+            无提示音。
+            </summary>
+        </member>
+        <member name="F:EIIP.Adapter.TeleAD.WorkSoundType.TTS">
+            <summary>
+            TTS
+            </summary>
+        </member>
+        <member name="F:EIIP.Adapter.TeleAD.WorkSoundType.语音文件">
+            <summary>
+            语音文件
+            </summary>
+        </member>
+        <member name="T:EIIP.Adapter.Utility">
+            <summary>
+            实用工具类。
+            </summary>
+        </member>
+        <member name="M:EIIP.Adapter.Utility.ParsePhones(System.String,System.String@)">
+            <summary>
+            提取合法的电话号码。
+            </summary>
+            <param name="phones"></param>
+            <param name="firstMobile">返回首个手机号码。不存在返回string.Empty</param>
+            <returns></returns>
+        </member>
+        <member name="T:EIIP.Adapter.VersionInfo">
+            <summary>
+            版本信息
+            </summary>
+        </member>
+        <member name="F:EIIP.Adapter.VersionInfo.Version">
+            <summary>
+            版本号。
+            </summary>
+        </member>
+    </members>
+</doc>

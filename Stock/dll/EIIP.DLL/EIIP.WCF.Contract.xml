@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EIIP.WCF.Contract</name>
+    </assembly>
+    <members>
+        <member name="T:EIIP.Contract.ChartData">
+            <summary>
+            图表数据。 
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.ChartData.Width">
+            <summary>
+            图表宽度。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.ChartData.Height">
+            <summary>
+            图表高度。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.ChartData.IsIndex">
+            <summary>
+            指示是否指数数据。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.ChartData.ItemID">
+            <summary>
+            图表项ID。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.ChartData.Name">
+            <summary>
+            图表名称。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.ChartData.DMY">
+            <summary>
+            图表日期类型ID。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.ChartData.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.ChartData.CDateID">
+            <summary>
+            日期索引数据。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.ChartData.CDate">
+            <summary>
+            日期数据。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.ChartData.Data">
+            <summary>
+            数据。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.ChartData.DMI">
+            <summary>
+            动向线数据。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.ChartData.MTM">
+            <summary>
+            动量线数据。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.ChartData.MA5">
+            <summary>
+            5日平均线数据。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.ChartData.MA15">
+            <summary>
+            15日平均线数据。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.ChartData.MA30">
+            <summary>
+            30日平均线数据。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.ChartData.MA90">
+            <summary>
+            90日平均线数据。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.ChartData.MA180">
+            <summary>
+            180日平均线数据。
+            </summary>
+        </member>
+        <member name="F:EIIP.Contract.ChartData.MA360">
+            <summary>
+            360日平均线数据。
+            </summary>
+        </member>
+        <member name="M:EIIP.Contract.ChartData.#ctor">
+            <summary>
+            实例化缺省图表数据。
+            </summary>
+        </member>
+        <member name="M:EIIP.Contract.ChartData.#ctor(System.Int32)">
+            <summary>
+            实例化缺省图表数据。
+            </summary>
+            <param name="dmy"></param>
+        </member>
+        <member name="T:EIIP.Contract.Charts.IChartDataSource">
+            <summary>
+            定义图表数据源
+            </summary>
+        </member>
+        <member name="M:EIIP.Contract.Charts.IChartDataSource.GetChartData(System.String)">
+            <summary>
+            获取图表数据。
+            </summary>
+            <param name="chartCode">图表编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:EIIP.Contract.Charts.IChartDataSource.GetChartDatas(System.String)">
+            <summary>
+            获取图表数据。
+            </summary>
+            <param name="chartCode">图表编码</param>
+            <returns></returns>
+        </member>
+        <member name="T:EIIP.Contract.DayPriceEntity">
+            <summary>
+            日价格实体类
+            </summary>
+        </member>
+        <member name="P:EIIP.Contract.DayPriceEntity.PDays">
+            <summary>
+            采集日期
+            </summary>
+        </member>
+        <member name="P:EIIP.Contract.DayPriceEntity.MID">
+            <summary>
+            药材编号
+            </summary>
+        </member>
+        <member name="P:EIIP.Contract.DayPriceEntity.VPrice">
+            <summary>
+            价格
+            </summary>
+        </member>
+        <member name="P:EIIP.Contract.DayPriceEntity.TrendID">
+            <summary>
+            走势编号
+            </summary>
+        </member>
+        <member name="P:EIIP.Contract.DayPriceEntity.MName">
+            <summary>
+            品名
+            </summary>
+        </member>
+        <member name="P:EIIP.Contract.DayPriceEntity.MSpec">
+            <summary>
+            规格
+            </summary>
+        </member>
+        <member name="P:EIIP.Contract.DayPriceEntity.MArea">
+            <summary>
+            市场
+            </summary>
+        </member>
+        <member name="P:EIIP.Contract.DayPriceEntity.MAreaID">
+            <summary>
+            市场编号
+            </summary>
+        </member>
+        <member name="P:EIIP.Contract.DayPriceEntity.MBID">
+            <summary>
+            品名ID
+            </summary>
+        </member>
+        <member name="P:EIIP.Contract.DayPriceEntity.MBSID">
+            <summary>
+            规格ID
+            </summary>
+        </member>
+        <member name="T:EIIP.Contract.IUpayService">
+            <summary>
+            买卖通与天地网通信数据接口
+            </summary>
+        </member>
+        <member name="M:EIIP.Contract.IUpayService.GetBoZhouPrice">
+            <summary>
+            返回毫州的当日价格数据,每个品种选一个规格的数据，含“统”的规格优先
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EIIP.WCF.VersionInfo">
+            <summary>
+            产品版本信息
+            </summary>
+        </member>
+        <member name="F:EIIP.WCF.VersionInfo.Contract">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EIIP.WCF.VersionInfo.Contract_UPay">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EIIP.WCF.VersionInfo.Contract_Zyctd">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

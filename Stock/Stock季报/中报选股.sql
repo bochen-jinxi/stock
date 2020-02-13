@@ -1,0 +1,37 @@
+USE  stock
+GO
+ 
+
+--季报每股收益选牛股
+;WITH T AS (SELECT 
+
+((CAST(NULLIF(c1,'') AS DECIMAL(18,3)))) AS c1,
+((CAST(NULLIF(c6,'') AS DECIMAL(18,3)))) AS c6,
+((CAST(NULLIF(c11,'') AS DECIMAL(18,3)))) AS c11,
+((CAST(NULLIF(c16,'') AS DECIMAL(18,3)))) AS c16,
+((CAST(NULLIF(c21,'') AS DECIMAL(18,3)))) AS c21,
+((CAST(NULLIF(c26,'') AS DECIMAL(18,3)))) AS c26,
+((CAST(NULLIF(c31,'') AS DECIMAL(18,3)))) AS c31,
+((CAST(NULLIF(c36,'') AS DECIMAL(18,3)))) AS c36,
+((CAST(NULLIF(c41,'') AS DECIMAL(18,3)))) AS c41,
+((CAST(NULLIF(c46,'') AS DECIMAL(18,3)))) AS c46,
+((CAST(NULLIF(c51,'') AS DECIMAL(18,3)))) AS c51,
+((CAST(NULLIF(c56,'') AS DECIMAL(18,3)))) AS c56,
+((CAST(NULLIF(c61,'') AS DECIMAL(18,3)))) AS c61,
+((CAST(NULLIF(c66,'') AS DECIMAL(18,3)))) AS c66,code
+     FROM dbo.can WHERE c0='2019-06-30'  )
+	 ,T2 AS (
+SELECT c1-c6 AS col1, c21-c26 AS col2, c41-c46 AS col3, * FROM T where c1-c6>c6 
+AND c6>c26
+AND c1-c6> c21-c26  AND (c6-c26)*1.0/c26>0.5
+--AND  c1-c6> c41-c46
+--AND c6>0 AND c26>0 AND c46>0
+--AND (c21-c26)>0 AND  (c41-c46)>0 
+--AND c6>0 AND c26>0 AND c46>0
+--AND c1>c6-c11 
+)
+
+SELECT * FROM T2 
+ 
+
+ 
