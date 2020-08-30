@@ -55,8 +55,8 @@ namespace Stock季报
             Console.ReadLine();
 
 
-             //SetpTwo("600733");
-           // return;
+            // SetpTwo("000032");
+            //return;
             var fileStream = new FileStream(@"C:\can.txt", FileMode.OpenOrCreate);
 
             StreamReader sr = FileHelper.OpenStream(fileStream, Encoding.UTF8, Encoding.UTF8);
@@ -82,7 +82,7 @@ namespace Stock季报
 
         private static void SetpTwo(string code)
         {
-            // {"Params":["600703","zyzb",""]}
+             //{"Params":["600703","zyzb",""]}
             var param = new List<string> {code, "zyzb", ""};
 
             var li = new RequiredData {Params = param};
@@ -103,46 +103,48 @@ namespace Stock季报
                     int index = 0;
                     foreach (var element in e.Content)
                     {
-                        //日期
-                        string rq = element[0];
-                        //每股收益
-                        string mgsy = element[1];
-                        //营业总收入
-                        int length3 = el.ResultSets[3].Content.Length;
-                        string yyzsr = "";
-                        if (index < length3)
+                        if (index < 60)
                         {
-                            yyzsr = el.ResultSets[3].Content[index][1];
+                            //日期
+                            string rq = element[0];
+                            //每股收益
+                            string mgsy = element[1];
+                            //营业总收入
+                            int length3 = el.ResultSets[3].Content.Length;
+                            string yyzsr = "";
+                            if (index < length3)
+                            {
+                                yyzsr = el.ResultSets[3].Content[index][1];
+                            }
+
+                            //营业同比增长率 
+                            string yysrtb = element[12];
+
+
+                            //净利润同比增长率 
+                            string jlrtb = element[11];
+                            //净利润总额
+                            string jlr = element[8];
+
+                            //扣非净利润
+                            int length2 = el.ResultSets[2].Content.Length;
+                            string kfjlr = "";
+                            if (index < length2)
+                            {
+                                kfjlr = el.ResultSets[2].Content[index][1];
+                            }
+
+
+                            index++;
+                            list.Add(rq);
+                            list.Add(mgsy);
+                            list.Add(yyzsr);
+                            list.Add(kfjlr);
+                            list.Add(jlr);
+                            list90.Add(rq);
+                            list90.Add(yysrtb);
+                            list90.Add(jlrtb);
                         }
-
-                        //营业同比增长率 
-                        string yysrtb = element[12];
-
-
-                        //净利润同比增长率 
-                        string jlrtb = element[11];
-                        //净利润总额
-                        string jlr = element[8];
-
-                        //扣非净利润
-                        int length2 = el.ResultSets[2].Content.Length;
-                        string kfjlr = "";
-                        if (index < length2)
-                        {
-                            kfjlr = el.ResultSets[2].Content[index][1];
-                        }
-
-
-                        index++;
-                        list.Add(rq);
-                        list.Add(mgsy);
-                        list.Add(yyzsr);
-                        list.Add(kfjlr);
-                        list.Add(jlr);
-                        list90.Add(rq);
-                        list90.Add(yysrtb);
-                        list90.Add(jlrtb);
-                     
                     }
 
                     dic90.Add(code, list90);
@@ -197,10 +199,12 @@ namespace Stock季报
                 }
 
 
-               
+               //var  XXX= string.Format(@";INSERT INTO can
+               //             (code, {0})
+               //     VALUES  ({2}, {1})", sb2, sb3, string.Format("'{0}'", kv.Key), sb90.ToString(), sb903.ToString());
 
-               // sb2.Length--;
-               // sb3.Length--;
+                // sb2.Length--;
+                // sb3.Length--;
                 sb90.Length--;
                 sb903.Length--;
                 sb.AppendFormat(@";INSERT INTO can
