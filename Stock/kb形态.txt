@@ -1,3 +1,44 @@
+WITH T AS (SELECT ROW_NUMBER() OVER(PARTITION BY code,riqi ORDER BY pctChg ASC) AS sort, (shou-kai)/kai AS kbzf, (shou-kai) AS kb, *  FROM dbo.lishijiage60 )
+,  T2 AS (
+SELECT A0.kbzf AS k0zf, A0.kb AS k0, A0.shou AS  k0s,A0.kai AS k0k,A0.di AS k0d,A0.gao AS k0g,
+A.kbzf AS k1zf, A.kb AS k1, A.shou AS  k1s,A.kai AS k1k,A.di AS k1d,A.gao AS k1g,
+ B.kbzf AS k2zf,  B.kb AS k2, B.shou AS  k2s,B.kai AS k2k,B.di AS k2d,B.gao AS k2g,
+A0.sort,A0.code,A0.riqi 
+  FROM T AS A  INNER JOIN  T AS A0 
+ON  A.sort=A0.sort+1  
+--AND A0.riqi='2021-04-12 00:00:00.000'
+ AND A.code=A0.code
+INNER JOIN  T AS B
+ON  A.sort=B.sort-1  
+ --AND B.riqi='2021-04-12 00:00:00.000'
+ AND A.code=B.code
+--WHERE
+ --A.sort =1 AND
+ --  A.riqi='2021-04-12 00:00:00.000'
+)
+
+SELECT * FROM T2
+WHERE T2.k0>0 AND T2.k1>0 AND  T2.k2>0  AND T2.k0k<T2.k1k AND T2.k1d<T2.k0k AND T2.k1k<T2.k1s AND T2.k1g>T2.k1s AND T2.k1d<T2.k0k AND T2.k2k<T2.k2g AND T2.k2d<T2.k1s AND T2.k2g>T2.k1g
+AND T2.k2zf>T2.k0zf AND T2.k2zf>T2.k1zf AND T2.k1zf>0 AND T2.k1zf>T2.k0zf AND T2.k0zf>0
+
+ AND  code LIKE 'sh.6%' 
+  AND k1k>39 AND k1k<70  
+ --AND T2.riqi='2021-04-12 00:00:00.000'  
+
+ 
+
+-- SELECT * FROM  dbo.lishijiage WHERE code ='sz.002098' 
+
+
+-------==============================================================================
+-------------==================================================================
+----========================================================================
+------==================================================================
+----------=======================================================
+
+
+
+
 WITH T AS (SELECT ROW_NUMBER() OVER(PARTITION BY code,riqi ORDER BY pctChg ASC) AS sort, (shou-kai) AS kb, *  FROM dbo.lishijiage  )
 ----1	-0.07	sz.002098	2021-04-12 00:00:00.000	6.22	6.15	6.13	6.22	127800.00	0.00
 ----2	0.04	sz.002098	2021-04-12 00:00:00.000	6.15	6.19	6.15	6.19	74900.00	1.00
