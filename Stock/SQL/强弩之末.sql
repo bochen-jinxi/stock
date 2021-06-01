@@ -62,20 +62,20 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
              ),
         T6
           AS ( SELECT   ROW_NUMBER() OVER ( PARTITION BY code ORDER BY riqi ) AS riqihao ,
-		   ROW_NUMBER() OVER ( PARTITION BY code ORDER BY di DESC ) AS RowID2 ,
+		   ROW_NUMBER() OVER ( PARTITION BY code ORDER BY di DESC ) AS zuidijiahao ,
                         *
                FROM     T5
              ),
         T7
           AS ( SELECT   riqihao
-                        - ROW_NUMBER() OVER ( PARTITION BY code ORDER BY riqi ) AS lianxuxiadieriqi ,
+                        - ROW_NUMBER() OVER ( PARTITION BY code ORDER BY riqi ) AS lianxuxiadieriqizu ,
                         *
                FROM     T6
                WHERE    --code='sz.300983' AND   
                         zhangdie = -1
              ),
         T8
-          AS ( SELECT   COUNT(1) OVER ( PARTITION BY code, lianxuxiadieriqi ) AS lianxuxiadieshu ,
+          AS ( SELECT   COUNT(1) OVER ( PARTITION BY code, lianxuxiadieriqizu ) AS lianxuxiadieshu ,
                         *
                FROM     T7
              ),
@@ -94,13 +94,13 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
                             )
              )
     SELECT   T10.*,
-            T6.*
+            T6.riqi
     FROM    T10
             INNER JOIN T6 ON T10.code = T6.code
     WHERE   T6.zhangdie = 1
             AND T6.shitifudu >= 1
             AND T6.riqihao = T6.zhangdiezhouqishu
-			AND  T6.RowID2=T6.zhangdiezhouqishu
+			AND  T6.zuidijiahao=T6.zhangdiezhouqishu
             AND lianxuxiadeshangyingxiashu > 1
  
 	
