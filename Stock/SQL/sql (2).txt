@@ -639,23 +639,8 @@ FROM dbo.can
  
 
 GO
-/****** Object:  Table [dbo].[lishijiage]    Script Date: 2021/4/15 11:26:32 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[lishijiage](
-	[code] [nvarchar](10) NOT NULL,
-	[riqi] [datetime] NULL,
-	[kai] [decimal](18, 2) NULL,
-	[shou] [decimal](18, 2) NULL,
-	[di] [decimal](18, 2) NULL,
-	[gao] [decimal](18, 2) NULL,
-	[chengjiaoliang] [decimal](18, 2) NULL,
-	[pctChg] [decimal](18, 2) NULL
-) ON [PRIMARY]
-GO
-/****** Object:  Table [dbo].[lishijiage15]    Script Date: 2021/4/15 11:26:32 ******/
+ 
+/****** Object:  Table [dbo].[lishijiage15]    Script Date: 2021/6/4 2:06:15 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -670,8 +655,9 @@ CREATE TABLE [dbo].[lishijiage15](
 	[chengjiaoliang] [decimal](18, 2) NULL,
 	[pctChg] [decimal](18, 2) NULL
 ) ON [PRIMARY]
+
 GO
-/****** Object:  Table [dbo].[lishijiage30]    Script Date: 2021/4/15 11:26:32 ******/
+/****** Object:  Table [dbo].[lishijiage30]    Script Date: 2021/6/4 2:06:15 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -686,8 +672,9 @@ CREATE TABLE [dbo].[lishijiage30](
 	[chengjiaoliang] [decimal](18, 2) NULL,
 	[pctChg] [decimal](18, 2) NULL
 ) ON [PRIMARY]
+
 GO
-/****** Object:  Table [dbo].[lishijiage5]    Script Date: 2021/4/15 11:26:32 ******/
+/****** Object:  Table [dbo].[lishijiage5]    Script Date: 2021/6/4 2:06:15 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -702,8 +689,9 @@ CREATE TABLE [dbo].[lishijiage5](
 	[chengjiaoliang] [decimal](18, 2) NULL,
 	[pctChg] [decimal](18, 2) NULL
 ) ON [PRIMARY]
+
 GO
-/****** Object:  Table [dbo].[lishijiage60]    Script Date: 2021/4/15 11:26:32 ******/
+/****** Object:  Table [dbo].[lishijiage60]    Script Date: 2021/6/4 2:06:15 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -718,8 +706,9 @@ CREATE TABLE [dbo].[lishijiage60](
 	[chengjiaoliang] [decimal](18, 2) NULL,
 	[pctChg] [decimal](18, 2) NULL
 ) ON [PRIMARY]
+
 GO
-/****** Object:  Table [dbo].[lishijiager]    Script Date: 2021/4/15 11:26:33 ******/
+/****** Object:  Table [dbo].[lishijiager]    Script Date: 2021/6/4 2:06:15 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -734,4 +723,5 @@ CREATE TABLE [dbo].[lishijiager](
 	[chengjiaoliang] [decimal](18, 2) NULL,
 	[pctChg] [decimal](18, 2) NULL
 ) ON [PRIMARY]
+
 GO
