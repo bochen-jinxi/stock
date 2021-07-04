@@ -19,7 +19,7 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
                         1 AS [pctChg]
                FROM     dbo.lishijiager
                --WHERE    riqi >= DATEADD(DAY, -21, GETDATE())
-			    WHERE    riqi >='2021-06-08' AND  riqi<='2021-06-18'
+			    WHERE     riqi >='2021-06-23' AND  riqi<='2021-07-02'
              )-----------------------------------------------------------------
  ,      T2
           AS ( 
@@ -89,24 +89,31 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
 		    -- 后续数据按日期正序标号  标记上影线幅度
 		   SELECT   ROW_NUMBER() OVER ( PARTITION BY code ORDER BY riqi ) AS riqihao ,
 		    MAX(ABS(shangyingxianfudu)) OVER(PARTITION BY code) AS zuidajueduizhishangyingxianfudu , 
+			LAG(shou) OVER ( PARTITION BY code ORDER BY riqi ) AS  shou0,
+			LAG(kai) OVER ( PARTITION BY code ORDER BY riqi ) AS  kai0,
+			LAG(di) OVER ( PARTITION BY code ORDER BY riqi ) AS  di0,
+			LAG(gao) OVER ( PARTITION BY code ORDER BY riqi ) AS  gao0,
                         *
-               FROM     T5 
-			  
+               FROM     T5 			
              )
-			 , T60 AS (
-			  --后续数据数据查找上影线最长的K线 标记上影线的最低点
-				SELECT  *,di AS syxdi FROM T6
-				WHERE zuidajueduizhishangyingxianfudu=ABS(shangyingxianfudu)  
-				)		
-			, T7 AS ( 
-			--查找上影线后第二天收盘价跌破最低点的阴线
-			 SELECT T6.riqi AS posyxriqi,T6.riqihao AS posyxriqihao ,T60.*	  FROM T60 INNER JOIN T6 ON  T60.code = T6.code			
-			 WHERE T60.riqihao+1=T6.riqihao  
-		 AND  T60.syxdi>T6.shou 	
-			 AND T6.shiti<0 
+			 ,T7 AS  (
+			 SELECT * FROM T6  
+			 WHERE    --跳空低开0.1个点
+		    (di0-kai)/kai*100>0.1
+			AND shangyingxianfudu>0 
+		 AND zhangdie=1
 		 )
-		 ---查找上影线后第二天收盘价跌破最低点的阴线 紧接着收阳线且实体大于3
-		 SELECT T6.riqi, * FROM T7 INNER JOIN T6 ON  T7.code = T6.code
-		 WHERE T7.posyxriqihao+1=T6.riqihao
-		 AND  T6.shiti>0  AND  T6.shitifudu>3
+
+			, T8 AS ( 
+			--查找上影线后第二天收盘价跌破最低点的阴线
+			 SELECT T6.riqi AS posyxriqi,T6.riqihao AS posyxriqihao ,T7.*	  FROM T7 INNER JOIN T6 ON  T7.code = T6.code			
+			 WHERE 	T7.riqihao+1=T6.riqihao AND T7.di >T6.shou  
+				
+		 )
+		 --SELECT * FROM T8
+		 ---查找上影线后第二天收盘价跌破最低点的阴线 紧接着收阳线且实体大于1
+		 SELECT T6.riqi, * FROM T8 INNER JOIN T6 ON  T8.code = T6.code
+		 WHERE T8.posyxriqihao+1=T6.riqihao
+		AND  T6.shiti>0  AND  T6.shitifudu>1  
+		AND  T6.riqi='2021-07-02 00:00:00.000'
 			 

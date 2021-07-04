@@ -19,7 +19,7 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
                         1 AS [pctChg]
                FROM     dbo.lishijiager
               -- WHERE    riqi >= DATEADD(DAY, -21, GETDATE())
-			   WHERE    riqi >='2021-06-11' AND  riqi<='2021-06-21'
+			   WHERE    riqi >='2021-06-23' AND  riqi<='2021-07-02'
              )-----------------------------------------------------------------
  ,      T2
           AS ( 
@@ -115,5 +115,5 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
 		 SELECT DISTINCT T10.kaishiriqi,T10.code,t6.riqi,T6.shitifudu FROM T10 INNER JOIN T6 ON  T10.code = T6.code
 		 WHERE  T10.riqihao+1=t6.riqihao AND T10.kai<T6.shou
 		 AND T6.shitifudu>3
-		 		
+		 		AND  T6.riqi='2021-07-02 00:00:00.000'
 		  

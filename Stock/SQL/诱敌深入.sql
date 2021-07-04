@@ -19,7 +19,7 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
                         1 AS [pctChg]
                FROM     dbo.lishijiager
                --WHERE    riqi >= DATEADD(DAY, -21, GETDATE())
-			    WHERE    riqi >='2021-06-08' AND  riqi<='2021-06-18'
+			    WHERE     riqi >='2021-06-23' AND  riqi<='2021-07-02'
              )-----------------------------------------------------------------
  ,      T2
           AS (
@@ -84,29 +84,42 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
                                          AND T4.riqi < T3.riqi
                WHERE    T4.RowID = 1
              ),
-        T6
+			  T6
           AS (
 		    -- 后续数据按日期正序标号  标记下影线幅度
 		   SELECT   ROW_NUMBER() OVER ( PARTITION BY code ORDER BY riqi ) AS riqihao ,
 		    MAX(ABS(xiayingxianfudu)) OVER(PARTITION BY code) AS zuidajueduizhixiayingxianfudu , 
+			LAG(shou) OVER ( PARTITION BY code ORDER BY riqi ) AS  shou0,
+			LAG(kai) OVER ( PARTITION BY code ORDER BY riqi ) AS  kai0,
+			LAG(di) OVER ( PARTITION BY code ORDER BY riqi ) AS  di0,
+			LAG(gao) OVER ( PARTITION BY code ORDER BY riqi ) AS  gao0,
                         *
-               FROM     T5
+               FROM     T5 			
              )
-			 , T60 AS (
+			 ,T7 AS  (
+			 SELECT * FROM T6  
+			 WHERE    --跳空低开0.1个点
+		    (di0-kai)/kai*100>0.1
+		AND (ABS(xiayingxianfudu))*100>2
+		AND (ABS(shangyingxianfudu))*100<=0.5		-- AND zhangdie=1
+		 )
+		
+					 , T8 AS (
 			 --后续数据数据查找下影线最长的K线 标记下影线的区域范围
 				SELECT  *,( CASE zhangdie
                            WHEN 1 THEN  kai 
                           WHEN -1 THEN  shou 
-                         END ) AS xyxquyugao FROM T6
-				WHERE zuidajueduizhixiayingxianfudu=ABS(xiayingxianfudu)  
-				)				
-		--查找最大下影线K线 后续中所有K线 收盘价收在下影线区域中 并且最低价在下影线区域中 收红盘实体大于3
-					 SELECT T60.*, T6.riqi   
-			 FROM T60 INNER JOIN T6 ON  T60.code = T6.code
-			 WHERE T60.riqihao<T6.riqihao 
-		 AND  T60.xyxquyugao>T6.shou 
-			 AND  T60.di<T6.di
-			 AND T6.shiti>0 AND T6.shitifudu>3
-			-- ORDER BY 1 DESC 
-		
-			 
+                         END ) AS xyxquyugao FROM T7
+				)
+
+				--查找最大下影线K线 后续中所有K线 收盘价收在下影线区域中 并且最低价在下影线区域中 收红盘实体大于3
+					 SELECT T6.riqi AS zriqi, T6.zhangdie, T8.kaishiriqi, T8.riqi, T6.*   
+			 FROM T8 INNER JOIN T6 ON  T8.code = T6.code
+			 WHERE T8.riqihao<T6.riqihao 
+		 AND  T8.xyxquyugao>T6.shou 
+		AND  T8.di<=T6.di
+	 AND T6.zhangdie=1 
+	 	AND  T6.riqi='2021-07-02 00:00:00.000'
+	 --AND T6.shitifudu>1
+			 ORDER BY code  
+		 

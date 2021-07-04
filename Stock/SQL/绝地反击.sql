@@ -20,7 +20,7 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
                         1 AS [pctChg]
                FROM     dbo.lishijiager
           --    WHERE    riqi >= DATEADD(DAY, -34, GETDATE())
- WHERE    riqi >='2021-06-11' AND  riqi<='2021-06-21'
+ WHERE    riqi >='2021-06-24' AND  riqi<='2021-07-02'
 							)
 
 			 -----------------------------------------------------------------
@@ -145,9 +145,12 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
 		 SELECT 	* FROM T10 INNER JOIN T6 ON  T10.code = T6.code
 		 WHERE  T10.riqihao+1=T6.riqihao AND T10.di >T6.kai AND T6.gao>T10.shou 
 			AND  T6.shitifudu<3
-	--跳空低开2个点
-		 AND  (T10.di-t6.kai)/t6.kai*100>2
-		-- AND T6.shangyingxianfudu*100>1
+	--跳空低开0.5个点
+		 AND  (T10.di-t6.kai)/t6.kai*100>0.5
+		 AND T6.zhangdie=1
+		 AND T6.xiayingxianfudu*100<1
+		 AND  T6.riqi='2021-07-02 00:00:00.000'
+AND T6.shangyingxianfudu*100>1
 		-- AND T10.kaishiriqi<T10.riqi
 		--AND T6.syxbst>1 AND  t6.di/t6.kai<=1
 --	AND T10.zhangdiezhouqishu>2   	 AND T10.zhangdiezhouqishu<=8
