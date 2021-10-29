@@ -29,7 +29,7 @@ with fileinput.input(files=('D:\code.EBK')) as f:
             result_list.append(rs.get_row_data())
             index=0
         for el in result_list:
-            index=index%16
+            index=index%48
             pricedata= ";INSERT INTO dbo.lishijiage5 (code,riqi,kai,shou,di,gao,chengjiaoliang,pctChg) VALUES ('%s', '%s','%s',N'%s',N'%s',N'%s',N'%s',N'%s')" % (el[1], el[0],el[2],el[5],el[4],el[3],el[6],index)
             index+=1
             with open('D:\\f' + str(i) + '.sql', 'a+') as f2:
