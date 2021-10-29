@@ -3,6 +3,8 @@
 --1.下跌波段中,收出锤子止跌形态后,股价继续下跌,在锤子下影线区域收出大阴大阳组合
  -----------------------------------------------------------------------------------
   --找最近8个交易日的K线
+    use stock 
+   go 
 WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
                                WHEN ( shou - kai ) = 0 THEN 0
                                WHEN ( shou - kai ) < 0 THEN -1
@@ -19,7 +21,7 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
                         1 AS [pctChg]
                FROM     dbo.lishijiager
                --WHERE    riqi >= DATEADD(DAY, -21, GETDATE())
-			    WHERE     riqi >='2021-06-23' AND  riqi<='2021-07-02'
+			  WHERE     riqi >=dateadd(day,-1,'2021-10-21')  AND  riqi<='2021-10-28'
              )-----------------------------------------------------------------
  ,      T2
           AS (
@@ -119,7 +121,7 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
 		 AND  T8.xyxquyugao>T6.shou 
 		AND  T8.di<=T6.di
 	 AND T6.zhangdie=1 
-	 	AND  T6.riqi='2021-07-02 00:00:00.000'
+	 	AND  T6.riqi= '2021-10-28'
 	 --AND T6.shitifudu>1
 			 ORDER BY code  
 		 

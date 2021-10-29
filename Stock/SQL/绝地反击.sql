@@ -4,6 +4,8 @@
  
  -----------------------------------------------------------------------------------
  --找最近8个交易日的K线
+   use stock 
+   go 
 WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
                                WHEN ( shou - kai ) = 0 THEN 0
                                WHEN ( shou - kai ) < 0 THEN -1
@@ -20,7 +22,7 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
                         1 AS [pctChg]
                FROM     dbo.lishijiager
           --    WHERE    riqi >= DATEADD(DAY, -34, GETDATE())
- WHERE    riqi >='2021-06-24' AND  riqi<='2021-07-02'
+ WHERE    riqi >='2021-10-21' AND  riqi<='2021-10-28'
 							)
 
 			 -----------------------------------------------------------------
@@ -149,7 +151,7 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
 		 AND  (T10.di-t6.kai)/t6.kai*100>0.5
 		 AND T6.zhangdie=1
 		 AND T6.xiayingxianfudu*100<1
-		 AND  T6.riqi='2021-07-02 00:00:00.000'
+		 AND  T6.riqi='2021-10-28'
 AND T6.shangyingxianfudu*100>1
 		-- AND T10.kaishiriqi<T10.riqi
 		--AND T6.syxbst>1 AND  t6.di/t6.kai<=1

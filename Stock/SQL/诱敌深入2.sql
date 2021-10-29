@@ -3,6 +3,9 @@
 --2.下跌波段中,收出倒锤子止跌形态后第二天再收出大阴线跌破倒锤子低点，第三天再收出大阳线。
  -----------------------------------------------------------------------------------
    --找最近8个交易日的K线
+   use stock 
+   go 
+  
 WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
                                WHEN ( shou - kai ) = 0 THEN 0
                                WHEN ( shou - kai ) < 0 THEN -1
@@ -19,7 +22,7 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
                         1 AS [pctChg]
                FROM     dbo.lishijiager
                --WHERE    riqi >= DATEADD(DAY, -21, GETDATE())
-			    WHERE     riqi >='2021-06-23' AND  riqi<='2021-07-02'
+			    WHERE    riqi >=dateadd(day,-1,'2021-10-21')  AND  riqi<='2021-10-28'
              )-----------------------------------------------------------------
  ,      T2
           AS ( 
@@ -110,10 +113,11 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
 			 WHERE 	T7.riqihao+1=T6.riqihao AND T7.di >T6.shou  
 				
 		 )
-		 --SELECT * FROM T8
+		-- SELECT * FROM T8
 		 ---查找上影线后第二天收盘价跌破最低点的阴线 紧接着收阳线且实体大于1
-		 SELECT T6.riqi, * FROM T8 INNER JOIN T6 ON  T8.code = T6.code
-		 WHERE T8.posyxriqihao+1=T6.riqihao
+		 SELECT T6.riqi, * FROM T8 inner  JOIN T6 ON  T8.code = T6.code
+		 WHERE T8.posyxriqihao=T6.riqihao+1
 		AND  T6.shiti>0  AND  T6.shitifudu>1  
-		AND  T6.riqi='2021-07-02 00:00:00.000'
+		AND  T6.riqi=  dateadd(day,-1,'2021-10-28') 
+		--AND  T6.riqi= '2021-10-28'
 			 
