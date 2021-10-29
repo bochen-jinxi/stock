@@ -3,7 +3,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import re
 import time
-import json
+import json 
  
 caps = DesiredCapabilities.CHROME
 caps['loggingPrefs'] = {'performance': 'ALL'}
