@@ -1,0 +1,3 @@
+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
+
+git remote set-url origin https://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@github.com/bochen-jinxi/stock.git
