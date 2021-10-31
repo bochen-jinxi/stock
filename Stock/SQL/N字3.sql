@@ -1,30 +1,30 @@
----NÂ≠óÁªìÊûÑ ËßÅÈ´òÁÇπÂêé‰∏ãË∑å4Â§©‰πãÂÜÖËßÅÂú∞ÁÇπ ÊúâÁ†¥Â∫ïNÂ≠óÁªìÊûÑ
+---N◊÷Ω·ππ º˚∏ﬂµ„∫Ûœ¬µ¯4ÃÏ÷Æƒ⁄º˚µÿµ„ 2¿ÀN◊÷Ω·ππ
  -----------------------------------------------------------------------------------
- --ÊâæÊúÄËøë8‰∏™‰∫§ÊòìÊó•ÁöÑKÁ∫øÈîÆÈ´òÁÇπÁöÑ
+ --’“◊ÓΩ¸8∏ˆΩª“◊»’µƒKœﬂº¸∏ﬂµ„µƒ
 USE stock 
    go 
 WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
                                WHEN ( shou - kai ) = 0 THEN 0
                                WHEN ( shou - kai ) < 0 THEN -1
                           END ) AS zhangdie ,
+						    ROW_NUMBER() OVER ( PARTITION BY code ORDER BY riqi ASC ) AS riqihao2 ,
                         [code] ,
                         [riqi] ,
                         [kai] ,
                         [shou] ,
                         [di] ,
                         [gao] ,
-						  ROW_NUMBER() OVER ( PARTITION BY code ORDER BY riqi ASC ) AS riqihao2 ,
                         [chengjiaoliang] ,
                         1 AS [pctChg]
                FROM     dbo.lishijiager
                WHERE    riqi >= '2021-10-01'
                         AND riqi <= '2021-10-29'
-		--AND code like '%002608%'
+--	AND code like '%sh.600057%'
                         
              )-----------------------------------------------------------------
 	,   T2
           AS (
-		  --ÂèñÊúÄÂ§ßÂÄºÊó∂Èó¥  ÊúÄÂ∞èÂÄºÊó∂Èó¥ ÂÆû‰ΩìÂπÖÂ∫¶ ‰∏äÂΩ±Á∫øÂíåÂÆû‰ΩìÁöÑÊØîÂÄº ‰∏äÂΩ±Á∫øÂπÖÂ∫¶
+		  --»°◊Ó¥Û÷µ ±º‰  ◊Ó–°÷µ ±º‰  µÃÂ∑˘∂» …œ”∞œﬂ∫Õ µÃÂµƒ±»÷µ …œ”∞œﬂ∑˘∂»
                SELECT   ( CASE zhangdie
                             WHEN 1 THEN ( shou - kai ) / kai
                           END ) * 100 AS shitifudu ,
@@ -43,7 +43,7 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
                         *
                FROM     T
              ),
-			 --ÊúÄÈ´òÁÇπÊó•Êúü
+			 --◊Ó∏ﬂµ„»’∆⁄
         T3
           AS ( SELECT   *
                FROM     T2
@@ -51,13 +51,8 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
                         AND zhangdie = 1
                                              
              ),
-			 --ÊúÄ‰ΩéÁÇπÊó•Êúü
-        T4
-          AS ( SELECT   T2.*
-               FROM     T2
-               WHERE    RowID2 = 1
-             ),
-			 --	 ËßÅÈ´òÁÇπÂêé‰∏ãË∑å4Â§©‰πãÂÜÖËßÅÂú∞ÁÇπ
+		
+			 --	 º˚∏ﬂµ„∫Ûœ¬µ¯4ÃÏ÷Æƒ⁄º˚µÿµ„
         T5
           AS ( SELECT   T2.riqihao2 - T3.riqihao2 AS num ,
                         T3.riqi AS griqi ,
@@ -73,51 +68,36 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
                         )
                         AND T2.zhangdie = -1
              ),
-			 --1‰ΩéÁÇπÊó•Êúü Êó•ÊúüÂÄíÂ∫èÊéíÂè∑
+		
+			 --1µÕµ„»’∆⁄ »’∆⁄µπ–Ú≈≈∫≈
         T6
           AS ( SELECT   MAX(num) OVER ( PARTITION BY code ) AS jin4tianxiadieshu ,
                         MIN(d1jiage) OVER ( PARTITION BY code ) AS d1jia ,
                         ROW_NUMBER() OVER ( PARTITION BY code ORDER BY riqihao2 DESC ) AS num3 ,
                         *
                FROM     T5
-             ),
-			 -- 1‰ΩéÁÇπÊúÄÂ§ßÊó•Êúü
-        T7
+             )
+			  -- 1µÕµ„◊Ó¥Û»’∆⁄
+        ,T7
           AS ( SELECT   *
                FROM     T6
                WHERE    num3 = 1
-             ),
-        T9
-          AS ( SELECT   T7.d1jia ,
-                        T4.di AS d2jia ,
-                        T7.riqihao2 AS minriqihao2 ,
-                        T4.riqihao2 AS maxriqihao2 ,
-                        jin4tianxiadieshu ,
-                        T4.code ,
-                        griqi ,
-                        d1riqi ,
-                        T4.riqi AS d2riqi
-               FROM     T7
-                        INNER JOIN T4 ON T4.code = T7.code
-               WHERE    1 = 1
-                        AND 
-					     --2‰ΩéÁÇπÁ†¥1‰ΩéÁÇπ 1Â∫ïÁÇπ Âíå 2Â∫ïÁÇπ‰πãÈó¥‰ΩéÁÇπÈó¥Ë∑ù3‰∏™ÁÇπ‰πãÂÜÖ
-                        ( ( T7.d1jia - T4.di ) / T4.di ) * 100 < 3			                                      
-		--1‰ΩéÁÇπÊó•ÊúüÂ∞è‰∫é2‰ΩéÁÇπÊó•Â≠ê
-                        AND T7.riqihao2 < T4.riqihao2
              )
-    --‰∏äÂÜ≤2‰∏™ÁÇπ‰ª•‰∏ä ÂõûËêΩ
-		 SELECT T2.shou AS d2shou ,
-                T9.* ,
-                T2.riqi AS syxrq ,
-                T2.riqihao2
-         FROM   T9
-                INNER JOIN T2 ON T2.code = T9.code
-         WHERE  T2.riqihao2 >= minriqihao2
-                AND T2.riqihao2 <= maxriqihao2  
-                AND syxfd > 2
-         ORDER BY 1 DESC 
-
+			 ,T8 AS (
+			 	 	 --◊ÓµÕº€¥Û”⁄4ÃÏƒ⁄◊ÓµÕº€ »’∆⁄‘⁄∫Û–¯»’∆⁄µƒ
+      SELECT T7.griqi,T7.d1riqi,T2.code, T2.riqi AS lang2riqi,T2.shou,
+	   T2.riqihao2 AS lang2riqihao2,T2.di AS lang2djia, T7.jin4tianxiadieshu,T7.d1jia,(MAX(T2.riqihao2) OVER(PARTITION BY T2.code) -T7.riqihao2)  AS chariqihao2,  count(T2.riqihao2) OVER(PARTITION BY  T2.code) AS countriqihao2           FROM     T2 INNER JOIN  T7 ON T2.code = T7.code
+               WHERE        T2.di>d1jia AND  T2.riqihao2>T7.riqihao2
+           
+			)
+			,T9 AS (
+			SELECT ROW_NUMBER() OVER(PARTITION BY code ORDER BY lang2riqihao2 desc ) AS num4, * FROM T8 WHERE chariqihao2=countriqihao2
+			)
+			SELECT * FROM T9 WHERE num4=1
+			  --2µÕµ„∆∆1µÕµ„ 1µ◊µ„ ∫Õ 2µ◊µ„÷Æº‰µÕµ„º‰æ‡3∏ˆµ„÷Æƒ⁄
+                 AND      ( ( lang2djia - d1jia ) / d1jia ) * 100 <3
+				 AND lang2riqi='2021-10-29'
+				 ORDER BY shou DESC 
 
 
  
