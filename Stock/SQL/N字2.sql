@@ -18,7 +18,7 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
                         1 AS [pctChg]
                FROM     dbo.lishijiager
                WHERE    riqi >= '2021-10-01'
-                        AND riqi <= '2021-10-29'
+                        AND riqi <= '2021-11-29'
 		--AND code like '%002608%'
                         
              )-----------------------------------------------------------------

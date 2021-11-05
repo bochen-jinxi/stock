@@ -21,7 +21,7 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
                         1 AS [pctChg]
                FROM     dbo.lishijiager
              --  WHERE    riqi >= DATEADD(DAY, -21, GETDATE())
-			    WHERE    riqi >='2021-10-21' AND  riqi<='2021-10-28'
+			    WHERE    riqi >='2021-10-25' AND  riqi<='2021-11-04'
              )-----------------------------------------------------------------
  ,      T2
           AS (
@@ -123,7 +123,7 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
             AND T6.riqihao = T6.zhangdiezhouqishu
 			--AND  T6.zuidijiahao=T6.zhangdiezhouqishu
            AND lianxuxiadeshangyingxiashu > 2
-		   AND  T6.riqi='2021-10-28'
+		   AND  T6.riqi='2021-11-04'
  
 	
 	

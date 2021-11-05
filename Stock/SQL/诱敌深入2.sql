@@ -22,7 +22,7 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
                         1 AS [pctChg]
                FROM     dbo.lishijiager
                --WHERE    riqi >= DATEADD(DAY, -21, GETDATE())
-			    WHERE    riqi >=dateadd(day,-1,'2021-10-21')  AND  riqi<='2021-10-28'
+			    WHERE    riqi >=dateadd(day,-1,'2021-10-25')  AND  riqi<='2021-11-04'
              )-----------------------------------------------------------------
  ,      T2
           AS ( 
@@ -118,6 +118,6 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
 		 SELECT T6.riqi, * FROM T8 inner  JOIN T6 ON  T8.code = T6.code
 		 WHERE T8.posyxriqihao=T6.riqihao+1
 		AND  T6.shiti>0  AND  T6.shitifudu>1  
-		AND  T6.riqi=  dateadd(day,-1,'2021-10-28') 
-		--AND  T6.riqi= '2021-10-28'
+		AND  T6.riqi=  dateadd(day,-1,'2021-11-04') 
+		--AND  T6.riqi= '2021-11-04'
 			 

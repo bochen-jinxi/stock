@@ -22,7 +22,7 @@
                         1 AS [pctChg]
                FROM     dbo.lishijiager
                --WHERE    riqi >= DATEADD(DAY, -21, GETDATE())
-			     WHERE    riqi >='2021-10-21' AND  riqi<='2021-10-28'
+			     WHERE    riqi >='2021-10-25' AND  riqi<='2021-11-04'
              )-----------------------------------------------------------------
  ,      T2
           AS (
@@ -112,7 +112,7 @@
 		 WHERE  T7.riqihao+1=T6.riqihao
 		  AND T7.shou>T6.kai 
 		  AND T7.gao<T6.shou
-		AND  T6.riqi='2021-10-28'
+		AND  T6.riqi='2021-11-04'
 		 ORDER BY T7.code
 		 		
   

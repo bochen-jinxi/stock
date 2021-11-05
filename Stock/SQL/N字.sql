@@ -19,7 +19,7 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
                         1 AS [pctChg]
                FROM     dbo.lishijiager
              --  WHERE    riqi >= DATEADD(DAY, -21, GETDATE())
-			    WHERE    riqi >='2021-10-11' AND  riqi<='2021-10-28'
+			    WHERE    riqi >='2021-10-11' AND  riqi<='2021-11-04'
 				--AND code='sh.603317'
              )-----------------------------------------------------------------
 	,   T2

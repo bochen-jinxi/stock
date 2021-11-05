@@ -18,7 +18,7 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
                         1 AS [pctChg]
                FROM     dbo.lishijiager
                WHERE    riqi >= '2021-10-01'
-                        AND riqi <= '2021-10-29'
+                        AND riqi <= '2021-11-29'
 --	AND code like '%sh.600057%'
                         
              )-----------------------------------------------------------------
@@ -96,7 +96,7 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
 			SELECT * FROM T9 WHERE num4=1
 			  --2低点破1低点 1底点 和 2底点之间低点间距3个点之内
                  AND      ( ( lang2djia - d1jia ) / d1jia ) * 100 <3
-				 AND lang2riqi='2021-10-29'
+				 AND lang2riqi='2021-11-01'
 				 ORDER BY shou DESC 
 
 
