@@ -15,7 +15,7 @@ WITH    T AS ( SELECT
                         [chengjiaoliang] ,
                          [pctChg] AS zf
                FROM     dbo.lishijiager
-              WHERE    riqi >= '2021-10-01'                        AND riqi <= '2021-11-08'
+              WHERE    riqi >= '2021-11-08'                        AND riqi <= '2021-11-25'
 						--AND  code NOT  LIKE 'sh.688%'
 	--AND   code='sz.300672'
                         
@@ -36,10 +36,11 @@ WITH    T AS ( SELECT
 	
    --后续调整不破2分之一水位
    ,T5 AS (
-	SELECT (SELECT TOP 1 riqi FROM T WHERE T.code=T4.code AND T.riqihao2=T4.tingriqihao2) AS tingriqi, *    FROM T4 WHERE  houxuzhongtianshu=houxutianshu )
+	SELECT (SELECT TOP 1 riqi FROM T WHERE T.code=T4.code AND T.riqihao2=T4.tingriqihao2) AS tingriqi,
+	 *    FROM T4 WHERE  houxuzhongtianshu=houxutianshu )
 	
 	SELECT * FROM T5	
-	WHERE tingriqi='2021-10-22' 
+	WHERE tingriqi='2021-11-18' 
 	ORDER BY shou desc
 	-- houxutianshu IN(4,5,6,7,8)    
 

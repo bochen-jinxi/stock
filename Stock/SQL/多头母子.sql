@@ -16,7 +16,7 @@ WITH    T AS ( SELECT
                          [pctChg] AS zf						
 						 
                FROM     dbo.lishijiager
- WHERE    riqi >='2021-11-01' AND  riqi<='2021-11-09'
+ WHERE    riqi >='2021-10-22' AND  riqi<='2021-11-17'
 							)
 
 							SELECT  * FROM T   INNER JOIN T AS T0   ON T.code = T0.code 
@@ -29,7 +29,7 @@ WITH    T AS ( SELECT
 							--AND (( T.gao>=T0.shou*1.01 AND T0.zhangdie<1) OR( T.gao>=T0.kai*1.01 AND T0.zhangdie>-1))
 							AND T.shou<=T.kai*1.20
 							AND T.zf>=0
-							AND T.riqi='2021-11-05'
+							AND T.riqi='2021-11-17'
 							ORDER BY T.shou desc
 
 

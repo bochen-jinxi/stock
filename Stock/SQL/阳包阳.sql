@@ -15,18 +15,20 @@ WITH    T AS ( SELECT
                          [pctChg] AS zf						
 						 
                FROM     dbo.lishijiager
- WHERE    riqi >='2021-11-01' AND  riqi<='2021-11-08'
+ WHERE    riqi >='2021-10-01' AND  riqi<='2021-11-25'
 							)
 
 							SELECT  * FROM T   INNER JOIN T AS T0   ON T.code = T0.code 
 							WHERE T.riqidaoxu=T0.riqidaoxu-1   
-							--前一天进似5个点下影线
-							AND (T0.di*1.05)>=T0.kai AND T0.zf>=0
-							--AND T0.riqidaoxu=2
+							--前一天进似2个点下影线
+							AND (T0.di*1.02)>=T0.kai
+							 AND T0.zf>=0
+							AND T0.riqidaoxu=2
 							-- 后一天反包
-							AND T.kai<=T0.kai   AND T.shou >=T0.shou  
+							AND T.kai<=T0.di
+							--   AND T.shou >=T0.shou  
 							 AND T.zf>=0
-							AND T.riqi='2021-11-08'
+							AND T.riqi='2021-11-25'
 						
 							ORDER BY T.shou desc
 
