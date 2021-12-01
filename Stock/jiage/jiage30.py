@@ -15,7 +15,7 @@ with fileinput.input(files=('D:\code.EBK')) as f:
         # 详细指标参数，参见“历史行情指标参数”章节
         rs = bs.query_history_k_data(line,
                                      "date,code,open,high,low,close,volume,amount,adjustflag",
-                                      start_date='2021-05-13', end_date='2021-05-17',
+                                      start_date='2021-11-29', end_date='',
                                      frequency="30", adjustflag="3")
         #print(rs.error_code)
         #print(rs.error_msg!='')
@@ -29,7 +29,7 @@ with fileinput.input(files=('D:\code.EBK')) as f:
             result_list.append(rs.get_row_data())
             index=0
         for el in result_list:
-            index=index%16
+            index=index%8
             pricedata= ";INSERT INTO dbo.lishijiage30 (code,riqi,kai,shou,di,gao,chengjiaoliang,pctChg) VALUES ('%s', '%s','%s',N'%s',N'%s',N'%s',N'%s',N'%s')" % (el[1], el[0],el[2],el[5],el[4],el[3],el[6],index)
             index+=1
             with open('D:\\t' + str(i) + '.sql', 'a+') as f2:
