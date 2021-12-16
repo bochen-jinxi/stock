@@ -1,9 +1,9 @@
 ﻿----SCS买点2：绝地反击
----买点描述：股价在连续下跌后收出低位大阴线形态，第二天股价低开后高走，盘间最高价回补缺口
+---买点描述：股价在连续下跌后收出低位大阴线（光脚）形态，第二天股价低开后高走，盘间最高价回补缺口
 ---最终低开收阳的倒锤子形态
  
  -----------------------------------------------------------------------------------
- --找最近8个交易日的K线
+ --找最近60个交易日见高点后下跌23天的K线
    use stock 
    go 
 WITH    T AS ( SELECT   
@@ -16,22 +16,26 @@ WITH    T AS ( SELECT
                         [di] ,
                         [gao] ,
                 
-                         [pctChg] AS zhangdie						
+                         [pctChg] AS zf						
 						 
                FROM     dbo.lishijiager
- WHERE    riqi >='2021-11-01' AND  riqi<='2021-11-09'
+			   --60个交易日
+ WHERE    riqi >='2021-11-20' AND  riqi<='2021-12-16'
 							)
+,T2  AS (  --高点在最近23天出现
+							SELECT * FROM T WHERE gaodaoxu=1 AND riqi='2021-11-25')
+							,T3 AS (
+							--高点后续
+							SELECT T.* FROM T2 INNER JOIN T  ON T2.code = T.code  WHERE T2.riqidaoxu>T.riqidaoxu)
 
-							SELECT  * FROM T   INNER JOIN T AS T0   ON T.code = T0.code 
+							SELECT  * FROM T3 AS T  INNER JOIN T3 AS T0   ON T.code = T0.code 
 							WHERE T.riqidaoxu=T0.riqidaoxu-1   
-							--前一天进似光脚 
-							AND (((T0.di*1.01)>=T0.shou AND T0.zhangdie<1) 	OR ((T0.di*1.01)>=T0.kai AND T0.zhangdie>-1)							 ) 
+							--前一天进似光脚阴线 
+							AND T0.di*1.01>=T0.shou AND T0.zf<0
 							AND T0.riqidaoxu=2
 							-- 后一天进似光脚倒锤子
 							AND T.kai<=T0.di  
-							--AND (( T.gao>=T0.shou*1.01 AND T0.zhangdie<1) OR( T.gao>=T0.kai*1.01 AND T0.zhangdie>-1))
-							AND ((T.shou<=T.kai*1.01 AND T.zhangdie>-1) OR  ( T.shou<=T.kai/1.01 AND  T.zhangdie<1) )
-							AND T.riqidaoxu=1
+							AND ((T.kai*1.03>T.shou AND T.zf>0) OR  ( T.di*1.03>T.shou AND  T.zf<0) )
 							ORDER BY T.shou desc
 
 

@@ -21,8 +21,14 @@ WITH    T AS ( SELECT
                         
 	         )
 			 ,T2 AS (
-			 -------找到最早涨停日期 最低的收盘价格 最低的日期 统计涨停的次数
-	 SELECT DISTINCT MIN(riqihao2) OVER(PARTITION BY code) AS tingriqihao2,  MIN(shou) OVER(PARTITION BY code) AS tingshou, COUNT(1) OVER(PARTITION BY code) AS tongjitingtianshu,   code  FROM  T   WHERE (( T.zf>=9.94 AND T.code   NOT  LIKE 'sh.688%' AND  T.code NOT LIKE 'sz%') OR (T.zf>=19.90 AND  ( T.code LIKE 'sh.688' OR T.code LIKE 'sz%')  )) )  
+			 -------找到最早光头  涨停 日期 最低的收盘价格 最低的日期 统计涨停的次数
+	 SELECT DISTINCT MIN(riqihao2) OVER(PARTITION BY code) AS tingriqihao2,  MIN(shou) OVER(PARTITION BY code) AS tingshou, COUNT(1) OVER(PARTITION BY code) AS tongjitingtianshu,   code  FROM  T   WHERE 
+	 
+	 ((  1=1
+	-- AND T.zf>=9.94 
+	AND T.gao=T.shou	  AND T.code   NOT  LIKE 'sh.688%' AND  T.code NOT LIKE 'sz%') OR (1=1
+	-- AND T.zf>=19.90
+		AND T.gao=T.shou	   AND  ( T.code LIKE 'sh.688' OR T.code LIKE 'sz%')  )) )  
  ,T3 AS (
  -- 后续的天数
 	SELECT COUNT(1) OVER(PARTITION BY T2.code) AS houxutianshu, tingriqihao2, tongjitingtianshu,tingshou ,T.* FROM T2 INNER JOIN  T ON T2.code = T.code WHERE T2.tingriqihao2<T.riqihao2   
@@ -41,7 +47,7 @@ WITH    T AS ( SELECT
 	
 	SELECT * FROM T5	
 	WHERE tingriqi='2021-11-18' 
-	ORDER BY shou desc
+	ORDER BY shou DESC ,riqi DESC ,code
 	-- houxutianshu IN(4,5,6,7,8)    
 
 
