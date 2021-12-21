@@ -20,7 +20,7 @@ WITH    T AS ( SELECT
 						 
                FROM     dbo.lishijiager
 			   --60个交易日
- WHERE    riqi >='2021-11-20' AND  riqi<='2021-12-16'
+ WHERE    riqi >='2021-11-22' AND  riqi<='2021-12-15'
 							)
 ,T2  AS (  --高点在最近23天出现
 							SELECT * FROM T WHERE gaodaoxu=1 AND riqi='2021-11-25')
@@ -34,7 +34,7 @@ WITH    T AS ( SELECT
 							AND 
 							((T.shou*1.03>T.gao  AND T.zf>0) OR  ( T.shou*1.03>T.gao AND  T.zf<0))
 							AND T0.riqidaoxu=2
-							-- 后一天进似光脚倒锤子
+							-- 后一天低开后高走
 							AND T.kai<=T0.di  
 							AND  T.zf>0
 							AND T.shou>T0.gao

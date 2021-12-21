@@ -20,7 +20,7 @@ WITH    T AS ( SELECT
 						 
                FROM     dbo.lishijiager
 			   --60个交易日
- WHERE    riqi >='2021-11-20' AND  riqi<='2021-12-16'
+ WHERE    riqi >='2021-11-22' AND  riqi<='2021-12-15'
 							)
 ,T2  AS (  --高点在最近23天出现
 							SELECT * FROM T WHERE gaodaoxu=1 AND riqi='2021-11-25')
