@@ -15,7 +15,7 @@ WITH    T AS ( SELECT
                         [chengjiaoliang] ,
                          [pctChg] AS zf
                FROM     dbo.lishijiager
-              WHERE    riqi >= '2021-11-08'                        AND riqi <= '2021-11-25'
+              WHERE    riqi >= '2021-12-06'                        AND riqi <= '2021-12-16'
 						--AND  code NOT  LIKE 'sh.688%'
 	--AND   code='sz.300672'
                         
@@ -25,9 +25,9 @@ WITH    T AS ( SELECT
 	 SELECT DISTINCT MIN(riqihao2) OVER(PARTITION BY code) AS tingriqihao2,  MIN(shou) OVER(PARTITION BY code) AS tingshou, COUNT(1) OVER(PARTITION BY code) AS tongjitingtianshu,   code  FROM  T   WHERE 
 	 
 	 ((  1=1
-	-- AND T.zf>=9.94 
+	 AND T.zf>=9.94 
 	AND T.gao=T.shou	  AND T.code   NOT  LIKE 'sh.688%' AND  T.code NOT LIKE 'sz%') OR (1=1
-	-- AND T.zf>=19.90
+	 AND T.zf>=19.90
 		AND T.gao=T.shou	   AND  ( T.code LIKE 'sh.688' OR T.code LIKE 'sz%')  )) )  
  ,T3 AS (
  -- 后续的天数
@@ -35,18 +35,20 @@ WITH    T AS ( SELECT
 	)
 	,T4 AS (
 	--后续最低价不破最早涨停收盘价的2分之一水位
-	SELECT COUNT(1) OVER(PARTITION BY T3.code) AS houxuzhongtianshu, * FROM T3  WHERE 
+	SELECT COUNT(1) OVER(PARTITION BY T3.code) AS houxuzhongtianshu,* FROM T3  WHERE 
 	 (((code NOT  LIKE 'sh.688%' OR code NOT LIKE 'sz%') AND 	 tingshou/1.05<di )   OR ((code  LIKE 'sz%' OR code LIKE 'sh.688%') AND 	 tingshou/1.10<di  ))
 	AND  ((di*1.05>=shou AND zf<0) 	OR (di*1.05>=kai AND zf>=0))
 		) 
-	
    --后续调整不破2分之一水位
    ,T5 AS (
 	SELECT (SELECT TOP 1 riqi FROM T WHERE T.code=T4.code AND T.riqihao2=T4.tingriqihao2) AS tingriqi,
+	 (SELECT COUNT(1) FROM T4 AS A WHERE T4.code=A.code AND zf>=0) AS yangtianshu,
+	houxuzhongtianshu-(SELECT COUNT(1) FROM T4 AS A WHERE T4.code=A.code AND zf>=0) AS yintianshu,
 	 *    FROM T4 WHERE  houxuzhongtianshu=houxutianshu )
 	
 	SELECT * FROM T5	
-	WHERE tingriqi='2021-11-18' 
+	WHERE tingriqi='2021-12-06' 
+	AND yangtianshu>yintianshu
 	ORDER BY shou DESC ,riqi DESC ,code
 	-- houxutianshu IN(4,5,6,7,8)    
 

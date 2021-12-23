@@ -1,6 +1,5 @@
---AND T.riqi='2021-11-05' æ—¥æœŸå¤šå¤´æ¯å­
+--AND T.riqi='2021-11-05' ÈÕÆÚ¶àÍ··´ÆË
  -----------------------------------------------------------------------------------
- --æ‰¾æœ€è¿‘8ä¸ªäº¤æ˜“æ—¥çš„Kçº¿
    use stock 
    go 
 WITH    T AS ( SELECT   
@@ -21,15 +20,11 @@ WITH    T AS ( SELECT
 
 							SELECT  * FROM T   INNER JOIN T AS T0   ON T.code = T0.code 
 							WHERE T.riqidaoxu=T0.riqidaoxu-1   
-							--å‰ä¸€å¤©é˜´
+							--Ç°Ò»ÌìÒõ
 							AND (T0.di*1.03)>=T0.shou AND T0.zf<0
 							--AND T0.riqidaoxu=2
-							-- åŽä¸€å¤©å­•
-							AND T.kai>=T0.shou   AND T.gao<=T0.kai AND T.di>=T0.shou
+							-- ºóÒ»Ìì·´ÆË
+							AND T.kai>T0.shou   AND T.shou>T0.kai
 							AND T.zf>=0
 							AND T.riqi='2021-12-16'
 							ORDER BY T0.zf 
-
-
-		 		
-		  

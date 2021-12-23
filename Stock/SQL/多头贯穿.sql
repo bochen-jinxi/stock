@@ -1,7 +1,6 @@
---AND T.riqi='2021-11-05' 日期多头母子
+--AND T.riqi='2021-11-05' ���ڶ�ͷ�ᴩ
  -----------------------------------------------------------------------------------
- --找最近8个交易日的K线
-   use stock 
+  use stock 
    go 
 WITH    T AS ( SELECT   
  ROW_NUMBER() OVER(PARTITION BY code ORDER BY riqi desc) AS riqidaoxu,
@@ -21,15 +20,19 @@ WITH    T AS ( SELECT
 
 							SELECT  * FROM T   INNER JOIN T AS T0   ON T.code = T0.code 
 							WHERE T.riqidaoxu=T0.riqidaoxu-1   
-							--前一天阴
+							--ǰһ����
 							AND (T0.di*1.03)>=T0.shou AND T0.zf<0
 							--AND T0.riqidaoxu=2
-							-- 后一天孕
-							AND T.kai>=T0.shou   AND T.gao<=T0.kai AND T.di>=T0.shou
+							-- ��һ��ᴩ
+							AND T.kai*1.01<=T0.di   AND T.shou>=T0.kai/1.05 
 							AND T.zf>=0
 							AND T.riqi='2021-12-16'
 							ORDER BY T0.zf 
 
-
 		 		
 		  
+
+
+	
+		 
+  
