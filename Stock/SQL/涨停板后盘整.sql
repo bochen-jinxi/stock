@@ -15,7 +15,7 @@ WITH    T AS ( SELECT
                         [chengjiaoliang] ,
                          [pctChg] AS zf
                FROM     dbo.lishijiager
-              WHERE    riqi >= '2021-12-06'                        AND riqi <= '2021-12-16'
+              WHERE    riqi >= '2021-12-07'                        AND riqi <= '2021-12-23'
 						--AND  code NOT  LIKE 'sh.688%'
 	--AND   code='sz.300672'
                         
@@ -47,7 +47,7 @@ WITH    T AS ( SELECT
 	 *    FROM T4 WHERE  houxuzhongtianshu=houxutianshu )
 	
 	SELECT * FROM T5	
-	WHERE tingriqi='2021-12-06' 
+	WHERE tingriqi='2021-12-07' 
 	AND yangtianshu>yintianshu
 	ORDER BY shou DESC ,riqi DESC ,code
 	-- houxutianshu IN(4,5,6,7,8)    

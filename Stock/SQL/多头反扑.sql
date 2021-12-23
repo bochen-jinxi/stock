@@ -5,6 +5,7 @@
 WITH    T AS ( SELECT   
  ROW_NUMBER() OVER(PARTITION BY code ORDER BY riqi desc) AS riqidaoxu,
  ROW_NUMBER() OVER(PARTITION BY code ORDER BY gao desc) AS gaodaoxu,
+  ROW_NUMBER() OVER(PARTITION BY code ORDER BY di asc) AS dizhengxu,
  [code] ,
                         [riqi] ,
                         [kai] ,
@@ -15,7 +16,7 @@ WITH    T AS ( SELECT
                          [pctChg] AS zf						
 						 
                FROM     dbo.lishijiager
- WHERE    riqi >='2021-12-06' AND  riqi<='2021-12-16'
+ WHERE    riqi >='2021-12-20' AND  riqi<='2021-12-23'
 							)
 
 							SELECT  * FROM T   INNER JOIN T AS T0   ON T.code = T0.code 
@@ -26,5 +27,6 @@ WITH    T AS ( SELECT
 							-- 后一天反扑
 							AND T.kai>T0.shou   AND T.shou>T0.kai
 							AND T.zf>=0
-							AND T.riqi='2021-12-16'
+							AND T.riqi='2021-12-23'
+							AND T0.dizhengxu=1
 							ORDER BY T0.zf 

@@ -1,4 +1,4 @@
---永远的N N字消化：上涨6-7天，回调4-5天比较好。  时间周期15天为个周期
+--永远的N N字消化：上涨6-7天，回调4-5天比较好。  时间周期13天为个周期
  -- riqi >='2021-11-09' AND  riqi<='2021-11-29' 今天是2021-11-29 高点调整4-5 天   调整日期前是7个交易日是有连阳的
  -----------------------------------------------------------------------------------
    use stock 
@@ -14,7 +14,7 @@
                         [chengjiaoliang] ,
                          [pctChg] AS zhangdie
                FROM     dbo.lishijiager
-			   WHERE    riqi >='2021-11-10' AND  riqi<='2021-11-29'
+			   WHERE    riqi >='2021-12-07' AND  riqi<='2021-12-23'
 		     -- AND  code LIKE '%603256%'
              )-----------------------------------------------------------------
 	,   T2
@@ -24,7 +24,8 @@
 		                 ROW_NUMBER() OVER ( PARTITION BY code ORDER BY gao DESC ) AS maxriqinum ,
 						ROW_NUMBER() OVER ( PARTITION BY code ORDER BY di Asc ) AS minriqinum ,
                         *
-               FROM     T WHERE    riqi >='2021-11-15' AND  riqi<='2021-11-23'
+						--点见高点开始日期第一天开始涨 涨7天后见高点
+               FROM     T WHERE    riqi >='2021-12-08' AND  riqi<='2021-12-16'
              )
 			-- select * from T2
        ,T3 AS (	SELECT * FROM T2  WHERE minriqinum=1)
@@ -44,8 +45,9 @@
 		 , T8 AS (
 		 SELECT DISTINCT SUM(zhangdie) OVER(PARTITION BY code) AS sumzf, MIN(riqihao) OVER(PARTITION BY code) AS minriqihao, MAX(riqihao) OVER(PARTITION BY code) AS maxriqihao, MIN(di) OVER(PARTITION BY code) AS mindi, MAX(gao) OVER(PARTITION BY code) AS maxgao, yangnum,zongshunum,minriqi,maxriqi,code   FROM T7 
 		  WHERE 1=1 
-		  AND maxriqi='2021-11-23 00:00:00.000' 
-		 --and  zongshunum=yangnum 
+		  --高点在最近5天出现
+		  AND maxriqi='2021-12-16 00:00:00.000' 
+		 and  zongshunum=7 
 		 )
 		 --T8是 N字的一撇找到了
 		 --SELECT * FROM T8 ORDER BY sumzf DESC 
@@ -57,9 +59,9 @@
 		  WHERE T8.maxriqihao<T.riqihao
 		  )
 		  SELECT  * FROM T9 WHERE 1=1   
-		--AND riqi='2021-11-29' 
+		AND riqi='2021-12-23' 
 		--AND kai/1.03<di   
-		-- AND ((maxgao-mindi)/(100/50))+mindi<di
+		-- AND ((maxgao-mindi)/(100/62.5))+mindi<di
 		 ORDER BY sumzf DESC
 		 
 

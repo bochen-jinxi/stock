@@ -16,7 +16,7 @@ WITH    T AS ( SELECT
                          [pctChg] AS zf						
 						 
                FROM     dbo.lishijiager
- WHERE    riqi >='2021-11-08' AND  riqi<='2021-11-25'
+ WHERE    riqi >='2021-12-08' AND  riqi<='2021-12-23'
  --AND code LIKE '%300118%'
 							)
 
@@ -29,7 +29,7 @@ WITH    T AS ( SELECT
 							AND T.kai>=T0.gao*1.01
 							AND T.kai/1.01<=T.di
 							AND T.zf>=0
-							AND T.riqi='2021-11-25'
+							AND T.riqi='2021-12-23'
 							ORDER BY T.shou desc
 
 
