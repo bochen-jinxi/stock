@@ -2,7 +2,7 @@
  go
 declare @i int
 set @i=1
-while @i<=19
+while @i<=(SELECT COUNT(1) FROM dbo.lishijiager   WHERE riqi>='2022-01-01'  AND code='sh.601288')
 begin  
  WITH T AS (SELECT ROW_NUMBER() OVER(PARTITION BY code ORDER BY riqi desc) AS sort, pctChg AS kbzf, pctChg AS kb, *  FROM dbo.lishijiager 
   WHERE riqi>='2022-01-01' 
