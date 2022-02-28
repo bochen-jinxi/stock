@@ -1,5 +1,5 @@
-﻿--SCS买点4：破低反涨
---买点描述：股价在近期支撑位出现大阴线破位走势，第二天大阳能强势收复。
+--SCS买点4：破低反涨
+--买点描述：股价在近期支撑位出现大阴线破位走势，第二天大阳能强势收复。 肉眼可见前期有一波淋漓的上涨
  
  -----------------------------------------------------------------------------------
     --找最近8个交易日的K线
@@ -21,7 +21,8 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
                         1 AS [pctChg]
                FROM     dbo.lishijiager
               -- WHERE    riqi >= DATEADD(DAY, -21, GETDATE())
-			  WHERE    riqi >='2021-10-25' AND  riqi<='2021-11-04'
+			  WHERE    riqi >='2022-01-01' AND  riqi<='2022-01-26'
+			   --AND   code LIKE '%000090%'
              )-----------------------------------------------------------------
  ,      T2
           AS ( 
@@ -88,8 +89,9 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
           AS (
 		   --查找后续中所有阴线并重新按日期正序标号 用以查找连续日期号的阴线
 		   SELECT   riqihao
-                        - ROW_NUMBER() OVER ( PARTITION BY code ORDER BY riqi ) AS lianxuxiadieriqizu ,
-                        *
+                        - ROW_NUMBER() OVER ( PARTITION BY code ORDER BY riqi ) AS lianxuxiadieriqizu , COUNT(1) OVER(PARTITION BY code) AS  yingxianshu,
+						(SELECT COUNT(1) FROM T6 AS A WHERE A.zhangdie=1 AND A.code=T6.code ) AS yangxianshu,
+                         *
                FROM     T6
                WHERE   --- code='sh.603985' AND   
                         zhangdie = -1
@@ -110,12 +112,21 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
              )
 			 ,T10 AS (
 			 --查找后续最大跌幅的阴线 并且是上一个交易日期
-			 SELECT * FROM T9 WHERE riqihao+1=zhangdiezhouqishu AND  T9.shitifudu=zuidadiefu
+			 SELECT * FROM T9 WHERE riqihao+1=zhangdiezhouqishu 
+			-- AND  T9.shitifudu=zuidadiefu
 			 		 			-- AND zuidijiahao=zhangdiezhouqishu
 			 )
+			 --SELECT * FROM T10
 			--第二天阳线收复
-		 SELECT DISTINCT T10.kaishiriqi,T10.code,t6.riqi,T6.shitifudu FROM T10 INNER JOIN T6 ON  T10.code = T6.code
-		 WHERE  T10.riqihao+1=t6.riqihao AND T10.kai<T6.shou
-		 AND T6.shitifudu>3
-		 		AND  T6.riqi='2021-11-04'
+		 SELECT DISTINCT T10.kaishiriqi,T10.code,T10.riqi,T6.riqi,  T10.shitifudu,T6.shitifudu,T10.yingxianshu,T10.yangxianshu, T10.* FROM T10 INNER JOIN T6 ON  T10.code = T6.code
+		 WHERE  
+	     T10.riqihao+1=t6.riqihao 
+		 AND T10.zhangdie=-1  AND  ABS(T10.shitifudu)/(100/61.8)<T6.shitifudu
+		  and T10.kai>=T6.shou	
+	     AND (T10.zuidijiahao=T10.zhangdiezhouqishu	 OR T10.zuidijiahao+1=T10.zhangdiezhouqishu)
+		 --AND T10.zhangdiezhouqishu>8	 	
+		 AND T10.yingxianshu<T10.yangxianshu
+			 	AND 		  T6.riqi='2022-01-26'	
+				 ORDER BY T10.code
 		  
+ 
