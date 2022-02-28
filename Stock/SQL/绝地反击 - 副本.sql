@@ -1,4 +1,4 @@
-﻿----SCS买点2：绝地反击
+----SCS买点2：绝地反击
 ---买点描述：股价在连续下跌后收出低位大阴线形态，第二天股价低开后高走，盘间最高价回补缺口
 ---最终低开收阳的倒锤子形态
  
@@ -22,7 +22,7 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
                         1 AS [pctChg]
                FROM     dbo.lishijiager
           --    WHERE    riqi >= DATEADD(DAY, -34, GETDATE())
- WHERE    riqi >='2021-10-25' AND  riqi<='2021-11-04'
+ WHERE    riqi >='2022-01-01' AND  riqi<='2022-01-26'
 							)
 
 			 -----------------------------------------------------------------
@@ -146,13 +146,14 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
 			 --T6 见高点后的后续所有数据
 		 SELECT 	* FROM T10 INNER JOIN T6 ON  T10.code = T6.code
 		 WHERE  T10.riqihao+1=T6.riqihao AND T10.di >T6.kai AND T6.gao>T10.shou 
-			AND  T6.shitifudu<3
-	--跳空低开0.5个点
-		 AND  (T10.di-t6.kai)/t6.kai*100>0.5
+		 AND  T10.zhangdie=-1
+			--AND  T6.shitifudu<3
+	--跳空低开2个点
+		 AND  (T10.di/1.02)>T6.kai
 		 AND T6.zhangdie=1
-		 AND T6.xiayingxianfudu*100<1
-		 AND  T6.riqi='2021-11-04'
-AND T6.shangyingxianfudu*100>1
+		 
+		 AND  T6.riqi='2022-01-26'
+ 
 		-- AND T10.kaishiriqi<T10.riqi
 		--AND T6.syxbst>1 AND  t6.di/t6.kai<=1
 --	AND T10.zhangdiezhouqishu>2   	 AND T10.zhangdiezhouqishu<=8
