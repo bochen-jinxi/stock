@@ -1,13 +1,13 @@
  --查询排序
  --SELECT * FROM  dbo.T900
- --WHERE gaoriqi='2022-04-13'
+ --WHERE zhuriqi='2022-04-13'
  --ORDER BY code desc
 
 
 
-SELECT  DISTINCT CONCAT('exec master.dbo.xp_cmdshell ''echo '+CONVERT(varchar(5), gaoriqi, 10)+'                                             '+CONVERT(varchar(5), gaoriqi, 10)+'                                                               >>C:\zd_zsone\T0002\blocknew\blocknew.cfg"''',';')
+SELECT  DISTINCT CONCAT('exec master.dbo.xp_cmdshell ''echo '+CONVERT(varchar(5), zhuriqi, 10)+'                                             '+CONVERT(varchar(5), zhuriqi, 10)+'                                                               >>C:\zd_zsone\T0002\blocknew\blocknew.cfg"''',';')
   ,  gaoriqi,
-   CONVERT(varchar(5), gaoriqi, 10)
+   CONVERT(varchar(5), zhuriqi, 10)
   FROM [stock].[dbo].[T900] 
    
 --exec master.dbo.xp_cmdshell 'echo 03-07                                             03-07                                                               >>C:\zd_zsone\T0002\blocknew\blocknew.cfg"';
@@ -16,11 +16,11 @@ SELECT  DISTINCT CONCAT('exec master.dbo.xp_cmdshell ''echo '+CONVERT(varchar(5)
 --exec master.dbo.xp_cmdshell 'echo 03-10                                             03-10                                                               >>C:\zd_zsone\T0002\blocknew\blocknew.cfg"';
 
 
-SELECT  CONCAT('exec master.dbo.xp_cmdshell ''echo '+REPLACE(REPLACE(code,'sh.',1),'sz.',0)+'   >>C:\zd_zsone\T0002\blocknew\"'+ CONVERT(varchar(5), gaoriqi, 10)+'                                            .blk"''',';')
+SELECT  CONCAT('exec master.dbo.xp_cmdshell ''echo '+REPLACE(REPLACE(code,'sh.',1),'sz.',0)+'   >>C:\zd_zsone\T0002\blocknew\"'+ CONVERT(varchar(5), zhuriqi, 10)+'                                            .blk"''',';')
   ,code,
   REPLACE(REPLACE(code,'sh.',1),'sz.',0),
-  gaoriqi,
-   CONVERT(varchar(5), gaoriqi, 10)
+  zhuriqi,
+   CONVERT(varchar(5), zhuriqi, 10)
   FROM [stock].[dbo].[T900] 
   ORDER BY code desc 
 
