@@ -1,3 +1,8 @@
+ --查询排序
+ --SELECT * FROM  dbo.T900
+ --WHERE gaoriqi='2022-04-13'
+ --ORDER BY code desc
+
 
 
 SELECT  DISTINCT CONCAT('exec master.dbo.xp_cmdshell ''echo '+CONVERT(varchar(5), gaoriqi, 10)+'                                             '+CONVERT(varchar(5), gaoriqi, 10)+'                                                               >>C:\zd_zsone\T0002\blocknew\blocknew.cfg"''',';')
@@ -16,7 +21,8 @@ SELECT  CONCAT('exec master.dbo.xp_cmdshell ''echo '+REPLACE(REPLACE(code,'sh.',
   REPLACE(REPLACE(code,'sh.',1),'sz.',0),
   gaoriqi,
    CONVERT(varchar(5), gaoriqi, 10)
-  FROM [stock].[dbo].[T900]  
+  FROM [stock].[dbo].[T900] 
+  ORDER BY code desc 
 
 -- exec master.dbo.xp_cmdshell 'echo 1688508   >>C:\zd_zsone\T0002\blocknew\"03-10                                            .blk"';
 --exec master.dbo.xp_cmdshell 'echo 1600319   >>C:\zd_zsone\T0002\blocknew\"03-09                                            .blk"';
