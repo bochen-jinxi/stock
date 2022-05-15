@@ -4,11 +4,11 @@
  --ORDER BY code desc
 
 
-
-SELECT  DISTINCT CONCAT('exec master.dbo.xp_cmdshell ''echo '+CONVERT(varchar(5), zhuriqi, 10)+'                                             '+CONVERT(varchar(5), zhuriqi, 10)+'                                                               >>C:\zd_zsone\T0002\blocknew\blocknew.cfg"''',';')
-  ,  gaoriqi,
+ 
+SELECT  DISTINCT   CONCAT('exec master.dbo.xp_cmdshell ''echo '+CONVERT(varchar(5), zhuriqi, 10)+'                                             '+CONVERT(varchar(5), zhuriqi, 10)+'                                                               >>C:\zd_zsone\T0002\blocknew\blocknew.cfg"''',';')
+  ,  zhuriqi,
    CONVERT(varchar(5), zhuriqi, 10)
-  FROM [stock].[dbo].[T900] 
+  FROM [stock].[dbo].[T900]  
    
 --exec master.dbo.xp_cmdshell 'echo 03-07                                             03-07                                                               >>C:\zd_zsone\T0002\blocknew\blocknew.cfg"';
 --exec master.dbo.xp_cmdshell 'echo 03-08                                             03-08                                                               >>C:\zd_zsone\T0002\blocknew\blocknew.cfg"';
