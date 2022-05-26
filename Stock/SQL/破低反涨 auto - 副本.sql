@@ -1,15 +1,15 @@
---SCSÂòµã4£ºÆÆµÍ·´ÕÇ
---ÂòµãÃèÊö£º¹É¼ÛÔÚ½üÆÚÖ§³ÅÎ»³öÏÖ´óÒõÏßÆÆÎ»×ßÊÆ£¬µÚ¶þÌì´óÑôÄÜÇ¿ÊÆÊÕ¸´¡£ ÈâÑÛ¿É¼ûÇ°ÆÚÓÐÒ»²¨ÁÜÀìµÄÉÏÕÇ
+ --SCSä¹°ç‚¹4ï¼šç ´ä½Žåæ¶¨
+--ä¹°ç‚¹æè¿°ï¼šè‚¡ä»·åœ¨è¿‘æœŸæ”¯æ’‘ä½å‡ºçŽ°å¤§é˜´çº¿ç ´ä½èµ°åŠ¿ï¼Œç¬¬äºŒå¤©å¤§é˜³èƒ½å¼ºåŠ¿æ”¶å¤ã€‚ è‚‰çœ¼å¯è§å‰æœŸæœ‰ä¸€æ³¢æ·‹æ¼“çš„ä¸Šæ¶¨
  
  -----------------------------------------------------------------------------------
-    --ÕÒ×î½ü8¸ö½»Ò×ÈÕµÄKÏß
+    --æ‰¾æœ€è¿‘8ä¸ªäº¤æ˜“æ—¥çš„Kçº¿
 	  use stock 
    go 
 
     --SELECT    ROW_NUMBER() OVER( PARTITION BY code ORDER BY riqi ASC) AS riqihao,*
     --          INTO T90
 			 --  FROM     dbo.lishijiager
-			 -- WHERE  riqi >='2022-04-11' AND  riqi<='2022-05-11'
+			 -- WHERE  riqi >='2022-04-01' 
 
 			 DECLARE @i INT ;
 			 SET @i=(SELECT COUNT(1) FROM dbo.T90 WHERE  code ='sz.000001')
@@ -40,7 +40,7 @@ WITH    T AS ( SELECT   riqihao,  ( CASE WHEN ( shou - kai ) > 0 THEN 1
 	
   ,T2
           AS ( 
-		    --È¡ÉÏ/ÏÂÓ°Ïß
+		    --å–ä¸Š/ä¸‹å½±çº¿
 		  SELECT   ( CASE zhangdie
                             WHEN 1 THEN ( gao - shou )
                             WHEN -1 THEN ( kai - gao )
@@ -54,7 +54,7 @@ WITH    T AS ( SELECT   riqihao,  ( CASE WHEN ( shou - kai ) > 0 THEN 1
              )----------------------------------------------------------------
 	,   T3
           AS ( 
-		   --³å¸ß»ØÂä/Ì½µ×»ØÉýµÄ±ÈÀý 
+		   --å†²é«˜å›žè½/æŽ¢åº•å›žå‡çš„æ¯”ä¾‹ 
 		  SELECT   shanyingxian / shiti AS syxbst ,
                         xiayingxian / shiti AS xyxbst ,
                         ROW_NUMBER() OVER ( PARTITION BY code ORDER BY gao DESC ) AS RowID ,
@@ -64,14 +64,14 @@ WITH    T AS ( SELECT   riqihao,  ( CASE WHEN ( shou - kai ) > 0 THEN 1
              ),
         T4
           AS ( 
-		    -- ¸÷´úÂë¼û¸ßµãµÄÈÕÆÚ ¼Û¸ñ
+		    -- å„ä»£ç è§é«˜ç‚¹çš„æ—¥æœŸ ä»·æ ¼
 		  SELECT   *
                FROM     T3
                WHERE    RowID = 1
              )-----------------------------------------------------------------------
 	,   T5
           AS (
-		  	--¼û¸ßµãºó ºóÐø¼Û¸ñÊý¾ÝÖÐËùÓÐÒõÑôÏß ²¢Í³¼ÆºóÐøÒõÑôÏßµÄÊýÁ¿
+		  	--è§é«˜ç‚¹åŽ åŽç»­ä»·æ ¼æ•°æ®ä¸­æ‰€æœ‰é˜´é˜³çº¿ å¹¶ç»Ÿè®¡åŽç»­é˜´é˜³çº¿çš„æ•°é‡
 		   SELECT   COUNT(1) OVER ( PARTITION BY T3.code ) AS zhangdiezhouqishu ,
                         T4.code ,
                         T4.riqi AS kaishiriqi ,
@@ -93,7 +93,7 @@ WITH    T AS ( SELECT   riqihao,  ( CASE WHEN ( shou - kai ) > 0 THEN 1
              ),
         T6
           AS ( 
-		      -- ºóÐøÊý¾Ý°´ÈÕÆÚÕýÐò±êºÅ  ×îµÍ¼Ûµ¹Ðò
+		      -- åŽç»­æ•°æ®æŒ‰æ—¥æœŸæ­£åºæ ‡å·  æœ€ä½Žä»·å€’åº
 		  SELECT   ROW_NUMBER() OVER ( PARTITION BY code ORDER BY riqi ) AS riqihao ,
 		   ROW_NUMBER() OVER ( PARTITION BY code ORDER BY di DESC ) AS zuidijiahao ,
                         *
@@ -101,7 +101,7 @@ WITH    T AS ( SELECT   riqihao,  ( CASE WHEN ( shou - kai ) > 0 THEN 1
              ),
         T7
           AS (
-		   --²éÕÒºóÐøÖÐËùÓÐÒõÏß²¢ÖØÐÂ°´ÈÕÆÚÕýÐò±êºÅ ÓÃÒÔ²éÕÒÁ¬ÐøÈÕÆÚºÅµÄÒõÏß
+		   --æŸ¥æ‰¾åŽç»­ä¸­æ‰€æœ‰é˜´çº¿å¹¶é‡æ–°æŒ‰æ—¥æœŸæ­£åºæ ‡å· ç”¨ä»¥æŸ¥æ‰¾è¿žç»­æ—¥æœŸå·çš„é˜´çº¿
 		   SELECT   riqihao
                         - ROW_NUMBER() OVER ( PARTITION BY code ORDER BY riqi ) AS lianxuxiadieriqizu , COUNT(1) OVER(PARTITION BY code) AS  yingxianshu,
 						(SELECT COUNT(1) FROM T6 AS A WHERE A.zhangdie=1 AND A.code=T6.code ) AS yangxianshu,
@@ -112,27 +112,27 @@ WITH    T AS ( SELECT   riqihao,  ( CASE WHEN ( shou - kai ) > 0 THEN 1
              ),
         T8
           AS (
-		   --±êÊ¶ºóÐøÖÐËùÓÐÁ¬ÐøÒõÏßµÄÌìÊý
+		   --æ ‡è¯†åŽç»­ä¸­æ‰€æœ‰è¿žç»­é˜´çº¿çš„å¤©æ•°
 		   SELECT   COUNT(1) OVER ( PARTITION BY code, lianxuxiadieriqizu ) AS lianxuxiadieshu ,
                         *
                FROM     T7
              ),
         T9
           AS ( 
-		   --±êÊ¶ºóÐøÖÐÒõÏß×î´óÁ¬ÐøÌìÊý 
+		   --æ ‡è¯†åŽç»­ä¸­é˜´çº¿æœ€å¤§è¿žç»­å¤©æ•° 
 		  SELECT   MAX(lianxuxiadieshu) OVER ( PARTITION BY code ) zuidalianxuxiadieshu ,
                         *
                FROM     T8
              )
 			
 			 ,T10 AS (
-			 --²éÕÒºóÐø×î´óµø·ùµÄÒõÏß ²¢ÇÒÊÇÉÏÒ»¸ö½»Ò×ÈÕÆÚ
+			 --æŸ¥æ‰¾åŽç»­æœ€å¤§è·Œå¹…çš„é˜´çº¿ å¹¶ä¸”æ˜¯ä¸Šä¸€ä¸ªäº¤æ˜“æ—¥æœŸ
 			 SELECT * FROM T9 WHERE riqihao+1=zhangdiezhouqishu 
 			-- AND  T9.shitifudu=zuidadiefu
 			 		 			-- AND zuidijiahao=zhangdiezhouqishu
 			 )
 	 
-			--µÚ¶þÌìÑôÏßÊÕ¸´
+			--ç¬¬äºŒå¤©é˜³çº¿æ”¶å¤
 		 INSERT INTO  [dbo].[T900](
 	[gaoriqi]		,
 	[code]			,
@@ -154,9 +154,12 @@ WITH    T AS ( SELECT   riqihao,  ( CASE WHEN ( shou - kai ) > 0 THEN 1
 	     T10.riqihao+1=t6.riqihao 
 		 AND T10.zhangdie=-1  AND  ABS(T10.shitifudu)/(100/61.8)<T6.shitifudu
 		  and T10.kai>=T6.shou	
+AND  T10.di*1.01>=T10.shou
+AND  T6.di*1.03>=T6.kai
+
 	     AND (T10.zuidijiahao=T10.zhangdiezhouqishu	 OR T10.zuidijiahao+1=T10.zhangdiezhouqishu)
 		 --AND T10.zhangdiezhouqishu>8	 	
-		 AND T10.yingxianshu<T10.yangxianshu
+		 --AND T10.yingxianshu<T10.yangxianshu
 			 	--AND 		  T6.riqi='2022-04-27'	
 				 ORDER BY T10.code
 	
