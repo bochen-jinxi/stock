@@ -5,10 +5,11 @@
     --找最近21个交易日的K线
 	  use stock 
    go 
-       --SELECT    ROW_NUMBER() OVER( PARTITION BY code ORDER BY riqi ASC) AS riqihao,*
-    --          INTO T90
-			 --  FROM     dbo.lishijiager
-			 -- WHERE  riqi >='2022-04-26' 
+     --  SELECT    ROW_NUMBER() OVER( PARTITION BY code ORDER BY riqi ASC) AS riqihao,*
+     --         INTO T90
+			  -- FROM     dbo.lishijiager
+			  --WHERE  riqi >='2022-04-26' 
+			  ----and  riqi <='2022-07-18'
 
 			 DECLARE @i INT ;
 			 SET @i=(SELECT COUNT(1) FROM dbo.T90 WHERE  code ='sz.000001')
@@ -31,6 +32,7 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
                         1 AS [pctChg]
                FROM    T90       
 			  WHERE    [riqihao] <=@i
+		 
 			
              )-----------------------------------------------------------------
  ,      T2
@@ -97,6 +99,7 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
 		      -- 后续数据按日期正序标号  最低价倒序
 		  SELECT   ROW_NUMBER() OVER ( PARTITION BY code ORDER BY riqi ) AS riqihao ,
 		   ROW_NUMBER() OVER ( PARTITION BY code ORDER BY di DESC ) AS zuidijiahao ,
+		  
                         *
                FROM     T5
              )
@@ -144,20 +147,20 @@ WITH    T AS ( SELECT   ( CASE WHEN ( shou - kai ) > 0 THEN 1
            ,[diriqi]
            ,[zhariqi]
            ,[shitifudu]
+		   ,[zuidadiefu]
+		   ,[zuidadiefuriqi]
            ,[yingxianshu]
            ,[yangxianshu])
 
-		 SELECT DISTINCT A.kaishiriqi,A.code,A.riqi AS diriqi,B.riqi AS zhariqi,  A.shitifudu,A.yingxianshu,A.yangxianshu
-	    --  INTO T904
+		 SELECT DISTINCT A.kaishiriqi,A.code,A.riqi AS diriqi,B.riqi AS zhariqi,  A.shitifudu,A.zuidadiefu,  (SELECT TOP 1  riqi FROM T3 WHERE T3.code=code AND  shitifudu=A.zuidadiefu AND   T3.riqi>A.kaishiriqi) AS  zuidadiefuriqi,A.yingxianshu,A.yangxianshu
+	     -- INTO T904
 		  FROM T10 AS A INNER JOIN T6 AS B ON  A.code = B.code
-		 INNER JOIN T6 AS C ON  B.code = C.code
-		 WHERE   A.riqihao+1=C.riqihao AND   B.riqihao+0=C.riqihao	 	
-		 AND A.zhangdie=-1   AND A.shou<=A.di*1.02 AND A.kai*1.01<=A.gao
+		WHERE   A.riqihao+1=B.riqihao  	 	
+		 AND A.zhangdie=-1   AND A.shou<=A.di*1.02 AND A.kai*1.02>=A.gao
 		 AND B.zhangdie=1 
-		AND B.kai=B.di		
-		--AND B.kai>A.shou*1.00001	
-		AND C.shou>A.kai
-	   
+		AND B.kai=B.di	
+		AND (ABS(A.zuidadiefu)/1.30)<=(ABS(A.shitifudu))
+		AND B.kai>=A.shou  AND B.kai<=A.shou*1.02
       ORDER BY A.code
 		  
  
